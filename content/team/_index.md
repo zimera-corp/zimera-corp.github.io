@@ -7,5 +7,5 @@ intro_image_hide_on_mobile: false
 
 # Meet The Team
 
-Our team of qualified softwware and data technologies professionals.
+Our team of qualified software and data technologies professionals.
 
