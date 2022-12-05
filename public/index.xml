@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Homepage on Zimera Corporation</title>
+    <link>/</link>
+    <description>Recent content in Homepage on Zimera Corporation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dr. Bambang Purnomosidi D. P.</title>
+      <link>/team/bpdp/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/team/bpdp/</guid>
+      <description>Future contents of bpdp.</description>
+    </item>
+    
+    <item>
+      <title>Consulting</title>
+      <link>/services/consulting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/services/consulting/</guid>
+      <description>Contents of consulting service.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Future content of About Zimera Corporation
+Zimera Consulting First service
+Zimera Systems Second service
+Zimera School Third service</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/contact/</guid>
+      <description> Day Opening Hours Monday - Friday 9:00am - 16:00pm Saturday - Sunday Closed </description>
+    </item>
+    
+  </channel>
+</rss>

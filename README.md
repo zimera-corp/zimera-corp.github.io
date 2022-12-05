@@ -1,2 +1,2 @@
-# Zimera Coorporation
+# Zimera Corporation
 

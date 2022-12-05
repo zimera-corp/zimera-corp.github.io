@@ -1,0 +1,17 @@
+[
+  {
+    "title": "Consulting",
+    "description": "We provide consultation services on software and data technologies",
+    "image": "images/features/noun_branding_1885335.svg"
+  },
+  {
+    "title": "Software Systems",
+    "description": "Our engineering department provides data related software development",
+    "image": "images/features/noun_The Process_1885341.svg"
+  },
+  {
+    "title": "School and Training",
+    "description": "We provide human resources - talent development on software and data technologies",
+    "image": "images/features/noun_3d modeling_1885342.svg"
+  }
+]
