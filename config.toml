@@ -3,6 +3,7 @@ themesDir = "themes"
 theme = "hugo-serif-theme"
 languageCode = "en-us"
 title = "Zimera Corporation"
+publishDir = "docs"
 
 [module]
   [module.hugoVersion]
