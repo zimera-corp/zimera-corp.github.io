@@ -1,7 +1,7 @@
 ---
 title: "Consulting"
 date: Mon Dec  5 08:19:43 AM WIB 2022
-featured: true
+featured: false
 draft: false
 weight: 5
 ---

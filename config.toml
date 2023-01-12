@@ -16,7 +16,7 @@ publishDir = "docs"
   google_tag_manager_id = ""
 
   [params.homepage]
-    show_contact_box = true      # show / hide the contaxt box on the homepage
+    show_contact_box = false      # show / hide the contaxt box on the homepage
     show_services_button = false # show / hide the "view all services" button
 
   [params.logo]
