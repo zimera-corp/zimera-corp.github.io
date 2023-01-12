@@ -19,3 +19,12 @@ By default, `services/*.md` will be checked for `featured = `. If `true` then th
 
 See `[params.homepage].show_contact_box` to choose whether to display Contact or not (will be the same with `data/contact.yaml`.
 
+### Embed HTML Codes
+
+See [layouts/shortcodes/rawhtml.html](layouts/shortcodes/rawhtml.html) on how to provide function which will enable us to embed HTML codes. Also see [content/news/_index.md](content/news/_index.md) for an example:
+
+```
+{{< rawhtml >}}
+<a class="twitter-timeline" data-width="500" data-height="300" href="https://twitter.com/ZimeraCorp?ref_src=twsrc%5Etfw">Tweets by ZimeraCorp</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+{{< /rawhtml >}}
+```

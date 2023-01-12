@@ -75,6 +75,11 @@ publishDir = "docs"
     url = "/contact/"
     weight = 4
 
+  [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 5
+
   # Footer Menu
   [[menu.footer]]
     name = "Home"
