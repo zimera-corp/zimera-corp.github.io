@@ -2,6 +2,10 @@
 title: "News"
 date: 2023-01-12T11:15:15+07:00
 draft: false
+description: "News and Announcement at Zimera Corporation."
+intro_image: "images/news/news.jpg"
+intro_image_absolute: true
+intro_image_hide_on_mobile: true
 ---
 # News and Announcement
 
