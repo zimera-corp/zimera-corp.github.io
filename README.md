@@ -33,3 +33,6 @@ See [layouts/shortcodes/rawhtml.html](layouts/shortcodes/rawhtml.html) on how to
 
 See [layouts/_default/list.html](layouts/_default/list.html) for definition. The template at `layouts/_default/list.html` is used by default for pagination. Configuration can be seen at [config.toml](config.toml) - see `paginate = ...`. There's no need to setup pagination at `posts` for example, since it will automatically calls `list.html` template if more than `paginate = ...` files exist.
 
+### Summary -> Number of Words Truncated
+
+See [layouts/_default/summary.html](layouts/_default/summary.html), it uses `truncate` function.
