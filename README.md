@@ -28,3 +28,8 @@ See [layouts/shortcodes/rawhtml.html](layouts/shortcodes/rawhtml.html) on how to
 <a class="twitter-timeline" data-width="500" data-height="300" href="https://twitter.com/ZimeraCorp?ref_src=twsrc%5Etfw">Tweets by ZimeraCorp</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {{< /rawhtml >}}
 ```
+
+### Pagination and Read more ...
+
+See [layouts/_default/list.html](layouts/_default/list.html) for definition. The template at `layouts/_default/list.html` is used by default for pagination. Configuration can be seen at [config.toml](config.toml) - see `paginate = ...`. There's no need to setup pagination at `posts` for example, since it will automatically calls `list.html` template if more than `paginate = ...` files exist.
+
