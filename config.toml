@@ -4,6 +4,7 @@ theme = "hugo-serif-theme"
 languageCode = "en-us"
 title = "Zimera Corporation"
 publishDir = "docs"
+paginate = 2
 
 [module]
   [module.hugoVersion]
@@ -79,6 +80,11 @@ publishDir = "docs"
     name = "News"
     url = "/news/"
     weight = 5
+
+  [[menu.main]]
+    name = "Posts"
+    url = "/posts/"
+    weight = 6
 
   # Footer Menu
   [[menu.footer]]
