@@ -21,10 +21,10 @@ paginate = 8
     show_services_button = false # show / hide the "view all services" button
 
   [params.logo]
-    mobile = "images/logo/logo-mobile.svg"
+    mobile = "images/logo/logo-zimera-corp--mobile.png"
     mobile_height = "36px"
-    desktop = "images/logo/logo-zimera.png"
-    desktop_height = "75px"
+    desktop = "images/logo/logo-zimera-corp.png"
+    desktop_height = "200px"
     alt = "Zimera Corporation"
 
   [params.fonts]
