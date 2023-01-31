@@ -22,7 +22,7 @@ paginate = 8
 
   [params.logo]
     mobile = "images/logo/logo-zimera-corp--mobile.png"
-    mobile_height = "36px"
+    mobile_height = "100px"
     desktop = "images/logo/logo-zimera-corp.png"
     desktop_height = "200px"
     alt = "Zimera Corporation"
