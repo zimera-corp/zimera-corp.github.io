@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Jan 2023 10:56:44 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Jan 2023 12:59:14 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
@@ -22,7 +22,26 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/services/consulting/</guid>
-      <description>Contents of consulting service.</description>
+      <description>Contents of consulting service.
+syem tenan</description>
+    </item>
+    
+    <item>
+      <title>School</title>
+      <link>/services/school/</link>
+      <pubDate>Tue, 31 Jan 2023 12:59:14 +0700</pubDate>
+      
+      <guid>/services/school/</guid>
+      <description>This is school services</description>
+    </item>
+    
+    <item>
+      <title>Systems</title>
+      <link>/services/systems/</link>
+      <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
+      
+      <guid>/services/systems/</guid>
+      <description>This is systems</description>
     </item>
     
     <item>

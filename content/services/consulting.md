@@ -6,5 +6,8 @@ draft: false
 weight: 5
 ---
 
+![Zimera Consulting](/images/services/consulting.jpg)
+
 Contents of consulting service.
 
+syem tenan

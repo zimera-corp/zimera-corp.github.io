@@ -5,14 +5,34 @@
     <link>/services/</link>
     <description>Recent content in Services on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Jan 2023 12:59:14 +0700</lastBuildDate><atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Consulting</title>
       <link>/services/consulting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>/services/consulting/</guid>
-      <description>Contents of consulting service.</description>
+      <description>Contents of consulting service.
+syem tenan</description>
+    </item>
+    
+    <item>
+      <title>School</title>
+      <link>/services/school/</link>
+      <pubDate>Tue, 31 Jan 2023 12:59:14 +0700</pubDate>
+      
+      <guid>/services/school/</guid>
+      <description>This is school services</description>
+    </item>
+    
+    <item>
+      <title>Systems</title>
+      <link>/services/systems/</link>
+      <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
+      
+      <guid>/services/systems/</guid>
+      <description>This is systems</description>
     </item>
     
   </channel>
