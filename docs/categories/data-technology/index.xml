@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Data Technology on Zimera Corporation</title>
+    <link>/categories/data-technology/</link>
+    <description>Recent content in Data Technology on Zimera Corporation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 18 Jan 2023 10:16:30 +0700</lastBuildDate><atom:link href="/categories/data-technology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using YugabyteDB in Python App Development</title>
+      <link>/posts/05/</link>
+      <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
+      
+      <guid>/posts/05/</guid>
+      <description>As a long time PostgreSQL user, it&amp;rsquo;s normal that YugabyteDB got my attention. It&amp;rsquo;s a distributed SQL database which features-compatible with PostgreSQL so that I don&amp;rsquo;t need to lose my investation. YugabyteDB reuses PostgreSQL&amp;rsquo;s query layer, so I can use my development tools as usual. It gives me more since there is also Cassandra query layer. Using YugabyteDB I can reuse my SQL skill and development tools, enhanced with NOSQL data model (especially wide-column store), while I have NewSQL&amp;rsquo;s resiliency, scalability, and high performance.</description>
+    </item>
+    
+  </channel>
+</rss>

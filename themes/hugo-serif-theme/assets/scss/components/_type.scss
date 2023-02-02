@@ -6,6 +6,7 @@ p {
   color: $grey;
   font-family: $font-family-base;
   margin-bottom: 20px;
+  font-size: 1.2rem;
 }
 h1 {
   font-size: 24px;
@@ -37,8 +38,9 @@ h3 {
 }
 ul,
 ol {
+  font-size: 1.2rem;
   margin: 0;
-  padding: 0;
+  padding: 2;
   li {
     padding: 0;
     margin: 0;

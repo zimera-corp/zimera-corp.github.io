@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Agile on Zimera Corporation</title>
+    <link>/tags/agile/</link>
+    <description>Recent content in Agile on Zimera Corporation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Jan 2023 10:13:33 +0700</lastBuildDate><atom:link href="/tags/agile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Agile Development: Welcome Changing Requirements?</title>
+      <link>/posts/02/</link>
+      <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
+      
+      <guid>/posts/02/</guid>
+      <description>If you ever being in a team which practices agile software development, you might already heard about how a software development team &amp;ldquo;welcome chnging requirements&amp;rdquo;. While it sounds great, I personally think, if this statement is not properly explained, the impact will be negative on the development team side. Now, let&amp;rsquo;s see the complete statement:
+Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</description>
+    </item>
+    
+  </channel>
+</rss>

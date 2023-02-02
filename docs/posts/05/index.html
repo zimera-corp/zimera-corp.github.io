@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>05 - Zimera Corporation</title>
+  <title>Using YugabyteDB in Python App Development - Zimera Corporation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="/favicon-32x32.svg">
 
@@ -21,13 +21,13 @@
   
     
   
-  <link rel="stylesheet" href="/css/style.min.bc4a12e5c3ca2dae1f3e632c1be7b293452729efc58aa60b6c22aed0399891a1.css">
+  <link rel="stylesheet" href="/css/style.min.a27b110e1710a61f7a6e2cbce505d7cec5e386cb6f22575a78f81a45232e9bfd.css">
 
   
 
   
     
-    <meta property="og:title" content="05"/>
+    <meta property="og:title" content="Using YugabyteDB in Python App Development"/>
     <meta property="og:type" content="website"/>
     <meta property="og:url" content="/posts/05/"/>
     
@@ -176,34 +176,433 @@
 <div class="container pb-6 pt-6 pt-md-10 pb-md-10">
   <div class="row justify-content-start">
     <div class="col-12 col-md-8">
-      <h1 class="title">05</h1>
+      <h1 class="title">Using YugabyteDB in Python App Development</h1>
 
     <p>Posted in: 
     
         
-        <a href="/categories/kategori-2">Kategori 2</a>&nbsp;&nbsp;
+        <a href="/categories/software-development">Software Development</a>&nbsp;&nbsp;
+        
+        <a href="/categories/programming">Programming</a>&nbsp;&nbsp;
+        
+        <a href="/categories/data-technology">Data Technology</a>&nbsp;&nbsp;
         
     
     <br />
     Tags: 
     
         
-        <a href="/tags/tag-3">tag 3</a>&nbsp;&nbsp;
+        <a href="/tags/yugabytedb">YugabyteDB</a>&nbsp;&nbsp;
         
-        <a href="/tags/tag-5">tag 5&#39;</a>&nbsp;&nbsp;
+        <a href="/tags/python">Python</a>&nbsp;&nbsp;
         
     
     <br />
-    Author:  | <time>January 13, 2023</time> | 
-        2  minutes reading time
+    Author:  | <time>January 18, 2023</time> | 
+        10  minutes reading time
        </p>
 
-      <div class="content"><h1 id="title-05">Title 05</h1>
-<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-<h2 id="subtitle-05---1">Subtitle 05 - 1</h2>
-<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &lsquo;Content here, content here&rsquo;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &rsquo;lorem ipsum&rsquo; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
-<h2 id="subtitle-05---2">Subtitle 05 - 2</h2>
-<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using &lsquo;Content here, content here&rsquo;, making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for &rsquo;lorem ipsum&rsquo; will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).</p>
+      <div class="content"><p>As a long time <a href="https://www.postgresql.org/">PostgreSQL</a> user, it&rsquo;s normal that <a href="https://www.yugabyte.com/">YugabyteDB</a> got my attention. It&rsquo;s a distributed SQL database which features-compatible with PostgreSQL so that I don&rsquo;t need to lose my investation. YugabyteDB reuses PostgreSQL&rsquo;s query layer, so I can use my development tools as usual. It gives me more since there is also Cassandra query layer. Using YugabyteDB I can reuse my SQL skill and development tools, enhanced with NOSQL data model (especially <strong>wide-column store</strong>), while I have NewSQL&rsquo;s resiliency, scalability, and high performance.</p>
+<p>In this article, I am going to setup YugabyteDB for local cluster, populate data, and access the data using Python3.</p>
+<h2 id="install-and-configure-yugabytedb">Install and Configure YugabyteDB</h2>
+<p>Installation is very easy and straightforward. No source code compilation (well, unless you really want to dig that deep). Just <a href="https://download.yugabyte.com/local">download</a> YugabyteDB, extract, then execute <code>bin/post-install.sh</code>. When this step has finished, make sure that <code>path/to/extracted/yugabytedb/bin</code> is in the $PATH. Here&rsquo;s what I did:</p>
+<p><strong>Fish Shell</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ set -x path/to/extracted/yugabytedb/bin $PATH
+</span></span></code></pre></div><p><strong>Bash Shell</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ export PATH<span style="color:#f92672">=</span>path/to/extracted/yugabytedb/bin:$PATH
+</span></span></code></pre></div><blockquote>
+<p><strong>Note</strong>: to avoid writing the same thing over and over again, I usually put the <code>set</code> or <code>export</code> statements above inside a file and then whenever I want to use YugabyteDB, I just <code>source the-file.sh</code>.</p>
+</blockquote>
+<p>Next, we need to configure YugabyteDB. To configure YugabyteDB, see <a href="https://docs.yugabyte.com/latest/deploy/manual-deployment/system-config/">YugabyteDB configuration</a>. The documentation is complete but to have everything works, all I need to do is changing <code>/etc/security/limits.conf</code> to:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># /etc/security/limits.conf</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#Each line describes a limit for a user in the form:</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#&lt;domain&gt;      &lt;type&gt;  &lt;item&gt;         &lt;value&gt;</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>*                -       core            unlimited
+</span></span><span style="display:flex;"><span>*                -       data            unlimited
+</span></span><span style="display:flex;"><span>*                -       fsize           unlimited
+</span></span><span style="display:flex;"><span>*                -       sigpending      <span style="color:#ae81ff">119934</span>
+</span></span><span style="display:flex;"><span>*                -       memlock         <span style="color:#ae81ff">64</span>
+</span></span><span style="display:flex;"><span>*                -       rss             unlimited
+</span></span><span style="display:flex;"><span>*                -       nofile          <span style="color:#ae81ff">1048576</span>
+</span></span><span style="display:flex;"><span>*                -       msgqueue        <span style="color:#ae81ff">819200</span>
+</span></span><span style="display:flex;"><span>*                -       stack           <span style="color:#ae81ff">8192</span>
+</span></span><span style="display:flex;"><span>*                -       cpu             unlimited
+</span></span><span style="display:flex;"><span>*                -       nproc           <span style="color:#ae81ff">12000</span>
+</span></span><span style="display:flex;"><span>*                -       locks           unlimited
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># End of file</span>
+</span></span></code></pre></div><p>Depends on your situation, maybe you need to restart or just logout-login back.</p>
+<p>All data, logs, configurations, etc for YugabyteDB reside in <code>$HOME/var/</code>. Do check <code>$HOME/var/conf/yugabytedb.conf</code> for more configuration:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">{</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;tserver_webserver_port&#34;</span>: 9000, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;master_rpc_port&#34;</span>: 7100, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;universe_uuid&#34;</span>: <span style="color:#e6db74">&#34;dabc3d28-6982-4585-8b10-5faa7352da02&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;webserver_port&#34;</span>: 7200, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;ysql_enable_auth&#34;</span>: false, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;cluster_member&#34;</span>: true, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;ycql_port&#34;</span>: 9042, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;data_dir&#34;</span>: <span style="color:#e6db74">&#34;/home/bpdp/var/data&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;tserver_uuid&#34;</span>: <span style="color:#e6db74">&#34;71ad70b8eef149ae945842572e0fff75&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;use_cassandra_authentication&#34;</span>: false, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;log_dir&#34;</span>: <span style="color:#e6db74">&#34;/home/bpdp/var/logs&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;polling_interval&#34;</span>: <span style="color:#e6db74">&#34;5&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;listen&#34;</span>: <span style="color:#e6db74">&#34;0.0.0.0&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;callhome&#34;</span>: true, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;master_webserver_port&#34;</span>: 7000, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;master_uuid&#34;</span>: <span style="color:#e6db74">&#34;1ef618e573a04e1d835f4ed4364825d7&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;master_flags&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;node_uuid&#34;</span>: <span style="color:#e6db74">&#34;6ae31951-7199-4c22-b30b-e8f235cef7db&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;join&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;ysql_port&#34;</span>: 5433, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;tserver_flags&#34;</span>: <span style="color:#e6db74">&#34;&#34;</span>, 
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;tserver_rpc_port&#34;</span>: <span style="color:#ae81ff">9100</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>                                                          
+</span></span></code></pre></div><blockquote>
+<p><strong>Note</strong>: PostgreSQL usually uses port 5432, but YugabyteDB default port is 5433. Pay attention to this since we are going to use this when we write our code.</p>
+</blockquote>
+<p>So many things we can do with YugabyteDB, but for this article, I will concentrate more on Python app development. Therefore, it&rsquo;s enough now to have local cluster. Let&rsquo;s set it up!.</p>
+<p>Let&rsquo;s run YugabyteDB:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yugabyted start
+</span></span><span style="display:flex;"><span>Starting yugabyted...
+</span></span><span style="display:flex;"><span>✅ System checks           
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------------------------------------------+
+</span></span><span style="display:flex;"><span>|                                            yugabyted                                             |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------------------------------------------+
+</span></span><span style="display:flex;"><span>| Status              : Running. Leader Master is present                                          |
+</span></span><span style="display:flex;"><span>| Web console         : http://127.0.0.1:7000                                                      |
+</span></span><span style="display:flex;"><span>| JDBC                : jdbc:postgresql://127.0.0.1:5433/yugabyte?user<span style="color:#f92672">=</span>yugabyte&amp;password<span style="color:#f92672">=</span>yugabyte  |
+</span></span><span style="display:flex;"><span>| YSQL                : bin/ysqlsh   -U yugabyte -d yugabyte                                       |
+</span></span><span style="display:flex;"><span>| YCQL                : bin/ycqlsh   -u cassandra                                                  |
+</span></span><span style="display:flex;"><span>| Data Dir            : /home/bpdp/var/data                                                        |
+</span></span><span style="display:flex;"><span>| Log Dir             : /home/bpdp/var/logs                                                        |
+</span></span><span style="display:flex;"><span>| Universe UUID       : dabc3d28-6982-4585-8b10-5faa7352da02                                       |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------------------------------------------+
+</span></span><span style="display:flex;"><span>🚀 yugabyted started successfully! To load a sample dataset, try <span style="color:#e6db74">&#39;yugabyted demo&#39;</span>.
+</span></span><span style="display:flex;"><span>🎉 Join us on Slack at https://www.yugabyte.com/slack
+</span></span><span style="display:flex;"><span>👕 Claim your free t-shirt at https://www.yugabyte.com/community-rewards/
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Check the status:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yugabyted status
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------------------------------------------+
+</span></span><span style="display:flex;"><span>|                                            yugabyted                                             |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------------------------------------------+
+</span></span><span style="display:flex;"><span>| Status              : Running. Leader Master is present                                          |
+</span></span><span style="display:flex;"><span>| Web console         : http://127.0.0.1:7000                                                      |
+</span></span><span style="display:flex;"><span>| JDBC                : jdbc:postgresql://127.0.0.1:5433/yugabyte?user<span style="color:#f92672">=</span>yugabyte&amp;password<span style="color:#f92672">=</span>yugabyte  |
+</span></span><span style="display:flex;"><span>| YSQL                : bin/ysqlsh   -U yugabyte -d yugabyte                                       |
+</span></span><span style="display:flex;"><span>| YCQL                : bin/ycqlsh   -u cassandra                                                  |
+</span></span><span style="display:flex;"><span>| Data Dir            : /home/bpdp/var/data                                                        |
+</span></span><span style="display:flex;"><span>| Log Dir             : /home/bpdp/var/logs                                                        |
+</span></span><span style="display:flex;"><span>| Universe UUID       : dabc3d28-6982-4585-8b10-5faa7352da02                                       |
+</span></span><span style="display:flex;"><span>+--------------------------------------------------------------------------------------------------+
+</span></span></code></pre></div><p>Just in case you need to shutdown YugabyteDB:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yugabyted stop
+</span></span><span style="display:flex;"><span>Stopped yugabyted using config /home/bpdp/var/conf/yugabyted.conf.
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Ok, now let YugabyteDB runs. We will use that for later processes.</p>
+<h2 id="data-preparation">Data Preparation</h2>
+<p>Now, it gets more interesting. Using one YugabyteDB server instance, we can use both SQL and Cassandra data model. Let&rsquo;s aggregate some data into PostgreSQL layer and Cassandra layer. For this purpose, we still use default user and password. Later on, you can manage the security side of YugabyteDB.</p>
+<blockquote>
+<p><strong>Note</strong>: default username and password for PostgreSQL layer: <strong>yugabyte:yugabyte</strong>, while for Cassandra: <strong>cassandra:cassandra</strong>.</p>
+</blockquote>
+<h3 id="sql-data">SQL Data</h3>
+<p>YugabyteDB provides <a href="https://docs.yugabyte.com/latest/sample-data/">sample datasets</a> for SQL data. We are going to use <a href="https://docs.yugabyte.com/latest/sample-data/northwind/">Northwind Traders Database</a>. Get the <code>DDL</code> and <code>Data</code> scripts from the Northwind sample datasets URL. Follow this sceen dump to prepare the database, tables, and populate the data. The <strong><!-- raw HTML omitted -->#</strong> pompt is the place to write command.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ysqlsh -U yugabyte
+</span></span><span style="display:flex;"><span>ysqlsh <span style="color:#f92672">(</span>11.2-YB-2.7.2.0-b0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span> <span style="color:#66d9ef">for</span> help.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>yugabyte<span style="color:#f92672">=</span><span style="color:#75715e"># create database northwind;</span>
+</span></span><span style="display:flex;"><span>CREATE DATABASE
+</span></span><span style="display:flex;"><span>yugabyte<span style="color:#f92672">=</span><span style="color:#75715e"># \l</span>
+</span></span><span style="display:flex;"><span>                                   List of databases
+</span></span><span style="display:flex;"><span>      Name       |  Owner   | Encoding | Collate |    Ctype    |   Access privileges   
+</span></span><span style="display:flex;"><span>-----------------+----------+----------+---------+-------------+-----------------------
+</span></span><span style="display:flex;"><span> northwind       | yugabyte | UTF8     | C       | en_US.UTF-8 | 
+</span></span><span style="display:flex;"><span> postgres        | postgres | UTF8     | C       | en_US.UTF-8 | 
+</span></span><span style="display:flex;"><span> system_platform | postgres | UTF8     | C       | en_US.UTF-8 | 
+</span></span><span style="display:flex;"><span> template0       | postgres | UTF8     | C       | en_US.UTF-8 | <span style="color:#f92672">=</span>c/postgres          +
+</span></span><span style="display:flex;"><span>                 |          |          |         |             | postgres<span style="color:#f92672">=</span>CTc/postgres
+</span></span><span style="display:flex;"><span> template1       | postgres | UTF8     | C       | en_US.UTF-8 | <span style="color:#f92672">=</span>c/postgres          +
+</span></span><span style="display:flex;"><span>                 |          |          |         |             | postgres<span style="color:#f92672">=</span>CTc/postgres
+</span></span><span style="display:flex;"><span> yugabyte        | postgres | UTF8     | C       | en_US.UTF-8 | 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#ae81ff">6</span> rows<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>yugabyte<span style="color:#f92672">=</span><span style="color:#75715e"># \c northwind</span>
+</span></span><span style="display:flex;"><span>You are now connected to database <span style="color:#e6db74">&#34;northwind&#34;</span> as user <span style="color:#e6db74">&#34;yugabyte&#34;</span>.
+</span></span><span style="display:flex;"><span>northwind<span style="color:#f92672">=</span><span style="color:#75715e"># \i northwind_ddl.sql </span>
+</span></span><span style="display:flex;"><span>SET
+</span></span><span style="display:flex;"><span>SET
+</span></span><span style="display:flex;"><span>SET
+</span></span><span style="display:flex;"><span>SET
+</span></span><span style="display:flex;"><span>SET
+</span></span><span style="display:flex;"><span>SET
+</span></span><span style="display:flex;"><span>SET
+</span></span><span style="display:flex;"><span>SET
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>DROP TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>CREATE TABLE
+</span></span><span style="display:flex;"><span>northwind<span style="color:#f92672">=</span><span style="color:#75715e"># \d</span>
+</span></span><span style="display:flex;"><span>                 List of relations
+</span></span><span style="display:flex;"><span> Schema |          Name          | Type  |  Owner   
+</span></span><span style="display:flex;"><span>--------+------------------------+-------+----------
+</span></span><span style="display:flex;"><span> public | categories             | table | yugabyte
+</span></span><span style="display:flex;"><span> public | customer_customer_demo | table | yugabyte
+</span></span><span style="display:flex;"><span> public | customer_demographics  | table | yugabyte
+</span></span><span style="display:flex;"><span> public | customers              | table | yugabyte
+</span></span><span style="display:flex;"><span> public | employee_territories   | table | yugabyte
+</span></span><span style="display:flex;"><span> public | employees              | table | yugabyte
+</span></span><span style="display:flex;"><span> public | order_details          | table | yugabyte
+</span></span><span style="display:flex;"><span> public | orders                 | table | yugabyte
+</span></span><span style="display:flex;"><span> public | products               | table | yugabyte
+</span></span><span style="display:flex;"><span> public | region                 | table | yugabyte
+</span></span><span style="display:flex;"><span> public | shippers               | table | yugabyte
+</span></span><span style="display:flex;"><span> public | suppliers              | table | yugabyte
+</span></span><span style="display:flex;"><span> public | territories            | table | yugabyte
+</span></span><span style="display:flex;"><span> public | us_states              | table | yugabyte
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#ae81ff">14</span> rows<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>northwind<span style="color:#f92672">=</span><span style="color:#75715e"># \i northwind_data.sql</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>INSERT <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>INSERT <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>INSERT <span style="color:#ae81ff">0</span> <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>northwind<span style="color:#f92672">=</span><span style="color:#75715e"># select * from products;</span>
+</span></span><span style="display:flex;"><span> product_id |           product_name           | supplier_id | category_id |  quantity_per_unit   | unit_price | units_in_s
+</span></span><span style="display:flex;"><span>tock | units_on_order | reorder_level | discontinued 
+</span></span><span style="display:flex;"><span>------------+----------------------------------+-------------+-------------+----------------------+------------+-----------
+</span></span><span style="display:flex;"><span>-----+----------------+---------------+--------------
+</span></span><span style="display:flex;"><span>          <span style="color:#ae81ff">4</span> | Chef Anton<span style="color:#960050;background-color:#1e0010">&#39;</span>s Cajun Seasoning     |           <span style="color:#ae81ff">2</span> |           <span style="color:#ae81ff">2</span> | <span style="color:#ae81ff">48</span> - <span style="color:#ae81ff">6</span> oz jars       |         <span style="color:#ae81ff">22</span> |           
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">53</span> |              <span style="color:#ae81ff">0</span> |             <span style="color:#ae81ff">0</span> |            <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">46</span> | Spegesild                        |          <span style="color:#ae81ff">21</span> |           <span style="color:#ae81ff">8</span> | <span style="color:#ae81ff">4</span> - <span style="color:#ae81ff">450</span> g glasses    |         <span style="color:#ae81ff">12</span> |           
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">95</span> |              <span style="color:#ae81ff">0</span> |             <span style="color:#ae81ff">0</span> |            <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">73</span> | Röd Kaviar                       |          <span style="color:#ae81ff">17</span> |           <span style="color:#ae81ff">8</span> | <span style="color:#ae81ff">24</span> - <span style="color:#ae81ff">150</span> g jars      |         <span style="color:#ae81ff">15</span> |           
+</span></span><span style="display:flex;"><span> <span style="color:#ae81ff">101</span> |              <span style="color:#ae81ff">0</span> |             <span style="color:#ae81ff">5</span> |            <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">29</span> | Thüringer Rostbratwurst          |          <span style="color:#ae81ff">12</span> |           <span style="color:#ae81ff">6</span> | <span style="color:#ae81ff">50</span> bags x <span style="color:#ae81ff">30</span> sausgs. |     123.79 |           
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">0</span> |              <span style="color:#ae81ff">0</span> |             <span style="color:#ae81ff">0</span> |            <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">70</span> | Outback Lager                    |           <span style="color:#ae81ff">7</span> |           <span style="color:#ae81ff">1</span> | <span style="color:#ae81ff">24</span> - <span style="color:#ae81ff">355</span> ml bottles  |         <span style="color:#ae81ff">15</span> |           
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">15</span> |             <span style="color:#ae81ff">10</span> |            <span style="color:#ae81ff">30</span> |            <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">25</span> | NuNuCa Nuß-Nougat-Creme          |          <span style="color:#ae81ff">11</span> |           <span style="color:#ae81ff">3</span> | <span style="color:#ae81ff">20</span> - <span style="color:#ae81ff">450</span> g glasses   |         <span style="color:#ae81ff">14</span> |           
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">76</span> |              <span style="color:#ae81ff">0</span> |            <span style="color:#ae81ff">30</span> |            <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">54</span> | Tourtière                        |          <span style="color:#ae81ff">25</span> |           <span style="color:#ae81ff">6</span> | <span style="color:#ae81ff">16</span> pies              |       7.45 |           
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">21</span> |              <span style="color:#ae81ff">0</span> |            <span style="color:#ae81ff">10</span> |            <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">17</span> | Alice Mutton                     |           <span style="color:#ae81ff">7</span> |           <span style="color:#ae81ff">6</span> | <span style="color:#ae81ff">20</span> - <span style="color:#ae81ff">1</span> kg tins       |         <span style="color:#ae81ff">39</span> |           
+</span></span><span style="display:flex;"><span>   <span style="color:#ae81ff">0</span> |              <span style="color:#ae81ff">0</span> |             <span style="color:#ae81ff">0</span> |            <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>         <span style="color:#ae81ff">59</span> | Raclette Courdavault             |          <span style="color:#ae81ff">28</span> |           <span style="color:#ae81ff">4</span> | <span style="color:#ae81ff">5</span> kg pkg.            |         <span style="color:#ae81ff">55</span> |           
+</span></span><span style="display:flex;"><span>  <span style="color:#ae81ff">79</span> |              <span style="color:#ae81ff">0</span> |             <span style="color:#ae81ff">0</span> |            <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#ae81ff">77</span> rows<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>northwind<span style="color:#f92672">=</span><span style="color:#75715e">#  </span>
+</span></span></code></pre></div><p>Finish with SQL data, it&rsquo;s about the time to populate column-wide - Cassandra data.</p>
+<h3 id="nosql-column-wide-data---apache-cassandra">NOSQL Column-wide Data - Apache Cassandra</h3>
+<p>We will use a simple keyspace: one keyspace, consists of one table. Create a CQL script file (here, the file name is <code>zimera-employees.cql</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> KEYSPACE zimera
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">WITH</span> replication <span style="color:#f92672">=</span> <span style="color:#960050;background-color:#1e0010">{</span><span style="color:#e6db74">&#39;class&#39;</span>:<span style="color:#e6db74">&#39;SimpleStrategy&#39;</span>, <span style="color:#e6db74">&#39;replication_factor&#39;</span> : <span style="color:#ae81ff">3</span><span style="color:#960050;background-color:#1e0010">}</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>USE zimera;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> employees(
+</span></span><span style="display:flex;"><span>   e_id int <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span>,
+</span></span><span style="display:flex;"><span>   e_fullname text,
+</span></span><span style="display:flex;"><span>   e_address text,
+</span></span><span style="display:flex;"><span>   e_dept text,
+</span></span><span style="display:flex;"><span>   e_role text
+</span></span><span style="display:flex;"><span>   );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">INSERT</span> <span style="color:#66d9ef">INTO</span> employees (e_id, e_fullname, e_address, e_dept, e_role) <span style="color:#66d9ef">VALUES</span>(<span style="color:#ae81ff">1</span>,<span style="color:#e6db74">&#39;Zaky A. Aditya&#39;</span>, <span style="color:#e6db74">&#39;Dusun Medelan, RT 01, Umbulmartani, Ngemplak, Sleman, DIY, Indonesia&#39;</span>, <span style="color:#e6db74">&#39;Information Technology&#39;</span>, <span style="color:#e6db74">&#39;Machine Learning Developer&#39;</span>);
+</span></span></code></pre></div><p>Execute the script:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ycqlsh -f zimera-employees.cql 
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Check whether succeed or not:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ycqlsh -u cassandra
+</span></span><span style="display:flex;"><span>Password: 
+</span></span><span style="display:flex;"><span>Connected to local cluster at 127.0.0.1:9042.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>ycqlsh 5.0.1 | Cassandra 3.9-SNAPSHOT | CQL spec 3.4.2 | Native protocol v4<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Use HELP <span style="color:#66d9ef">for</span> help.
+</span></span><span style="display:flex;"><span>cassandra@ycqlsh&gt; use zimera;
+</span></span><span style="display:flex;"><span>cassandra@ycqlsh:zimera&gt; <span style="color:#66d9ef">select</span> * from employees;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> e_id | e_fullname     | e_address                                                            | e_dept                 | e_role
+</span></span><span style="display:flex;"><span>------+----------------+----------------------------------------------------------------------+------------------------+----------------------------
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span> | Zaky A. Aditya | Dusun Medelan, RT 01, Umbulmartani, Ngemplak, Sleman, DIY, Indonesia | Information Technology | Machine Learning Developer
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> rows<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>cassandra@ycqlsh:zimera&gt; 
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="python---drivers">Python - Drivers</h2>
+<p>Since we are going to use both PostgreSQL and Apache Cassandra data model, we need to install those two drivers: <a href="https://www.psycopg.org/">psycopg2</a> for PostgreSQL and <a href="https://github.com/datastax/python-driver">Python Driver for Apache Cassandra</a>.</p>
+<blockquote>
+<p><strong>Note</strong>: currently, <code>psycopg</code> is still developing <a href="https://www.psycopg.org/psycopg3/">psycopg3</a>. We do not use psycopg3 since it is still in early development stage, but once <code>psycopg3</code> is released, there should be easy to migrate.</p>
+</blockquote>
+<p><strong>Install Cassandra Driver</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ conda install cassandra-driver
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>  added / updated specs:
+</span></span><span style="display:flex;"><span>    - cassandra-driver
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The following packages will be downloaded:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    package                    |            build
+</span></span><span style="display:flex;"><span>    ---------------------------|-----------------
+</span></span><span style="display:flex;"><span>    cassandra-driver-3.25.0    |   py39h27cfd23_0         3.0 MB
+</span></span><span style="display:flex;"><span>    ------------------------------------------------------------
+</span></span><span style="display:flex;"><span>                                           Total:         3.0 MB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The following NEW packages will be INSTALLED:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  blas               pkgs/main/linux-64::blas-1.0-mkl
+</span></span><span style="display:flex;"><span>  cassandra-driver   pkgs/main/linux-64::cassandra-driver-3.25.0-py39h27cfd23_0
+</span></span><span style="display:flex;"><span>  intel-openmp       pkgs/main/linux-64::intel-openmp-2021.3.0-h06a4308_3350
+</span></span><span style="display:flex;"><span>  libev              pkgs/main/linux-64::libev-4.33-h7b6447c_0
+</span></span><span style="display:flex;"><span>  mkl                pkgs/main/linux-64::mkl-2021.3.0-h06a4308_520
+</span></span><span style="display:flex;"><span>  mkl-service        pkgs/main/linux-64::mkl-service-2.4.0-py39h7f8727e_0
+</span></span><span style="display:flex;"><span>  mkl_fft            pkgs/main/linux-64::mkl_fft-1.3.0-py39h42c9631_2
+</span></span><span style="display:flex;"><span>  mkl_random         pkgs/main/linux-64::mkl_random-1.2.2-py39h51133e4_0
+</span></span><span style="display:flex;"><span>  numpy              pkgs/main/linux-64::numpy-1.20.3-py39hf144106_0
+</span></span><span style="display:flex;"><span>  numpy-base         pkgs/main/linux-64::numpy-base-1.20.3-py39h74d4b33_0
+</span></span><span style="display:flex;"><span>  six                pkgs/main/noarch::six-1.16.0-pyhd3eb1b0_0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Proceed <span style="color:#f92672">([</span>y<span style="color:#f92672">]</span>/n<span style="color:#f92672">)</span>? y
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p><strong>Install PostgreSQL Driver</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ conda install psycopg2                                                              ...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>  added / updated specs:
+</span></span><span style="display:flex;"><span>    - psycopg2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The following NEW packages will be INSTALLED:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  krb5               pkgs/main/linux-64::krb5-1.19.2-hac12032_0
+</span></span><span style="display:flex;"><span>  libedit            pkgs/main/linux-64::libedit-3.1.20210714-h7f8727e_0
+</span></span><span style="display:flex;"><span>  libpq              pkgs/main/linux-64::libpq-12.2-h553bfba_1
+</span></span><span style="display:flex;"><span>  psycopg2           pkgs/main/linux-64::psycopg2-2.8.6-py39h3c74f83_1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Proceed <span style="color:#f92672">([</span>y<span style="color:#f92672">]</span>/n<span style="color:#f92672">)</span>? y
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><blockquote>
+<p><strong>Note</strong>: I use <code>conda</code> for package management, but you don&rsquo;t need to. You can also use <code>pip</code>, in this case just <code>pip install psycopg2</code> and <code>pip install cassandra-driver</code>.</p>
+</blockquote>
+<h2 id="lets-code">Let&rsquo;s Code!</h2>
+<h3 id="accessing-sql-data">Accessing SQL Data</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># code-sql.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> psycopg2
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>conn <span style="color:#f92672">=</span> psycopg2<span style="color:#f92672">.</span>connect(
+</span></span><span style="display:flex;"><span>    host<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;localhost&#34;</span>,
+</span></span><span style="display:flex;"><span>    database<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;northwind&#34;</span>,
+</span></span><span style="display:flex;"><span>    user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yugabyte&#34;</span>,
+</span></span><span style="display:flex;"><span>    port<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5433&#34;</span>,
+</span></span><span style="display:flex;"><span>    password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yugabyte&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Open a cursor to perform database operations</span>
+</span></span><span style="display:flex;"><span>cur <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>cursor()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Execute a query</span>
+</span></span><span style="display:flex;"><span>cur<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#34;SELECT * FROM products&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve query results</span>
+</span></span><span style="display:flex;"><span>records <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>fetchall()
+</span></span><span style="display:flex;"><span>print(records[<span style="color:#ae81ff">0</span>])
+</span></span></code></pre></div><p>Results:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python code-sql.py
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>4, <span style="color:#e6db74">&#34;Chef Anton&#39;s Cajun Seasoning&#34;</span>, 2, 2, <span style="color:#e6db74">&#39;48 - 6 oz jars&#39;</span>, 22.0, 53, 0, 0, 0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h3 id="accessing-cassandra-data-model">Accessing Cassandra Data Model</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> cassandra.cluster <span style="color:#f92672">import</span> Cluster
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cluster <span style="color:#f92672">=</span> Cluster()
+</span></span><span style="display:flex;"><span>session <span style="color:#f92672">=</span> cluster<span style="color:#f92672">.</span>connect(<span style="color:#e6db74">&#39;zimera&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#39;SELECT e_fullname, e_address, e_dept, e_role FROM employees&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> rows:
+</span></span><span style="display:flex;"><span>    print(row<span style="color:#f92672">.</span>e_fullname, row<span style="color:#f92672">.</span>e_address, row<span style="color:#f92672">.</span>e_dept, row<span style="color:#f92672">.</span>e_role)
+</span></span></code></pre></div><p>Results:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python code-cassandra.py 
+</span></span><span style="display:flex;"><span>Zaky A. Aditya Dusun Medelan, RT 01, Umbulmartani, Ngemplak, Sleman, DIY, Indonesia Information Technology Machine Learning Developer
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>What if we want to use both data model in one python source code? Here you go:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># code-all.py</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> psycopg2
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> cassandra.cluster <span style="color:#f92672">import</span> Cluster
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>conn <span style="color:#f92672">=</span> psycopg2<span style="color:#f92672">.</span>connect(
+</span></span><span style="display:flex;"><span>    host<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;localhost&#34;</span>,
+</span></span><span style="display:flex;"><span>    database<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;northwind&#34;</span>,
+</span></span><span style="display:flex;"><span>    user<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yugabyte&#34;</span>,
+</span></span><span style="display:flex;"><span>    port<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5433&#34;</span>,
+</span></span><span style="display:flex;"><span>    password<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;yugabyte&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Open a cursor to perform database operations</span>
+</span></span><span style="display:flex;"><span>cur <span style="color:#f92672">=</span> conn<span style="color:#f92672">.</span>cursor()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Execute a query</span>
+</span></span><span style="display:flex;"><span>cur<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#34;SELECT * FROM products&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Retrieve query results</span>
+</span></span><span style="display:flex;"><span>records <span style="color:#f92672">=</span> cur<span style="color:#f92672">.</span>fetchall()
+</span></span><span style="display:flex;"><span>print(records[<span style="color:#ae81ff">0</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>cluster <span style="color:#f92672">=</span> Cluster()
+</span></span><span style="display:flex;"><span>session <span style="color:#f92672">=</span> cluster<span style="color:#f92672">.</span>connect(<span style="color:#e6db74">&#39;zimera&#39;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>rows <span style="color:#f92672">=</span> session<span style="color:#f92672">.</span>execute(<span style="color:#e6db74">&#39;SELECT e_fullname, e_address, e_dept, e_role FROM employees&#39;</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> row <span style="color:#f92672">in</span> rows:
+</span></span><span style="display:flex;"><span>    print(row<span style="color:#f92672">.</span>e_fullname, row<span style="color:#f92672">.</span>e_address, row<span style="color:#f92672">.</span>e_dept, row<span style="color:#f92672">.</span>e_role)
+</span></span></code></pre></div><p>Results:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python code-all.py
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span>4, <span style="color:#e6db74">&#34;Chef Anton&#39;s Cajun Seasoning&#34;</span>, 2, 2, <span style="color:#e6db74">&#39;48 - 6 oz jars&#39;</span>, 22.0, 53, 0, 0, 0<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Zaky A. Aditya Dusun Medelan, RT 01, Umbulmartani, Ngemplak, Sleman, DIY, Indonesia Information Technology Machine Learning Developer
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Aren&rsquo;t they cool? Happy coding!</p>
 </div>
     </div>
   </div>

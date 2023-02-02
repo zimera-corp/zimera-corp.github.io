@@ -6,29 +6,29 @@
     <description>Recent content in Categories on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Kategori 2</title>
-      <link>/categories/kategori-2/</link>
-      <pubDate>Fri, 13 Jan 2023 10:17:08 +0700</pubDate>
+      <title>Programming</title>
+      <link>/categories/programming/</link>
+      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       
-      <guid>/categories/kategori-2/</guid>
+      <guid>/categories/programming/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Kategori 1</title>
-      <link>/categories/kategori-1/</link>
-      <pubDate>Fri, 13 Jan 2023 10:15:26 +0700</pubDate>
+      <title>Data Technology</title>
+      <link>/categories/data-technology/</link>
+      <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
       
-      <guid>/categories/kategori-1/</guid>
+      <guid>/categories/data-technology/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Software development</title>
+      <title>Software Development</title>
       <link>/categories/software-development/</link>
-      <pubDate>Fri, 13 Jan 2023 10:11:27 +0700</pubDate>
+      <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
       
       <guid>/categories/software-development/</guid>
       <description></description>

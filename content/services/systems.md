@@ -1,7 +1,7 @@
 ---
 title: "Systems"
 date: 2023-01-31T12:59:06+07:00
-featured: true
+featured: false
 draft: false
 weight: 100
 ---

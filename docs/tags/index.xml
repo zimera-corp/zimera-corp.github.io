@@ -6,58 +6,103 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 13 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>tag 2</title>
-      <link>/tags/tag-2/</link>
-      <pubDate>Fri, 13 Jan 2023 10:17:08 +0700</pubDate>
+      <title>GraalVM</title>
+      <link>/tags/graalvm/</link>
+      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       
-      <guid>/tags/tag-2/</guid>
+      <guid>/tags/graalvm/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tag 4</title>
-      <link>/tags/tag-4/</link>
-      <pubDate>Fri, 13 Jan 2023 10:17:08 +0700</pubDate>
+      <title>Polyglot</title>
+      <link>/tags/polyglot/</link>
+      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       
-      <guid>/tags/tag-4/</guid>
+      <guid>/tags/polyglot/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tag 3</title>
-      <link>/tags/tag-3/</link>
-      <pubDate>Fri, 13 Jan 2023 10:16:30 +0700</pubDate>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       
-      <guid>/tags/tag-3/</guid>
+      <guid>/tags/python/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tag 5&#39;</title>
-      <link>/tags/tag-5/</link>
-      <pubDate>Fri, 13 Jan 2023 10:16:30 +0700</pubDate>
+      <title>R</title>
+      <link>/tags/r/</link>
+      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       
-      <guid>/tags/tag-5/</guid>
+      <guid>/tags/r/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>tag 1</title>
-      <link>/tags/tag-1/</link>
-      <pubDate>Fri, 13 Jan 2023 10:14:33 +0700</pubDate>
+      <title>Terminology</title>
+      <link>/tags/terminology/</link>
+      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       
-      <guid>/tags/tag-1/</guid>
+      <guid>/tags/terminology/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>YugabyteDB</title>
+      <link>/tags/yugabytedb/</link>
+      <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
+      
+      <guid>/tags/yugabytedb/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Idiomatic</title>
+      <link>/tags/idiomatic/</link>
+      <pubDate>Mon, 16 Jan 2023 10:15:26 +0700</pubDate>
+      
+      <guid>/tags/idiomatic/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Career</title>
       <link>/tags/career/</link>
-      <pubDate>Fri, 13 Jan 2023 10:11:27 +0700</pubDate>
+      <pubDate>Sun, 15 Jan 2023 10:14:33 +0700</pubDate>
       
       <guid>/tags/career/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Management</title>
+      <link>/tags/management/</link>
+      <pubDate>Sun, 15 Jan 2023 10:14:33 +0700</pubDate>
+      
+      <guid>/tags/management/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Agile</title>
+      <link>/tags/agile/</link>
+      <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
+      
+      <guid>/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Methodology</title>
+      <link>/tags/methodology/</link>
+      <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
+      
+      <guid>/tags/methodology/</guid>
       <description></description>
     </item>
     

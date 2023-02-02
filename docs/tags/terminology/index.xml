@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Terminology on Zimera Corporation</title>
+    <link>/tags/terminology/</link>
+    <description>Recent content in Terminology on Zimera Corporation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 23 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/tags/terminology/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Polyglot Programming dan GraalVM</title>
+      <link>/posts/06/</link>
+      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
+      
+      <guid>/posts/06/</guid>
+      <description>Pernahkah mendengar istilah polyglot programming? Istilah ini sudah menjadi istilah yang umum dan barangkali banyak didengar oleh para developer yang sehari-hari memang berkutat dengan bahasa pemrograman dan peranti pengembangan. Polyglot programming merupakan penggunaan lebih dari satu bahasa pemrograman untuk menyelesaikan suatu masalah pemrograman. Kategori polyglot programming antara lain adalah:
+Penggunaan binding yang dibuat menggunakan suatu bahasa pemrograman tertentu (biasanya bahasa pemrograman aras sistem — atau aras rendah seperti C/C++, Assembly, Rust) ke suatu bahasa yang berada pada aras tinggi seperti Ruby, Python, dan lain-lain.</description>
+    </item>
+    
+    <item>
+      <title>Idiomatic Programming</title>
+      <link>/posts/04/</link>
+      <pubDate>Mon, 16 Jan 2023 10:15:26 +0700</pubDate>
+      
+      <guid>/posts/04/</guid>
+      <description>Salah satu hal yang menghambat orang untuk belajar adalah banyaknya istilah-istilah yang membingungkan. Semua domain pengetahuan biasanya memang mempunyai istilah-istilah sendiri dan meskipun ada satu istilah yang muncul di lebih dari satu domain pengetahuan, pengertiannya seringkali tidak sama sehingga pemahaman tentang istilah bersifat context-dependent (harus dilihat konteksnya).
+Mempelajari pemrograman juga kurang lebih harus memahami berbagai macam istilah yang muncul. Kali ini saya akan menjelaskan sedikit tentang istilah idiomatic programming. Jika anda sering membaca mailing list, newsgroup, atau berbagai macam resources di Internet, terutama yang terkait dengan pemrograman, barangkali akan sering mendengar istilah-istilah berikut:</description>
+    </item>
+    
+  </channel>
+</rss>

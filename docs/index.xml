@@ -45,48 +45,52 @@ syem tenan</description>
     </item>
     
     <item>
-      <title>06</title>
+      <title>Polyglot Programming dan GraalVM</title>
       <link>/posts/06/</link>
-      <pubDate>Fri, 13 Jan 2023 10:17:08 +0700</pubDate>
+      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       
       <guid>/posts/06/</guid>
-      <description>Title 06 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+      <description>Pernahkah mendengar istilah polyglot programming? Istilah ini sudah menjadi istilah yang umum dan barangkali banyak didengar oleh para developer yang sehari-hari memang berkutat dengan bahasa pemrograman dan peranti pengembangan. Polyglot programming merupakan penggunaan lebih dari satu bahasa pemrograman untuk menyelesaikan suatu masalah pemrograman. Kategori polyglot programming antara lain adalah:
+Penggunaan binding yang dibuat menggunakan suatu bahasa pemrograman tertentu (biasanya bahasa pemrograman aras sistem — atau aras rendah seperti C/C++, Assembly, Rust) ke suatu bahasa yang berada pada aras tinggi seperti Ruby, Python, dan lain-lain.</description>
     </item>
     
     <item>
-      <title>05</title>
+      <title>Using YugabyteDB in Python App Development</title>
       <link>/posts/05/</link>
-      <pubDate>Fri, 13 Jan 2023 10:16:30 +0700</pubDate>
+      <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
       
       <guid>/posts/05/</guid>
-      <description>Title 05 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+      <description>As a long time PostgreSQL user, it&amp;rsquo;s normal that YugabyteDB got my attention. It&amp;rsquo;s a distributed SQL database which features-compatible with PostgreSQL so that I don&amp;rsquo;t need to lose my investation. YugabyteDB reuses PostgreSQL&amp;rsquo;s query layer, so I can use my development tools as usual. It gives me more since there is also Cassandra query layer. Using YugabyteDB I can reuse my SQL skill and development tools, enhanced with NOSQL data model (especially wide-column store), while I have NewSQL&amp;rsquo;s resiliency, scalability, and high performance.</description>
     </item>
     
     <item>
-      <title>04</title>
+      <title>Idiomatic Programming</title>
       <link>/posts/04/</link>
-      <pubDate>Fri, 13 Jan 2023 10:15:26 +0700</pubDate>
+      <pubDate>Mon, 16 Jan 2023 10:15:26 +0700</pubDate>
       
       <guid>/posts/04/</guid>
-      <description>Title 04 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+      <description>Salah satu hal yang menghambat orang untuk belajar adalah banyaknya istilah-istilah yang membingungkan. Semua domain pengetahuan biasanya memang mempunyai istilah-istilah sendiri dan meskipun ada satu istilah yang muncul di lebih dari satu domain pengetahuan, pengertiannya seringkali tidak sama sehingga pemahaman tentang istilah bersifat context-dependent (harus dilihat konteksnya).
+Mempelajari pemrograman juga kurang lebih harus memahami berbagai macam istilah yang muncul. Kali ini saya akan menjelaskan sedikit tentang istilah idiomatic programming. Jika anda sering membaca mailing list, newsgroup, atau berbagai macam resources di Internet, terutama yang terkait dengan pemrograman, barangkali akan sering mendengar istilah-istilah berikut:</description>
     </item>
     
     <item>
-      <title>03</title>
+      <title>Managing a Software Development Team: Some Experiences</title>
       <link>/posts/03/</link>
-      <pubDate>Fri, 13 Jan 2023 10:14:33 +0700</pubDate>
+      <pubDate>Sun, 15 Jan 2023 10:14:33 +0700</pubDate>
       
       <guid>/posts/03/</guid>
-      <description>Title 03 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+      <description>Managing a software development team is never an easy task. It consists of 2 sides:
+technical things non-technical things. This task is often assigned to the project manager, VP Engineering, Software Development Manager, etc. To be succeed, one has to consider those 2 sides. In this article, I will ouline some of my experiences in managing a software development team. This list is not meant to be complete nor perfect. You may need more but at least you will be in the safety line level one if you do care with these issues.</description>
     </item>
     
     <item>
-      <title>02</title>
+      <title>Agile Development: Welcome Changing Requirements?</title>
       <link>/posts/02/</link>
-      <pubDate>Fri, 13 Jan 2023 10:13:33 +0700</pubDate>
+      <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
       
       <guid>/posts/02/</guid>
-      <description>Title 02 Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry&amp;rsquo;s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</description>
+      <description>If you ever being in a team which practices agile software development, you might already heard about how a software development team &amp;ldquo;welcome chnging requirements&amp;rdquo;. While it sounds great, I personally think, if this statement is not properly explained, the impact will be negative on the development team side. Now, let&amp;rsquo;s see the complete statement:
+Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</description>
     </item>
     
     <item>
