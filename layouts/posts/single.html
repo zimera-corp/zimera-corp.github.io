@@ -1,0 +1,33 @@
+{{ define "body_classes" }}page-default-single{{ end }}
+
+{{ define "main" }}
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">{{.Title}}</h1>
+
+    <p>Posted in: 
+    {{ with .Params.categories }}
+        {{range .}}
+        <a href="/categories/{{ . | urlize }}">{{ . }}</a>&nbsp;&nbsp;
+        {{end}}
+    {{ end }}
+    <br />
+    Tags: 
+    {{ with .Params.tags }}
+        {{range .}}
+        <a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;&nbsp;
+        {{end}}
+    {{ end }}
+    <br />
+    Author: {{ range .Param "authors" }}
+          {{ . }}
+	      {{ end }} | <time>{{ .PublishDate.Format "January 2, 2006" }}</time> | 
+        {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes reading time{{ end }}
+       </p>
+
+      <div class="content">{{.Content}}</div>
+    </div>
+  </div>
+</div>
+{{ end }}

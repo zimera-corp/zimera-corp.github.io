@@ -36,3 +36,120 @@ See [layouts/_default/list.html](layouts/_default/list.html) for definition. The
 ### Summary -> Number of Words Truncated
 
 See [layouts/_default/summary.html](layouts/_default/summary.html), it uses `truncate` function.
+
+### Tags and Categories
+
+1. Activate tags and categories inside `config.toml`:
+
+```toml
+[taxonomies]
+    category = "categories"
+    tag = "tags"
+```
+
+2. Prepare template. We just want to pust tags and categories in `/posts/`, so prepare these layouts:
+
+`layout/_default/taxonomy.html`
+
+```
+{{ define "main" }}
+  <div class="container">
+    <h1>All {{ .Type }}</h1>
+    <ul>
+      {{ range .Data.Pages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end }}
+```
+
+`layout/_default/term.html`
+
+```
+{{ define "main" }}
+  <div class="container">
+    <h1>All posts for {{ .Type | singularize }} "{{ .Title }}"</h1>
+    <ul>
+      {{ range .Data.Pages }}
+        <li>
+          <a href="{{ .Permalink }}">{{ .Title }}</a>
+        </li>
+      {{ end }}
+    </ul>
+  </div>
+{{ end}}
+```
+
+`layout/posts/summary.html`
+
+```
+<div class="summary">
+    <h2>
+      <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    </h2>
+
+    <p>Posted in: 
+    {{ with .Params.categories }}
+        {{range .}}
+        <a href="/categories/{{ . | urlize }}">{{ . }}</a>&nbsp;&nbsp;
+        {{end}}
+    {{ end }}
+    <br />
+    Tags: 
+    {{ with .Params.tags }}
+        {{range .}}
+        <a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;&nbsp;
+        {{end}}
+    {{ end }}
+    <br />
+    Author: {{ range .Param "authors" }}
+          {{ . }}
+	      {{ end }} | <time>{{ .PublishDate.Format "January 2, 2006" }}</time> | 
+        {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes reading time{{ end }}
+       </p>
+
+    {{ .Content | truncate 200 "…" }}
+</div>
+```
+
+We may also adjust `layout/posts/single.html` (the template which will be used to display the whole post) just like the above. Here's an example:
+
+```
+{{ define "body_classes" }}page-default-single{{ end }}
+
+{{ define "main" }}
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">{{.Title}}</h1>
+
+    <p>Posted in: 
+    {{ with .Params.categories }}
+        {{range .}}
+        <a href="/categories/{{ . | urlize }}">{{ . }}</a>&nbsp;&nbsp;
+        {{end}}
+    {{ end }}
+    <br />
+    Tags: 
+    {{ with .Params.tags }}
+        {{range .}}
+        <a href="/tags/{{ . | urlize }}">{{ . }}</a>&nbsp;&nbsp;
+        {{end}}
+    {{ end }}
+    <br />
+    Author: {{ range .Param "authors" }}
+          {{ . }}
+	      {{ end }} | <time>{{ .PublishDate.Format "January 2, 2006" }}</time> | 
+        {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes reading time{{ end }}
+       </p>
+
+      <div class="content">{{.Content}}</div>
+    </div>
+  </div>
+</div>
+{{ end }}
+```
+

@@ -5,6 +5,61 @@
     <link>/tags/</link>
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>tag 2</title>
+      <link>/tags/tag-2/</link>
+      <pubDate>Fri, 13 Jan 2023 10:17:08 +0700</pubDate>
+      
+      <guid>/tags/tag-2/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag 4</title>
+      <link>/tags/tag-4/</link>
+      <pubDate>Fri, 13 Jan 2023 10:17:08 +0700</pubDate>
+      
+      <guid>/tags/tag-4/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag 3</title>
+      <link>/tags/tag-3/</link>
+      <pubDate>Fri, 13 Jan 2023 10:16:30 +0700</pubDate>
+      
+      <guid>/tags/tag-3/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag 5&#39;</title>
+      <link>/tags/tag-5/</link>
+      <pubDate>Fri, 13 Jan 2023 10:16:30 +0700</pubDate>
+      
+      <guid>/tags/tag-5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tag 1</title>
+      <link>/tags/tag-1/</link>
+      <pubDate>Fri, 13 Jan 2023 10:14:33 +0700</pubDate>
+      
+      <guid>/tags/tag-1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Career</title>
+      <link>/tags/career/</link>
+      <pubDate>Fri, 13 Jan 2023 10:11:27 +0700</pubDate>
+      
+      <guid>/tags/career/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>
