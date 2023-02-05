@@ -15,17 +15,38 @@
     <loc>/services/systems/</loc>
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
+  </url><url>
+    <loc>/categories/data/</loc>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
+  </url><url>
+    <loc>/tags/data-lake/</loc>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
+  </url><url>
+    <loc>/tags/data-warehouse/</loc>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
+  </url><url>
+    <loc>/tags/etl/</loc>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
+  </url><url>
     <loc>/</loc>
-    <lastmod>2023-02-06T05:42:41+07:00</lastmod>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
+  </url><url>
+    <loc>/tags/strategy/</loc>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
+  </url><url>
+    <loc>/posts/07/</loc>
+    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
   </url><url>
     <loc>/team/</loc>
     <lastmod>2023-02-06T05:42:41+07:00</lastmod>
   </url><url>
     <loc>/services/</loc>
     <lastmod>2023-01-31T12:59:14+07:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2023-01-23T10:17:08+07:00</lastmod>
   </url><url>
     <loc>/tags/graalvm/</loc>
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
@@ -45,14 +66,8 @@
     <loc>/categories/software-engineering/</loc>
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-01-23T10:17:08+07:00</lastmod>
-  </url><url>
     <loc>/tags/terminology/</loc>
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
-  </url><url>
-    <loc>/categories/data/</loc>
-    <lastmod>2023-01-18T10:16:30+07:00</lastmod>
   </url><url>
     <loc>/tags/newsql/</loc>
     <lastmod>2023-01-18T10:16:30+07:00</lastmod>

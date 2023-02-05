@@ -6,22 +6,22 @@
     <description>Recent content in Categories on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Feb 2023 06:48:57 +0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data</title>
+      <link>/categories/data/</link>
+      <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
+      
+      <guid>/categories/data/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Software Engineering</title>
       <link>/categories/software-engineering/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       
       <guid>/categories/software-engineering/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data</title>
-      <link>/categories/data/</link>
-      <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
-      
-      <guid>/categories/data/</guid>
       <description></description>
     </item>
     

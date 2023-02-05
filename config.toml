@@ -4,7 +4,7 @@ theme = "hugo-serif-theme"
 languageCode = "en-us"
 title = "Zimera Corporation"
 publishDir = "docs"
-paginate = 8
+paginate = 5
 
 [module]
   [module.hugoVersion]

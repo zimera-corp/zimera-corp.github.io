@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 06 Feb 2023 05:42:41 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Feb 2023 06:48:57 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
@@ -52,6 +52,15 @@ School of Decentralized Systems School of Enterprise Systems School of Software 
       
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    
+    <item>
+      <title>Tantangan Pengelolaan Data di Era Digital</title>
+      <link>/posts/07/</link>
+      <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
+      
+      <guid>/posts/07/</guid>
+      <description>Organisasi menghadapi tantangan yang semakin kompleks di era digital ini. Era digital merupakan era yang ditandai dengan masifnya penggunaan teknologi berbasis peranti digital elektronik yang memproses angka 0 dan 1 sebagai penanda hidup - mati atau on - off. Peranti digital elektronik sejak dahulu dikenal dengan istilah komputer dan saat ini sudah menunjuk ke berbagai perangkat serta sistem berbasis komputer dalam berbagai skala, mulai dari skala kecil (sub–0.1-mm3) yang bisa diinjeksikan ke dalam tubuh manusia (Shi, 2021) sampai dengan peranti berkapasitas besar yang digunakan dalam suatu data center.</description>
     </item>
     
     <item>
