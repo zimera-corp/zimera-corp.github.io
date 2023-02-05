@@ -6,6 +6,9 @@
   </url><url>
     <loc>/services/consulting/</loc>
   </url><url>
+    <loc>/team/widya/</loc>
+    <lastmod>2023-02-06T05:42:41+07:00</lastmod>
+  </url><url>
     <loc>/services/school/</loc>
     <lastmod>2023-01-31T12:59:14+07:00</lastmod>
   </url><url>
@@ -13,7 +16,10 @@
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2023-01-31T12:59:14+07:00</lastmod>
+    <lastmod>2023-02-06T05:42:41+07:00</lastmod>
+  </url><url>
+    <loc>/team/</loc>
+    <lastmod>2023-02-06T05:42:41+07:00</lastmod>
   </url><url>
     <loc>/services/</loc>
     <lastmod>2023-01-31T12:59:14+07:00</lastmod>
@@ -98,7 +104,5 @@
     <loc>/contact/</loc>
   </url><url>
     <loc>/404/</loc>
-  </url><url>
-    <loc>/team/</loc>
   </url>
 </urlset>
