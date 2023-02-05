@@ -97,8 +97,8 @@
   </url><url>
     <loc>/contact/</loc>
   </url><url>
-    <loc>/team/</loc>
-  </url><url>
     <loc>/404/</loc>
+  </url><url>
+    <loc>/team/</loc>
   </url>
 </urlset>
