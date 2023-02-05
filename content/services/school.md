@@ -1,5 +1,5 @@
 ---
-title: "School"
+title: "School and Training Services"
 date: 2023-01-31T12:59:14+07:00
 featured: false
 draft: false

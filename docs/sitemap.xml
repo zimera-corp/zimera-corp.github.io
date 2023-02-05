@@ -30,13 +30,13 @@
     <loc>/posts/06/</loc>
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
   </url><url>
-    <loc>/categories/programming/</loc>
-    <lastmod>2023-01-23T10:17:08+07:00</lastmod>
-  </url><url>
     <loc>/tags/python/</loc>
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
   </url><url>
     <loc>/tags/r/</loc>
+    <lastmod>2023-01-23T10:17:08+07:00</lastmod>
+  </url><url>
+    <loc>/categories/software-engineering/</loc>
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
   </url><url>
     <loc>/tags/</loc>
@@ -45,10 +45,10 @@
     <loc>/tags/terminology/</loc>
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
   </url><url>
-    <loc>/categories/data-technology/</loc>
+    <loc>/categories/data/</loc>
     <lastmod>2023-01-18T10:16:30+07:00</lastmod>
   </url><url>
-    <loc>/categories/software-development/</loc>
+    <loc>/tags/newsql/</loc>
     <lastmod>2023-01-18T10:16:30+07:00</lastmod>
   </url><url>
     <loc>/posts/05/</loc>
@@ -78,6 +78,9 @@
     <loc>/posts/02/</loc>
     <lastmod>2023-01-14T10:13:33+07:00</lastmod>
   </url><url>
+    <loc>/tags/change-management/</loc>
+    <lastmod>2023-01-14T10:13:33+07:00</lastmod>
+  </url><url>
     <loc>/tags/methodology/</loc>
     <lastmod>2023-01-14T10:13:33+07:00</lastmod>
   </url><url>
@@ -94,8 +97,8 @@
   </url><url>
     <loc>/contact/</loc>
   </url><url>
-    <loc>/404/</loc>
-  </url><url>
     <loc>/team/</loc>
+  </url><url>
+    <loc>/404/</loc>
   </url>
 </urlset>

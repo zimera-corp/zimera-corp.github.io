@@ -53,6 +53,15 @@
     </item>
     
     <item>
+      <title>NewSQL</title>
+      <link>/tags/newsql/</link>
+      <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
+      
+      <guid>/tags/newsql/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>YugabyteDB</title>
       <link>/tags/yugabytedb/</link>
       <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
@@ -94,6 +103,15 @@
       <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
       
       <guid>/tags/agile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Change Management</title>
+      <link>/tags/change-management/</link>
+      <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
+      
+      <guid>/tags/change-management/</guid>
       <description></description>
     </item>
     

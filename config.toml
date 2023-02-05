@@ -26,7 +26,7 @@ paginate = 8
 
   [params.logo]
     mobile = "images/logo/logo-zimera-corp--mobile.png"
-    mobile_height = "150px"
+    mobile_height = "200px"
     desktop = "images/logo/logo-zimera-corp.png"
     desktop_height = "200px"
     alt = "Zimera Corporation"
@@ -53,7 +53,7 @@ paginate = 8
     summary_truncate = 120 # How many characters to include in the summary of the services before truncating
 
   [params.team]
-    summary_large_truncate = 120 # How many characters to include in the summary of the team bios (large layout) before truncating
+    summary_large_truncate = 250 # How many characters to include in the summary of the team bios (large layout) before truncating
 
   [params.footer]
     copyright_text = 'Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a>' 

@@ -1,50 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Homepage on Zimera Corporation</title>
-    <link>/</link>
-    <description>Recent content in Homepage on Zimera Corporation</description>
+    <title>Software Engineering on Zimera Corporation</title>
+    <link>/categories/software-engineering/</link>
+    <description>Recent content in Software Engineering on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Jan 2023 12:59:14 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Dr. Bambang Purnomosidi D. P.</title>
-      <link>/team/bpdp/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/team/bpdp/</guid>
-      <description>Dr. Bambang Purnomosidi D. P. (also known as bpdp) has a wide range of experiences in software industry and education. He is a Ph.D from DTETI (Departement Teknik Elektro dan Teknologi Informasi), Faculty of Engineering, Universitas Gadjah Mada.</description>
-    </item>
-    
-    <item>
-      <title>Consulting Services</title>
-      <link>/services/consulting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/services/consulting/</guid>
-      <description>Our consulting services assist businesses or any other organizations with anything related to data and software. We focus on client&amp;rsquo;s critical issues and persistently work to achieve goals. Therefore, it is very important to define the problem since the beginning and stick to it until the solution has been succesfully completed. Specifically, there&amp;rsquo;s Powel&amp;rsquo;s Three C&amp;rsquo;s: Clarity, Consistency, and Commitment as our main concerns in every task/project.
-We assist in problem solving.</description>
-    </item>
-    
-    <item>
-      <title>School and Training Services</title>
-      <link>/services/school/</link>
-      <pubDate>Tue, 31 Jan 2023 12:59:14 +0700</pubDate>
-      
-      <guid>/services/school/</guid>
-      <description>About the School Our school helps in talent or human resources development. Basically, we have some schools which only act as themes grouping. Our schools consist of:
-School of Decentralized Systems School of Enterprise Systems School of Software Engineering School of Data Prior to enter Zimera School, a learner needs to understand the basic. It is not that difficult, but one may need to his/her paradigm in learning by consistently challenged his/her ability to solve problems.</description>
-    </item>
-    
-    <item>
-      <title>Systems Services</title>
-      <link>/services/systems/</link>
-      <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
-      
-      <guid>/services/systems/</guid>
-      <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
-    </item>
-    
+    <lastBuildDate>Mon, 23 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/categories/software-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Polyglot Programming dan GraalVM</title>
       <link>/posts/06/</link>
@@ -101,24 +63,6 @@ Welcome changing requirements, even late in development. Agile processes harness
       
       <guid>/posts/01/</guid>
       <description>So you are interested in software development and want to become one who do that job. Initially you think that it’s only a matter of coding. creating source code, have them compiled, and then deploy the software for the customer/client. Later on, you realize that developing software is hard. Even harder since so many things beyond technical issues are also involved. Suddenly you realize that what you have learned in school is not enough.</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Zimera Corporation was founded on February 14th, 2022 under the name of PT Zenit Merdeka Raya. The name Zimera has a simple meaning, taking from African language: one that creates. This name becomes the underlying philosophy of Zimera Operation: to create. In a broader sense, we do really appreciate anybody who creates something. It is not limited to just create a software per se, but also other things: create a better SOP (Standard Operating Procedure), create a solution to a problem not related with software creation, etc.</description>
-    </item>
-    
-    <item>
-      <title>Contact</title>
-      <link>/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/contact/</guid>
-      <description> Day Opening Hours Monday - Friday 9:00am - 16:00pm Saturday - Sunday Closed </description>
     </item>
     
   </channel>
