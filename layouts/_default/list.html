@@ -37,6 +37,7 @@
 
 {{ if gt $.Paginator.TotalPages 1 }}
 <div class="pagination">
+  <br />Page: 
   {{ $pag := .Paginator }}
 
   {{ $adjacent_links := 1 }}
@@ -45,13 +46,13 @@
   {{ $upper_limit := (sub $pag.TotalPages $adjacent_links) }}
 
   {{ if $pag.HasPrev }}
-  <a href="{{ $pag.Prev.URL }}" aria-label="Previous" class="page-tag">&lt;</a>
+  <a href="{{ $pag.Prev.URL }}" aria-label="Previous" class="page-tag">&lt;</a>&nbsp;
   {{ end }}
 
   <!-- First page (if current page is greater than allowed limit) -->
   {{ if gt $pag.TotalPages $max_links }}
     {{ if ge $pag.PageNumber $max_links }}
-    <a href="{{ $pag.First.URL }}" aria-label="First" class="page-tag">1</a>
+    <a href="{{ $pag.First.URL }}" aria-label="First" class="page-tag">1</a>&nbsp;
     <span>...</span>
     {{ end }}
   {{ end }}
@@ -93,7 +94,7 @@
   {{ end }}
 
   {{ if $pag.HasNext }}
-  <a href="{{ $pag.Next.URL }}" aria-label="Next" class="page-tag">&gt;</a>
+  <a href="{{ $pag.Next.URL }}" aria-label="Next" class="page-tag">&gt;</a>&nbsp;
   {{ end }}
 </div>
 {{ end }}
