@@ -256,7 +256,6 @@ output {
   display: inline-block; }
 
 summary {
-  font-size: 1.2rem;
   display: list-item;
   cursor: pointer; }
 
@@ -4056,8 +4055,7 @@ p {
   line-height: 26px;
   color: #5C5A5A;
   font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
-  margin-bottom: 20px;
-  font-size: 1.2rem; }
+  margin-bottom: 20px; }
 
 h1 {
   font-size: 24px;
@@ -4086,9 +4084,8 @@ h3 {
       line-height: 1.4; } }
 ul,
 ol {
-  font-size: 1.2rem;
   margin: 0;
-  padding: 2; }
+  padding: 0; }
   ul li,
   ol li {
     padding: 0;
@@ -4234,7 +4231,7 @@ ol {
     justify-content: flex-start; }
     .main-menu > ul > li {
       list-style: none;
-      font-size: 1.2rem; }
+      font-size: 1rem; }
       .main-menu > ul > li > a {
         padding: 10px 12px 10px 12px;
         display: inline-block;
@@ -4414,82 +4411,94 @@ ol {
   @media (min-width: 992px) {
     .title {
       font-size: 50px; } }
-.content {
-  font-size: 1.2rem; }
-  .content a {
-    text-decoration: underline; }
-  .content img {
-    max-width: 100%;
-    height: auto;
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  .content strong {
-    font-width: bold; }
-  .content em {
-    font-style: italic; }
-  .content p {
-    font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
-    line-height: 1.56;
-    color: #5C5A5A; }
-  .content h1 {
-    font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
-    font-size: 34px;
-    line-height: 1.26;
-    font-weight: normal;
-    margin-top: 30px;
-    margin-bottom: 20px; }
-  .content h2 {
-    font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
-    font-size: 26px;
-    font-weight: normal;
-    line-height: 1.4;
-    margin-top: 30px; }
-  .content h3 {
-    font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
-    font-size: 20px;
-    line-height: 1.4;
-    font-weight: normal;
-    margin-top: 30px; }
-  .content ul,
-  .content ol {
-    margin-bottom: 20px; }
-    .content ul ul,
-    .content ul ol,
-    .content ol ul,
-    .content ol ol {
-      margin-bottom: 0; }
-  .content ul {
-    list-style: disc; }
-  .content ol {
-    list-style: decimal; }
-  .content li {
-    margin-bottom: 5px;
-    line-height: 1.56;
-    margin-left: 20px;
-    color: #5C5A5A; }
-  .content hr {
-    border: none;
-    border-bottom: 1px solid #f6f7ff; }
-  .content table {
-    width: 100%;
-    margin-top: 30px;
-    margin-bottom: 30px; }
-    .content table th,
-    .content table td {
-      padding: 5px;
-      vertical-align: top;
-      border-top: 1px solid #f6f7ff; }
-    .content table thead th {
-      vertical-align: bottom;
-      border-bottom: 1px solid #f6f7ff;
-      text-align: left;
-      font-weight: bold; }
-    .content table tbody + tbody {
-      border-top: 1px solid #f6f7ff; }
-  .content blockquote {
-    padding: 0 1em;
-    color: #5C5A5A;
-    border-left: 0.25em solid #008080; }
+.content a {
+  text-decoration: underline; }
+
+.content img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.content strong {
+  font-width: bold; }
+
+.content em {
+  font-style: italic; }
+
+.content p {
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
+  line-height: 1.56;
+  color: #5C5A5A; }
+
+.content h1 {
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
+  font-size: 34px;
+  line-height: 1.26;
+  font-weight: normal;
+  margin-top: 30px;
+  margin-bottom: 20px; }
+
+.content h2 {
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 1.4;
+  margin-top: 30px; }
+
+.content h3 {
+  font-family: Source Sans Pro, Helvetica, Arial, sans-serif, -apple-system;
+  font-size: 20px;
+  line-height: 1.4;
+  font-weight: normal;
+  margin-top: 30px; }
+
+.content ul,
+.content ol {
+  margin-bottom: 20px; }
+  .content ul ul,
+  .content ul ol,
+  .content ol ul,
+  .content ol ol {
+    margin-bottom: 0; }
+
+.content ul {
+  list-style: disc; }
+
+.content ol {
+  list-style: decimal; }
+
+.content li {
+  margin-bottom: 5px;
+  line-height: 1.56;
+  margin-left: 20px;
+  color: #5C5A5A; }
+
+.content hr {
+  border: none;
+  border-bottom: 1px solid #f6f7ff; }
+
+.content table {
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .content table th,
+  .content table td {
+    padding: 5px;
+    vertical-align: top;
+    border-top: 1px solid #f6f7ff; }
+  .content table thead th {
+    vertical-align: bottom;
+    border-bottom: 1px solid #f6f7ff;
+    text-align: left;
+    font-weight: bold; }
+  .content table tbody + tbody {
+    border-top: 1px solid #f6f7ff; }
+
+.content blockquote {
+  padding: 0 1em;
+  color: #5C5A5A;
+  border-left: 0.25em solid #008080; }
 
 .intro {
   display: flex;
