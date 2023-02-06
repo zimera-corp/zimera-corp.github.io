@@ -8,8 +8,7 @@ intro_image_absolute: false
 intro_image_hide_on_mobile: true
 ---
 
-In this page, you may find blog posts / articles which might be useful to you. The posts will range from software and data technologies and can be explored using these:
+# Articles / Blog Posts 
 
-* [Categories](/categories)
-* [Tags](/tags)
+In this page, you may find blog posts / articles which might be useful to you. The posts will range from software and data technologies. You may also browse them based on posts' [categories](/categories) and each category also has one or more [tags](/tags).
 
