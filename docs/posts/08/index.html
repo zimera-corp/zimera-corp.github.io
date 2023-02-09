@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Flutter: Persiapan Lingkungan Pengembangan - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon-32x32.svg">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.bc4a12e5c3ca2dae1f3e632c1be7b293452729efc58aa60b6c22aed0399891a1.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Flutter: Persiapan Lingkungan Pengembangan"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/08/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Flutter: Persiapan Lingkungan Pengembangan</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/software-engineering">Software Engineering</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/dart">Dart</a>&nbsp;&nbsp;
+        
+        <a href="/tags/flutter">Flutter</a>&nbsp;&nbsp;
+        
+        <a href="/tags/mobile">Mobile</a>&nbsp;&nbsp;
+        
+        <a href="/tags/web">Web</a>&nbsp;&nbsp;
+        
+        <a href="/tags/development-environment">Development Environment</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author:  | <time>February 9, 2023</time> | 
+        9  minutes reading time
+       </p>
+
+      <div class="content"><p>Flutter adalah software framework yang digunakan untuk membangun native mobile app. Jika biasanya pemrogram membangun peranti khusus dari OS mobile yang berbeda-beda (Java/Kotlin/Scala untuk Android, Objective C/Swift untuk iOS), kali ini Flutter dimaksudkan untuk membangun aplikasi untuk 3 platform yang berbeda: Android, iOS, dan Fuchsia (belum rilis) dengan satu codebase yang sama. Tentu saja yang dikerjakan oleh Flutter ini bukan hal yang pertama kali, sebelumnya sudah ada <a href="https://reactnative.dev/">React Native</a>, <a href="https://nativescript.org/">NativeScript</a>, maupun <a href="https://www.lambdanative.org/">LambdaNative</a>. Flutter sudah mencapai versi stabil pada bulan Desember 2018. Saat ini (2023), Flutter sudah berada pada versi 3.7.1.</p>
+<p>Secara umum, untuk menggunakan Flutter, ada beberapa hal yang harus disiapkan:</p>
+<ol>
+<li>Android SDK atau Android Studio - jika ingin membuat aplikasi Android menggunakan Flutter. Peranti ini juga harus memenuhi syarat instalasi komponen-komponennya.</li>
+<li>Flutter SDK. Tidak perlu install Dart secara terpisah karena Flutter sudah menyertakan Dart stable.</li>
+<li>Konfigurasi localhost (127.0.0.1).</li>
+<li>Device / Emulator</li>
+<li>IDE atau editor teks biasa (plugin tersedia untuk Android Studio dan Visual Studio Code).</li>
+</ol>
+<p>Mari kita siapkan satu persatu.</p>
+<h2 id="android-sdk">Android SDK</h2>
+<p>Kami memilih menggunakan versi <code>command line</code> karena Android Studio terlalu berat untuk mesin kami. Unduh command line tools dari <a href="https://developer.android.com/studio?gclsrc=ds&amp;gclsrc=ds">URL unduh Android Studio</a>. Setelah itu, ekstrak di direktori <code>$HOME/Android/Sdk/cmdline-tools/latest</code> (direktori ini default ditentukan oleh Android SDK). Setelah itu, atur path (bisa juga simpan ke file supaya bisa di-<em>source</em>, kami menggunakan <code>fish shell</code>):</p>
+<pre tabindex="0"><code>set -x ANDROID_SDK_ROOT /home/bpdp/Android/Sdk
+set -x PATH /home/bpdp/Android/Sdk/cmdline-tools/latest/bin $ANDROID_SDK_ROOT/tools/bin $ANDROID_SDK_ROOT/platform-tools $ANDROID_SDK_ROOT/emulator $ANDROID_SDK_ROOT/build-tools/28.0.3 $PATH
+</code></pre><p>Setelah itu, install berbagai paket yang diperlukan menggunakan perintah <code>sdkmanager --install namapaket</code>. Paket yang kami install:</p>
+<pre tabindex="0"><code>$ sdkmanager --list_installed
+[=======================================] 100% Fetch remote repository...       
+Installed packages:
+  Path                                                  | Version | Description                                | Location                                             
+  -------                                               | ------- | -------                                    | -------                                              
+  build-tools;23.0.3                                    | 23.0.3  | Android SDK Build-Tools 23.0.3             | build-tools/23.0.3                                   
+  build-tools;27.0.3                                    | 27.0.3  | Android SDK Build-Tools 27.0.3             | build-tools/27.0.3                                   
+  build-tools;28.0.3                                    | 28.0.3  | Android SDK Build-Tools 28.0.3             | build-tools/28.0.3                                   
+  build-tools;33.0.2                                    | 33.0.2  | Android SDK Build-Tools 33.0.2             | build-tools/33.0.2                                   
+  emulator                                              | 32.1.11 | Android Emulator                           | emulator                                             
+  extras;google;auto                                    | 2.0     | Android Auto Desktop Head Unit Emulator    | extras/google/auto                                   
+  patcher;v4                                            | 1       | SDK Patch Applier v4                       | patcher/v4                                           
+  platform-tools                                        | 33.0.3  | Android SDK Platform-Tools                 | platform-tools                                       
+  platforms;android-23                                  | 3       | Android SDK Platform 23                    | platforms/android-23                                 
+  platforms;android-27                                  | 3       | Android SDK Platform 27                    | platforms/android-27                                 
+  platforms;android-28                                  | 6       | Android SDK Platform 28                    | platforms/android-28                                 
+  platforms;android-33                                  | 2       | Android SDK Platform 33                    | platforms/android-33                                 
+  system-images;android-23;google_apis;x86_64           | 33      | Google APIs Intel x86 Atom_64 System Image | system-images/android-23/google_apis/x86_64          
+  system-images;android-27;default;x86_64               | 1       | Intel x86 Atom_64 System Image             | system-images/android-27/default/x86_64              
+  system-images;android-28;default;x86_64               | 4       | Intel x86 Atom_64 System Image             | system-images/android-28/default/x86_64              
+  system-images;android-28;google_apis_playstore;x86_64 | 8       | Google Play Intel x86 Atom_64 System Image | system-images/android-28/google_apis_playstore/x86_64
+</code></pre><p>Nama paket:</p>
+<pre tabindex="0"><code>build-tools;23.0.3
+build-tools;27.0.3
+build-tools;28.0.3
+build-tools;33.0.2
+emulator
+extras;google;auto
+patcher;v4
+platform-tools
+platforms;android-23
+platforms;android-27
+platforms;android-28
+platforms;android-33
+system-images;android-23;google_apis;x86_64
+system-images;android-27;default;x86_64
+system-images;android-28;default;x86_64
+system-images;android-28;google_apis_playstore;x86_64
+</code></pre><p>Setelah itu membuat emulator dengan perintah berikut:</p>
+<pre tabindex="0"><code>$ avdmanager create avd --force --name Nexus6P --abi google_apis/x86_64 --package &#39;system-images;android-23;google_apis;x86_64&#39; --device &#34;Nexus 6P&#34;
+</code></pre><p>Tentu saja anda bisa membuat emulator lainnya juga selain Nexus 6P.</p>
+<h2 id="install-flutter">Install Flutter</h2>
+<p>Setelah itu, Flutter diinstall. Instalasi Flutter sangat mudah, hanya perlu mengekstrak dan kemudian menambahkan direktori <code>bin/</code> pada distribusi Flutter ke dalam variable lingkungan PATH.</p>
+<pre tabindex="0"><code>set -x PATH $HOME/software/dart-dev-tools/flutter/bin $PATH
+</code></pre><p>Untuk memeriksa apakah sudah terinstall dengan benar serta Android SDK sudah sesuai atau belum, gunakan argumen <em>doctor</em>, biasanya pada saat pertama kali dijalankan akan muncul masalah license:</p>
+<pre tabindex="0"><code>...
+...
+[!] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
+    • Android SDK at /home/bpdp/Android/Sdk
+    • Platform android-33, build-tools 33.0.2
+    • ANDROID_SDK_ROOT = /home/bpdp/Android/Sdk
+    • Java binary at: /home/bpdp/software/android-dev-tools/android-studio/jre/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_242-release-1644-b3-6222593)
+    ✗ Android license status unknown.
+      Run `flutter doctor --android-licenses` to accept the SDK licenses.
+      See https://flutter.dev/docs/get-started/install/linux#android-setup for more details.
+...
+...
+</code></pre><p>Accept lisensi dari Android dengan perintah berikut:</p>
+<pre tabindex="0"><code>$ flutter doctor --android-licenses
+[=======================================] 100% Computing updates...             
+4 of 6 SDK package licenses not accepted.
+Review licenses that have not been accepted (y/N)? y
+
+1/4: License android-googletv-license:
+...
+...
+...
+Accept? (y/N): y
+All SDK package licenses accepted
+$
+</code></pre><p>Berikut adalah hasil jika semua telah terinstall dengan benar.</p>
+<pre tabindex="0"><code>$ flutter doctor -v
+[✓] Flutter (Channel stable, 3.7.1, on Devuan GNU/Linux 5 (daedalus/ceres) 5.18.0-4-amd64, locale en_US.UTF-8)
+    • Flutter version 3.7.1 on channel stable at /home/bpdp/software/dart-dev-tools/flutter-3.7.1
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 7048ed95a5 (8 days ago), 2023-02-01 09:07:31 -0800
+    • Engine revision 800594f1f4
+    • Dart version 2.19.1
+    • DevTools version 2.20.1
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 33.0.2)
+    • Android SDK at /home/bpdp/Android/Sdk
+    • Platform android-33, build-tools 33.0.2
+    • ANDROID_SDK_ROOT = /home/bpdp/Android/Sdk
+    • Java binary at: /home/bpdp/software/java-dev-tools/jdk/oracle/jdk11/bin/java
+    • Java version Java(TM) SE Runtime Environment 18.9 (build 11.0.18+9-LTS-195)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web
+    • Chrome at google-chrome
+
+[✓] Linux toolchain - develop for Linux desktop
+    • Debian clang version 14.0.6
+    • cmake version 3.25.1
+    • ninja version 1.11.1
+    • pkg-config version 1.8.1
+
+[!] Android Studio (not installed)
+    • Android Studio not found; download from https://developer.android.com/studio/index.html
+      (or visit https://flutter.dev/docs/get-started/install/linux#android-setup for detailed instructions).
+
+[✓] Connected device (3 available)
+    • Android SDK built for x86 64 (mobile) • emulator-5554 • android-x64    • Android 6.0 (API 23) (emulator)
+    • Linux (desktop)                       • linux         • linux-x64      • Devuan GNU/Linux 5 (daedalus/ceres) 5.18.0-4-amd64
+    • Chrome (web)                          • chrome        • web-javascript • Google Chrome 110.0.5481.77
+
+[✓] HTTP Host Availability
+    • All required HTTP hosts are available
+
+! Doctor found issues in 1 category.
+$
+</code></pre><blockquote>
+<p><strong>Catatan</strong>: Jika ingin menggunakan Flutter untuk Web, kita juga harus install Google Chrome.</p>
+</blockquote>
+<h2 id="konfigurasi-loopback">Konfigurasi Loopback</h2>
+<p>Sebagai superuser:</p>
+<pre tabindex="0"><code>$ sudo ifconfig lo up
+[sudo] password for bpdp: 
+$ sudo ifconfig
+lo: flags=73&lt;UP,LOOPBACK,RUNNING&gt;  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10&lt;host&gt;
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 3028  bytes 390084 (380.9 KiB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 3028  bytes 390084 (380.9 KiB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+...
+...
+$
+</code></pre><p>Konfigurasi ini diperlukan supaya tidak terjadi error saat menjalankan emulator.</p>
+<pre tabindex="0"><code>emulator: ERROR: It seems too many emulator instances are running on this machine. Aborting.
+</code></pre><p>Jika berhasil, maka emulator akan berjalan dengan baik seperti ini:</p>
+<pre tabindex="0"><code>$ emulator -avd Nexus6P
+INFO    | Android emulator version 32.1.11.0 (build_id 9536276) (CL:N/A)
+INFO    | Found systemPath /home/bpdp/Android/Sdk/system-images/android-23/google_apis/x86_64/
+INFO    | Storing crashdata in: /tmp/android-bpdp/emu-crash.db, detection is enabled
+INFO    | Duplicate loglines will be removed, if you wish to see each indiviudal line launch with the -log-nofilter flag.
+ERROR   | Failed to retrieve DNS servers list from the system
+WARNING | Cannot find system DNS servers! Name resolution will be disabled.
+Fontconfig warning: &#34;/usr/share/fontconfig/conf.avail/05-reset-dirs-sample.conf&#34;, line 6: unknown element &#34;reset-dirs&#34;
+WARNING | cannot add library /home/bpdp/Android/Sdk/emulator/qemu/linux-x86_64/lib64/vulkan/libvulkan.so: failed
+INFO    | added library /home/bpdp/Android/Sdk/emulator/lib64/vulkan/libvulkan.so
+WARNING | *** No gRPC protection active, consider launching with the -grpc-use-jwt flag.***
+INFO    | Started GRPC server at 127.0.0.1:8554, security: Local, auth: none
+INFO    | Advertising in: /run/user/1000/avd/running/pid_16533.ini
+INFO    | Setting display: 0 configuration to: 1440x2560, dpi: 560x560 
+INFO    | Info: Sandboxing disabled by user. ((null):0, (null))
+INFO    | Critical: Failed to load https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true: The &#39;Access-Control-Allow-Origin&#39; header has a value &#39;qrc://&#39; that is not equal to the supplied origin. Origin &#39;qrc://&#39; is therefore not allowed access. (qrc:/html/location-point.html:0, (null))
+INFO    | Deleting snapshot default_boot
+INFO    | Critical: Failed to load https://maps.googleapis.com/maps/api/mapsjs/gen_204?csp_test=true: The &#39;Access-Control-Allow-Origin&#39; header has a value &#39;qrc://&#39; that is not equal to the supplied origin. Origin &#39;qrc://&#39; is therefore not allowed access. (qrc:/html/location-point.html:0, (null))
+</code></pre><p>Tampilannya adalah sebagai berikut:</p>
+<p><img src="/images/posts/07/emulator-nexus6p.png" alt="Emulator Nexus6P"></p>
+<h2 id="ide-atau-editor-teks">IDE atau Editor Teks</h2>
+<p>Untuk IDE, bisa menggunakan Android Studio maupun Visual Studio Code. Keduanya mempunyai plugin untuk Flutter. Jika menggunakan editor biasa, gunakan plugin untuk menulis source code menggunakan Dart. Sebagai contoh, jika menggunakan Vim, gunakan <a href="https://github.com/dart-lang/dart-vim-plugin">dart-vim</a>. Kami menggunakan SpaceVim sehingga setting bisa dilakukan dengan mengaktifkan <a href="https://spacevim.org/layers/lang/dart/">lang#dart</a>.</p>
+<h2 id="mencoba-flutter-untuk-android">Mencoba Flutter untuk Android</h2>
+<p>Jika sudah siap, kita bisa mencoba dengan menggunakan langkah-langkah berikut ini, dimulai dari inisialisasi - membuat kerangka aplikasi (<code>hello</code>):</p>
+<pre tabindex="0"><code>$ flutter create hello
+Creating project hello...
+Running &#34;flutter pub get&#34; in hello...
+Resolving dependencies in hello... (3.5s)
++ async 2.10.0
++ boolean_selector 2.1.1
++ characters 1.2.1
++ clock 1.1.1
++ collection 1.17.0 (1.17.1 available)
++ cupertino_icons 1.0.5
++ fake_async 1.3.1
++ flutter 0.0.0 from sdk flutter
++ flutter_lints 2.0.1
++ flutter_test 0.0.0 from sdk flutter
++ js 0.6.5 (0.6.7 available)
++ lints 2.0.1
++ matcher 0.12.13 (0.12.14 available)
++ material_color_utilities 0.2.0
++ meta 1.8.0 (1.9.0 available)
++ path 1.8.2 (1.8.3 available)
++ sky_engine 0.0.99 from sdk flutter
++ source_span 1.9.1
++ stack_trace 1.11.0
++ stream_channel 2.1.1
++ string_scanner 1.2.0
++ term_glyph 1.2.1
++ test_api 0.4.16 (0.4.18 available)
++ vector_math 2.1.4
+Changed 24 dependencies in hello!
+Wrote 127 files.
+
+All done!
+You can find general documentation for Flutter at: https://docs.flutter.dev/
+Detailed API documentation is available at: https://api.flutter.dev/
+If you prefer video documentation, consider: https://www.youtube.com/c/flutterdev
+
+In order to run your application, type:
+
+  $ cd hello
+  $ flutter run
+
+Your application code is in hello/lib/main.dart.
+$
+</code></pre><p>Setelah itu, jalankan emulator.</p>
+<pre tabindex="0"><code>emulator -avd Nexus6P
+</code></pre><p>Jalankan program hello (direktori yang aktif adalah direktori hello sesuai nama aplikasi yang kita inisialisasi) :</p>
+<pre tabindex="0"><code>$ cd hello
+$ flutter run
+Using hardware rendering with device Android SDK built for x86 64. If you notice graphics artifacts, consider enabling software rendering with
+&#34;--enable-software-rendering&#34;.
+Launching lib/main.dart on Android SDK built for x86 64 in debug mode...
+Checking the license for package Android SDK Build-Tools 30.0.3 in /home/bpdp/Android/Sdk/licenses
+License for package Android SDK Build-Tools 30.0.3 accepted.
+Preparing &#34;Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)&#34;.
+&#34;Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)&#34; ready.
+Installing Android SDK Build-Tools 30.0.3 in /home/bpdp/Android/Sdk/build-tools/30.0.3
+&#34;Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)&#34; complete.
+&#34;Install Android SDK Build-Tools 30.0.3 (revision: 30.0.3)&#34; finished.
+Running Gradle task &#39;assembleDebug&#39;...                            227.8s
+✓  Built build/app/outputs/flutter-apk/app-debug.apk.
+Installing build/app/outputs/flutter-apk/app-debug.apk...          25.2s
+I/Choreographer( 3224): Skipped 67 frames!  The application may be doing too much work on its main thread.
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+E/eglCodecCommon( 3224): glUtilsParamSize: unknow param 0x00008741
+Syncing files to device Android SDK built for x86 64...            22.2s
+
+Flutter run key commands.
+r Hot reload. 🔥🔥🔥
+R Hot restart.
+h List all available interactive commands.
+d Detach (terminate &#34;flutter run&#34; but leave application running).
+c Clear the screen
+q Quit (terminate the application on the device).
+
+💪 Running with sound null safety 💪
+
+An Observatory debugger and profiler on Android SDK built for x86 64 is available at: http://127.0.0.1:41669/pL0RSUz5FiM=/
+The Flutter DevTools debugger and profiler on Android SDK built for x86 64 is available at:
+http://127.0.0.1:9100?uri=http://127.0.0.1:41669/pL0RSUz5FiM=/
+</code></pre><p>Setelah gradle diaktifkan untuk mengambil berbagai dependencies (karena menggunakan Android), akan muncul tampilan di emulator.</p>
+<p><img src="/images/posts/07/hello-flutter.png" alt="Emulator Nexus6P"></p>
+<p>Selamat mencoba!</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>
