@@ -8,6 +8,16 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Jan 2023 10:56:44 +0700</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Workaround for Compilation Result of TypeScript on import</title>
+      <link>/posts/09/</link>
+      <pubDate>Mon, 27 Feb 2023 13:40:22 +0700</pubDate>
+      
+      <guid>/posts/09/</guid>
+      <description>TypeScript is supertype of JavaScript, or for easier understanding, TypeScrirpt is JavaScript with syntax for types. It is now developed by Microsoft. It is a lovely programming language which tries to &amp;ldquo;patch&amp;rdquo; the flaws of JavaScript. TypeScript adds static typing to JavaScript, and as a static typing programming language it can be used to catch any errors before deployment (well, hopefully).
+TypeScript compilation result is JavaScript. Documentation is very complete and details, but one thing that I found confusing is how TypeScript treats import.</description>
+    </item>
+    
+    <item>
       <title>Flutter: Persiapan Lingkungan Pengembangan</title>
       <link>/posts/08/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
