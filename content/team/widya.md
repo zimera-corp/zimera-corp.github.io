@@ -4,7 +4,7 @@ date: 2023-02-06T05:42:41+07:00
 image: "images/team/widya.jpg"
 jobtitle: "Consultant"
 draft: false
-weight: 100
+weight: 10
 promoted: true
 ---
 
