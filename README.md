@@ -5,6 +5,12 @@ Tools:
 1.  [Hugo](https://gohugo.io).
 2.  [Hugo Serif theme](https://github.com/zerostaticthemes/hugo-serif-theme).
 
+## Modify Contents
+
+1.  Modify contents using `hugo new`, for example: `hugo new posts/10.md`. 
+2.  Test: `hugo serve`.
+3.  Deploy: `hugo`, then push to Github. See **Checking** below.
+
 ## Some Notes
 
 ### Checking
