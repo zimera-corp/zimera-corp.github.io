@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Tags - Zimera Corporation</title>
+  <title>QEMU Parameter for Audio Devices - Zimera Corporation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="/favicon-32x32.svg">
 
@@ -27,9 +27,9 @@
 
   
     
-    <meta property="og:title" content="Tags"/>
+    <meta property="og:title" content="QEMU Parameter for Audio Devices"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="/tags/"/>
+    <meta property="og:url" content="/posts/10/"/>
     
     
     <meta name="twitter:card" content="summary"/>
@@ -39,7 +39,7 @@
 
 </head>
 
-<body class='page '>
+<body class='page page-default-single'>
   <div id="main-menu-mobile" class="main-menu-mobile">
   <ul>
     
@@ -173,124 +173,44 @@
 </div>
 
     
-  <div class="container">
-    <h1>All tags</h1>
-    <ul>
-      
-        <li>
-          <a href="/tags/audio/">Audio</a>
-        </li>
-      
-        <li>
-          <a href="/tags/haiku/">Haiku</a>
-        </li>
-      
-        <li>
-          <a href="/tags/qemu/">QEMU</a>
-        </li>
-      
-        <li>
-          <a href="/tags/sound/">Sound</a>
-        </li>
-      
-        <li>
-          <a href="/tags/javascript/">JavaScript</a>
-        </li>
-      
-        <li>
-          <a href="/tags/typescript/">TypeScript</a>
-        </li>
-      
-        <li>
-          <a href="/tags/dart/">Dart</a>
-        </li>
-      
-        <li>
-          <a href="/tags/development-environment/">Development Environment</a>
-        </li>
-      
-        <li>
-          <a href="/tags/flutter/">Flutter</a>
-        </li>
-      
-        <li>
-          <a href="/tags/mobile/">Mobile</a>
-        </li>
-      
-        <li>
-          <a href="/tags/web/">Web</a>
-        </li>
-      
-        <li>
-          <a href="/tags/data-lake/">Data Lake</a>
-        </li>
-      
-        <li>
-          <a href="/tags/data-warehouse/">Data Warehouse</a>
-        </li>
-      
-        <li>
-          <a href="/tags/etl/">ETL</a>
-        </li>
-      
-        <li>
-          <a href="/tags/strategy/">Strategy</a>
-        </li>
-      
-        <li>
-          <a href="/tags/graalvm/">GraalVM</a>
-        </li>
-      
-        <li>
-          <a href="/tags/polyglot/">Polyglot</a>
-        </li>
-      
-        <li>
-          <a href="/tags/python/">Python</a>
-        </li>
-      
-        <li>
-          <a href="/tags/r/">R</a>
-        </li>
-      
-        <li>
-          <a href="/tags/terminology/">Terminology</a>
-        </li>
-      
-        <li>
-          <a href="/tags/newsql/">NewSQL</a>
-        </li>
-      
-        <li>
-          <a href="/tags/yugabytedb/">YugabyteDB</a>
-        </li>
-      
-        <li>
-          <a href="/tags/idiomatic/">Idiomatic</a>
-        </li>
-      
-        <li>
-          <a href="/tags/career/">Career</a>
-        </li>
-      
-        <li>
-          <a href="/tags/management/">Management</a>
-        </li>
-      
-        <li>
-          <a href="/tags/agile/">Agile</a>
-        </li>
-      
-        <li>
-          <a href="/tags/change-management/">Change Management</a>
-        </li>
-      
-        <li>
-          <a href="/tags/methodology/">Methodology</a>
-        </li>
-      
-    </ul>
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">QEMU Parameter for Audio Devices</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/operating-system">Operating System</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/qemu">QEMU</a>&nbsp;&nbsp;
+        
+        <a href="/tags/haiku">Haiku</a>&nbsp;&nbsp;
+        
+        <a href="/tags/sound">Sound</a>&nbsp;&nbsp;
+        
+        <a href="/tags/audio">Audio</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author:  | <time>June 18, 2023</time> | 
+        1  minute 
+       </p>
+
+      <div class="content"><p><img src="/images/posts/10/haiku-yt.png" alt="Haiku - Web / Epiphany"></p>
+<p>Have you ever use <a href="https://haiku-os.org">Haiku OS</a>? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&rsquo;ve used some parameters in <a href="https://www.qemu.org/">QEMU</a>. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ qemu-system-x86_64 haiku-beta4.qcow2 -m <span style="color:#ae81ff">4096</span> --enable-kvm --usb -device usb-tablet -nic user -audiodev pa,id<span style="color:#f92672">=</span>pa,server<span style="color:#f92672">=</span>unix:<span style="color:#f92672">{</span>$XDG_RUNTIME_DIR<span style="color:#f92672">}</span>/pulse/native,out.stream-name<span style="color:#f92672">=</span>foobar,in.stream-name<span style="color:#f92672">=</span>foobar -device intel-hda -device hda-duplex,audiodev<span style="color:#f92672">=</span>pa,mixer<span style="color:#f92672">=</span>off -rtc base<span style="color:#f92672">=</span>localtime,clock<span style="color:#f92672">=</span>host -smp <span style="color:#ae81ff">16</span> -vga virtio
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Voila! now I can listen to my favourite songs from Haiku OS! (not smooth - probably because of my limited RAM allocation, but I think it&rsquo;s quite good).</p>
+</div>
+    </div>
   </div>
+</div>
 
   </div>
 

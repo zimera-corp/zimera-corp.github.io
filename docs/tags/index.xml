@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Feb 2023 13:40:22 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Jun 2023 22:15:53 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Audio</title>
+      <link>/tags/audio/</link>
+      <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
+      
+      <guid>/tags/audio/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Haiku</title>
+      <link>/tags/haiku/</link>
+      <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
+      
+      <guid>/tags/haiku/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>QEMU</title>
+      <link>/tags/qemu/</link>
+      <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
+      
+      <guid>/tags/qemu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Sound</title>
+      <link>/tags/sound/</link>
+      <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
+      
+      <guid>/tags/sound/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>JavaScript</title>
       <link>/tags/javascript/</link>

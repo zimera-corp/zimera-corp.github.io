@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Mar 2023 18:01:06 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Jun 2023 22:15:53 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
@@ -61,6 +61,15 @@ School of Decentralized Systems School of Enterprise Systems School of Software 
       
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    
+    <item>
+      <title>QEMU Parameter for Audio Devices</title>
+      <link>/posts/10/</link>
+      <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
+      
+      <guid>/posts/10/</guid>
+      <description>Have you ever use Haiku OS? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&amp;rsquo;ve used some parameters in QEMU. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:</description>
     </item>
     
     <item>

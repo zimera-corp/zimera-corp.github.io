@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 27 Feb 2023 13:40:22 +0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Jun 2023 22:15:53 +0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Operating System</title>
+      <link>/categories/operating-system/</link>
+      <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
+      
+      <guid>/categories/operating-system/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Software Engineering</title>
       <link>/categories/software-engineering/</link>
