@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Tags - Zimera Corporation</title>
+  <title>How to Handle Unstable Debian-based APT Broken Package(s) - Zimera Corporation</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" href="/favicon-32x32.svg">
 
@@ -27,9 +27,9 @@
 
   
     
-    <meta property="og:title" content="Tags"/>
+    <meta property="og:title" content="How to Handle Unstable Debian-based APT Broken Package(s)"/>
     <meta property="og:type" content="website"/>
-    <meta property="og:url" content="/tags/"/>
+    <meta property="og:url" content="/posts/11/"/>
     
     
     <meta name="twitter:card" content="summary"/>
@@ -39,7 +39,7 @@
 
 </head>
 
-<body class='page '>
+<body class='page page-default-single'>
   <div id="main-menu-mobile" class="main-menu-mobile">
   <ul>
     
@@ -173,140 +173,46 @@
 </div>
 
     
-  <div class="container">
-    <h1>All tags</h1>
-    <ul>
-      
-        <li>
-          <a href="/tags/apt/">APT</a>
-        </li>
-      
-        <li>
-          <a href="/tags/broken/">Broken</a>
-        </li>
-      
-        <li>
-          <a href="/tags/debian-based/">Debian-based</a>
-        </li>
-      
-        <li>
-          <a href="/tags/devuan/">Devuan</a>
-        </li>
-      
-        <li>
-          <a href="/tags/audio/">Audio</a>
-        </li>
-      
-        <li>
-          <a href="/tags/haiku/">Haiku</a>
-        </li>
-      
-        <li>
-          <a href="/tags/qemu/">QEMU</a>
-        </li>
-      
-        <li>
-          <a href="/tags/sound/">Sound</a>
-        </li>
-      
-        <li>
-          <a href="/tags/javascript/">JavaScript</a>
-        </li>
-      
-        <li>
-          <a href="/tags/typescript/">TypeScript</a>
-        </li>
-      
-        <li>
-          <a href="/tags/dart/">Dart</a>
-        </li>
-      
-        <li>
-          <a href="/tags/development-environment/">Development Environment</a>
-        </li>
-      
-        <li>
-          <a href="/tags/flutter/">Flutter</a>
-        </li>
-      
-        <li>
-          <a href="/tags/mobile/">Mobile</a>
-        </li>
-      
-        <li>
-          <a href="/tags/web/">Web</a>
-        </li>
-      
-        <li>
-          <a href="/tags/data-lake/">Data Lake</a>
-        </li>
-      
-        <li>
-          <a href="/tags/data-warehouse/">Data Warehouse</a>
-        </li>
-      
-        <li>
-          <a href="/tags/etl/">ETL</a>
-        </li>
-      
-        <li>
-          <a href="/tags/strategy/">Strategy</a>
-        </li>
-      
-        <li>
-          <a href="/tags/graalvm/">GraalVM</a>
-        </li>
-      
-        <li>
-          <a href="/tags/polyglot/">Polyglot</a>
-        </li>
-      
-        <li>
-          <a href="/tags/python/">Python</a>
-        </li>
-      
-        <li>
-          <a href="/tags/r/">R</a>
-        </li>
-      
-        <li>
-          <a href="/tags/terminology/">Terminology</a>
-        </li>
-      
-        <li>
-          <a href="/tags/newsql/">NewSQL</a>
-        </li>
-      
-        <li>
-          <a href="/tags/yugabytedb/">YugabyteDB</a>
-        </li>
-      
-        <li>
-          <a href="/tags/idiomatic/">Idiomatic</a>
-        </li>
-      
-        <li>
-          <a href="/tags/career/">Career</a>
-        </li>
-      
-        <li>
-          <a href="/tags/management/">Management</a>
-        </li>
-      
-        <li>
-          <a href="/tags/agile/">Agile</a>
-        </li>
-      
-        <li>
-          <a href="/tags/change-management/">Change Management</a>
-        </li>
-      
-        <li>
-          <a href="/tags/methodology/">Methodology</a>
-        </li>
-      
-    </ul>
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">How to Handle Unstable Debian-based APT Broken Package(s)</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/operating-system">Operating System</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/devuan">Devuan</a>&nbsp;&nbsp;
+        
+        <a href="/tags/debian-based">Debian-based</a>&nbsp;&nbsp;
+        
+        <a href="/tags/broken">Broken</a>&nbsp;&nbsp;
+        
+        <a href="/tags/apt">APT</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>June 22, 2023</time> | 
+        2  minutes reading time
+       </p>
+
+      <div class="content"><p>If you are a user of <a href="Debian">https://debian.org</a>-based Linux distro, especially the unstable release (so called <strong>Sid</strong> in Debian), broken packages are not special. They may arise in your day-to-day activities with the distro (that&rsquo;s the reason of why the word <strong>unstable</strong> is used!). While the reason to use the unsable release is obvious: to live in the bleeding edge of software release (including the packages), one still feel surprise of the broken packages event. That is also happen to me, I use <a href="Devuan">https://devuan.org</a> Linux for my daily activities. Devuan is Debian withoud systemd. I have my own reason to not using systemd - I might reveal that later. As a person who loves to stay in the bleeding edge of software release, I use <strong>ceres</strong> - a sid release of Devuan.</p>
+<p>My problem started yesterday, when I recklessly did <code>sudo apt full-upgrade</code> after <code>sudo apt update</code> and said Yes. The result is broken XOrg X Window System since <strong>xserver-xorg</strong> package and all dependencies were removed. I tried to cure the situation by <code>sudo apt install xserver-xorg</code> but it will install <strong>keyboard-configuration</strong> and keyboard-configuration package needs xkb-data version <strong>&lt;= 2.35.1</strong> while I have <strong>2.32-2</strong> (version for ceres).</p>
+<p>To handle this situation, I need to downgrade the package from <strong>2.32-2</strong> to <strong>2.35.1</strong>. I use <code>sudo apt install xkb-data=2.35.1</code> but it didn&rsquo;t work. So, what I did is just grab the package from [https://pkginfo.devuan.org/cgi-bin/policy-query.html](Devuan package information) and then installed it using dpkg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dpkg -i xkb-data_2.35.1-1_all.deb
+</span></span></code></pre></div><p>After that, I installed xserver-xorg using <code>sudo apt install xserver-xorg</code>, and everything back to normal.</p>
+</div>
+    </div>
   </div>
+</div>
 
   </div>
 

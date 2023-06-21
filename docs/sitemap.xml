@@ -18,19 +18,37 @@
     <loc>/services/systems/</loc>
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
+    <loc>/tags/apt/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
+    <loc>/tags/broken/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
+    <loc>/tags/debian-based/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
+    <loc>/tags/devuan/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
+    <loc>/posts/11/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
+    <loc>/categories/operating-system/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-06-22T05:46:23+07:00</lastmod>
+  </url><url>
     <loc>/tags/audio/</loc>
     <lastmod>2023-06-18T22:15:53+07:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2023-06-18T22:15:53+07:00</lastmod>
-  </url><url>
     <loc>/tags/haiku/</loc>
-    <lastmod>2023-06-18T22:15:53+07:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2023-06-18T22:15:53+07:00</lastmod>
-  </url><url>
-    <loc>/categories/operating-system/</loc>
     <lastmod>2023-06-18T22:15:53+07:00</lastmod>
   </url><url>
     <loc>/tags/qemu/</loc>
@@ -40,9 +58,6 @@
     <lastmod>2023-06-18T22:15:53+07:00</lastmod>
   </url><url>
     <loc>/tags/sound/</loc>
-    <lastmod>2023-06-18T22:15:53+07:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2023-06-18T22:15:53+07:00</lastmod>
   </url><url>
     <loc>/team/</loc>

@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jun 2023 22:15:53 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jun 2023 05:46:23 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
@@ -61,6 +61,15 @@ School of Decentralized Systems School of Enterprise Systems School of Software 
       
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    
+    <item>
+      <title>How to Handle Unstable Debian-based APT Broken Package(s)</title>
+      <link>/posts/11/</link>
+      <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
+      
+      <guid>/posts/11/</guid>
+      <description>If you are a user of https://debian.org-based Linux distro, especially the unstable release (so called Sid in Debian), broken packages are not special. They may arise in your day-to-day activities with the distro (that&amp;rsquo;s the reason of why the word unstable is used!). While the reason to use the unsable release is obvious: to live in the bleeding edge of software release (including the packages), one still feel surprise of the broken packages event.</description>
     </item>
     
     <item>

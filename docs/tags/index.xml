@@ -6,7 +6,43 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jun 2023 22:15:53 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jun 2023 05:46:23 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>APT</title>
+      <link>/tags/apt/</link>
+      <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
+      
+      <guid>/tags/apt/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Broken</title>
+      <link>/tags/broken/</link>
+      <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
+      
+      <guid>/tags/broken/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Debian-based</title>
+      <link>/tags/debian-based/</link>
+      <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
+      
+      <guid>/tags/debian-based/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Devuan</title>
+      <link>/tags/devuan/</link>
+      <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
+      
+      <guid>/tags/devuan/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Audio</title>
       <link>/tags/audio/</link>
