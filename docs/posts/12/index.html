@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>SDKMan for Linux - Bash, Zsh, and Fish Shell - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon-32x32.svg">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.bc4a12e5c3ca2dae1f3e632c1be7b293452729efc58aa60b6c22aed0399891a1.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="SDKMan for Linux - Bash, Zsh, and Fish Shell"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/12/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">SDKMan for Linux - Bash, Zsh, and Fish Shell</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/software-engineering">Software Engineering</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/java">Java</a>&nbsp;&nbsp;
+        
+        <a href="/tags/sdkman">SDKMan</a>&nbsp;&nbsp;
+        
+        <a href="/tags/installation">Installation</a>&nbsp;&nbsp;
+        
+        <a href="/tags/configuration">Configuration</a>&nbsp;&nbsp;
+        
+        <a href="/tags/fish-shell">Fish Shell</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>June 27, 2023</time> | 
+        4  minutes reading time
+       </p>
+
+      <div class="content"><p>If you are a developer, working mainly with Java, you will notice that so many things need to be done in order to install and stay updated with Java ecosystem and development tools. There&rsquo;s a tool called <a href="SDKMan">https://sdkman.io</a> which can be used to handle installation, configuration, remove, and update all those Java-base software easier. It can be used on major platform (Linux, Windows, Mac) and makes our live as (Java platform) developer easier. However, it doesn&rsquo;t include support for [https://fishshell.com/](Fish Shell) (yet). So, if you are Linux user and a happy Fish user, stay tuned for a guide to install and configure SDKMan for Fish.</p>
+<p>First, we need to install SDKMan. For this, we don&rsquo;t care what shell we use. Do this:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -s <span style="color:#e6db74">&#34;https://get.sdkman.io&#34;</span> | bash
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                                -+syyyyyyys:
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">`</span>/yho:<span style="color:#e6db74">`</span>       -yd.
+</span></span><span style="display:flex;"><span>                         <span style="color:#e6db74">`</span>/yh/<span style="color:#e6db74">`</span>             +m.
+</span></span><span style="display:flex;"><span>                       .oho.                 hy                          .<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>                     .sh/<span style="color:#e6db74">`</span>                   :N<span style="color:#e6db74">`</span>                <span style="color:#e6db74">`</span>-/o<span style="color:#e6db74">`</span>  <span style="color:#e6db74">`</span>+dyyo:.
+</span></span><span style="display:flex;"><span>                   .yh:<span style="color:#e6db74">`</span>                     <span style="color:#e6db74">`</span>M-          <span style="color:#e6db74">`</span>-/osysoym  :hs<span style="color:#e6db74">`</span> <span style="color:#e6db74">`</span>-+sys:      hhyssssssssy+
+</span></span><span style="display:flex;"><span>                 .sh:<span style="color:#e6db74">`</span>                       <span style="color:#e6db74">`</span>N:          ms/-<span style="color:#e6db74">``</span>  yy.yh-      -hy.    <span style="color:#e6db74">`</span>.N-<span style="color:#e6db74">````````</span>+N.
+</span></span><span style="display:flex;"><span>               <span style="color:#e6db74">`</span>od/<span style="color:#e6db74">`</span>                         <span style="color:#e6db74">`</span>N-       -/oM-      ddd+<span style="color:#e6db74">`</span>     <span style="color:#e6db74">`</span>sd:     hNNm        -N:
+</span></span><span style="display:flex;"><span>              :do<span style="color:#e6db74">`</span>                           .M.       dMMM-     <span style="color:#e6db74">`</span>ms.      /d+<span style="color:#e6db74">`</span>     <span style="color:#e6db74">`</span>NMMs       <span style="color:#e6db74">`</span><span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>            .yy-                             :N<span style="color:#e6db74">`</span>    <span style="color:#e6db74">```</span>mMMM.      -      -hy.       /MMM:       yh
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">`</span>+d+<span style="color:#e6db74">`</span>           <span style="color:#e6db74">`</span>:/oo/<span style="color:#e6db74">`</span>       <span style="color:#e6db74">`</span>-/osyh/ossssssdNMM<span style="color:#e6db74">`</span>           .sh:         yMMN<span style="color:#e6db74">`</span>      /m.
+</span></span><span style="display:flex;"><span>         -dh-           :ymNMMMMy  <span style="color:#e6db74">`</span>-/shmNm-<span style="color:#e6db74">`</span>:N/-.<span style="color:#e6db74">``</span>   <span style="color:#e6db74">`</span>.sN            /N-         <span style="color:#e6db74">`</span>NMMy      .m/
+</span></span><span style="display:flex;"><span>       <span style="color:#e6db74">`</span>oNs<span style="color:#e6db74">`</span>          -hysosmMMMMydmNmds+-.:ohm           :             sd<span style="color:#e6db74">`</span>        :MMM/      yy
+</span></span><span style="display:flex;"><span>      .hN+           /d:    -MMMmhs/-.<span style="color:#e6db74">`</span>   .MMMh   .ss+-                 <span style="color:#e6db74">`</span>yy<span style="color:#e6db74">`</span>       sMMN<span style="color:#e6db74">`</span>     :N.
+</span></span><span style="display:flex;"><span>     :mN/           <span style="color:#e6db74">`</span>N/     <span style="color:#e6db74">`</span>o/-<span style="color:#e6db74">`</span>         :MMMo   +MMMN-         .<span style="color:#e6db74">`</span>      <span style="color:#e6db74">`</span>ds       mMMh      <span style="color:#66d9ef">do</span>
+</span></span><span style="display:flex;"><span>    /NN/            <span style="color:#e6db74">`</span>N+....--:/+oooosooo+:sMMM:   hMMMM:        <span style="color:#e6db74">`</span>my       .m+     -MMM+     :N.
+</span></span><span style="display:flex;"><span>   /NMo              -+ooooo+/:-....<span style="color:#e6db74">`</span>...:+hNMN.  <span style="color:#e6db74">`</span>NMMMd<span style="color:#e6db74">`</span>        .MM/       -m:    oMMN.     hs
+</span></span><span style="display:flex;"><span>  -NMd<span style="color:#e6db74">`</span>                                    :mm   -MMMm- .s/     -MMm.       /m-   mMMd     -N.
+</span></span><span style="display:flex;"><span> <span style="color:#e6db74">`</span>mMM/                                      .-   /MMh. -dMo     -MMMy        od. .MMMs..---yh
+</span></span><span style="display:flex;"><span> +MMM.                                           sNo<span style="color:#e6db74">`</span>.sNMM+     :MMMM/        sh<span style="color:#e6db74">`</span>+MMMNmNm+++-
+</span></span><span style="display:flex;"><span> mMMM-                                           /--ohmMMM+     :MMMMm.       <span style="color:#e6db74">`</span>hyymmmdddo
+</span></span><span style="display:flex;"><span> MMMMh.                  <span style="color:#e6db74">````</span>                  <span style="color:#e6db74">`</span>-+yy/<span style="color:#e6db74">`</span>yMMM/     :MMMMMy       -sm:.<span style="color:#e6db74">``</span>..-:-.<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span> dMMMMmo-.<span style="color:#e6db74">``````</span>..-:/osyhddddho.           <span style="color:#e6db74">`</span>+shdh+.   hMMM:     :MmMMMM/   ./yy/<span style="color:#e6db74">`</span> <span style="color:#e6db74">`</span>:sys+/+sh/
+</span></span><span style="display:flex;"><span> .dMMMMMMmdddddmmNMMMNNNNNMMMMMs           sNdo-      dMMM-  <span style="color:#e6db74">`</span>-/yd/MMMMm-:sy+.   :hs-      /N<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">`</span>/ymNNNNNNNmmdys+/::----/dMMm:          +m-         mMMM+ohmo/.<span style="color:#e6db74">`</span> sMMMMdo-    .om:       <span style="color:#e6db74">`</span>sh
+</span></span><span style="display:flex;"><span>     <span style="color:#e6db74">`</span>.-----+/.<span style="color:#e6db74">`</span>       <span style="color:#e6db74">`</span>.-+hh/<span style="color:#e6db74">`</span>         <span style="color:#e6db74">`</span>od.          NMMNmds/     <span style="color:#e6db74">`</span>mmy:<span style="color:#e6db74">`</span>     +mMy      <span style="color:#e6db74">`</span>:yy.
+</span></span><span style="display:flex;"><span>           /moyso+//+ossso:.           .yy<span style="color:#e6db74">`</span>          <span style="color:#e6db74">`</span>dy+:<span style="color:#e6db74">`</span>         ..       :MMMN+---/oys:
+</span></span><span style="display:flex;"><span>         /+m:  <span style="color:#e6db74">`</span>.-:::-<span style="color:#e6db74">`</span>               /d+                                    +MMMMMMMNh:<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>        +MN/                        -yh.                                     <span style="color:#e6db74">`</span>+hddhy+.
+</span></span><span style="display:flex;"><span>       /MM+                       .sh:
+</span></span><span style="display:flex;"><span>      :NMo                      -sh/
+</span></span><span style="display:flex;"><span>     -NMs                    <span style="color:#e6db74">`</span>/yy:
+</span></span><span style="display:flex;"><span>    .NMy                  <span style="color:#e6db74">`</span>:sh+.
+</span></span><span style="display:flex;"><span>   <span style="color:#e6db74">`</span>mMm<span style="color:#e6db74">`</span>               ./yds-
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">`</span>dMMMmyo:-.<span style="color:#e6db74">````</span>.-:oymNy:<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>  +NMMMMMMMMMMMMMMMMms:<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>    -+shmNMMMNmdy+:<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>                                                                 Now attempting installation...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> a previous installation of SDKMAN...
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> unzip...
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> zip...
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> curl...
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span> sed...
+</span></span><span style="display:flex;"><span>Installing SDKMAN scripts...
+</span></span><span style="display:flex;"><span>Create distribution directories...
+</span></span><span style="display:flex;"><span>Getting available candidates...
+</span></span><span style="display:flex;"><span>Prime platform file...
+</span></span><span style="display:flex;"><span>Prime the config file...
+</span></span><span style="display:flex;"><span>Installing script cli archive...
+</span></span><span style="display:flex;"><span>* Downloading...
+</span></span><span style="display:flex;"><span><span style="color:#75715e">######################################################################## 100.0%</span>
+</span></span><span style="display:flex;"><span>* Checking archive integrity...
+</span></span><span style="display:flex;"><span>* Extracting archive...
+</span></span><span style="display:flex;"><span>* Copying archive contents...
+</span></span><span style="display:flex;"><span>* Cleaning up...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Installing script cli archive...
+</span></span><span style="display:flex;"><span>* Downloading...
+</span></span><span style="display:flex;"><span><span style="color:#75715e">######################################################################## 100.0%</span>
+</span></span><span style="display:flex;"><span>* Checking archive integrity...
+</span></span><span style="display:flex;"><span>* Extracting archive...
+</span></span><span style="display:flex;"><span>* Copying archive contents...
+</span></span><span style="display:flex;"><span>* Cleaning up...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Set version to 5.18.2 ...
+</span></span><span style="display:flex;"><span>Set native version to 0.2.9 ...
+</span></span><span style="display:flex;"><span>Attempt update of interactive bash profile on regular UNIX...
+</span></span><span style="display:flex;"><span>Attempt update of zsh profile...
+</span></span><span style="display:flex;"><span>Updated existing /home/bpdp/.zshrc
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>All <span style="color:#66d9ef">done</span>!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>You are subscribed to the STABLE channel.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Please open a new terminal, or run the following in the existing one:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    source <span style="color:#e6db74">&#34;/home/bpdp/.sdkman/bin/sdkman-init.sh&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Then issue the following command:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    sdk help
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enjoy!!!
+</span></span></code></pre></div><p><strong>Notes</strong>: Your path of course different with mine. Also, if you use Bash or Zsh, you may now use SDKMan. If you use Fish, please continue.</p>
+<p>Now, install <a href="Fisher">https://github.com/jorgebucaran/fisher</a> first:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source <span style="color:#f92672">&amp;&amp;</span> fisher install jorgebucaran/fisher
+</span></span><span style="display:flex;"><span>fisher install version 4.4.3
+</span></span><span style="display:flex;"><span>Fetching https://api.github.com/repos/jorgebucaran/fisher/tarball/HEAD
+</span></span><span style="display:flex;"><span>Installing jorgebucaran/fisher
+</span></span><span style="display:flex;"><span>           /home/bpdp/.config/fish/functions/fisher.fish
+</span></span><span style="display:flex;"><span>           /home/bpdp/.config/fish/completions/fisher.fish
+</span></span><span style="display:flex;"><span>Updated <span style="color:#ae81ff">1</span> plugin/s
+</span></span><span style="display:flex;"><span>$ fisher list
+</span></span><span style="display:flex;"><span>jorgebucaran/fisher
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Using <strong>fisher</strong>, let&rsquo;s install SDKMan for Fish:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fisher install reitzig/sdkman-for-fish@v2.0.0
+</span></span><span style="display:flex;"><span>fisher install version 4.4.3
+</span></span><span style="display:flex;"><span>Fetching https://api.github.com/repos/reitzig/sdkman-for-fish/tarball/v2.0.0
+</span></span><span style="display:flex;"><span>Installing reitzig/sdkman-for-fish@v2.0.0
+</span></span><span style="display:flex;"><span>           /home/bpdp/.config/fish/functions/sdk.fish
+</span></span><span style="display:flex;"><span>           /home/bpdp/.config/fish/conf.d/sdk.fish
+</span></span><span style="display:flex;"><span>           /home/bpdp/.config/fish/completions/sdk.fish
+</span></span><span style="display:flex;"><span>Updated <span style="color:#ae81ff">1</span> plugin/s
+</span></span><span style="display:flex;"><span>$ fisher list
+</span></span><span style="display:flex;"><span>jorgebucaran/fisher
+</span></span><span style="display:flex;"><span>reitzig/sdkman-for-fish@v2.0.0
+</span></span><span style="display:flex;"><span>$ 
+</span></span></code></pre></div><p>Configure SDKMan directory in <strong>$HOME/.config/fish/conf.d/config_sdk.fish</strong>, add this text:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set -g __sdkman_custom_dir $HOME/.sdkman
+</span></span></code></pre></div><p>Exit from current terminal/shell, then activate new terminal/shell. Run <strong>sdk</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sdk
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>NAME
+</span></span><span style="display:flex;"><span>    sdk - The command line interface <span style="color:#f92672">(</span>CLI<span style="color:#f92672">)</span> <span style="color:#66d9ef">for</span> SDKMAN!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SYNOPSIS
+</span></span><span style="display:flex;"><span>    sdk &lt;subcommand&gt; <span style="color:#f92672">[</span>candidate<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>version<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>DESCRIPTION
+</span></span><span style="display:flex;"><span>    SDKMAN! is a tool <span style="color:#66d9ef">for</span> managing parallel versions of multiple JVM related
+</span></span><span style="display:flex;"><span>    Software Development Kits on most Unix based systems. It provides a
+</span></span><span style="display:flex;"><span>    convenient Command Line Interface <span style="color:#f92672">(</span>CLI<span style="color:#f92672">)</span> and API <span style="color:#66d9ef">for</span> installing, switching,
+</span></span><span style="display:flex;"><span>    removing and listing Candidates.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>SUBCOMMANDS &amp; QUALIFIERS
+</span></span><span style="display:flex;"><span>    help         <span style="color:#f92672">[</span>subcommand<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    install      &lt;candidate&gt; <span style="color:#f92672">[</span>version<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>path<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    uninstall    &lt;candidate&gt; &lt;version&gt;
+</span></span><span style="display:flex;"><span>    list         <span style="color:#f92672">[</span>candidate<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    use          &lt;candidate&gt; &lt;version&gt;
+</span></span><span style="display:flex;"><span>    config       no qualifier
+</span></span><span style="display:flex;"><span>    default      &lt;candidate&gt; <span style="color:#f92672">[</span>version<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    home         &lt;candidate&gt; &lt;version&gt;
+</span></span><span style="display:flex;"><span>    env          <span style="color:#f92672">[</span>init|install|clear<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    current      <span style="color:#f92672">[</span>candidate<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    upgrade      <span style="color:#f92672">[</span>candidate<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    version      no qualifier
+</span></span><span style="display:flex;"><span>    offline      <span style="color:#f92672">[</span>enable|disable<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    selfupdate   <span style="color:#f92672">[</span>force<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>    update       no qualifier
+</span></span><span style="display:flex;"><span>    flush        <span style="color:#f92672">[</span>tmp|metadata|version<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>EXAMPLES
+</span></span><span style="display:flex;"><span>    sdk install java 17.0.0-tem
+</span></span><span style="display:flex;"><span>    sdk help install
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>All are set!</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Jun 2023 05:46:23 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 27 Jun 2023 12:02:01 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
@@ -61,6 +61,15 @@ School of Decentralized Systems School of Enterprise Systems School of Software 
       
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    
+    <item>
+      <title>SDKMan for Linux - Bash, Zsh, and Fish Shell</title>
+      <link>/posts/12/</link>
+      <pubDate>Tue, 27 Jun 2023 12:02:01 +0700</pubDate>
+      
+      <guid>/posts/12/</guid>
+      <description>If you are a developer, working mainly with Java, you will notice that so many things need to be done in order to install and stay updated with Java ecosystem and development tools. There&amp;rsquo;s a tool called https://sdkman.io which can be used to handle installation, configuration, remove, and update all those Java-base software easier. It can be used on major platform (Linux, Windows, Mac) and makes our live as (Java platform) developer easier.</description>
     </item>
     
     <item>
