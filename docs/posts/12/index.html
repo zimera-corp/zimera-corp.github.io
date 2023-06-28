@@ -190,7 +190,7 @@
         
         <a href="/tags/java">Java</a>&nbsp;&nbsp;
         
-        <a href="/tags/sdkman">SDKMan</a>&nbsp;&nbsp;
+        <a href="/tags/sdkman">SDKMAN!</a>&nbsp;&nbsp;
         
         <a href="/tags/installation">Installation</a>&nbsp;&nbsp;
         
@@ -206,8 +206,8 @@
         4  minutes reading time
        </p>
 
-      <div class="content"><p>If you are a developer, working mainly with Java, you will notice that so many things need to be done in order to install and stay updated with Java ecosystem and development tools. There&rsquo;s a tool called <a href="SDKMan">https://sdkman.io</a> which can be used to handle installation, configuration, remove, and update all those Java-base software easier. It can be used on major platform (Linux, Windows, Mac) and makes our live as (Java platform) developer easier. However, it doesn&rsquo;t include support for [https://fishshell.com/](Fish Shell) (yet). So, if you are Linux user and a happy Fish user, stay tuned for a guide to install and configure SDKMan for Fish.</p>
-<p>First, we need to install SDKMan. For this, we don&rsquo;t care what shell we use. Do this:</p>
+      <div class="content"><p>If you are a developer, working mainly with Java, you will notice that so many things need to be done in order to install and stay updated with Java ecosystem and development tools. There&rsquo;s a tool called <a href="SDKMAN!">https://sdkman.io</a> which can be used to handle installation, configuration, remove, and update all those Java-base software easier. It can be used on major platform (Linux, Windows, Mac) and makes our live as (Java platform) developer easier. However, it doesn&rsquo;t include support for [https://fishshell.com/](Fish Shell) (yet). So, if you are Linux user and a happy Fish user, stay tuned for a guide to install and configure SDKMAN! for Fish.</p>
+<p>First, we need to install SDKMAN!. For this, we don&rsquo;t care what shell we use. Do this:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -s <span style="color:#e6db74">&#34;https://get.sdkman.io&#34;</span> | bash
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>                                -+syyyyyyys:
@@ -300,7 +300,7 @@
 </span></span><span style="display:flex;"><span>    sdk help
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span>Enjoy!!!
-</span></span></code></pre></div><p><strong>Notes</strong>: Your path of course different with mine. Also, if you use Bash or Zsh, you may now use SDKMan. If you use Fish, please continue.</p>
+</span></span></code></pre></div><p><strong>Notes</strong>: Your path of course different with mine. Also, if you use Bash or Zsh, you may now use SDKMAN!. If you use Fish, please continue.</p>
 <p>Now, install <a href="Fisher">https://github.com/jorgebucaran/fisher</a> first:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source <span style="color:#f92672">&amp;&amp;</span> fisher install jorgebucaran/fisher
 </span></span><span style="display:flex;"><span>fisher install version 4.4.3
@@ -312,7 +312,7 @@
 </span></span><span style="display:flex;"><span>$ fisher list
 </span></span><span style="display:flex;"><span>jorgebucaran/fisher
 </span></span><span style="display:flex;"><span>$
-</span></span></code></pre></div><p>Using <strong>fisher</strong>, let&rsquo;s install SDKMan for Fish:</p>
+</span></span></code></pre></div><p>Using <strong>fisher</strong>, let&rsquo;s install SDKMAN! for Fish:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>fisher install reitzig/sdkman-for-fish@v2.0.0
 </span></span><span style="display:flex;"><span>fisher install version 4.4.3
 </span></span><span style="display:flex;"><span>Fetching https://api.github.com/repos/reitzig/sdkman-for-fish/tarball/v2.0.0
@@ -325,7 +325,7 @@
 </span></span><span style="display:flex;"><span>jorgebucaran/fisher
 </span></span><span style="display:flex;"><span>reitzig/sdkman-for-fish@v2.0.0
 </span></span><span style="display:flex;"><span>$ 
-</span></span></code></pre></div><p>Configure SDKMan directory in <strong>$HOME/.config/fish/conf.d/config_sdk.fish</strong>, add this text:</p>
+</span></span></code></pre></div><p>Configure SDKMAN! directory in <strong>$HOME/.config/fish/conf.d/config_sdk.fish</strong>, add this text:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set -g __sdkman_custom_dir $HOME/.sdkman
 </span></span></code></pre></div><p>Exit from current terminal/shell, then activate new terminal/shell. Run <strong>sdk</strong>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sdk

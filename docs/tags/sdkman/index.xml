@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SDKMan on Zimera Corporation</title>
+    <title>SDKMAN! on Zimera Corporation</title>
     <link>/tags/sdkman/</link>
-    <description>Recent content in SDKMan on Zimera Corporation</description>
+    <description>Recent content in SDKMAN! on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 27 Jun 2023 12:02:01 +0700</lastBuildDate><atom:link href="/tags/sdkman/index.xml" rel="self" type="application/rss+xml" />
