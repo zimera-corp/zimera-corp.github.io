@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 27 Jun 2023 12:02:01 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 31 Jul 2023 21:51:43 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
@@ -61,6 +61,15 @@ School of Decentralized Systems School of Enterprise Systems School of Software 
       
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    
+    <item>
+      <title>Penerapan AI Sebagai Pendorong Transformasi Ekonomi Indonesia</title>
+      <link>/posts/13/</link>
+      <pubDate>Mon, 31 Jul 2023 21:51:43 +0700</pubDate>
+      
+      <guid>/posts/13/</guid>
+      <description>Full presentation available at our GitHub repository</description>
     </item>
     
     <item>
