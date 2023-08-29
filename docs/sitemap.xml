@@ -18,16 +18,37 @@
     <loc>/services/systems/</loc>
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
+    <loc>/categories/data/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
+    <loc>/tags/geospation/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
+    <loc>/tags/installation/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
+    <loc>/tags/postgis/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
+    <loc>/posts/14/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
+    <loc>/tags/postgresql/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+  </url><url>
     <loc>/tags/artificial-intelligence/</loc>
     <lastmod>2023-07-31T21:51:43+07:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2023-07-31T21:51:43+07:00</lastmod>
-  </url><url>
     <loc>/tags/economic-transformation/</loc>
-    <lastmod>2023-07-31T21:51:43+07:00</lastmod>
-  </url><url>
-    <loc>/</loc>
     <lastmod>2023-07-31T21:51:43+07:00</lastmod>
   </url><url>
     <loc>/tags/janabadra/</loc>
@@ -39,16 +60,10 @@
     <loc>/categories/public-speaking/</loc>
     <lastmod>2023-07-31T21:51:43+07:00</lastmod>
   </url><url>
-    <loc>/tags/</loc>
-    <lastmod>2023-07-31T21:51:43+07:00</lastmod>
-  </url><url>
     <loc>/tags/configuration/</loc>
     <lastmod>2023-06-27T12:02:01+07:00</lastmod>
   </url><url>
     <loc>/tags/fish-shell/</loc>
-    <lastmod>2023-06-27T12:02:01+07:00</lastmod>
-  </url><url>
-    <loc>/tags/installation/</loc>
     <lastmod>2023-06-27T12:02:01+07:00</lastmod>
   </url><url>
     <loc>/tags/java/</loc>
@@ -125,9 +140,6 @@
   </url><url>
     <loc>/tags/web/</loc>
     <lastmod>2023-02-09T20:59:19+07:00</lastmod>
-  </url><url>
-    <loc>/categories/data/</loc>
-    <lastmod>2023-02-06T06:48:57+07:00</lastmod>
   </url><url>
     <loc>/tags/data-lake/</loc>
     <lastmod>2023-02-06T06:48:57+07:00</lastmod>

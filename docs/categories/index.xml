@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 31 Jul 2023 21:51:43 +0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 29 Aug 2023 22:25:56 +0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Data</title>
+      <link>/categories/data/</link>
+      <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
+      
+      <guid>/categories/data/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Public Speaking</title>
       <link>/categories/public-speaking/</link>
@@ -31,15 +40,6 @@
       <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
       
       <guid>/categories/operating-system/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Data</title>
-      <link>/categories/data/</link>
-      <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
-      
-      <guid>/categories/data/</guid>
       <description></description>
     </item>
     

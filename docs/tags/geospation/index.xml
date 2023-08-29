@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Geospation on Zimera Corporation</title>
+    <link>/tags/geospation/</link>
+    <description>Recent content in Geospation on Zimera Corporation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 29 Aug 2023 22:25:56 +0700</lastBuildDate><atom:link href="/tags/geospation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>PostGIS - PostgreSQL GIS Extension Installation</title>
+      <link>/posts/14/</link>
+      <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
+      
+      <guid>/posts/14/</guid>
+      <description>PostgreSQL - in its default installation - geometric data types for spatial object. More geospatial features exist in PostgreSQL extension - PostGIS. Here&amp;rsquo;s hos to insatll PostGIS extension.
+Prerequisites PostGIS needs GEOS and SFCGAL. In Debian-based system, these packages are needed:
+gdal-data and libgdal-dev. libgeosVERRSION and libgeos-dev. libsfcgal1 and libsfcgal-dev. protobuf-* and libprotobuf-c-dev dblatex if you want to build PostGIS documentation Build Get the source code, extract:
+$ tar -xvf postgis-3.</description>
+    </item>
+    
+  </channel>
+</rss>
