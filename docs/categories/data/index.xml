@@ -6,7 +6,16 @@
     <description>Recent content in Data on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 29 Aug 2023 22:25:56 +0700</lastBuildDate><atom:link href="/categories/data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Oct 2023 09:19:22 +0700</lastBuildDate><atom:link href="/categories/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proses aggregate RDD pada Apache Spark</title>
+      <link>/posts/15/</link>
+      <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
+      
+      <guid>/posts/15/</guid>
+      <description>RDD merupakan struktur data fundamental di Apache Spark. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses transformasi serta action yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah zero value yang ada pada action aggregate.</description>
+    </item>
+    
     <item>
       <title>PostGIS - PostgreSQL GIS Extension Installation</title>
       <link>/posts/14/</link>

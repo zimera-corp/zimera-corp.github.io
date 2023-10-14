@@ -18,16 +18,37 @@
     <loc>/services/systems/</loc>
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
+    <loc>/tags/action/</loc>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
+  </url><url>
+    <loc>/tags/aggregate/</loc>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
+  </url><url>
+    <loc>/tags/apache-spark/</loc>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
+  </url><url>
     <loc>/categories/</loc>
-    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
     <loc>/categories/data/</loc>
-    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
-    <loc>/tags/geospation/</loc>
-    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
+    <loc>/tags/data-engineering/</loc>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
     <loc>/</loc>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
+  </url><url>
+    <loc>/posts/15/</loc>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
+  </url><url>
+    <loc>/tags/rdd/</loc>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
+  </url><url>
+    <loc>/tags/geospation/</loc>
     <lastmod>2023-08-29T22:25:56+07:00</lastmod>
   </url><url>
     <loc>/tags/installation/</loc>
@@ -40,9 +61,6 @@
     <lastmod>2023-08-29T22:25:56+07:00</lastmod>
   </url><url>
     <loc>/tags/postgresql/</loc>
-    <lastmod>2023-08-29T22:25:56+07:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2023-08-29T22:25:56+07:00</lastmod>
   </url><url>
     <loc>/tags/artificial-intelligence/</loc>

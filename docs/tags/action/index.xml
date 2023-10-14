@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>action on Zimera Corporation</title>
+    <link>/tags/action/</link>
+    <description>Recent content in action on Zimera Corporation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 14 Oct 2023 09:19:22 +0700</lastBuildDate><atom:link href="/tags/action/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Proses aggregate RDD pada Apache Spark</title>
+      <link>/posts/15/</link>
+      <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
+      
+      <guid>/posts/15/</guid>
+      <description>RDD merupakan struktur data fundamental di Apache Spark. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses transformasi serta action yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah zero value yang ada pada action aggregate.</description>
+    </item>
+    
+  </channel>
+</rss>
