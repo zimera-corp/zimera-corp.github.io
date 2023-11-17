@@ -18,6 +18,39 @@
     <loc>/services/systems/</loc>
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/tags/ide/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/tags/instalasi/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/tags/konfigurasi/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/tags/modular/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/tags/mojo/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/posts/16/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/categories/software/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
+    <loc>/tags/visual-studio-code/</loc>
+    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
+  </url><url>
     <loc>/tags/action/</loc>
     <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
@@ -27,25 +60,16 @@
     <loc>/tags/apache-spark/</loc>
     <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
-  </url><url>
     <loc>/categories/data/</loc>
     <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
     <loc>/tags/data-engineering/</loc>
     <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
-  </url><url>
     <loc>/posts/15/</loc>
     <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
     <loc>/tags/rdd/</loc>
-    <lastmod>2023-10-14T09:19:22+07:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2023-10-14T09:19:22+07:00</lastmod>
   </url><url>
     <loc>/tags/geospation/</loc>

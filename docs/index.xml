@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Oct 2023 09:19:22 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 17 Nov 2023 22:01:11 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
@@ -61,6 +61,15 @@ School of Decentralized Systems School of Enterprise Systems School of Software 
       
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    
+    <item>
+      <title>Mojo - Instalasi dan Memulai Coding</title>
+      <link>/posts/16/</link>
+      <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
+      
+      <guid>/posts/16/</guid>
+      <description>Tentang Mojo Mojo adalah bahasa pemrograman baru yang diarahkan ke para pengembang software bidang AI (Artificial Intelligence). Mojo muncul karena keluhan lamanya eksekusi program AI yang dibangun menggunakan Python, sementara itu ekosistem AI di Python sedemikian kuat dan berlimpah (barangkali tidak ada bahasa pemrograman lain yang menandingi). &amp;ldquo;Ketidakberdayaan&amp;rdquo; para pengembang software AI berbasis Python tersebut yang memicu munculnya Mojo: tidak menyukai lambatnya program AI tetapi tidak bisa lepas dari Python karena matangnya ekosistem AI di Python.</description>
     </item>
     
     <item>
