@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Apache AGE - Property Graph - OpenCypher for PostgreSQL - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon-32x32.svg">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.bc4a12e5c3ca2dae1f3e632c1be7b293452729efc58aa60b6c22aed0399891a1.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Apache AGE - Property Graph - OpenCypher for PostgreSQL"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/17/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Apache AGE - Property Graph - OpenCypher for PostgreSQL</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/data">Data</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/opencypher">OpenCypher</a>&nbsp;&nbsp;
+        
+        <a href="/tags/graph">Graph</a>&nbsp;&nbsp;
+        
+        <a href="/tags/graph-database">Graph Database</a>&nbsp;&nbsp;
+        
+        <a href="/tags/postgresql">PostgreSQL</a>&nbsp;&nbsp;
+        
+        <a href="/tags/apache-age">Apache AGE</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>January 27, 2024</time> | 
+        2  minutes reading time
+       </p>
+
+      <div class="content"><h2 id="tentang-apache-age">Tentang Apache AGE</h2>
+<p><a href="https://age.apache.org/">Apache AGE</a> adalah adalah ekstensi dari <a href="https://postgresql.org">PostgreSQL</a> untuk model data graph. Apache AGE mendukung model data graph berupa <em>property graph</em> (jenis lainnya adalah RDF/TripleStore). Apache AGE merupakan software bebas dan mendukung berbagai versi PostgreSQL. Secara resmi, pada halaman web Apache AGE, dinyatakan bahwa versi PostgreSQL yang didukung adalah versi 11-15. Meski demikian, pada versi <em>release</em> dari Apache AGE di <a href="https://github.com/apache/age/releases">GitHub</a>, terdapat versi untuk PostgreSQL 16.x. Artikel ini menggunakan versi 16.1.</p>
+<h2 id="instalasi">Instalasi</h2>
+<p>Instalasi sangat mudah dilakukan dan harus dikompilasi dari <em>source code</em>. Berikut adalah cara melakukan instalasi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pwd
+</span></span><span style="display:flex;"><span>/home/bpdp/master/postgresql/16/age-1.5.0-pg16/apache-age-1.5.0
+</span></span><span style="display:flex;"><span>$ make install
+</span></span><span style="display:flex;"><span>gcc -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror<span style="color:#f92672">=</span>vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> -Wcast-function-type -Wshadow<span style="color:#f92672">=</span>compatible-local -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision<span style="color:#f92672">=</span>standard -Wno-format-truncation -Wno-stringop-truncation -O2 -fPIC -fvisibility<span style="color:#f92672">=</span>hidden -I.//src/include -I.//src/include/parser -I. -I./ -I/home/bpdp/software/dbms/postgresql-16.1/include/server -I/home/bpdp/software/dbms/postgresql-16.1/include/internal  -D_GNU_SOURCE   -c -o src/backend/age.o src/backend/age.c
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>/bin/mkdir -p <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-16.1/lib&#39;</span>
+</span></span><span style="display:flex;"><span>/bin/mkdir -p <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-16.1/share/extension&#39;</span>
+</span></span><span style="display:flex;"><span>/bin/mkdir -p <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-16.1/share/extension&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">755</span>  age.so <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-16.1/lib/age.so&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">644</span> .//age.control <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-16.1/share/extension/&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">644</span>  age--1.5.0.sql <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-16.1/share/extension/&#39;</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="menggunakan-apache-age">Menggunakan Apache AGE</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>psql <span style="color:#f92672">-</span>U bpdp <span style="color:#f92672">-</span>d template1
+</span></span><span style="display:flex;"><span>psql (<span style="color:#ae81ff">16</span>.<span style="color:#ae81ff">1</span>)
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">Type</span> <span style="color:#e6db74">&#34;help&#34;</span> <span style="color:#66d9ef">for</span> help.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=#</span> <span style="color:#66d9ef">CREATE</span> EXTENSION age;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> EXTENSION
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=#</span> <span style="color:#66d9ef">LOAD</span> <span style="color:#e6db74">&#39;age&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">LOAD</span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=#</span> <span style="color:#66d9ef">SET</span> search_path <span style="color:#f92672">=</span> ag_catalog, <span style="color:#e6db74">&#34;$user&#34;</span>, <span style="color:#66d9ef">public</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">SET</span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=#</span> <span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">USAGE</span> <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">SCHEMA</span> ag_catalog <span style="color:#66d9ef">TO</span> bpdp;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=#</span> <span style="color:#66d9ef">SELECT</span> create_graph(<span style="color:#e6db74">&#39;test_age&#39;</span>);
+</span></span><span style="display:flex;"><span>NOTICE:  graph <span style="color:#e6db74">&#34;test_age&#34;</span> has been created
+</span></span><span style="display:flex;"><span> create_graph 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">--------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> 
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">row</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=#</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> ag_catalog.ag_graph;
+</span></span><span style="display:flex;"><span> graphid <span style="color:#f92672">|</span>   name   <span style="color:#f92672">|</span> namespace 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">---------+----------+-----------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#ae81ff">21353</span> <span style="color:#f92672">|</span> test_age <span style="color:#f92672">|</span> test_age
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">row</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=#</span> <span style="color:#66d9ef">SELECT</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">FROM</span> ag_catalog.drop_graph(<span style="color:#e6db74">&#39;test_age&#39;</span>, <span style="color:#66d9ef">true</span>);
+</span></span><span style="display:flex;"><span>NOTICE:  <span style="color:#66d9ef">drop</span> cascades <span style="color:#66d9ef">to</span> <span style="color:#ae81ff">2</span> other objects
+</span></span><span style="display:flex;"><span>DETAIL:  <span style="color:#66d9ef">drop</span> cascades <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">table</span> test_age._ag_label_vertex
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">drop</span> cascades <span style="color:#66d9ef">to</span> <span style="color:#66d9ef">table</span> test_age._ag_label_edge
+</span></span><span style="display:flex;"><span>NOTICE:  graph <span style="color:#e6db74">&#34;test_age&#34;</span> has been dropped
+</span></span><span style="display:flex;"><span> drop_graph 
+</span></span><span style="display:flex;"><span><span style="color:#75715e">------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> 
+</span></span><span style="display:flex;"><span>(<span style="color:#ae81ff">1</span> <span style="color:#66d9ef">row</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=#</span> 
+</span></span></code></pre></div><p>Setelah ini, kita bisa menggunakan <a href="https://opencypher.org">OpenCypher</a> untuk bahasa query dari graph database yang kita buat (create_graph).</p>
+<p>Happy hacking!</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

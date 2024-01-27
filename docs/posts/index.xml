@@ -8,6 +8,15 @@
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Jan 2023 10:56:44 +0700</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
+      <title>Apache AGE - Property Graph - OpenCypher for PostgreSQL</title>
+      <link>/posts/17/</link>
+      <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
+      
+      <guid>/posts/17/</guid>
+      <description>Tentang Apache AGE Apache AGE adalah adalah ekstensi dari PostgreSQL untuk model data graph. Apache AGE mendukung model data graph berupa property graph (jenis lainnya adalah RDF/TripleStore). Apache AGE merupakan software bebas dan mendukung berbagai versi PostgreSQL. Secara resmi, pada halaman web Apache AGE, dinyatakan bahwa versi PostgreSQL yang didukung adalah versi 11-15. Meski demikian, pada versi release dari Apache AGE di GitHub, terdapat versi untuk PostgreSQL 16.x. Artikel ini menggunakan versi 16.</description>
+    </item>
+    
+    <item>
       <title>Mojo - Instalasi dan Memulai Coding</title>
       <link>/posts/16/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
