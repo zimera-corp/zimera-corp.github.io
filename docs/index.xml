@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jan 2024 17:41:41 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
@@ -61,6 +61,15 @@ School of Decentralized Systems School of Enterprise Systems School of Software 
       
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    
+    <item>
+      <title>FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS</title>
+      <link>/posts/18/</link>
+      <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
+      
+      <guid>/posts/18/</guid>
+      <description>If you are a software developer, mainly working with data intensive application, chances are, you&amp;rsquo;ve already work with in-memory data as it will make our app runs fast. Redis usually becomes de-facto DBMS for caching. Redis mainly uses key-value data model but its modular architecture makes it possible to develop other tools or data models using Redis key-value as its underlying data model. That&amp;rsquo;s also happens with RedisGraph, a Redis module for property graph model.</description>
     </item>
     
     <item>

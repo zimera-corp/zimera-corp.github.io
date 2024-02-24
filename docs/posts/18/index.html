@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/favicon-32x32.svg">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.bc4a12e5c3ca2dae1f3e632c1be7b293452729efc58aa60b6c22aed0399891a1.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/18/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/data">Data</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/opencypher">OpenCypher</a>&nbsp;&nbsp;
+        
+        <a href="/tags/graph">Graph</a>&nbsp;&nbsp;
+        
+        <a href="/tags/graph-database">Graph Database</a>&nbsp;&nbsp;
+        
+        <a href="/tags/redis">Redis</a>&nbsp;&nbsp;
+        
+        <a href="/tags/redisgraph">RedisGraph</a>&nbsp;&nbsp;
+        
+        <a href="/tags/falkordb">FalkorDB</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>February 24, 2024</time> | 
+        5  minutes reading time
+       </p>
+
+      <div class="content"><p>If you are a software developer, mainly working with data intensive application, chances are, you&rsquo;ve already work with in-memory data as it will make our app runs fast. <a href="https://redis.io">Redis</a> usually becomes de-facto DBMS for caching. Redis mainly uses <em>key-value</em> data model but its modular architecture makes it possible to develop other tools or data models using Redis key-value as its underlying data model. That&rsquo;s also happens with <em>RedisGraph</em>, a Redis module for property graph model. It uses <a href="https://opencypher.org">OpenCypher</a> as its query language. However, bad news came: Redis <a href="https://redis.com/blog/redisgraph-eol/">stopped its development</a>. However, lucky for us, some developers decide to fork RedisGraph and continue its development as <a href="https://falkordb.con">FalkorDB</a>. This article explains how we can get started quickly with FalkorDB.</p>
+<h2 id="installation">Installation</h2>
+<p>To install FalkorDB, install Redis first. You may use your own package manager or compile it by yourself. Here, I will build Redis from source and configure it.</p>
+<h3 id="install-redis">Install Redis</h3>
+<ol>
+<li>Get the source (here I use v7.2.4): <a href="https://redis.io/download/">https://redis.io/download/</a></li>
+<li>Compile and build:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tar -xvf 7.2.4.tar.gz
+</span></span><span style="display:flex;"><span>$ cd redis-7.2.4
+</span></span><span style="display:flex;"><span>$ make PREFIX<span style="color:#f92672">=</span>/home/bpdp/software/redis/redis-7.2.4 BUILD_TLS<span style="color:#f92672">=</span>yes install
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Once finished, the result will be installed in <code>/home/bpdp/software/redis/redis-7.2.4/bin</code>. Put that <code>bin</code> directory in <em>PATH</em> environment variable.</p>
+<h3 id="install-falkordb">Install FalkorDB</h3>
+<p>Currentnly, FalkorDB is a Redis module. When build process succeed, there will be one <code>.so</code> file. Here, we will use stable version (4.0.4), directly cloned from GitHub. To install:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ git clone --recurse-submodules -j8 --depth <span style="color:#ae81ff">1</span> --branch v4.0.4  https://github.com/FalkorDB/FalkorDB.git
+</span></span><span style="display:flex;"><span>$ cd FalkorDB
+</span></span><span style="display:flex;"><span>$ make
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Result:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -la bin/linux-x64-release/src/
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">243908</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">3</span> bpdp bpdp      <span style="color:#ae81ff">4096</span> Feb <span style="color:#ae81ff">24</span> 11:46 ./
+</span></span><span style="display:flex;"><span>drwxr-xr-x <span style="color:#ae81ff">10</span> bpdp bpdp      <span style="color:#ae81ff">4096</span> Feb <span style="color:#ae81ff">24</span> 11:55 ../
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> bpdp bpdp     <span style="color:#ae81ff">18750</span> Feb <span style="color:#ae81ff">24</span> 11:45 CMakeCache.txt
+</span></span><span style="display:flex;"><span>drwxr-xr-x  <span style="color:#ae81ff">6</span> bpdp bpdp      <span style="color:#ae81ff">4096</span> Feb <span style="color:#ae81ff">24</span> 11:46 CMakeFiles/
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> bpdp bpdp      <span style="color:#ae81ff">1746</span> Feb <span style="color:#ae81ff">24</span> 11:45 cmake_install.cmake
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> bpdp bpdp    <span style="color:#ae81ff">580894</span> Feb <span style="color:#ae81ff">24</span> 11:45 compile_commands.json
+</span></span><span style="display:flex;"><span>-rwxr-xr-x  <span style="color:#ae81ff">1</span> bpdp bpdp  <span style="color:#ae81ff">48220880</span> Feb <span style="color:#ae81ff">24</span> 11:46 falkordb.so*
+</span></span><span style="display:flex;"><span>-rwxr-xr-x  <span style="color:#ae81ff">1</span> bpdp bpdp <span style="color:#ae81ff">200529120</span> Feb <span style="color:#ae81ff">24</span> 11:46 falkordb.so.debug*
+</span></span><span style="display:flex;"><span>-rw-r--r--  <span style="color:#ae81ff">1</span> bpdp bpdp    <span style="color:#ae81ff">388247</span> Feb <span style="color:#ae81ff">24</span> 11:45 Makefile
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Copy <code>falkordb.so</code> anywhere (to make it easy, i put that file in $REDIS_HOME/lib. Here&rsquo;s the directory structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pwd
+</span></span><span style="display:flex;"><span>/home/bpdp/software/redis/redis-7.2.4
+</span></span><span style="display:flex;"><span>$ tree .
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── bin
+</span></span><span style="display:flex;"><span>│   ├── redis-benchmark
+</span></span><span style="display:flex;"><span>│   ├── redis-check-aof -&gt; redis-server
+</span></span><span style="display:flex;"><span>│   ├── redis-check-rdb -&gt; redis-server
+</span></span><span style="display:flex;"><span>│   ├── redis-cli
+</span></span><span style="display:flex;"><span>│   ├── redis-sentinel -&gt; redis-server
+</span></span><span style="display:flex;"><span>│   └── redis-server
+</span></span><span style="display:flex;"><span>└── lib
+</span></span><span style="display:flex;"><span>    ├── falkordb.so
+</span></span><span style="display:flex;"><span>    └── redisearch.so
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> directories, <span style="color:#ae81ff">8</span> files
+</span></span></code></pre></div><h2 id="configuration">Configuration</h2>
+<p>Here I created some directory inside <code>redis-dont-delete</code> (this could be whatever as you wish). Inside that directory, I pull all configuration and any other files needed for the Redis and FalkorDB.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pwd
+</span></span><span style="display:flex;"><span>/home/bpdp/software/redis/redis-dont-delete
+</span></span><span style="display:flex;"><span>$ tree .
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>├── conf
+</span></span><span style="display:flex;"><span>│   └── redis.conf
+</span></span><span style="display:flex;"><span>├── data
+</span></span><span style="display:flex;"><span>│   ├── konversa-orig.rdb
+</span></span><span style="display:flex;"><span>│   └── konversa.rdb
+</span></span><span style="display:flex;"><span>├── log
+</span></span><span style="display:flex;"><span>│   └── redis.log
+</span></span><span style="display:flex;"><span>└── run
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> directories, <span style="color:#ae81ff">4</span> files
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Configuration resides in <code>redis.conf</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat conf/redis.conf
+</span></span><span style="display:flex;"><span>port <span style="color:#ae81ff">6379</span>
+</span></span><span style="display:flex;"><span>daemonize no
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>loadmodule /home/bpdp/software/redis/redis-current/lib/redisearch.so
+</span></span><span style="display:flex;"><span>loadmodule /home/bpdp/software/redis/redis-current/lib/falkordb.so
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>logfile /home/bpdp/software/redis/redis-dont-delete/log/redis.log 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dbfilename konversa.rdb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>dir /home/bpdp/software/redis/redis-dont-delete/data
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<p>Run Redis server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ redis-server software/redis/redis-dont-delete/conf/redis.conf
+</span></span><span style="display:flex;"><span>25432:C <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.273 <span style="color:#75715e"># WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add &#39;vm.overcommit_memory = 1&#39; to /etc/sysctl.conf and then reboot or run the command &#39;sysctl vm.overcommit_memory=1&#39; for this to take effect.</span>
+</span></span><span style="display:flex;"><span>25432:C <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.273 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+</span></span><span style="display:flex;"><span>25432:C <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.273 * Redis version<span style="color:#f92672">=</span>7.2.4, bits<span style="color:#f92672">=</span>64, commit<span style="color:#f92672">=</span>00000000, modified<span style="color:#f92672">=</span>0, pid<span style="color:#f92672">=</span>25432, just started
+</span></span><span style="display:flex;"><span>25432:C <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.273 * Configuration loaded
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.274 * monotonic clock: POSIX clock_gettime
+</span></span><span style="display:flex;"><span>                _._                                                  
+</span></span><span style="display:flex;"><span>           _.-<span style="color:#e6db74">``</span>__ <span style="color:#e6db74">&#39;&#39;</span>-._                                             
+</span></span><span style="display:flex;"><span>      _.-<span style="color:#e6db74">``</span>    <span style="color:#e6db74">`</span>.  <span style="color:#e6db74">`</span>_.  <span style="color:#e6db74">&#39;&#39;</span>-._           Redis 7.2.4 <span style="color:#f92672">(</span>00000000/0<span style="color:#f92672">)</span> <span style="color:#ae81ff">64</span> bit
+</span></span><span style="display:flex;"><span>  .-<span style="color:#e6db74">``</span> .-<span style="color:#e6db74">```</span>.  <span style="color:#e6db74">```</span><span style="color:#ae81ff">\/</span>    _.,_ <span style="color:#e6db74">&#39;&#39;</span>-._                                  
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">(</span>    <span style="color:#e6db74">&#39;      ,       .-`  | `,    )     Running in standalone mode
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |`-._`-...-` __...-.``-._|&#39;</span><span style="color:#e6db74">`</span> _.-<span style="color:#e6db74">&#39;|     Port: 6379
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |    `-._   `._    /     _.-&#39;</span>    |     PID: <span style="color:#ae81ff">25432</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">`</span>-._    <span style="color:#e6db74">`</span>-._  <span style="color:#e6db74">`</span>-./  _.-<span style="color:#e6db74">&#39;    _.-&#39;</span>                                   
+</span></span><span style="display:flex;"><span> |<span style="color:#e6db74">`</span>-._<span style="color:#e6db74">`</span>-._    <span style="color:#e6db74">`</span>-.__.-<span style="color:#e6db74">&#39;    _.-&#39;</span>_.-<span style="color:#e6db74">&#39;|                                  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |    `-._`-._        _.-&#39;</span>_.-<span style="color:#e6db74">&#39;    |           https://redis.io       
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  `-._    `-._`-.__.-&#39;</span>_.-<span style="color:#e6db74">&#39;    _.-&#39;</span>                                   
+</span></span><span style="display:flex;"><span> |<span style="color:#e6db74">`</span>-._<span style="color:#e6db74">`</span>-._    <span style="color:#e6db74">`</span>-.__.-<span style="color:#e6db74">&#39;    _.-&#39;</span>_.-<span style="color:#e6db74">&#39;|                                  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |    `-._`-._        _.-&#39;</span>_.-<span style="color:#e6db74">&#39;    |                                  
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  `-._    `-._`-.__.-&#39;</span>_.-<span style="color:#e6db74">&#39;    _.-&#39;</span>                                   
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">`</span>-._    <span style="color:#e6db74">`</span>-.__.-<span style="color:#e6db74">&#39;    _.-&#39;</span>                                       
+</span></span><span style="display:flex;"><span>          <span style="color:#e6db74">`</span>-._        _.-<span style="color:#e6db74">&#39;                                           
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">              `-.__.-&#39;</span>                                               
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.276 * &lt;search&gt; Redis version found by RedisSearch : 7.2.4 - oss
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.276 * &lt;search&gt; RediSearch version 2.6.14 <span style="color:#f92672">(</span>Git<span style="color:#f92672">=</span>HEAD-eef91a67<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.276 * &lt;search&gt; Low level api version <span style="color:#ae81ff">1</span> initialized successfully
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.276 * &lt;search&gt; concurrent writes: OFF, gc: ON, prefix min length: 2, prefix max expansions: 200, query timeout <span style="color:#f92672">(</span>ms<span style="color:#f92672">)</span>: 500, timeout policy: <span style="color:#66d9ef">return</span>, cursor read size: 1000, cursor max idle <span style="color:#f92672">(</span>ms<span style="color:#f92672">)</span>: 300000, max doctable size: 1000000, max number of search results:  1000000, search pool size: 20, index pool size: 8, 
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.276 * &lt;search&gt; Initialized thread pool!
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.276 * &lt;search&gt; Enabled role change notification
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.276 * Module <span style="color:#e6db74">&#39;search&#39;</span> loaded from /home/bpdp/software/redis/redis-current/lib/redisearch.so
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.280 * &lt;graph&gt; Enabled role change notification
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.280 * &lt;graph&gt; Starting up FalkorDB version 4.0.4.
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * &lt;graph&gt; Thread pool created, using <span style="color:#ae81ff">8</span> threads.
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * &lt;graph&gt; Maximum number of OpenMP threads set to <span style="color:#ae81ff">8</span>
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * &lt;graph&gt; Query backlog size: <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * Module <span style="color:#e6db74">&#39;graph&#39;</span> loaded from /home/bpdp/software/redis/redis-current/lib/falkordb.so
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * Server initialized
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * &lt;search&gt; Loading event starts
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * Loading RDB produced by version 7.2.4
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * RDB age <span style="color:#ae81ff">767</span> seconds
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.281 * RDB memory usage when created 2.31 Mb
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * &lt;graph&gt; Done decoding graph social
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * &lt;graph&gt; Done decoding graph movies
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * &lt;graph&gt; Done decoding graph us_government
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * &lt;module&gt; Deleted <span style="color:#ae81ff">0</span> virtual keys <span style="color:#66d9ef">for</span> graph social
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * &lt;module&gt; Deleted <span style="color:#ae81ff">0</span> virtual keys <span style="color:#66d9ef">for</span> graph movies
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * &lt;module&gt; Deleted <span style="color:#ae81ff">0</span> virtual keys <span style="color:#66d9ef">for</span> graph us_government
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * Done loading RDB, keys loaded: 3, keys expired: 0.
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 <span style="color:#75715e"># &lt;search&gt; Skip background reindex scan, redis version contains loaded event.</span>
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * &lt;search&gt; Loading event ends
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * DB loaded from disk: 0.001 seconds
+</span></span><span style="display:flex;"><span>25432:M <span style="color:#ae81ff">24</span> Feb <span style="color:#ae81ff">2024</span> 13:11:07.282 * Ready to accept connections tcp
+</span></span></code></pre></div><p>Run redis client:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ redis-cli
+</span></span><span style="display:flex;"><span>127.0.0.1:6379&gt; 
+</span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

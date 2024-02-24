@@ -6,20 +6,20 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 27 Jan 2024 17:41:41 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Apache AGE</title>
-      <link>/tags/apache-age/</link>
-      <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
+      <title>FalkorDB</title>
+      <link>/tags/falkordb/</link>
+      <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
       
-      <guid>/tags/apache-age/</guid>
+      <guid>/tags/falkordb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Graph</title>
       <link>/tags/graph/</link>
-      <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
+      <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
       
       <guid>/tags/graph/</guid>
       <description></description>
@@ -28,7 +28,7 @@
     <item>
       <title>Graph Database</title>
       <link>/tags/graph-database/</link>
-      <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
+      <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
       
       <guid>/tags/graph-database/</guid>
       <description></description>
@@ -37,9 +37,36 @@
     <item>
       <title>OpenCypher</title>
       <link>/tags/opencypher/</link>
-      <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
+      <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
       
       <guid>/tags/opencypher/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Redis</title>
+      <link>/tags/redis/</link>
+      <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
+      
+      <guid>/tags/redis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RedisGraph</title>
+      <link>/tags/redisgraph/</link>
+      <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
+      
+      <guid>/tags/redisgraph/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Apache AGE</title>
+      <link>/tags/apache-age/</link>
+      <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
+      
+      <guid>/tags/apache-age/</guid>
       <description></description>
     </item>
     
