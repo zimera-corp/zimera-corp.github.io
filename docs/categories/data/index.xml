@@ -6,63 +6,49 @@
     <description>Recent content in Data on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate><atom:link href="/categories/data/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate>
+    <atom:link href="/categories/data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS</title>
       <link>/posts/18/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/posts/18/</guid>
       <description>If you are a software developer, mainly working with data intensive application, chances are, you&amp;rsquo;ve already work with in-memory data as it will make our app runs fast. Redis usually becomes de-facto DBMS for caching. Redis mainly uses key-value data model but its modular architecture makes it possible to develop other tools or data models using Redis key-value as its underlying data model. That&amp;rsquo;s also happens with RedisGraph, a Redis module for property graph model.</description>
     </item>
-    
     <item>
       <title>Apache AGE - Property Graph - OpenCypher for PostgreSQL</title>
       <link>/posts/17/</link>
       <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
-      
       <guid>/posts/17/</guid>
       <description>Tentang Apache AGE Apache AGE adalah adalah ekstensi dari PostgreSQL untuk model data graph. Apache AGE mendukung model data graph berupa property graph (jenis lainnya adalah RDF/TripleStore). Apache AGE merupakan software bebas dan mendukung berbagai versi PostgreSQL. Secara resmi, pada halaman web Apache AGE, dinyatakan bahwa versi PostgreSQL yang didukung adalah versi 11-15. Meski demikian, pada versi release dari Apache AGE di GitHub, terdapat versi untuk PostgreSQL 16.x. Artikel ini menggunakan versi 16.</description>
     </item>
-    
     <item>
       <title>Proses aggregate RDD pada Apache Spark</title>
       <link>/posts/15/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      
       <guid>/posts/15/</guid>
       <description>RDD merupakan struktur data fundamental di Apache Spark. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses transformasi serta action yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah zero value yang ada pada action aggregate.</description>
     </item>
-    
     <item>
       <title>PostGIS - PostgreSQL GIS Extension Installation</title>
       <link>/posts/14/</link>
       <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
-      
       <guid>/posts/14/</guid>
-      <description>PostgreSQL - in its default installation - geometric data types for spatial object. More geospatial features exist in PostgreSQL extension - PostGIS. Here&amp;rsquo;s hos to insatll PostGIS extension.
-Prerequisites PostGIS needs GEOS and SFCGAL. In Debian-based system, these packages are needed:
-gdal-data and libgdal-dev. libgeosVERRSION and libgeos-dev. libsfcgal1 and libsfcgal-dev. protobuf-* and libprotobuf-c-dev dblatex if you want to build PostGIS documentation Build Get the source code, extract:
-$ tar -xvf postgis-3.</description>
+      <description>PostgreSQL - in its default installation - geometric data types for spatial object. More geospatial features exist in PostgreSQL extension - PostGIS. Here&amp;rsquo;s hos to insatll PostGIS extension.&#xA;Prerequisites PostGIS needs GEOS and SFCGAL. In Debian-based system, these packages are needed:&#xA;gdal-data and libgdal-dev. libgeosVERRSION and libgeos-dev. libsfcgal1 and libsfcgal-dev. protobuf-* and libprotobuf-c-dev dblatex if you want to build PostGIS documentation Build Get the source code, extract:&#xA;$ tar -xvf postgis-3.</description>
     </item>
-    
     <item>
       <title>Tantangan Pengelolaan Data di Era Digital</title>
       <link>/posts/07/</link>
       <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
-      
       <guid>/posts/07/</guid>
       <description>Organisasi menghadapi tantangan yang semakin kompleks di era digital ini. Era digital merupakan era yang ditandai dengan masifnya penggunaan teknologi berbasis peranti digital elektronik yang memproses angka 0 dan 1 sebagai penanda hidup - mati atau on - off. Peranti digital elektronik sejak dahulu dikenal dengan istilah komputer dan saat ini sudah menunjuk ke berbagai perangkat serta sistem berbasis komputer dalam berbagai skala, mulai dari skala kecil (sub–0.1-mm3) yang bisa diinjeksikan ke dalam tubuh manusia (Shi, 2021) sampai dengan peranti berkapasitas besar yang digunakan dalam suatu data center.</description>
     </item>
-    
     <item>
       <title>Using YugabyteDB in Python App Development</title>
       <link>/posts/05/</link>
       <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
-      
       <guid>/posts/05/</guid>
       <description>As a long time PostgreSQL user, it&amp;rsquo;s normal that YugabyteDB got my attention. It&amp;rsquo;s a distributed SQL database which features-compatible with PostgreSQL so that I don&amp;rsquo;t need to lose my investation. YugabyteDB reuses PostgreSQL&amp;rsquo;s query layer, so I can use my development tools as usual. It gives me more since there is also Cassandra query layer. Using YugabyteDB I can reuse my SQL skill and development tools, enhanced with NOSQL data model (especially wide-column store), while I have NewSQL&amp;rsquo;s resiliency, scalability, and high performance.</description>
     </item>
-    
   </channel>
 </rss>

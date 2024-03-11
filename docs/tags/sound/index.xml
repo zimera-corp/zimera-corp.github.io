@@ -6,15 +6,14 @@
     <description>Recent content in Sound on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 18 Jun 2023 22:15:53 +0700</lastBuildDate><atom:link href="/tags/sound/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 18 Jun 2023 22:15:53 +0700</lastBuildDate>
+    <atom:link href="/tags/sound/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>QEMU Parameter for Audio Devices</title>
       <link>/posts/10/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
-      
       <guid>/posts/10/</guid>
       <description>Have you ever use Haiku OS? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&amp;rsquo;ve used some parameters in QEMU. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:</description>
     </item>
-    
   </channel>
 </rss>

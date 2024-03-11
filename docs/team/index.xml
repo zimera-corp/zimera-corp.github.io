@@ -6,33 +6,28 @@
     <description>Recent content in Our Team on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 03 Mar 2023 18:01:06 +0700</lastBuildDate><atom:link href="/team/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 03 Mar 2023 18:01:06 +0700</lastBuildDate>
+    <atom:link href="/team/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/team/bpdp/</guid>
       <description>Dr. Bambang Purnomosidi D. P. (also known as bpdp) has a wide range of experiences in software industry and education. He is a Ph.D from DTETI - FT UGM.</description>
     </item>
-    
     <item>
       <title>Dr. Widyastuti Andriyani</title>
       <link>/team/widya/</link>
       <pubDate>Mon, 06 Feb 2023 05:42:41 +0700</pubDate>
-      
       <guid>/team/widya/</guid>
       <description>Dr. Widyastuti Andriyani is a Ph.D from DCSE, FMIPA, UGM. Her expertise are in AI and Expert System.</description>
     </item>
-    
     <item>
       <title>Karyani Laksmi Dewi, S.E., M.Si.</title>
       <link>/team/lala/</link>
       <pubDate>Fri, 03 Mar 2023 18:01:06 +0700</pubDate>
-      
       <guid>/team/lala/</guid>
       <description>Karyani Laksmi Dewi, S.E., M.Si. has degree from UGM (FEB - Economics) and UI (Master of Science in Management). She has a wide range of experiences and expertise in business development and investor relation.</description>
     </item>
-    
   </channel>
 </rss>

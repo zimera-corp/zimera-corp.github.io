@@ -6,250 +6,189 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate>
+    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
       <link>/team/bpdp/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/team/bpdp/</guid>
       <description>Dr. Bambang Purnomosidi D. P. (also known as bpdp) has a wide range of experiences in software industry and education. He is a Ph.D from DTETI - FT UGM.</description>
     </item>
-    
     <item>
       <title>Consulting Services</title>
       <link>/services/consulting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/services/consulting/</guid>
-      <description>Our consulting services assist businesses or any other organizations with anything related to data and software. We focus on client&amp;rsquo;s critical issues and persistently work to achieve goals. Therefore, it is very important to define the problem since the beginning and stick to it until the solution has been succesfully completed. Specifically, we use 4C: Clarity, Consistency, Communication, and Commitment as our main concerns in every task/project.
-We assist in problem solving.</description>
+      <description>Our consulting services assist businesses or any other organizations with anything related to data and software. We focus on client&amp;rsquo;s critical issues and persistently work to achieve goals. Therefore, it is very important to define the problem since the beginning and stick to it until the solution has been succesfully completed. Specifically, we use 4C: Clarity, Consistency, Communication, and Commitment as our main concerns in every task/project.&#xA;We assist in problem solving.</description>
     </item>
-    
     <item>
       <title>Dr. Widyastuti Andriyani</title>
       <link>/team/widya/</link>
       <pubDate>Mon, 06 Feb 2023 05:42:41 +0700</pubDate>
-      
       <guid>/team/widya/</guid>
       <description>Dr. Widyastuti Andriyani is a Ph.D from DCSE, FMIPA, UGM. Her expertise are in AI and Expert System.</description>
     </item>
-    
     <item>
       <title>Karyani Laksmi Dewi, S.E., M.Si.</title>
       <link>/team/lala/</link>
       <pubDate>Fri, 03 Mar 2023 18:01:06 +0700</pubDate>
-      
       <guid>/team/lala/</guid>
       <description>Karyani Laksmi Dewi, S.E., M.Si. has degree from UGM (FEB - Economics) and UI (Master of Science in Management). She has a wide range of experiences and expertise in business development and investor relation.</description>
     </item>
-    
     <item>
       <title>School and Training Services</title>
       <link>/services/school/</link>
       <pubDate>Tue, 31 Jan 2023 12:59:14 +0700</pubDate>
-      
       <guid>/services/school/</guid>
-      <description>About the School Our school helps in talent or human resources development. Basically, we have some schools which only act as themes grouping. Our schools consist of:
-School of Decentralized Systems School of Enterprise Systems School of Software Engineering School of Data Prior to enter Zimera School, a learner needs to understand the basic. It is not that difficult, but one may need to his/her paradigm in learning by consistently challenged his/her ability to solve problems.</description>
+      <description>About the School Our school helps in talent or human resources development. Basically, we have some schools which only act as themes grouping. Our schools consist of:&#xA;School of Decentralized Systems School of Enterprise Systems School of Software Engineering School of Data Prior to enter Zimera School, a learner needs to understand the basic. It is not that difficult, but one may need to his/her paradigm in learning by consistently challenged his/her ability to solve problems.</description>
     </item>
-    
     <item>
       <title>Systems Services</title>
       <link>/services/systems/</link>
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
-      
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
     </item>
-    
     <item>
       <title>FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS</title>
       <link>/posts/18/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/posts/18/</guid>
       <description>If you are a software developer, mainly working with data intensive application, chances are, you&amp;rsquo;ve already work with in-memory data as it will make our app runs fast. Redis usually becomes de-facto DBMS for caching. Redis mainly uses key-value data model but its modular architecture makes it possible to develop other tools or data models using Redis key-value as its underlying data model. That&amp;rsquo;s also happens with RedisGraph, a Redis module for property graph model.</description>
     </item>
-    
     <item>
       <title>Apache AGE - Property Graph - OpenCypher for PostgreSQL</title>
       <link>/posts/17/</link>
       <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
-      
       <guid>/posts/17/</guid>
       <description>Tentang Apache AGE Apache AGE adalah adalah ekstensi dari PostgreSQL untuk model data graph. Apache AGE mendukung model data graph berupa property graph (jenis lainnya adalah RDF/TripleStore). Apache AGE merupakan software bebas dan mendukung berbagai versi PostgreSQL. Secara resmi, pada halaman web Apache AGE, dinyatakan bahwa versi PostgreSQL yang didukung adalah versi 11-15. Meski demikian, pada versi release dari Apache AGE di GitHub, terdapat versi untuk PostgreSQL 16.x. Artikel ini menggunakan versi 16.</description>
     </item>
-    
     <item>
       <title>Mojo - Instalasi dan Memulai Coding</title>
       <link>/posts/16/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      
       <guid>/posts/16/</guid>
       <description>Tentang Mojo Mojo adalah bahasa pemrograman baru yang diarahkan ke para pengembang software bidang AI (Artificial Intelligence). Mojo muncul karena keluhan lamanya eksekusi program AI yang dibangun menggunakan Python, sementara itu ekosistem AI di Python sedemikian kuat dan berlimpah (barangkali tidak ada bahasa pemrograman lain yang menandingi). &amp;ldquo;Ketidakberdayaan&amp;rdquo; para pengembang software AI berbasis Python tersebut yang memicu munculnya Mojo: tidak menyukai lambatnya program AI tetapi tidak bisa lepas dari Python karena matangnya ekosistem AI di Python.</description>
     </item>
-    
     <item>
       <title>Proses aggregate RDD pada Apache Spark</title>
       <link>/posts/15/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      
       <guid>/posts/15/</guid>
       <description>RDD merupakan struktur data fundamental di Apache Spark. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses transformasi serta action yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah zero value yang ada pada action aggregate.</description>
     </item>
-    
     <item>
       <title>PostGIS - PostgreSQL GIS Extension Installation</title>
       <link>/posts/14/</link>
       <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
-      
       <guid>/posts/14/</guid>
-      <description>PostgreSQL - in its default installation - geometric data types for spatial object. More geospatial features exist in PostgreSQL extension - PostGIS. Here&amp;rsquo;s hos to insatll PostGIS extension.
-Prerequisites PostGIS needs GEOS and SFCGAL. In Debian-based system, these packages are needed:
-gdal-data and libgdal-dev. libgeosVERRSION and libgeos-dev. libsfcgal1 and libsfcgal-dev. protobuf-* and libprotobuf-c-dev dblatex if you want to build PostGIS documentation Build Get the source code, extract:
-$ tar -xvf postgis-3.</description>
+      <description>PostgreSQL - in its default installation - geometric data types for spatial object. More geospatial features exist in PostgreSQL extension - PostGIS. Here&amp;rsquo;s hos to insatll PostGIS extension.&#xA;Prerequisites PostGIS needs GEOS and SFCGAL. In Debian-based system, these packages are needed:&#xA;gdal-data and libgdal-dev. libgeosVERRSION and libgeos-dev. libsfcgal1 and libsfcgal-dev. protobuf-* and libprotobuf-c-dev dblatex if you want to build PostGIS documentation Build Get the source code, extract:&#xA;$ tar -xvf postgis-3.</description>
     </item>
-    
     <item>
       <title>Penerapan AI Sebagai Pendorong Transformasi Ekonomi Indonesia</title>
       <link>/posts/13/</link>
       <pubDate>Mon, 31 Jul 2023 21:51:43 +0700</pubDate>
-      
       <guid>/posts/13/</guid>
       <description>Full presentation available at our GitHub repository</description>
     </item>
-    
     <item>
       <title>SDKMan for Linux - Bash, Zsh, and Fish Shell</title>
       <link>/posts/12/</link>
       <pubDate>Tue, 27 Jun 2023 12:02:01 +0700</pubDate>
-      
       <guid>/posts/12/</guid>
-      <description>If you are a developer, working mainly with Java, you will notice that so many things need to be done in order to install and stay updated with Java ecosystem and development tools. There&amp;rsquo;s a tool called https://sdkman.io which can be used to handle installation, configuration, remove, and update all those Java-base software easier. It can be used on major platform (Linux, Windows, Mac) and makes our live as (Java platform) developer easier.</description>
+      <description>If you are a developer, working mainly with Java, you will notice that so many things need to be done in order to install and stay updated with Java ecosystem and development tools. There&amp;rsquo;s a tool called SDKMAN! which can be used to handle installation, configuration, remove, and update all those Java-base software easier. It can be used on major platform (Linux, Windows, Mac) and makes our live as (Java platform) developer easier.</description>
     </item>
-    
     <item>
       <title>How to Handle Unstable Debian-based APT Broken Package(s)</title>
       <link>/posts/11/</link>
       <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
-      
       <guid>/posts/11/</guid>
       <description>If you are a user of Debian-based Linux distro, especially the unstable release (so called Sid in Debian), broken packages are not special. They may arise in your day-to-day activities with the distro (that&amp;rsquo;s the reason of why the word unstable is used!). While the reason to use the unsable release is obvious: to live in the bleeding edge of software release (including the packages), one still feel surprise of the broken packages event.</description>
     </item>
-    
     <item>
       <title>QEMU Parameter for Audio Devices</title>
       <link>/posts/10/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
-      
       <guid>/posts/10/</guid>
       <description>Have you ever use Haiku OS? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&amp;rsquo;ve used some parameters in QEMU. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:</description>
     </item>
-    
     <item>
       <title>Workaround for Compilation Result of TypeScript on import</title>
       <link>/posts/09/</link>
       <pubDate>Mon, 27 Feb 2023 13:40:22 +0700</pubDate>
-      
       <guid>/posts/09/</guid>
-      <description>TypeScript is supertype of JavaScript, or for easier understanding, TypeScrirpt is JavaScript with syntax for types. It is now developed by Microsoft. It is a lovely programming language which tries to &amp;ldquo;patch&amp;rdquo; the flaws of JavaScript. TypeScript adds static typing to JavaScript, and as a static typing programming language it can be used to catch any errors before deployment (well, hopefully).
-TypeScript compilation result is JavaScript. Documentation is very complete and details, but one thing that I found confusing is how TypeScript treats import.</description>
+      <description>TypeScript is supertype of JavaScript, or for easier understanding, TypeScrirpt is JavaScript with syntax for types. It is now developed by Microsoft. It is a lovely programming language which tries to &amp;ldquo;patch&amp;rdquo; the flaws of JavaScript. TypeScript adds static typing to JavaScript, and as a static typing programming language it can be used to catch any errors before deployment (well, hopefully).&#xA;TypeScript compilation result is JavaScript. Documentation is very complete and details, but one thing that I found confusing is how TypeScript treats import.</description>
     </item>
-    
     <item>
       <title>Flutter: Persiapan Lingkungan Pengembangan</title>
       <link>/posts/08/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
-      
       <guid>/posts/08/</guid>
       <description>Flutter adalah software framework yang digunakan untuk membangun native mobile app. Jika biasanya pemrogram membangun peranti khusus dari OS mobile yang berbeda-beda (Java/Kotlin/Scala untuk Android, Objective C/Swift untuk iOS), kali ini Flutter dimaksudkan untuk membangun aplikasi untuk 3 platform yang berbeda: Android, iOS, dan Fuchsia (belum rilis) dengan satu codebase yang sama. Tentu saja yang dikerjakan oleh Flutter ini bukan hal yang pertama kali, sebelumnya sudah ada React Native, NativeScript, maupun LambdaNative.</description>
     </item>
-    
     <item>
       <title>Tantangan Pengelolaan Data di Era Digital</title>
       <link>/posts/07/</link>
       <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
-      
       <guid>/posts/07/</guid>
       <description>Organisasi menghadapi tantangan yang semakin kompleks di era digital ini. Era digital merupakan era yang ditandai dengan masifnya penggunaan teknologi berbasis peranti digital elektronik yang memproses angka 0 dan 1 sebagai penanda hidup - mati atau on - off. Peranti digital elektronik sejak dahulu dikenal dengan istilah komputer dan saat ini sudah menunjuk ke berbagai perangkat serta sistem berbasis komputer dalam berbagai skala, mulai dari skala kecil (sub–0.1-mm3) yang bisa diinjeksikan ke dalam tubuh manusia (Shi, 2021) sampai dengan peranti berkapasitas besar yang digunakan dalam suatu data center.</description>
     </item>
-    
     <item>
       <title>Polyglot Programming dan GraalVM</title>
       <link>/posts/06/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
-      
       <guid>/posts/06/</guid>
-      <description>Pernahkah mendengar istilah polyglot programming? Istilah ini sudah menjadi istilah yang umum dan barangkali banyak didengar oleh para developer yang sehari-hari memang berkutat dengan bahasa pemrograman dan peranti pengembangan. Polyglot programming merupakan penggunaan lebih dari satu bahasa pemrograman untuk menyelesaikan suatu masalah pemrograman. Kategori polyglot programming antara lain adalah:
-Penggunaan binding yang dibuat menggunakan suatu bahasa pemrograman tertentu (biasanya bahasa pemrograman aras sistem — atau aras rendah seperti C/C++, Assembly, Rust) ke suatu bahasa yang berada pada aras tinggi seperti Ruby, Python, dan lain-lain.</description>
+      <description>Pernahkah mendengar istilah polyglot programming? Istilah ini sudah menjadi istilah yang umum dan barangkali banyak didengar oleh para developer yang sehari-hari memang berkutat dengan bahasa pemrograman dan peranti pengembangan. Polyglot programming merupakan penggunaan lebih dari satu bahasa pemrograman untuk menyelesaikan suatu masalah pemrograman. Kategori polyglot programming antara lain adalah:&#xA;Penggunaan binding yang dibuat menggunakan suatu bahasa pemrograman tertentu (biasanya bahasa pemrograman aras sistem — atau aras rendah seperti C/C++, Assembly, Rust) ke suatu bahasa yang berada pada aras tinggi seperti Ruby, Python, dan lain-lain.</description>
     </item>
-    
     <item>
       <title>Using YugabyteDB in Python App Development</title>
       <link>/posts/05/</link>
       <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
-      
       <guid>/posts/05/</guid>
       <description>As a long time PostgreSQL user, it&amp;rsquo;s normal that YugabyteDB got my attention. It&amp;rsquo;s a distributed SQL database which features-compatible with PostgreSQL so that I don&amp;rsquo;t need to lose my investation. YugabyteDB reuses PostgreSQL&amp;rsquo;s query layer, so I can use my development tools as usual. It gives me more since there is also Cassandra query layer. Using YugabyteDB I can reuse my SQL skill and development tools, enhanced with NOSQL data model (especially wide-column store), while I have NewSQL&amp;rsquo;s resiliency, scalability, and high performance.</description>
     </item>
-    
     <item>
       <title>Idiomatic Programming</title>
       <link>/posts/04/</link>
       <pubDate>Mon, 16 Jan 2023 10:15:26 +0700</pubDate>
-      
       <guid>/posts/04/</guid>
-      <description>Salah satu hal yang menghambat orang untuk belajar adalah banyaknya istilah-istilah yang membingungkan. Semua domain pengetahuan biasanya memang mempunyai istilah-istilah sendiri dan meskipun ada satu istilah yang muncul di lebih dari satu domain pengetahuan, pengertiannya seringkali tidak sama sehingga pemahaman tentang istilah bersifat context-dependent (harus dilihat konteksnya).
-Mempelajari pemrograman juga kurang lebih harus memahami berbagai macam istilah yang muncul. Kali ini saya akan menjelaskan sedikit tentang istilah idiomatic programming. Jika anda sering membaca mailing list, newsgroup, atau berbagai macam resources di Internet, terutama yang terkait dengan pemrograman, barangkali akan sering mendengar istilah-istilah berikut:</description>
+      <description>Salah satu hal yang menghambat orang untuk belajar adalah banyaknya istilah-istilah yang membingungkan. Semua domain pengetahuan biasanya memang mempunyai istilah-istilah sendiri dan meskipun ada satu istilah yang muncul di lebih dari satu domain pengetahuan, pengertiannya seringkali tidak sama sehingga pemahaman tentang istilah bersifat context-dependent (harus dilihat konteksnya).&#xA;Mempelajari pemrograman juga kurang lebih harus memahami berbagai macam istilah yang muncul. Kali ini saya akan menjelaskan sedikit tentang istilah idiomatic programming. Jika anda sering membaca mailing list, newsgroup, atau berbagai macam resources di Internet, terutama yang terkait dengan pemrograman, barangkali akan sering mendengar istilah-istilah berikut:</description>
     </item>
-    
     <item>
       <title>Managing a Software Development Team: Some Experiences</title>
       <link>/posts/03/</link>
       <pubDate>Sun, 15 Jan 2023 10:14:33 +0700</pubDate>
-      
       <guid>/posts/03/</guid>
-      <description>Managing a software development team is never an easy task. It consists of 2 sides:
-technical things non-technical things. This task is often assigned to the project manager, VP Engineering, Software Development Manager, etc. To be succeed, one has to consider those 2 sides. In this article, I will ouline some of my experiences in managing a software development team. This list is not meant to be complete nor perfect. You may need more but at least you will be in the safety line level one if you do care with these issues.</description>
+      <description>Managing a software development team is never an easy task. It consists of 2 sides:&#xA;technical things non-technical things. This task is often assigned to the project manager, VP Engineering, Software Development Manager, etc. To be succeed, one has to consider those 2 sides. In this article, I will ouline some of my experiences in managing a software development team. This list is not meant to be complete nor perfect. You may need more but at least you will be in the safety line level one if you do care with these issues.</description>
     </item>
-    
     <item>
       <title>Agile Development: Welcome Changing Requirements?</title>
       <link>/posts/02/</link>
       <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
-      
       <guid>/posts/02/</guid>
-      <description>If you ever being in a team which practices agile software development, you might already heard about how a software development team &amp;ldquo;welcome chnging requirements&amp;rdquo;. While it sounds great, I personally think, if this statement is not properly explained, the impact will be negative on the development team side. Now, let&amp;rsquo;s see the complete statement:
-Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</description>
+      <description>If you ever being in a team which practices agile software development, you might already heard about how a software development team &amp;ldquo;welcome chnging requirements&amp;rdquo;. While it sounds great, I personally think, if this statement is not properly explained, the impact will be negative on the development team side. Now, let&amp;rsquo;s see the complete statement:&#xA;Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.</description>
     </item>
-    
     <item>
       <title>Core Values for Software Developer</title>
       <link>/posts/01/</link>
       <pubDate>Fri, 13 Jan 2023 10:11:27 +0700</pubDate>
-      
       <guid>/posts/01/</guid>
       <description>So you are interested in software development and want to become one who do that job. Initially you think that it’s only a matter of coding. creating source code, have them compiled, and then deploy the software for the customer/client. Later on, you realize that developing software is hard. Even harder since so many things beyond technical issues are also involved. Suddenly you realize that what you have learned in school is not enough.</description>
     </item>
-    
     <item>
       <title>About</title>
       <link>/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/about/</guid>
       <description>Zimera Corporation was founded on February 14th, 2022 under the name of PT Zenit Merdeka Raya. The name Zimera has a simple meaning, taking from African language: one that creates. This name becomes the underlying philosophy of Zimera Operation: to create. In a broader sense, we do really appreciate anybody who creates something. It is not limited to just create a software per se, but also other things: create a better SOP (Standard Operating Procedure), create a solution to a problem not related with software creation, etc.</description>
     </item>
-    
     <item>
       <title>Contact</title>
       <link>/contact/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/contact/</guid>
       <description>Address RT 01 RW 03 No 155 Medelan, Umbulmartani, Kepanewon Ngemplak Kabupaten Sleman Daerah Istimewa Yogyakarta 55584 Office Hours Day Opening Hours Monday - Friday 9:00am - 16:00pm Saturday - Sunday Closed </description>
     </item>
-    
   </channel>
 </rss>

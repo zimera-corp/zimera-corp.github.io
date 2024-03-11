@@ -6,35 +6,28 @@
     <description>Recent content in Our Services on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 31 Jan 2023 12:59:14 +0700</lastBuildDate><atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Jan 2023 12:59:14 +0700</lastBuildDate>
+    <atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Consulting Services</title>
       <link>/services/consulting/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
       <guid>/services/consulting/</guid>
-      <description>Our consulting services assist businesses or any other organizations with anything related to data and software. We focus on client&amp;rsquo;s critical issues and persistently work to achieve goals. Therefore, it is very important to define the problem since the beginning and stick to it until the solution has been succesfully completed. Specifically, we use 4C: Clarity, Consistency, Communication, and Commitment as our main concerns in every task/project.
-We assist in problem solving.</description>
+      <description>Our consulting services assist businesses or any other organizations with anything related to data and software. We focus on client&amp;rsquo;s critical issues and persistently work to achieve goals. Therefore, it is very important to define the problem since the beginning and stick to it until the solution has been succesfully completed. Specifically, we use 4C: Clarity, Consistency, Communication, and Commitment as our main concerns in every task/project.&#xA;We assist in problem solving.</description>
     </item>
-    
     <item>
       <title>School and Training Services</title>
       <link>/services/school/</link>
       <pubDate>Tue, 31 Jan 2023 12:59:14 +0700</pubDate>
-      
       <guid>/services/school/</guid>
-      <description>About the School Our school helps in talent or human resources development. Basically, we have some schools which only act as themes grouping. Our schools consist of:
-School of Decentralized Systems School of Enterprise Systems School of Software Engineering School of Data Prior to enter Zimera School, a learner needs to understand the basic. It is not that difficult, but one may need to his/her paradigm in learning by consistently challenged his/her ability to solve problems.</description>
+      <description>About the School Our school helps in talent or human resources development. Basically, we have some schools which only act as themes grouping. Our schools consist of:&#xA;School of Decentralized Systems School of Enterprise Systems School of Software Engineering School of Data Prior to enter Zimera School, a learner needs to understand the basic. It is not that difficult, but one may need to his/her paradigm in learning by consistently challenged his/her ability to solve problems.</description>
     </item>
-    
     <item>
       <title>Systems Services</title>
       <link>/services/systems/</link>
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
-      
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
     </item>
-    
   </channel>
 </rss>

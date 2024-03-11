@@ -6,15 +6,14 @@
     <description>Recent content in Redis on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate><atom:link href="/tags/redis/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate>
+    <atom:link href="/tags/redis/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS</title>
       <link>/posts/18/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/posts/18/</guid>
       <description>If you are a software developer, mainly working with data intensive application, chances are, you&amp;rsquo;ve already work with in-memory data as it will make our app runs fast. Redis usually becomes de-facto DBMS for caching. Redis mainly uses key-value data model but its modular architecture makes it possible to develop other tools or data models using Redis key-value as its underlying data model. That&amp;rsquo;s also happens with RedisGraph, a Redis module for property graph model.</description>
     </item>
-    
   </channel>
 </rss>

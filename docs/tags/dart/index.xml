@@ -6,15 +6,14 @@
     <description>Recent content in Dart on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 09 Feb 2023 20:59:19 +0700</lastBuildDate><atom:link href="/tags/dart/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Feb 2023 20:59:19 +0700</lastBuildDate>
+    <atom:link href="/tags/dart/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flutter: Persiapan Lingkungan Pengembangan</title>
       <link>/posts/08/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
-      
       <guid>/posts/08/</guid>
       <description>Flutter adalah software framework yang digunakan untuk membangun native mobile app. Jika biasanya pemrogram membangun peranti khusus dari OS mobile yang berbeda-beda (Java/Kotlin/Scala untuk Android, Objective C/Swift untuk iOS), kali ini Flutter dimaksudkan untuk membangun aplikasi untuk 3 platform yang berbeda: Android, iOS, dan Fuchsia (belum rilis) dengan satu codebase yang sama. Tentu saja yang dikerjakan oleh Flutter ini bukan hal yang pertama kali, sebelumnya sudah ada React Native, NativeScript, maupun LambdaNative.</description>
     </item>
-    
   </channel>
 </rss>

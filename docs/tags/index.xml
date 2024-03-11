@@ -6,555 +6,434 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate>
+    <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>FalkorDB</title>
       <link>/tags/falkordb/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/tags/falkordb/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Graph</title>
       <link>/tags/graph/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/tags/graph/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Graph Database</title>
       <link>/tags/graph-database/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/tags/graph-database/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>OpenCypher</title>
       <link>/tags/opencypher/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/tags/opencypher/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Redis</title>
       <link>/tags/redis/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/tags/redis/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RedisGraph</title>
       <link>/tags/redisgraph/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      
       <guid>/tags/redisgraph/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Apache AGE</title>
       <link>/tags/apache-age/</link>
       <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
-      
       <guid>/tags/apache-age/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PostgreSQL</title>
       <link>/tags/postgresql/</link>
       <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
-      
       <guid>/tags/postgresql/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>IDE</title>
       <link>/tags/ide/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      
       <guid>/tags/ide/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Instalasi</title>
       <link>/tags/instalasi/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      
       <guid>/tags/instalasi/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Konfigurasi</title>
       <link>/tags/konfigurasi/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      
       <guid>/tags/konfigurasi/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>modular</title>
+      <title>Modular</title>
       <link>/tags/modular/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      
       <guid>/tags/modular/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mojo</title>
       <link>/tags/mojo/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      
       <guid>/tags/mojo/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Visual Studio Code</title>
       <link>/tags/visual-studio-code/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      
       <guid>/tags/visual-studio-code/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>action</title>
+      <title>Action</title>
       <link>/tags/action/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      
       <guid>/tags/action/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>aggregate</title>
+      <title>Aggregate</title>
       <link>/tags/aggregate/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      
       <guid>/tags/aggregate/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Apache Spark</title>
       <link>/tags/apache-spark/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      
       <guid>/tags/apache-spark/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Data Engineering</title>
       <link>/tags/data-engineering/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      
       <guid>/tags/data-engineering/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>RDD</title>
       <link>/tags/rdd/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      
       <guid>/tags/rdd/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Geospation</title>
       <link>/tags/geospation/</link>
       <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
-      
       <guid>/tags/geospation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Installation</title>
       <link>/tags/installation/</link>
       <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
-      
       <guid>/tags/installation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>PostGIS</title>
       <link>/tags/postgis/</link>
       <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
-      
       <guid>/tags/postgis/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Artificial Intelligence</title>
       <link>/tags/artificial-intelligence/</link>
       <pubDate>Mon, 31 Jul 2023 21:51:43 +0700</pubDate>
-      
       <guid>/tags/artificial-intelligence/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Economic Transformation</title>
       <link>/tags/economic-transformation/</link>
       <pubDate>Mon, 31 Jul 2023 21:51:43 +0700</pubDate>
-      
       <guid>/tags/economic-transformation/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Janabadra</title>
       <link>/tags/janabadra/</link>
       <pubDate>Mon, 31 Jul 2023 21:51:43 +0700</pubDate>
-      
       <guid>/tags/janabadra/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Configuration</title>
       <link>/tags/configuration/</link>
       <pubDate>Tue, 27 Jun 2023 12:02:01 +0700</pubDate>
-      
       <guid>/tags/configuration/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Fish Shell</title>
       <link>/tags/fish-shell/</link>
       <pubDate>Tue, 27 Jun 2023 12:02:01 +0700</pubDate>
-      
       <guid>/tags/fish-shell/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Java</title>
       <link>/tags/java/</link>
       <pubDate>Tue, 27 Jun 2023 12:02:01 +0700</pubDate>
-      
       <guid>/tags/java/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>SDKMAN!</title>
       <link>/tags/sdkman/</link>
       <pubDate>Tue, 27 Jun 2023 12:02:01 +0700</pubDate>
-      
       <guid>/tags/sdkman/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>APT</title>
       <link>/tags/apt/</link>
       <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
-      
       <guid>/tags/apt/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Broken</title>
       <link>/tags/broken/</link>
       <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
-      
       <guid>/tags/broken/</guid>
       <description></description>
     </item>
-    
     <item>
-      <title>Debian-based</title>
+      <title>Debian-Based</title>
       <link>/tags/debian-based/</link>
       <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
-      
       <guid>/tags/debian-based/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Devuan</title>
       <link>/tags/devuan/</link>
       <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
-      
       <guid>/tags/devuan/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Audio</title>
       <link>/tags/audio/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
-      
       <guid>/tags/audio/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Haiku</title>
       <link>/tags/haiku/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
-      
       <guid>/tags/haiku/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>QEMU</title>
       <link>/tags/qemu/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
-      
       <guid>/tags/qemu/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Sound</title>
       <link>/tags/sound/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
-      
       <guid>/tags/sound/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>JavaScript</title>
       <link>/tags/javascript/</link>
       <pubDate>Mon, 27 Feb 2023 13:40:22 +0700</pubDate>
-      
       <guid>/tags/javascript/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>TypeScript</title>
       <link>/tags/typescript/</link>
       <pubDate>Mon, 27 Feb 2023 13:40:22 +0700</pubDate>
-      
       <guid>/tags/typescript/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Dart</title>
       <link>/tags/dart/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
-      
       <guid>/tags/dart/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Development Environment</title>
       <link>/tags/development-environment/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
-      
       <guid>/tags/development-environment/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Flutter</title>
       <link>/tags/flutter/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
-      
       <guid>/tags/flutter/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Mobile</title>
       <link>/tags/mobile/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
-      
       <guid>/tags/mobile/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Web</title>
       <link>/tags/web/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
-      
       <guid>/tags/web/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Data Lake</title>
       <link>/tags/data-lake/</link>
       <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
-      
       <guid>/tags/data-lake/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Data Warehouse</title>
       <link>/tags/data-warehouse/</link>
       <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
-      
       <guid>/tags/data-warehouse/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>ETL</title>
       <link>/tags/etl/</link>
       <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
-      
       <guid>/tags/etl/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Strategy</title>
       <link>/tags/strategy/</link>
       <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
-      
       <guid>/tags/strategy/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>GraalVM</title>
       <link>/tags/graalvm/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
-      
       <guid>/tags/graalvm/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Polyglot</title>
       <link>/tags/polyglot/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
-      
       <guid>/tags/polyglot/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Python</title>
       <link>/tags/python/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
-      
       <guid>/tags/python/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>R</title>
       <link>/tags/r/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
-      
       <guid>/tags/r/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Terminology</title>
       <link>/tags/terminology/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
-      
       <guid>/tags/terminology/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>NewSQL</title>
       <link>/tags/newsql/</link>
       <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
-      
       <guid>/tags/newsql/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>YugabyteDB</title>
       <link>/tags/yugabytedb/</link>
       <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
-      
       <guid>/tags/yugabytedb/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Idiomatic</title>
       <link>/tags/idiomatic/</link>
       <pubDate>Mon, 16 Jan 2023 10:15:26 +0700</pubDate>
-      
       <guid>/tags/idiomatic/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Career</title>
       <link>/tags/career/</link>
       <pubDate>Sun, 15 Jan 2023 10:14:33 +0700</pubDate>
-      
       <guid>/tags/career/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Management</title>
       <link>/tags/management/</link>
       <pubDate>Sun, 15 Jan 2023 10:14:33 +0700</pubDate>
-      
       <guid>/tags/management/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Agile</title>
       <link>/tags/agile/</link>
       <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
-      
       <guid>/tags/agile/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Change Management</title>
       <link>/tags/change-management/</link>
       <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
-      
       <guid>/tags/change-management/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Methodology</title>
       <link>/tags/methodology/</link>
       <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
-      
       <guid>/tags/methodology/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>

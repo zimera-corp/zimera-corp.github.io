@@ -6,15 +6,14 @@
     <description>Recent content in Devuan on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Jun 2023 05:46:23 +0700</lastBuildDate><atom:link href="/tags/devuan/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 22 Jun 2023 05:46:23 +0700</lastBuildDate>
+    <atom:link href="/tags/devuan/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How to Handle Unstable Debian-based APT Broken Package(s)</title>
       <link>/posts/11/</link>
       <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
-      
       <guid>/posts/11/</guid>
       <description>If you are a user of Debian-based Linux distro, especially the unstable release (so called Sid in Debian), broken packages are not special. They may arise in your day-to-day activities with the distro (that&amp;rsquo;s the reason of why the word unstable is used!). While the reason to use the unsable release is obvious: to live in the bleeding edge of software release (including the packages), one still feel surprise of the broken packages event.</description>
     </item>
-    
   </channel>
 </rss>

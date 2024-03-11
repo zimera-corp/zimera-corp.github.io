@@ -6,16 +6,14 @@
     <description>Recent content in Idiomatic on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 16 Jan 2023 10:15:26 +0700</lastBuildDate><atom:link href="/tags/idiomatic/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 16 Jan 2023 10:15:26 +0700</lastBuildDate>
+    <atom:link href="/tags/idiomatic/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Idiomatic Programming</title>
       <link>/posts/04/</link>
       <pubDate>Mon, 16 Jan 2023 10:15:26 +0700</pubDate>
-      
       <guid>/posts/04/</guid>
-      <description>Salah satu hal yang menghambat orang untuk belajar adalah banyaknya istilah-istilah yang membingungkan. Semua domain pengetahuan biasanya memang mempunyai istilah-istilah sendiri dan meskipun ada satu istilah yang muncul di lebih dari satu domain pengetahuan, pengertiannya seringkali tidak sama sehingga pemahaman tentang istilah bersifat context-dependent (harus dilihat konteksnya).
-Mempelajari pemrograman juga kurang lebih harus memahami berbagai macam istilah yang muncul. Kali ini saya akan menjelaskan sedikit tentang istilah idiomatic programming. Jika anda sering membaca mailing list, newsgroup, atau berbagai macam resources di Internet, terutama yang terkait dengan pemrograman, barangkali akan sering mendengar istilah-istilah berikut:</description>
+      <description>Salah satu hal yang menghambat orang untuk belajar adalah banyaknya istilah-istilah yang membingungkan. Semua domain pengetahuan biasanya memang mempunyai istilah-istilah sendiri dan meskipun ada satu istilah yang muncul di lebih dari satu domain pengetahuan, pengertiannya seringkali tidak sama sehingga pemahaman tentang istilah bersifat context-dependent (harus dilihat konteksnya).&#xA;Mempelajari pemrograman juga kurang lebih harus memahami berbagai macam istilah yang muncul. Kali ini saya akan menjelaskan sedikit tentang istilah idiomatic programming. Jika anda sering membaca mailing list, newsgroup, atau berbagai macam resources di Internet, terutama yang terkait dengan pemrograman, barangkali akan sering mendengar istilah-istilah berikut:</description>
     </item>
-    
   </channel>
 </rss>

@@ -6,16 +6,14 @@
     <description>Recent content in Polyglot on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jan 2023 10:17:08 +0700</lastBuildDate><atom:link href="/tags/polyglot/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Jan 2023 10:17:08 +0700</lastBuildDate>
+    <atom:link href="/tags/polyglot/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Polyglot Programming dan GraalVM</title>
       <link>/posts/06/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
-      
       <guid>/posts/06/</guid>
-      <description>Pernahkah mendengar istilah polyglot programming? Istilah ini sudah menjadi istilah yang umum dan barangkali banyak didengar oleh para developer yang sehari-hari memang berkutat dengan bahasa pemrograman dan peranti pengembangan. Polyglot programming merupakan penggunaan lebih dari satu bahasa pemrograman untuk menyelesaikan suatu masalah pemrograman. Kategori polyglot programming antara lain adalah:
-Penggunaan binding yang dibuat menggunakan suatu bahasa pemrograman tertentu (biasanya bahasa pemrograman aras sistem — atau aras rendah seperti C/C++, Assembly, Rust) ke suatu bahasa yang berada pada aras tinggi seperti Ruby, Python, dan lain-lain.</description>
+      <description>Pernahkah mendengar istilah polyglot programming? Istilah ini sudah menjadi istilah yang umum dan barangkali banyak didengar oleh para developer yang sehari-hari memang berkutat dengan bahasa pemrograman dan peranti pengembangan. Polyglot programming merupakan penggunaan lebih dari satu bahasa pemrograman untuk menyelesaikan suatu masalah pemrograman. Kategori polyglot programming antara lain adalah:&#xA;Penggunaan binding yang dibuat menggunakan suatu bahasa pemrograman tertentu (biasanya bahasa pemrograman aras sistem — atau aras rendah seperti C/C++, Assembly, Rust) ke suatu bahasa yang berada pada aras tinggi seperti Ruby, Python, dan lain-lain.</description>
     </item>
-    
   </channel>
 </rss>

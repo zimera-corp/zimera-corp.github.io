@@ -11,6 +11,9 @@ paginate = 5
     extended = true
     min = "0.55.0"
 
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+
 [taxonomies]
     category = "categories"
     tag = "tags"
