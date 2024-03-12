@@ -6,8 +6,29 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Mar 2024 06:45:51 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 17:09:50 +0700</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Instalasi</title>
+      <link>/tags/instalasi/</link>
+      <pubDate>Tue, 12 Mar 2024 17:09:50 +0700</pubDate>
+      <guid>/tags/instalasi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>PostgreSQL</title>
+      <link>/tags/postgresql/</link>
+      <pubDate>Tue, 12 Mar 2024 17:09:50 +0700</pubDate>
+      <guid>/tags/postgresql/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>UUID</title>
+      <link>/tags/uuid/</link>
+      <pubDate>Tue, 12 Mar 2024 17:09:50 +0700</pubDate>
+      <guid>/tags/uuid/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Conda</title>
       <link>/tags/conda/</link>
@@ -107,24 +128,10 @@
       <description></description>
     </item>
     <item>
-      <title>PostgreSQL</title>
-      <link>/tags/postgresql/</link>
-      <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
-      <guid>/tags/postgresql/</guid>
-      <description></description>
-    </item>
-    <item>
       <title>IDE</title>
       <link>/tags/ide/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
       <guid>/tags/ide/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Instalasi</title>
-      <link>/tags/instalasi/</link>
-      <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      <guid>/tags/instalasi/</guid>
       <description></description>
     </item>
     <item>

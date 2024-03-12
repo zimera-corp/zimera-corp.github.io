@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Mar 2024 06:45:51 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 17:09:50 +0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
@@ -49,6 +49,13 @@
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    <item>
+      <title>UUID di Instalasi PostgreSQL</title>
+      <link>/posts/20/</link>
+      <pubDate>Tue, 12 Mar 2024 17:09:50 +0700</pubDate>
+      <guid>/posts/20/</guid>
+      <description>PostgreSQL adalah salah satu RDBMS yang dikembangkan sudah sejak lama (1996) dan menjadi basis pengembangan software-software lainnya (YugabyteDB, CockroachDB, EDB). Hampir semua distro Linux menyertakan PostgreSQL dalam distribusinya. Sistem operasi lain juga didukung. Artikel ini membahas sedikit tentang UUID dan kaitannya dengan instalasi PostgreSQL.&#xA;Pada PostgreSQL versi lama, UUID dihasilkan oleh pustaka yang dibuat oleh OSSP. Sayangnya, software yang dibuat oleh legenda open source Ralf Engelschall ini tidak dikembangkan lagi. Oleh karena itu, proses untuk menghasilkan UUID sebaiknya menggunakan pustaka lainnya.</description>
     </item>
     <item>
       <title>Mamba as Conda Replacement</title>

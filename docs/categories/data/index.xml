@@ -6,8 +6,15 @@
     <description>Recent content in Data on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 17:09:50 +0700</lastBuildDate>
     <atom:link href="/categories/data/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>UUID di Instalasi PostgreSQL</title>
+      <link>/posts/20/</link>
+      <pubDate>Tue, 12 Mar 2024 17:09:50 +0700</pubDate>
+      <guid>/posts/20/</guid>
+      <description>PostgreSQL adalah salah satu RDBMS yang dikembangkan sudah sejak lama (1996) dan menjadi basis pengembangan software-software lainnya (YugabyteDB, CockroachDB, EDB). Hampir semua distro Linux menyertakan PostgreSQL dalam distribusinya. Sistem operasi lain juga didukung. Artikel ini membahas sedikit tentang UUID dan kaitannya dengan instalasi PostgreSQL.&#xA;Pada PostgreSQL versi lama, UUID dihasilkan oleh pustaka yang dibuat oleh OSSP. Sayangnya, software yang dibuat oleh legenda open source Ralf Engelschall ini tidak dikembangkan lagi. Oleh karena itu, proses untuk menghasilkan UUID sebaiknya menggunakan pustaka lainnya.</description>
+    </item>
     <item>
       <title>FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS</title>
       <link>/posts/18/</link>
