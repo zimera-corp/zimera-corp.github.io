@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 06:45:51 +0700</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Conda</title>
+      <link>/tags/conda/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/tags/conda/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Environment Management</title>
+      <link>/tags/environment-management/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/tags/environment-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mamba</title>
+      <link>/tags/mamba/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/tags/mamba/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Miniforge</title>
+      <link>/tags/miniforge/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/tags/miniforge/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Minimamba</title>
+      <link>/tags/minimamba/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/tags/minimamba/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Package Management</title>
+      <link>/tags/package-management/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/tags/package-management/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>FalkorDB</title>
       <link>/tags/falkordb/</link>
@@ -356,13 +405,6 @@
       <link>/tags/polyglot/</link>
       <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
       <guid>/tags/polyglot/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>/tags/python/</link>
-      <pubDate>Mon, 23 Jan 2023 10:17:08 +0700</pubDate>
-      <guid>/tags/python/</guid>
       <description></description>
     </item>
     <item>

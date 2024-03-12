@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 06:45:51 +0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
@@ -49,6 +49,13 @@
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    <item>
+      <title>Mamba as Conda Replacement</title>
+      <link>/posts/19/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/posts/19/</guid>
+      <description>Python and Its Package - Environment Management Python has always been the first choice for many programming tasks. This - of course - debatable since some problems exist in Python world, but let me tell you, in IEEE Spectrum top programming languages, Python is the winner from IEEE Spectrum and Trending category while SQL beats it in Job category.&#xA;As a long time developer who use Python since release 2.x (I insist on using Python for the whole curriculum in Universitas Teknologi Digital Indonesia back in 2004), currently I use Miniconda a lot (with conda as its package and environment manager).</description>
     </item>
     <item>
       <title>FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS</title>

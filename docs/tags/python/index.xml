@@ -6,8 +6,15 @@
     <description>Recent content in Python on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 23 Jan 2023 10:17:08 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 12 Mar 2024 06:45:51 +0700</lastBuildDate>
     <atom:link href="/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mamba as Conda Replacement</title>
+      <link>/posts/19/</link>
+      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
+      <guid>/posts/19/</guid>
+      <description>Python and Its Package - Environment Management Python has always been the first choice for many programming tasks. This - of course - debatable since some problems exist in Python world, but let me tell you, in IEEE Spectrum top programming languages, Python is the winner from IEEE Spectrum and Trending category while SQL beats it in Job category.&#xA;As a long time developer who use Python since release 2.x (I insist on using Python for the whole curriculum in Universitas Teknologi Digital Indonesia back in 2004), currently I use Miniconda a lot (with conda as its package and environment manager).</description>
+    </item>
     <item>
       <title>Polyglot Programming dan GraalVM</title>
       <link>/posts/06/</link>

@@ -19,7 +19,40 @@
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2024-02-24T12:30:22+07:00</lastmod>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/tags/conda/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/tags/environment-management/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/tags/mamba/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/posts/19/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/tags/miniforge/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/tags/minimamba/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/tags/package-management/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/tags/python/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/categories/software-engineering/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2024-03-12T06:45:51+07:00</lastmod>
   </url><url>
     <loc>/categories/data/</loc>
     <lastmod>2024-02-24T12:30:22+07:00</lastmod>
@@ -36,9 +69,6 @@
     <loc>/tags/graph-database/</loc>
     <lastmod>2024-02-24T12:30:22+07:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2024-02-24T12:30:22+07:00</lastmod>
-  </url><url>
     <loc>/tags/opencypher/</loc>
     <lastmod>2024-02-24T12:30:22+07:00</lastmod>
   </url><url>
@@ -46,9 +76,6 @@
     <lastmod>2024-02-24T12:30:22+07:00</lastmod>
   </url><url>
     <loc>/tags/redisgraph/</loc>
-    <lastmod>2024-02-24T12:30:22+07:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2024-02-24T12:30:22+07:00</lastmod>
   </url><url>
     <loc>/tags/apache-age/</loc>
@@ -144,9 +171,6 @@
     <loc>/tags/sdkman/</loc>
     <lastmod>2023-06-27T12:02:01+07:00</lastmod>
   </url><url>
-    <loc>/categories/software-engineering/</loc>
-    <lastmod>2023-06-27T12:02:01+07:00</lastmod>
-  </url><url>
     <loc>/tags/apt/</loc>
     <lastmod>2023-06-22T05:46:23+07:00</lastmod>
   </url><url>
@@ -235,9 +259,6 @@
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
   </url><url>
     <loc>/posts/06/</loc>
-    <lastmod>2023-01-23T10:17:08+07:00</lastmod>
-  </url><url>
-    <loc>/tags/python/</loc>
     <lastmod>2023-01-23T10:17:08+07:00</lastmod>
   </url><url>
     <loc>/tags/r/</loc>
