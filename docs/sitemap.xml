@@ -19,21 +19,33 @@
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
     <loc>/categories/</loc>
-    <lastmod>2024-03-12T17:09:50+07:00</lastmod>
-  </url><url>
-    <loc>/categories/data/</loc>
-    <lastmod>2024-03-12T17:09:50+07:00</lastmod>
+    <lastmod>2024-03-19T11:23:03+07:00</lastmod>
   </url><url>
     <loc>/</loc>
+    <lastmod>2024-03-19T11:23:03+07:00</lastmod>
+  </url><url>
+    <loc>/tags/latex/</loc>
+    <lastmod>2024-03-19T11:23:03+07:00</lastmod>
+  </url><url>
+    <loc>/categories/software/</loc>
+    <lastmod>2024-03-19T11:23:03+07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2024-03-19T11:23:03+07:00</lastmod>
+  </url><url>
+    <loc>/tags/tex-live/</loc>
+    <lastmod>2024-03-19T11:23:03+07:00</lastmod>
+  </url><url>
+    <loc>/posts/21/</loc>
+    <lastmod>2024-03-19T11:23:03+07:00</lastmod>
+  </url><url>
+    <loc>/categories/data/</loc>
     <lastmod>2024-03-12T17:09:50+07:00</lastmod>
   </url><url>
     <loc>/tags/instalasi/</loc>
     <lastmod>2024-03-12T17:09:50+07:00</lastmod>
   </url><url>
     <loc>/tags/postgresql/</loc>
-    <lastmod>2024-03-12T17:09:50+07:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2024-03-12T17:09:50+07:00</lastmod>
   </url><url>
     <loc>/tags/uuid/</loc>
@@ -109,9 +121,6 @@
     <lastmod>2023-11-17T22:01:11+07:00</lastmod>
   </url><url>
     <loc>/posts/16/</loc>
-    <lastmod>2023-11-17T22:01:11+07:00</lastmod>
-  </url><url>
-    <loc>/categories/software/</loc>
     <lastmod>2023-11-17T22:01:11+07:00</lastmod>
   </url><url>
     <loc>/tags/visual-studio-code/</loc>

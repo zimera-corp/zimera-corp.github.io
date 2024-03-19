@@ -6,8 +6,22 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 12 Mar 2024 17:09:50 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 19 Mar 2024 11:23:03 +0700</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>LaTex</title>
+      <link>/tags/latex/</link>
+      <pubDate>Tue, 19 Mar 2024 11:23:03 +0700</pubDate>
+      <guid>/tags/latex/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>TeX Live</title>
+      <link>/tags/tex-live/</link>
+      <pubDate>Tue, 19 Mar 2024 11:23:03 +0700</pubDate>
+      <guid>/tags/tex-live/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Instalasi</title>
       <link>/tags/instalasi/</link>
