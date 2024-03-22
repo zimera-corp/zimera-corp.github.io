@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Software on Zimera Corporation</title>
-    <link>/categories/software/</link>
-    <description>Recent content in Software on Zimera Corporation</description>
+    <title>AlmaLinux on Zimera Corporation</title>
+    <link>/tags/almalinux/</link>
+    <description>Recent content in AlmaLinux on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Mar 2024 11:23:03 +0700</lastBuildDate>
-    <atom:link href="/categories/software/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Tex Live - Instalasi dan Konfigurasi Manual</title>
-      <link>/posts/21/</link>
-      <pubDate>Tue, 19 Mar 2024 11:23:03 +0700</pubDate>
-      <guid>/posts/21/</guid>
-      <description>Tex Live adalah distribusi TeX document production system. TeX adalah sofware besar dan paket-paket pendukungnya dikumpulkan dan disimpan di The Comprehensive TeX Archive Network dengan mirror di seluruh dunia.TeX Live biasanya sudah disiapkan di berbagai macam distro Linux dan bisa diinstal dengan menggunakan package manager distro yang bersangkutan. Sebenarnya cukup menyenangkan, hanya saja, biasanya bukan versi update terbaru dan kita tidak bisa mengelola paket maupun mengkustomisasi TeX seperti yang kita inginkan.</description>
-    </item>
+    <lastBuildDate>Fri, 17 Nov 2023 22:01:11 +0700</lastBuildDate>
+    <atom:link href="/tags/almalinux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Mojo - Instalasi dan Memulai Coding</title>
       <link>/posts/16/</link>

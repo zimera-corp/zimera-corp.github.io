@@ -188,6 +188,8 @@
     Tags: 
     
         
+        <a href="/tags/almalinux">AlmaLinux</a>&nbsp;&nbsp;
+        
         <a href="/tags/mojo">Mojo</a>&nbsp;&nbsp;
         
         <a href="/tags/modular">modular</a>&nbsp;&nbsp;
@@ -205,10 +207,15 @@
     Author: 
           Bambang Purnomosidi D. P.
 	       | <time>November 17, 2023</time> | 
-        7  minutes reading time
+        8  minutes reading time
        </p>
 
-      <div class="content"><h2 id="tentang-mojo">Tentang Mojo</h2>
+      <div class="content"><p><strong>Update</strong> (22 Maret 2024):</p>
+<ol>
+<li>Perubahan cara instalasi.</li>
+<li>Menggunakan AlmaLinux.</li>
+</ol>
+<h2 id="tentang-mojo">Tentang Mojo</h2>
 <p><a href="https://www.modular.com/mojo">Mojo</a> adalah bahasa pemrograman baru yang diarahkan ke para pengembang software bidang AI (<em>Artificial Intelligence</em>). Mojo muncul karena keluhan lamanya eksekusi program AI yang dibangun menggunakan Python, sementara itu ekosistem AI di Python sedemikian kuat dan berlimpah (barangkali tidak ada bahasa pemrograman lain yang menandingi). &ldquo;Ketidakberdayaan&rdquo; para pengembang software AI berbasis Python tersebut yang memicu munculnya Mojo: tidak menyukai lambatnya program AI tetapi tidak bisa lepas dari Python karena matangnya ekosistem AI di Python.</p>
 <p>Mojo menggunakan sintaksis Python dengan penambahan minor sehingga bisa dikatakan bahwa Mojo adalah superset dari Python. Meskipun penggunaan utama dari Mojo adalah AI, Mojo juga merupakan <em>general purpose programming language</em>, artinya bisa digunakan untuk keperluan umum pemrograman.</p>
 <h2 id="instalasi-mojo">Instalasi Mojo</h2>
@@ -221,13 +228,59 @@
 <li>RAM minimal 4GB</li>
 </ol>
 <p><em>Tool</em> utama yang harus di-install adalah <a href="https://docs.modular.com/cli/">modular cli</a>. <em>modular</em> adalah program yang dijalankan dari shell untuk berinteraksi dengan produk perusahaan <em>modular</em> (Mojo diproduksi oleh Modular). Install <em>modular</em> dengan perintah berikut (sebagai <em>root</em>):</p>
-<pre tabindex="0"><code># apt-get install -y apt-transport-https
-# curl -1sLf &#39;https://dl.modular.com/bBNWiLZX5igwHXeu/installer/gpg.0E4925737A3895AD.key&#39; |  gpg --dearmor &gt;&gt; /usr/share/keyrings/modular-installer-archive-keyring.gpg
-# curl -1sLf &#39;https://dl.modular.com/bBNWiLZX5igwHXeu/installer/config.deb.txt?distro=debian&amp;codename=wheezy&#39; &gt; /etc/apt/sources.list.d/modular-installer.list
-# apt-get update
-# apt-get install -y modular
-</code></pre><p>Pada posisi ini, keluar dari user <em>root</em> (Ctrl-D), kita akan menginstall sebagai user biasa. Setelah <em>modular</em> terinstall, konfigurasikan otentikasi:</p>
-<pre tabindex="0"><code>$ modular auth mut_8ddaed883f374d7b9d5d94de89015e68
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ curl -s https://get.modular.com | sh -
+</span></span><span style="display:flex;"><span><span style="color:#f92672">[</span>sudo<span style="color:#f92672">]</span> password <span style="color:#66d9ef">for</span> bpdp: 
+</span></span><span style="display:flex;"><span>Executing the  setup script <span style="color:#66d9ef">for</span> the <span style="color:#e6db74">&#39;modular/installer&#39;</span> repository ...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   OK: Checking <span style="color:#66d9ef">for</span> required executable <span style="color:#e6db74">&#39;curl&#39;</span> ...
+</span></span><span style="display:flex;"><span>   OK: Checking <span style="color:#66d9ef">for</span> required executable <span style="color:#e6db74">&#39;rpm&#39;</span> ...
+</span></span><span style="display:flex;"><span>   OK: Detecting your OS distribution and release using system methods ...
+</span></span><span style="display:flex;"><span> ^^^^: ... Detected/provided <span style="color:#66d9ef">for</span> your OS/distribution, version and architecture:
+</span></span><span style="display:flex;"><span> &gt;&gt;&gt;&gt;:
+</span></span><span style="display:flex;"><span> &gt;&gt;&gt;&gt;: ... distro<span style="color:#f92672">=</span>almalinux  version<span style="color:#f92672">=</span>9.3  codename<span style="color:#f92672">=</span>Shamrock  arch<span style="color:#f92672">=</span>x86_64  
+</span></span><span style="display:flex;"><span> &gt;&gt;&gt;&gt;:
+</span></span><span style="display:flex;"><span>   OK: Importing <span style="color:#e6db74">&#39;modular/installer&#39;</span> repository GPG keys into rpm ...
+</span></span><span style="display:flex;"><span>   OK: Checking <span style="color:#66d9ef">for</span> available package manager <span style="color:#f92672">(</span>DNF/Microdnf/YUM/Zypper<span style="color:#f92672">)</span> ...
+</span></span><span style="display:flex;"><span> ^^^^: ... Detected package manager as <span style="color:#e6db74">&#39;dnf&#39;</span>
+</span></span><span style="display:flex;"><span>   OK: Checking <span style="color:#66d9ef">for</span> dnf dependency <span style="color:#e6db74">&#39;dnf-plugins-core&#39;</span> ...
+</span></span><span style="display:flex;"><span>   OK: Checking <span style="color:#66d9ef">if</span> upstream install config is OK ...
+</span></span><span style="display:flex;"><span>   OK: Fetching <span style="color:#e6db74">&#39;modular/installer&#39;</span> repository configuration ...
+</span></span><span style="display:flex;"><span>   OK: Installing <span style="color:#e6db74">&#39;modular/installer&#39;</span> repository via dnf ...
+</span></span><span style="display:flex;"><span>  RUN: Updating the dnf cache to fetch the new repository metadata ...Importing GPG key 0x7A3895AD:
+</span></span><span style="display:flex;"><span> Userid     : <span style="color:#e6db74">&#34;Cloudsmith Package (modular/installer) &lt;support@cloudsmith.io&gt;&#34;</span>
+</span></span><span style="display:flex;"><span> Fingerprint: 0BAB A1B0 518C 87CF F4CC <span style="color:#ae81ff">3740</span> 0E49 <span style="color:#ae81ff">2573</span> 7A38 95AD
+</span></span><span style="display:flex;"><span> From       : https://dl.modular.com/public/installer/gpg.0E4925737A3895AD.key
+</span></span><span style="display:flex;"><span>Importing GPG key 0x7A3895AD:
+</span></span><span style="display:flex;"><span> Userid     : <span style="color:#e6db74">&#34;Cloudsmith Package (modular/installer) &lt;support@cloudsmith.io&gt;&#34;</span>
+</span></span><span style="display:flex;"><span> Fingerprint: 0BAB A1B0 518C 87CF F4CC <span style="color:#ae81ff">3740</span> 0E49 <span style="color:#ae81ff">2573</span> 7A38 95AD
+</span></span><span style="display:flex;"><span> From       : https://dl.modular.com/public/installer/gpg.0E4925737A3895AD.key
+</span></span><span style="display:flex;"><span>Importing GPG key 0x7A3895AD:
+</span></span><span style="display:flex;"><span> Userid     : <span style="color:#e6db74">&#34;Cloudsmith Package (modular/installer) &lt;support@cloudsmith.io&gt;&#34;</span>
+</span></span><span style="display:flex;"><span> Fingerprint: 0BAB A1B0 518C 87CF F4CC <span style="color:#ae81ff">3740</span> 0E49 <span style="color:#ae81ff">2573</span> 7A38 95AD
+</span></span><span style="display:flex;"><span> From       : https://dl.modular.com/public/installer/gpg.0E4925737A3895AD.key
+</span></span><span style="display:flex;"><span>   OK: Updating the dnf cache to fetch the new repository metadata ...
+</span></span><span style="display:flex;"><span>   OK: The repository has been installed successfully - You<span style="color:#e6db74">&#39;re ready to rock!
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Installed:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  modular-0.5.2-1.x86_64                                                                                                                                                
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  __  __           _       _
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> |  \/  | ___   __| |_   _| | __ _ _ __
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74"> | |\/| |/ _ \ / _` | | | | |/ _` | &#39;</span>__|
+</span></span><span style="display:flex;"><span> | |  | | <span style="color:#f92672">(</span>_<span style="color:#f92672">)</span> | <span style="color:#f92672">(</span>_| | |_| | | <span style="color:#f92672">(</span>_| | |
+</span></span><span style="display:flex;"><span> |_|  |_|<span style="color:#ae81ff">\_</span>__/ <span style="color:#ae81ff">\_</span>_,_|<span style="color:#ae81ff">\_</span>_,_|_|<span style="color:#ae81ff">\_</span>_,_|_|
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Welcome to the Modular CLI!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>To get started, see:
+</span></span><span style="display:flex;"><span>https://modul.ar/get-started
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>For info about this tool, type <span style="color:#e6db74">&#34;modular --help&#34;</span>.
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p><strong>Catatan</strong>: Jika anda menggunakan Linux, instalasi <code>modular</code> hanya bisa dilakukan pada sistem operasi berbasis Debian/Ubuntu dan RedHat</p>
+<p>Pada posisi ini, kita akan menginstall <code>mojo</code> sebagai user biasa. Setelah <em>modular</em> terinstall, konfigurasikan otentikasi:</p>
+<pre tabindex="0"><code>$ modular auth 
 </code></pre><p>Untuk instalasi Python, bisa digunakan <a href="https://docs.conda.io/projects/miniconda/en/latest/">miniconda</a>.Untuk keperluan tersebut, setelah install <em>miniconda</em>, buat virtual environment baru menggunakan Python versi 3.11:</p>
 <pre tabindex="0"><code>$ conda create -n py311-mojo python=3.11
 Channels:
