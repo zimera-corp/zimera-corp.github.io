@@ -6,8 +6,15 @@
     <description>Recent content in Operating System on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 22 Jun 2023 05:46:23 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 23 Mar 2024 05:59:05 +0700</lastBuildDate>
     <atom:link href="/categories/operating-system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Optimasi AlmaLinux: Lightdm dan XFCE4</title>
+      <link>/posts/22/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/posts/22/</guid>
+      <description>AlmaLinux menggunakan GNOME Display Manager dan akan menggunakan GNOME-Wayland secara default sebagai desktop environment. Untuk mesin dengan resources yang cukup, hal ini tentu saja tidak masalah. Meskipun demikian, mempunyai resources yang cukup, juga bukan berarti bebas saja. Banyak pemakai yang memang sudah memahami kebutuhannya, tidak terlalu mementingkan bells and whistles serta eye-candy. Saya mungkin termasuk dalam kategori seperti itu. AlmaLinux saya install secara default sehingga GDM dan GNOME akan digunakan. Saya memutuskan untuk menggunakan XFCE sebagai desktop environment dan lightdm sebagai pengganti dari GDM.</description>
+    </item>
     <item>
       <title>How to Handle Unstable Debian-based APT Broken Package(s)</title>
       <link>/posts/11/</link>

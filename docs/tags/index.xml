@@ -6,8 +6,57 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Mar 2024 11:23:03 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 23 Mar 2024 05:59:05 +0700</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Alma</title>
+      <link>/tags/alma/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/tags/alma/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>AlmaLinux</title>
+      <link>/tags/almalinux/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/tags/almalinux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Display Manager</title>
+      <link>/tags/display-manager/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/tags/display-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Lightdm</title>
+      <link>/tags/lightdm/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/tags/lightdm/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Optimasi</title>
+      <link>/tags/optimasi/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/tags/optimasi/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>RHEL</title>
+      <link>/tags/rhel/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/tags/rhel/</guid>
+      <description></description>
+    </item>
     <item>
       <title>LaTex</title>
       <link>/tags/latex/</link>
@@ -139,13 +188,6 @@
       <link>/tags/apache-age/</link>
       <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
       <guid>/tags/apache-age/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>AlmaLinux</title>
-      <link>/tags/almalinux/</link>
-      <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      <guid>/tags/almalinux/</guid>
       <description></description>
     </item>
     <item>

@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 19 Mar 2024 11:23:03 +0700</lastBuildDate>
+    <lastBuildDate>Sat, 23 Mar 2024 05:59:05 +0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
@@ -49,6 +49,13 @@
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    <item>
+      <title>Optimasi AlmaLinux: Lightdm dan XFCE4</title>
+      <link>/posts/22/</link>
+      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
+      <guid>/posts/22/</guid>
+      <description>AlmaLinux menggunakan GNOME Display Manager dan akan menggunakan GNOME-Wayland secara default sebagai desktop environment. Untuk mesin dengan resources yang cukup, hal ini tentu saja tidak masalah. Meskipun demikian, mempunyai resources yang cukup, juga bukan berarti bebas saja. Banyak pemakai yang memang sudah memahami kebutuhannya, tidak terlalu mementingkan bells and whistles serta eye-candy. Saya mungkin termasuk dalam kategori seperti itu. AlmaLinux saya install secara default sehingga GDM dan GNOME akan digunakan. Saya memutuskan untuk menggunakan XFCE sebagai desktop environment dan lightdm sebagai pengganti dari GDM.</description>
     </item>
     <item>
       <title>Tex Live - Instalasi dan Konfigurasi Manual</title>
