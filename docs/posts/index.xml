@@ -6,8 +6,15 @@
     <description>Recent content in Articles - Blog Posts on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Mar 2024 05:59:05 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2024 12:10:35 +0700</lastBuildDate>
     <atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Konfigurasi LSP dan Treesitter di Neovim &#43; LazyVim</title>
+      <link>/posts/23/</link>
+      <pubDate>Sun, 21 Apr 2024 12:10:35 +0700</pubDate>
+      <guid>/posts/23/</guid>
+      <description>Bagi anda yang telat terbiasa berada di lingkungan berbasis UNIX, Vim bukan software yang asing. Editor ini biasanya sering dikaitkan dengan Emacs dalam suatu perang suci. Tentu saja seiring makin berkembangnya dunia software, perang suci ini sudah tidak terlalu relevan lagi. Vim pun sekarang sudah terpecah menjadi 2: Vim dan Neovim. Saya tidak akan membahas perang suci ini maupun perpecahan pasukan yang ikut dalam peperangan tersebut tentu saja. Sebagai pengguna Vim dan kemudian berpindah ke Neovim, saya rasa banyak hal yang harus dipelajari dan disesuaikan meskipun tidak secara eksplisit dan to the point.</description>
+    </item>
     <item>
       <title>Optimasi AlmaLinux: Lightdm dan XFCE4</title>
       <link>/posts/22/</link>

@@ -1,26 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>IDE on Zimera Corporation</title>
-    <link>/tags/ide/</link>
-    <description>Recent content in IDE on Zimera Corporation</description>
+    <title>Coding on Zimera Corporation</title>
+    <link>/tags/coding/</link>
+    <description>Recent content in Coding on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 21 Apr 2024 12:10:35 +0700</lastBuildDate>
-    <atom:link href="/tags/ide/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="/tags/coding/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Konfigurasi LSP dan Treesitter di Neovim &#43; LazyVim</title>
       <link>/posts/23/</link>
       <pubDate>Sun, 21 Apr 2024 12:10:35 +0700</pubDate>
       <guid>/posts/23/</guid>
       <description>Bagi anda yang telat terbiasa berada di lingkungan berbasis UNIX, Vim bukan software yang asing. Editor ini biasanya sering dikaitkan dengan Emacs dalam suatu perang suci. Tentu saja seiring makin berkembangnya dunia software, perang suci ini sudah tidak terlalu relevan lagi. Vim pun sekarang sudah terpecah menjadi 2: Vim dan Neovim. Saya tidak akan membahas perang suci ini maupun perpecahan pasukan yang ikut dalam peperangan tersebut tentu saja. Sebagai pengguna Vim dan kemudian berpindah ke Neovim, saya rasa banyak hal yang harus dipelajari dan disesuaikan meskipun tidak secara eksplisit dan to the point.</description>
-    </item>
-    <item>
-      <title>Mojo - Instalasi dan Memulai Coding</title>
-      <link>/posts/16/</link>
-      <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      <guid>/posts/16/</guid>
-      <description>Update (22 Maret 2024):&#xA;Perubahan cara instalasi. Menggunakan AlmaLinux. Tentang Mojo Mojo adalah bahasa pemrograman baru yang diarahkan ke para pengembang software bidang AI (Artificial Intelligence). Mojo muncul karena keluhan lamanya eksekusi program AI yang dibangun menggunakan Python, sementara itu ekosistem AI di Python sedemikian kuat dan berlimpah (barangkali tidak ada bahasa pemrograman lain yang menandingi). &amp;ldquo;Ketidakberdayaan&amp;rdquo; para pengembang software AI berbasis Python tersebut yang memicu munculnya Mojo: tidak menyukai lambatnya program AI tetapi tidak bisa lepas dari Python karena matangnya ekosistem AI di Python.</description>
     </item>
   </channel>
 </rss>

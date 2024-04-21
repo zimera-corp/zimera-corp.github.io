@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Mar 2024 05:59:05 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2024 12:10:35 +0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
@@ -49,6 +49,13 @@
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    <item>
+      <title>Konfigurasi LSP dan Treesitter di Neovim &#43; LazyVim</title>
+      <link>/posts/23/</link>
+      <pubDate>Sun, 21 Apr 2024 12:10:35 +0700</pubDate>
+      <guid>/posts/23/</guid>
+      <description>Bagi anda yang telat terbiasa berada di lingkungan berbasis UNIX, Vim bukan software yang asing. Editor ini biasanya sering dikaitkan dengan Emacs dalam suatu perang suci. Tentu saja seiring makin berkembangnya dunia software, perang suci ini sudah tidak terlalu relevan lagi. Vim pun sekarang sudah terpecah menjadi 2: Vim dan Neovim. Saya tidak akan membahas perang suci ini maupun perpecahan pasukan yang ikut dalam peperangan tersebut tentu saja. Sebagai pengguna Vim dan kemudian berpindah ke Neovim, saya rasa banyak hal yang harus dipelajari dan disesuaikan meskipun tidak secara eksplisit dan to the point.</description>
     </item>
     <item>
       <title>Optimasi AlmaLinux: Lightdm dan XFCE4</title>
