@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 21 Apr 2024 12:10:35 +0700</lastBuildDate>
+    <lastBuildDate>Sun, 02 Jun 2024 12:19:08 +0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
@@ -49,6 +49,13 @@
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
       <guid>/services/systems/</guid>
       <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+    </item>
+    <item>
+      <title>Blockchain: Tidak Hanya untuk Cryptocurrency</title>
+      <link>/posts/24/</link>
+      <pubDate>Sun, 02 Jun 2024 12:19:08 +0700</pubDate>
+      <guid>/posts/24/</guid>
+      <description>Jika anda menyukai bidang investasi, istilah cryptocurrency atau mata uang kripto bukan merupakan istilah yang asing. Banyak cryptocurrency yang beredar dan bisa dijadikan sebagai investasi maupun alat pembayaran dengan segala kelebihan dan kekurangannya. Kekurangan paling mendasar adalah tidak adanya nilai intrinsik. Kondisi ini menyebabkan nilai dari cryptocurrency sangat fluktuatif sehingga menyebabkan pandangan orang terhadap cryptocurrency cenderung negatif. Keberadaan cryptocurrency ini dimungkinkan oleh adanya teknologi yang disebut dengan blockchain.&#xA;Kasus kejahatan yang melibatkan cryptocurrency ini (dikenal dengan istilah cyptocurrency scams) juga cukup signifikan.</description>
     </item>
     <item>
       <title>Konfigurasi LSP dan Treesitter di Neovim &#43; LazyVim</title>
