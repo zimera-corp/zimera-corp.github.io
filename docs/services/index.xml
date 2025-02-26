@@ -4,30 +4,30 @@
     <title>Our Services on Zimera Corporation</title>
     <link>/services/</link>
     <description>Recent content in Our Services on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 31 Jan 2023 12:59:14 +0700</lastBuildDate>
     <atom:link href="/services/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Consulting Services</title>
       <link>/services/consulting/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <pubDate>Mon, 05 Dec 2022 08:19:43 +0700</pubDate>
       <guid>/services/consulting/</guid>
-      <description>Our consulting services assist businesses or any other organizations with anything related to data and software. We focus on client&amp;rsquo;s critical issues and persistently work to achieve goals. Therefore, it is very important to define the problem since the beginning and stick to it until the solution has been succesfully completed. Specifically, we use 4C: Clarity, Consistency, Communication, and Commitment as our main concerns in every task/project.&#xA;We assist in problem solving.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/services/consulting.jpg&#34; alt=&#34;Zimera Consulting&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Our consulting services assist businesses or any other organizations with anything related to data and software. We focus on client&amp;rsquo;s critical issues and persistently work to achieve goals. Therefore, it is very important to define the problem since the beginning and stick to it until the solution has been succesfully completed. Specifically, we use 4C: &lt;strong&gt;Clarity&lt;/strong&gt;, &lt;strong&gt;Consistency&lt;/strong&gt;, &lt;strong&gt;Communication&lt;/strong&gt;, and &lt;strong&gt;Commitment&lt;/strong&gt; as our main concerns in every task/project.&lt;/p&gt;&#xA;&lt;p&gt;We assist in problem solving. We do it simply. We talk to people, we gather information, and we trust our intuition. &lt;a href=&#34;/contact/&#34;&gt;Contact us&lt;/a&gt; for more information regarding our availability for consulting tasks.&lt;/p&gt;</description>
     </item>
     <item>
       <title>School and Training Services</title>
       <link>/services/school/</link>
       <pubDate>Tue, 31 Jan 2023 12:59:14 +0700</pubDate>
       <guid>/services/school/</guid>
-      <description>About the School Our school helps in talent or human resources development. Basically, we have some schools which only act as themes grouping. Our schools consist of:&#xA;School of Decentralized Systems School of Enterprise Systems School of Software Engineering School of Data Prior to enter Zimera School, a learner needs to understand the basic. It is not that difficult, but one may need to his/her paradigm in learning by consistently challenged his/her ability to solve problems.</description>
+      <description>&lt;h1 id=&#34;about-the-school&#34;&gt;About the School&lt;/h1&gt;&#xA;&lt;p&gt;&lt;img src=&#34;/images/services/school.jpg&#34; alt=&#34;Zimera School&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Our school helps in talent or human resources development. Basically, we have some schools which only act as themes grouping. Our schools consist of:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;School of Decentralized Systems&lt;/li&gt;&#xA;&lt;li&gt;School of Enterprise Systems&lt;/li&gt;&#xA;&lt;li&gt;School of Software Engineering&lt;/li&gt;&#xA;&lt;li&gt;School of Data&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Prior to enter Zimera School, a learner needs to understand the basic. It is not that difficult, but one may need to his/her paradigm in learning by consistently challenged his/her ability to solve problems. Head over to our &lt;a href=&#34;https://github.com/zimera-school/materi-pembelajaran/blob/main/kemampuan-dasar.md&#34;&gt;GitHub repo for basic skills&lt;/a&gt; to learn more about this basic ability.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Systems Services</title>
       <link>/services/systems/</link>
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
       <guid>/services/systems/</guid>
-      <description>Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version.</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/services/systems.jpg&#34; alt=&#34;Zimera Systems&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version. This case happen in source code level version, so that one can be sure that we do not offer other version. We will, of course, make some documentation about differences with upstream.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

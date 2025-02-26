@@ -3,8 +3,10 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/team/bpdp/</loc>
+    <lastmod>2022-12-05T07:48:38+07:00</lastmod>
   </url><url>
     <loc>/services/consulting/</loc>
+    <lastmod>2022-12-05T08:19:43+07:00</lastmod>
   </url><url>
     <loc>/team/widya/</loc>
     <lastmod>2023-02-06T05:42:41+07:00</lastmod>
@@ -18,13 +20,46 @@
     <loc>/services/systems/</loc>
     <lastmod>2023-01-31T12:59:06+07:00</lastmod>
   </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/categories/infrastructure/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/posts/25/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/tags/l2tp/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/tags/linux/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/tags/networkmanager/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/categories/operating-system/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/tags/void-linux/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/tags/vpn/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
+    <loc>/tags/xfce/</loc>
+    <lastmod>2025-02-26T15:54:08+07:00</lastmod>
+  </url><url>
     <loc>/tags/blockchain/</loc>
     <lastmod>2024-06-02T12:19:08+07:00</lastmod>
   </url><url>
     <loc>/posts/24/</loc>
-    <lastmod>2024-06-02T12:19:08+07:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
     <lastmod>2024-06-02T12:19:08+07:00</lastmod>
   </url><url>
     <loc>/tags/consortium-blockchain/</loc>
@@ -39,9 +74,6 @@
     <loc>/tags/decentralized-systems/</loc>
     <lastmod>2024-06-02T12:19:08+07:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2024-06-02T12:19:08+07:00</lastmod>
-  </url><url>
     <loc>/tags/private-blockchain/</loc>
     <lastmod>2024-06-02T12:19:08+07:00</lastmod>
   </url><url>
@@ -49,9 +81,6 @@
     <lastmod>2024-06-02T12:19:08+07:00</lastmod>
   </url><url>
     <loc>/categories/software/</loc>
-    <lastmod>2024-06-02T12:19:08+07:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2024-06-02T12:19:08+07:00</lastmod>
   </url><url>
     <loc>/tags/coding/</loc>
@@ -85,12 +114,6 @@
     <lastmod>2024-03-23T05:59:05+07:00</lastmod>
   </url><url>
     <loc>/tags/lightdm/</loc>
-    <lastmod>2024-03-23T05:59:05+07:00</lastmod>
-  </url><url>
-    <loc>/tags/linux/</loc>
-    <lastmod>2024-03-23T05:59:05+07:00</lastmod>
-  </url><url>
-    <loc>/categories/operating-system/</loc>
     <lastmod>2024-03-23T05:59:05+07:00</lastmod>
   </url><url>
     <loc>/tags/optimasi/</loc>
@@ -390,9 +413,11 @@
     <loc>/news/</loc>
     <lastmod>2023-01-12T11:15:15+07:00</lastmod>
   </url><url>
-    <loc>/about/</loc>
-  </url><url>
     <loc>/contact/</loc>
+    <lastmod>2022-12-05T07:32:33+07:00</lastmod>
+  </url><url>
+    <loc>/about/</loc>
+    <lastmod>2022-12-05T07:28:50+07:00</lastmod>
   </url><url>
     <loc>/404/</loc>
   </url>

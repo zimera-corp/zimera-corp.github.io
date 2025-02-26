@@ -4,7 +4,7 @@
     <title>QEMU on Zimera Corporation</title>
     <link>/tags/qemu/</link>
     <description>Recent content in QEMU on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 18 Jun 2023 22:15:53 +0700</lastBuildDate>
     <atom:link href="/tags/qemu/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>/posts/10/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
       <guid>/posts/10/</guid>
-      <description>Have you ever use Haiku OS? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&amp;rsquo;ve used some parameters in QEMU. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/posts/10/haiku-yt.png&#34; alt=&#34;Haiku - Web / Epiphany&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Have you ever use &lt;a href=&#34;https://haiku-os.org&#34;&gt;Haiku OS&lt;/a&gt;? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&amp;rsquo;ve used some parameters in &lt;a href=&#34;https://www.qemu.org/&#34;&gt;QEMU&lt;/a&gt;. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Konfigurasi VPN pada (Void) Linux - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Konfigurasi VPN pada (Void) Linux"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/25/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Konfigurasi VPN pada (Void) Linux</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/infrastructure">Infrastructure</a>&nbsp;&nbsp;
+        
+        <a href="/categories/operating-system">Operating System</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/vpn">VPN</a>&nbsp;&nbsp;
+        
+        <a href="/tags/linux">Linux</a>&nbsp;&nbsp;
+        
+        <a href="/tags/void-linux">Void Linux</a>&nbsp;&nbsp;
+        
+        <a href="/tags/networkmanager">NetworkManager</a>&nbsp;&nbsp;
+        
+        <a href="/tags/l2tp">l2tp</a>&nbsp;&nbsp;
+        
+        <a href="/tags/xfce">Xfce</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author:  | <time>February 26, 2025</time> | 
+        2  minutes reading time
+       </p>
+
+      <div class="content"><p>Artikel berikut akan membahas tentang cara mengkonfigurasi dan mengaktifkan VPN jika anda menggunakan Linux. Pembahasan pada artikel ini difokuskan pada <a href="https://voidlinux.org/">Void Linux</a> meskipun sebenarnya cukup generik - tinggal diganti pada pembahasan instalasi paket sesuai dengan package manager yang digunakan serta penggunaan <a href="https://smarden.org/runit/">runit</a> disesuaikan dengan distro yang anda gunakan (kebanyakan masih menggunakan <a href="https://systemd.io/">systemd</a>).</p>
+<p>NetworkManager mempunyai beberapa plugin untuk VPN (OpenVPN, L2TP/IPsec, OpenConnect, PPTP). Untuk keperluan ini kita akan menggunakan L2TP/IPsec.</p>
+<ol>
+<li>Install terlebih dahulu plugin untuk L2TP:</li>
+</ol>
+<p>Cari paket plugin NetworkManager untuk l2tp dengan perintah <code>xbps-query -Rs NetworkManager</code>.</p>
+<p><img src="/images/posts/25/00-00--package-l2tp.png" alt="Paket NetworkManager-l2tp di Void Linux"></p>
+<p>Install dengan perintah berikut:</p>
+<pre tabindex="0"><code>$ sudo xbps-install NetworkManager-l2tp
+</code></pre><ol start="2">
+<li>Restart NetworkManager</li>
+</ol>
+<p>Perintah: <code>sudo sv restart NetworkManager</code></p>
+<p><img src="/images/posts/25/00-01--restart-nm.png" alt="Restart NetworkManager di Void Linux menggunakan runit"></p>
+<p>Sesuaikan dengan distro Linux anda. Pada distro dengan systemd anda bisa menggunakan <code>systemctl</code>.</p>
+<ol start="3">
+<li>Konfigurasi VPN</li>
+</ol>
+<p>Untuk mengkonfigurasi, bisa menggunakan <code>nmcli</code> jika menghendaki antarmuka <em>command line</em>. Di bagian ini, saya akan menggunakan menu dari Xfce4.</p>
+<p><img src="/images/posts/25/00-02--network-setting-menu-xfce4.png" alt="Menu konfigurasi NetworkManager di Xfce4"></p>
+<p>Isikan konfigurasi setelah muncul dialog berikut:</p>
+<p><img src="/images/posts/25/01--network-conf.png" alt="Dialog konfigurasi NetworkManager di Xfce4"></p>
+<p>kemudian klik pada tanda <strong>+</strong> dan pilih <strong>Connection Type</strong> berikut ini:</p>
+<p><img src="/images/posts/25/02--click-plus.png" alt="Memilih tipe koneksi NetworkManager di Xfce4"></p>
+<p>Isikan <strong>Gateway - User name - Password</strong>:</p>
+<p><img src="/images/posts/25/03--define-vpn.png" alt="Pengisian konfigurasi"></p>
+<p>Klik pada <strong>IPsec setting</strong> dan isikan <strong>Pre-shared key</strong></p>
+<p><img src="/images/posts/25/04--define-ipsec.png" alt="Konfigurasi IPsec"></p>
+<p>Setelah itu <strong>Save</strong>. Konfigurasi akan tersimpan di <code>/etc/NetworkManager/system-connections/</code>.</p>
+<ol start="4">
+<li>Mengaktifkan VPN</li>
+</ol>
+<p>Untuk mengaktifkan, bisa melalui menu Xfce4:</p>
+<p><img src="/images/posts/25/05--activate-from-xfce4.png" alt="Aktivasi VPN melalui Xfce4"></p>
+<p>atau bisa juga dari shell / <em>command line</em>. Untuk memeriksa apakah koneksi telah tersimpan, gunakan perintah <code>nmcli con</code>.</p>
+<p><img src="/images/posts/25/06--connection-list.png" alt="Daftar koneksi NetworkManager"></p>
+<p>Aktifkan dengan perintah berikut <code>nmcli con up id vpn-utdi</code> (vpn-utdi disesuaikan dengan id koneksi):</p>
+<p><img src="/images/posts/25/07--activate-from-shell.png" alt="Aktivasi VPN dari shell"></p>
+<ol start="5">
+<li>Selesai. Pada titik ini, VPN anda sudah aktif.</li>
+</ol>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

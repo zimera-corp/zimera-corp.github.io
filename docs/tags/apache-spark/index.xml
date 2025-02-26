@@ -4,7 +4,7 @@
     <title>Apache Spark on Zimera Corporation</title>
     <link>/tags/apache-spark/</link>
     <description>Recent content in Apache Spark on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 14 Oct 2023 09:19:22 +0700</lastBuildDate>
     <atom:link href="/tags/apache-spark/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>/posts/15/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
       <guid>/posts/15/</guid>
-      <description>RDD merupakan struktur data fundamental di Apache Spark. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses transformasi serta action yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah zero value yang ada pada action aggregate.</description>
+      <description>&lt;p&gt;RDD merupakan struktur data fundamental di &lt;a href=&#34;https://spark.apache.org&#34;&gt;Apache Spark&lt;/a&gt;. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses &lt;em&gt;transformasi&lt;/em&gt; serta &lt;em&gt;action&lt;/em&gt; yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah &lt;strong&gt;zero value&lt;/strong&gt; yang ada pada &lt;em&gt;action&lt;/em&gt; &lt;strong&gt;aggregate&lt;/strong&gt;. Perhatikan &lt;em&gt;source code&lt;/em&gt; berikut ini:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

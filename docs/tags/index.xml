@@ -4,10 +4,52 @@
     <title>Tags on Zimera Corporation</title>
     <link>/tags/</link>
     <description>Recent content in Tags on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Jun 2024 12:19:08 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2025 15:54:08 +0700</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>L2tp</title>
+      <link>/tags/l2tp/</link>
+      <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
+      <guid>/tags/l2tp/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Linux</title>
+      <link>/tags/linux/</link>
+      <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
+      <guid>/tags/linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>NetworkManager</title>
+      <link>/tags/networkmanager/</link>
+      <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
+      <guid>/tags/networkmanager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Void Linux</title>
+      <link>/tags/void-linux/</link>
+      <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
+      <guid>/tags/void-linux/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>VPN</title>
+      <link>/tags/vpn/</link>
+      <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
+      <guid>/tags/vpn/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Xfce</title>
+      <link>/tags/xfce/</link>
+      <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
+      <guid>/tags/xfce/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Blockchain</title>
       <link>/tags/blockchain/</link>
@@ -118,13 +160,6 @@
       <link>/tags/lightdm/</link>
       <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
       <guid>/tags/lightdm/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Linux</title>
-      <link>/tags/linux/</link>
-      <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
-      <guid>/tags/linux/</guid>
       <description></description>
     </item>
     <item>

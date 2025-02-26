@@ -4,7 +4,9 @@ theme = "hugo-serif-theme"
 languageCode = "en-us"
 title = "Zimera Corporation"
 publishDir = "docs"
-paginate = 5
+
+[pagination]
+  pagerSize = 5
 
 [module]
   [module.hugoVersion]
@@ -13,6 +15,8 @@ paginate = 5
 
 [markup]
   defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark.renderer]
+    unsafe = true
 
 [taxonomies]
     category = "categories"

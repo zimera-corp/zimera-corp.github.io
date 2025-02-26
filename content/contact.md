@@ -1,6 +1,6 @@
 ---
 title: 'Contact'
-date: Mon Dec  5 07:32:33 AM WIB 2022
+date: 2022-12-05T07:32:33+07:00
 layout: contact
 ---
 

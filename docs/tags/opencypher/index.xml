@@ -4,7 +4,7 @@
     <title>OpenCypher on Zimera Corporation</title>
     <link>/tags/opencypher/</link>
     <description>Recent content in OpenCypher on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 24 Feb 2024 12:30:22 +0700</lastBuildDate>
     <atom:link href="/tags/opencypher/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>/posts/18/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
       <guid>/posts/18/</guid>
-      <description>If you are a software developer, mainly working with data intensive application, chances are, you&amp;rsquo;ve already work with in-memory data as it will make our app runs fast. Redis usually becomes de-facto DBMS for caching. Redis mainly uses key-value data model but its modular architecture makes it possible to develop other tools or data models using Redis key-value as its underlying data model. That&amp;rsquo;s also happens with RedisGraph, a Redis module for property graph model.</description>
+      <description>&lt;p&gt;If you are a software developer, mainly working with data intensive application, chances are, you&amp;rsquo;ve already work with in-memory data as it will make our app runs fast. &lt;a href=&#34;https://redis.io&#34;&gt;Redis&lt;/a&gt; usually becomes de-facto DBMS for caching. Redis mainly uses &lt;em&gt;key-value&lt;/em&gt; data model but its modular architecture makes it possible to develop other tools or data models using Redis key-value as its underlying data model. That&amp;rsquo;s also happens with &lt;em&gt;RedisGraph&lt;/em&gt;, a Redis module for property graph model. It uses &lt;a href=&#34;https://opencypher.org&#34;&gt;OpenCypher&lt;/a&gt; as its query language. However, bad news came: Redis &lt;a href=&#34;https://redis.com/blog/redisgraph-eol/&#34;&gt;stopped its development&lt;/a&gt;. However, lucky for us, some developers decide to fork RedisGraph and continue its development as &lt;a href=&#34;https://falkordb.com&#34;&gt;FalkorDB&lt;/a&gt;. This article explains how we can get started quickly with FalkorDB.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Apache AGE - Property Graph - OpenCypher for PostgreSQL</title>
       <link>/posts/17/</link>
       <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
       <guid>/posts/17/</guid>
-      <description>Tentang Apache AGE Apache AGE adalah adalah ekstensi dari PostgreSQL untuk model data graph. Apache AGE mendukung model data graph berupa property graph (jenis lainnya adalah RDF/TripleStore). Apache AGE merupakan software bebas dan mendukung berbagai versi PostgreSQL. Secara resmi, pada halaman web Apache AGE, dinyatakan bahwa versi PostgreSQL yang didukung adalah versi 11-15. Meski demikian, pada versi release dari Apache AGE di GitHub, terdapat versi untuk PostgreSQL 16.x. Artikel ini menggunakan versi 16.</description>
+      <description>&lt;h2 id=&#34;tentang-apache-age&#34;&gt;Tentang Apache AGE&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://age.apache.org/&#34;&gt;Apache AGE&lt;/a&gt; adalah adalah ekstensi dari &lt;a href=&#34;https://postgresql.org&#34;&gt;PostgreSQL&lt;/a&gt; untuk model data graph. Apache AGE mendukung model data graph berupa &lt;em&gt;property graph&lt;/em&gt; (jenis lainnya adalah RDF/TripleStore). Apache AGE merupakan software bebas dan mendukung berbagai versi PostgreSQL. Secara resmi, pada halaman web Apache AGE, dinyatakan bahwa versi PostgreSQL yang didukung adalah versi 11-15. Meski demikian, pada versi &lt;em&gt;release&lt;/em&gt; dari Apache AGE di &lt;a href=&#34;https://github.com/apache/age/releases&#34;&gt;GitHub&lt;/a&gt;, terdapat versi untuk PostgreSQL 16.x. Artikel ini menggunakan versi 16.1.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,30 +4,37 @@
     <title>Operating System on Zimera Corporation</title>
     <link>/categories/operating-system/</link>
     <description>Recent content in Operating System on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 23 Mar 2024 05:59:05 +0700</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2025 15:54:08 +0700</lastBuildDate>
     <atom:link href="/categories/operating-system/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Konfigurasi VPN pada (Void) Linux</title>
+      <link>/posts/25/</link>
+      <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
+      <guid>/posts/25/</guid>
+      <description>&lt;p&gt;Artikel berikut akan membahas tentang cara mengkonfigurasi dan mengaktifkan VPN jika anda menggunakan Linux. Pembahasan pada artikel ini difokuskan pada &lt;a href=&#34;https://voidlinux.org/&#34;&gt;Void Linux&lt;/a&gt; meskipun sebenarnya cukup generik - tinggal diganti pada pembahasan instalasi paket sesuai dengan package manager yang digunakan serta penggunaan &lt;a href=&#34;https://smarden.org/runit/&#34;&gt;runit&lt;/a&gt; disesuaikan dengan distro yang anda gunakan (kebanyakan masih menggunakan &lt;a href=&#34;https://systemd.io/&#34;&gt;systemd&lt;/a&gt;).&lt;/p&gt;&#xA;&lt;p&gt;NetworkManager mempunyai beberapa plugin untuk VPN (OpenVPN, L2TP/IPsec, OpenConnect, PPTP). Untuk keperluan ini kita akan menggunakan L2TP/IPsec.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Install terlebih dahulu plugin untuk L2TP:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Cari paket plugin NetworkManager untuk l2tp dengan perintah &lt;code&gt;xbps-query -Rs NetworkManager&lt;/code&gt;.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Optimasi AlmaLinux: Lightdm dan XFCE4</title>
       <link>/posts/22/</link>
       <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
       <guid>/posts/22/</guid>
-      <description>AlmaLinux menggunakan GNOME Display Manager dan akan menggunakan GNOME-Wayland secara default sebagai desktop environment. Untuk mesin dengan resources yang cukup, hal ini tentu saja tidak masalah. Meskipun demikian, mempunyai resources yang cukup, juga bukan berarti bebas saja. Banyak pemakai yang memang sudah memahami kebutuhannya, tidak terlalu mementingkan bells and whistles serta eye-candy. Saya mungkin termasuk dalam kategori seperti itu. AlmaLinux saya install secara default sehingga GDM dan GNOME akan digunakan. Saya memutuskan untuk menggunakan XFCE sebagai desktop environment dan lightdm sebagai pengganti dari GDM.</description>
+      <description>&lt;p&gt;AlmaLinux menggunakan GNOME Display Manager dan akan menggunakan GNOME-Wayland secara default sebagai &lt;em&gt;desktop environment&lt;/em&gt;. Untuk mesin dengan &lt;em&gt;resources&lt;/em&gt; yang cukup, hal ini tentu saja tidak masalah. Meskipun demikian, mempunyai &lt;em&gt;resources&lt;/em&gt; yang cukup, juga bukan berarti bebas saja. Banyak pemakai yang memang sudah memahami kebutuhannya, tidak terlalu mementingkan &lt;em&gt;bells and whistles&lt;/em&gt; serta &lt;em&gt;eye-candy&lt;/em&gt;. Saya mungkin termasuk dalam kategori seperti itu. AlmaLinux saya install secara default sehingga GDM dan GNOME akan digunakan. Saya memutuskan untuk menggunakan &lt;a href=&#34;https://xfce.org/&#34;&gt;XFCE&lt;/a&gt; sebagai &lt;em&gt;desktop environment&lt;/em&gt; dan &lt;a href=&#34;https://github.com/canonical/lightdm&#34;&gt;lightdm&lt;/a&gt; sebagai pengganti dari GDM. Berikut ini langkah-langkah yang saya lakukan.&lt;/p&gt;</description>
     </item>
     <item>
       <title>How to Handle Unstable Debian-based APT Broken Package(s)</title>
       <link>/posts/11/</link>
       <pubDate>Thu, 22 Jun 2023 05:46:23 +0700</pubDate>
       <guid>/posts/11/</guid>
-      <description>If you are a user of Debian-based Linux distro, especially the unstable release (so called Sid in Debian), broken packages are not special. They may arise in your day-to-day activities with the distro (that&amp;rsquo;s the reason of why the word unstable is used!). While the reason to use the unsable release is obvious: to live in the bleeding edge of software release (including the packages), one still feel surprise of the broken packages event.</description>
+      <description>&lt;p&gt;If you are a user of &lt;a href=&#34;https://debian.org&#34;&gt;Debian&lt;/a&gt;-based Linux distro, especially the unstable release (so called &lt;strong&gt;Sid&lt;/strong&gt; in Debian), broken packages are not special. They may arise in your day-to-day activities with the distro (that&amp;rsquo;s the reason of why the word &lt;strong&gt;unstable&lt;/strong&gt; is used!). While the reason to use the unsable release is obvious: to live in the bleeding edge of software release (including the packages), one still feel surprise of the broken packages event. That is also happen to me, I use &lt;a href=&#34;https://devuan.org&#34;&gt;Devuan&lt;/a&gt; Linux for my daily activities. Devuan is Debian withoud systemd. I have my own reason to not using systemd - I might reveal that later. As a person who loves to stay in the bleeding edge of software release, I use &lt;strong&gt;ceres&lt;/strong&gt; - a sid release of Devuan.&lt;/p&gt;</description>
     </item>
     <item>
       <title>QEMU Parameter for Audio Devices</title>
       <link>/posts/10/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
       <guid>/posts/10/</guid>
-      <description>Have you ever use Haiku OS? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&amp;rsquo;ve used some parameters in QEMU. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/posts/10/haiku-yt.png&#34; alt=&#34;Haiku - Web / Epiphany&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Have you ever use &lt;a href=&#34;https://haiku-os.org&#34;&gt;Haiku OS&lt;/a&gt;? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&amp;rsquo;ve used some parameters in &lt;a href=&#34;https://www.qemu.org/&#34;&gt;QEMU&lt;/a&gt;. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

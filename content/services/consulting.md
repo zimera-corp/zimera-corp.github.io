@@ -1,6 +1,6 @@
 ---
 title: "Consulting Services"
-date: Mon Dec  5 08:19:43 AM WIB 2022
+date: 2022-12-05T08:19:43+07:00
 featured: false
 draft: false
 weight: 5

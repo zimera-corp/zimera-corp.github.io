@@ -1,6 +1,6 @@
 ---
 title: 'Dr. Bambang Purnomosidi D. P.'
-date: Mon Dec  5 07:48:38 AM WIB 2022
+date: 2022-12-05T07:48:38+07:00
 draft: false
 image: 'images/team/bpdp.jpg'
 jobtitle: 'Founder / Director'

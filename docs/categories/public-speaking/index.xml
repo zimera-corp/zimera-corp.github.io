@@ -4,7 +4,7 @@
     <title>Public Speaking on Zimera Corporation</title>
     <link>/categories/public-speaking/</link>
     <description>Recent content in Public Speaking on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Mon, 31 Jul 2023 21:51:43 +0700</lastBuildDate>
     <atom:link href="/categories/public-speaking/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>/posts/13/</link>
       <pubDate>Mon, 31 Jul 2023 21:51:43 +0700</pubDate>
       <guid>/posts/13/</guid>
-      <description>Full presentation available at our GitHub repository</description>
+      <description>&lt;p&gt;&lt;img src=&#34;/images/posts/13/judul.jpg&#34; alt=&#34;Presentation title: Penerapan AI Sebagai Pendorong Transformasi Ekonomi&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Full presentation available at our &lt;a href=&#34;https://github.com/zimera-corp/public-speaking&#34;&gt;GitHub repository&lt;/a&gt;&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -4,7 +4,7 @@
     <title>Mamba on Zimera Corporation</title>
     <link>/tags/mamba/</link>
     <description>Recent content in Mamba on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 12 Mar 2024 06:45:51 +0700</lastBuildDate>
     <atom:link href="/tags/mamba/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <link>/posts/19/</link>
       <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
       <guid>/posts/19/</guid>
-      <description>Python and Its Package - Environment Management Python has always been the first choice for many programming tasks. This - of course - debatable since some problems exist in Python world, but let me tell you, in IEEE Spectrum top programming languages, Python is the winner from IEEE Spectrum and Trending category while SQL beats it in Job category.&#xA;As a long time developer who use Python since release 2.x (I insist on using Python for the whole curriculum in Universitas Teknologi Digital Indonesia back in 2004), currently I use Miniconda a lot (with conda as its package and environment manager).</description>
+      <description>&lt;h2 id=&#34;python-and-its-package---environment-management&#34;&gt;Python and Its Package - Environment Management&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://python.org&#34;&gt;Python&lt;/a&gt; has always been the first choice for many programming tasks. This - of course - debatable since some problems exist in Python world, but let me tell you, in &lt;a href=&#34;https://spectrum.ieee.org/the-top-programming-languages-2023&#34;&gt;IEEE Spectrum top programming languages&lt;/a&gt;, Python is the winner from &lt;em&gt;IEEE Spectrum&lt;/em&gt; and &lt;em&gt;Trending&lt;/em&gt; category while SQL beats it in &lt;em&gt;Job&lt;/em&gt; category.&lt;/p&gt;&#xA;&lt;p&gt;As a long time developer who use Python since release 2.x (I insist on using Python for the whole curriculum in &lt;a href=&#34;https://www.utdi.ac.id&#34;&gt;Universitas Teknologi Digital Indonesia&lt;/a&gt; back in 2004), currently I use &lt;a href=&#34;https://docs.anaconda.com/free/miniconda/index.html&#34;&gt;Miniconda&lt;/a&gt; a lot (with &lt;code&gt;conda&lt;/code&gt; as its package and environment manager). Conda is a beautiful piece of software of course. I use it to manage my package and create mine. Using it, I can create an environment with specific Python version and also its own packages. However, when I use it for my software with many packages, It runs quite slow. So, I start to look for a drop in replacement. There goes &lt;a href=&#34;https://mamba.readthedocs.io/en/latest/&#34;&gt;Mamba&lt;/a&gt;!. It comes with faster and better at resolving package dependencies. Here&amp;rsquo;s the reason why Mamba is faster and better from &lt;a href=&#34;https://github.com/mamba-org/mamba&#34;&gt;Mamba Github&lt;/a&gt;:&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

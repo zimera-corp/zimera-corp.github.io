@@ -4,7 +4,7 @@
     <title>Career on Zimera Corporation</title>
     <link>/tags/career/</link>
     <description>Recent content in Career on Zimera Corporation</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Sun, 15 Jan 2023 10:14:33 +0700</lastBuildDate>
     <atom:link href="/tags/career/index.xml" rel="self" type="application/rss+xml" />
@@ -13,14 +13,14 @@
       <link>/posts/03/</link>
       <pubDate>Sun, 15 Jan 2023 10:14:33 +0700</pubDate>
       <guid>/posts/03/</guid>
-      <description>Managing a software development team is never an easy task. It consists of 2 sides:&#xA;technical things non-technical things. This task is often assigned to the project manager, VP Engineering, Software Development Manager, etc. To be succeed, one has to consider those 2 sides. In this article, I will ouline some of my experiences in managing a software development team. This list is not meant to be complete nor perfect. You may need more but at least you will be in the safety line level one if you do care with these issues.</description>
+      <description>&lt;p&gt;Managing a software development team is never an easy task. It consists of 2 sides:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;technical things&lt;/li&gt;&#xA;&lt;li&gt;non-technical things.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;This task is often assigned to the project manager, VP Engineering, Software Development Manager, etc. To be succeed, one has to consider those 2 sides. In this article, I will ouline some of my experiences in managing a software development team. This list is not meant to be complete nor perfect. You may need more but at least you will be in the safety line level one if you do care with these issues.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Core Values for Software Developer</title>
       <link>/posts/01/</link>
       <pubDate>Fri, 13 Jan 2023 10:11:27 +0700</pubDate>
       <guid>/posts/01/</guid>
-      <description>So you are interested in software development and want to become one who do that job. Initially you think that it’s only a matter of coding. creating source code, have them compiled, and then deploy the software for the customer/client. Later on, you realize that developing software is hard. Even harder since so many things beyond technical issues are also involved. Suddenly you realize that what you have learned in school is not enough.</description>
+      <description>&lt;p&gt;So you are interested in software development and want to become one who do that job. Initially you think that it’s only a matter of coding. creating source code, have them compiled, and then deploy the software for the customer/client. Later on, you realize that developing software is hard. Even harder since so many things beyond technical issues are also involved. Suddenly you realize that what you have learned in school is not enough. Well, it is almost impossible for university to deal with this advancement in technology, but instead they should work hard to cultivate core values of software developer: how one can survive as software developer?&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

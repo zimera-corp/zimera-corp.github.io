@@ -211,8 +211,7 @@
 </span></span></code></pre></div><p><strong>Bash Shell</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ export PATH<span style="color:#f92672">=</span>path/to/extracted/yugabytedb/bin:$PATH
 </span></span></code></pre></div><blockquote>
-<p><strong>Note</strong>: to avoid writing the same thing over and over again, I usually put the <code>set</code> or <code>export</code> statements above inside a file and then whenever I want to use YugabyteDB, I just <code>source the-file.sh</code>.</p>
-</blockquote>
+<p><strong>Note</strong>: to avoid writing the same thing over and over again, I usually put the <code>set</code> or <code>export</code> statements above inside a file and then whenever I want to use YugabyteDB, I just <code>source the-file.sh</code>.</p></blockquote>
 <p>Next, we need to configure YugabyteDB. To configure YugabyteDB, see <a href="https://docs.yugabyte.com/latest/deploy/manual-deployment/system-config/">YugabyteDB configuration</a>. The documentation is complete but to have everything works, all I need to do is changing <code>/etc/security/limits.conf</code> to:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># /etc/security/limits.conf</span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e">#</span>
@@ -264,8 +263,7 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;tserver_rpc_port&#34;</span>: <span style="color:#ae81ff">9100</span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">}</span>                                                          
 </span></span></code></pre></div><blockquote>
-<p><strong>Note</strong>: PostgreSQL usually uses port 5432, but YugabyteDB default port is 5433. Pay attention to this since we are going to use this when we write our code.</p>
-</blockquote>
+<p><strong>Note</strong>: PostgreSQL usually uses port 5432, but YugabyteDB default port is 5433. Pay attention to this since we are going to use this when we write our code.</p></blockquote>
 <p>So many things we can do with YugabyteDB, but for this article, I will concentrate more on Python app development. Therefore, it&rsquo;s enough now to have local cluster. Let&rsquo;s set it up!.</p>
 <p>Let&rsquo;s run YugabyteDB:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ yugabyted start
@@ -311,10 +309,9 @@
 <h2 id="data-preparation">Data Preparation</h2>
 <p>Now, it gets more interesting. Using one YugabyteDB server instance, we can use both SQL and Cassandra data model. Let&rsquo;s aggregate some data into PostgreSQL layer and Cassandra layer. For this purpose, we still use default user and password. Later on, you can manage the security side of YugabyteDB.</p>
 <blockquote>
-<p><strong>Note</strong>: default username and password for PostgreSQL layer: <strong>yugabyte:yugabyte</strong>, while for Cassandra: <strong>cassandra:cassandra</strong>.</p>
-</blockquote>
+<p><strong>Note</strong>: default username and password for PostgreSQL layer: <strong>yugabyte:yugabyte</strong>, while for Cassandra: <strong>cassandra:cassandra</strong>.</p></blockquote>
 <h3 id="sql-data">SQL Data</h3>
-<p>YugabyteDB provides <a href="https://docs.yugabyte.com/latest/sample-data/">sample datasets</a> for SQL data. We are going to use <a href="https://docs.yugabyte.com/latest/sample-data/northwind/">Northwind Traders Database</a>. Get the <code>DDL</code> and <code>Data</code> scripts from the Northwind sample datasets URL. Follow this sceen dump to prepare the database, tables, and populate the data. The <strong><!-- raw HTML omitted -->#</strong> pompt is the place to write command.</p>
+<p>YugabyteDB provides <a href="https://docs.yugabyte.com/latest/sample-data/">sample datasets</a> for SQL data. We are going to use <a href="https://docs.yugabyte.com/latest/sample-data/northwind/">Northwind Traders Database</a>. Get the <code>DDL</code> and <code>Data</code> scripts from the Northwind sample datasets URL. Follow this sceen dump to prepare the database, tables, and populate the data. The <strong><database-name>#</strong> pompt is the place to write command.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ysqlsh -U yugabyte
 </span></span><span style="display:flex;"><span>ysqlsh <span style="color:#f92672">(</span>11.2-YB-2.7.2.0-b0<span style="color:#f92672">)</span>
 </span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span> <span style="color:#66d9ef">for</span> help.
@@ -469,8 +466,7 @@
 </span></span></code></pre></div><h2 id="python---drivers">Python - Drivers</h2>
 <p>Since we are going to use both PostgreSQL and Apache Cassandra data model, we need to install those two drivers: <a href="https://www.psycopg.org/">psycopg2</a> for PostgreSQL and <a href="https://github.com/datastax/python-driver">Python Driver for Apache Cassandra</a>.</p>
 <blockquote>
-<p><strong>Note</strong>: currently, <code>psycopg</code> is still developing <a href="https://www.psycopg.org/psycopg3/">psycopg3</a>. We do not use psycopg3 since it is still in early development stage, but once <code>psycopg3</code> is released, there should be easy to migrate.</p>
-</blockquote>
+<p><strong>Note</strong>: currently, <code>psycopg</code> is still developing <a href="https://www.psycopg.org/psycopg3/">psycopg3</a>. We do not use psycopg3 since it is still in early development stage, but once <code>psycopg3</code> is released, there should be easy to migrate.</p></blockquote>
 <p><strong>Install Cassandra Driver</strong></p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ conda install cassandra-driver
 </span></span><span style="display:flex;"><span>...
@@ -529,8 +525,7 @@
 </span></span><span style="display:flex;"><span>...
 </span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><blockquote>
-<p><strong>Note</strong>: I use <code>conda</code> for package management, but you don&rsquo;t need to. You can also use <code>pip</code>, in this case just <code>pip install psycopg2</code> and <code>pip install cassandra-driver</code>.</p>
-</blockquote>
+<p><strong>Note</strong>: I use <code>conda</code> for package management, but you don&rsquo;t need to. You can also use <code>pip</code>, in this case just <code>pip install psycopg2</code> and <code>pip install cassandra-driver</code>.</p></blockquote>
 <h2 id="lets-code">Let&rsquo;s Code!</h2>
 <h3 id="accessing-sql-data">Accessing SQL Data</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># code-sql.py</span>
