@@ -23,5 +23,5 @@
         {{ .ReadingTime }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes reading time{{ end }}
        </p>
 
-    {{ .Content | truncate 200 "…" }}
+    {{ .Content | truncate 250 " … " }}
 </div>
