@@ -34,6 +34,14 @@ See [layouts/shortcodes/rawhtml.html](layouts/shortcodes/rawhtml.html) on how to
 <a class="twitter-timeline" data-width="500" data-height="300" href="https://twitter.com/ZimeraCorp?ref_src=twsrc%5Etfw">Tweets by ZimeraCorp</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {{< /rawhtml >}}
 ```
+Since raw HTML is considerd unsage, Hugo should be configured to read and embed HTML codes together with markdown using this configuration in [config.toml fle](config.toml):
+
+```
+[markup]
+  defaultMarkdownHandler = 'goldmark'
+  [markup.goldmark.renderer]
+    unsafe = true
+```
 
 ### Pagination and Read more ...
 
