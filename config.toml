@@ -11,7 +11,7 @@ publishDir = "docs"
 [module]
   [module.hugoVersion]
     extended = true
-    min = "0.55.0"
+    min = "0.144.2"
 
 [markup]
   defaultMarkdownHandler = 'goldmark'

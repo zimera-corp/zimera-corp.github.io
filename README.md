@@ -34,7 +34,7 @@ See [layouts/shortcodes/rawhtml.html](layouts/shortcodes/rawhtml.html) on how to
 <a class="twitter-timeline" data-width="500" data-height="300" href="https://twitter.com/ZimeraCorp?ref_src=twsrc%5Etfw">Tweets by ZimeraCorp</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 {{< /rawhtml >}}
 ```
-Since raw HTML is considerd unsage, Hugo should be configured to read and embed HTML codes together with markdown using this configuration in [config.toml fle](config.toml):
+Since raw HTML is considered unsafe, Hugo should be configured to read and embed HTML codes together with markdown using this configuration in [config.toml file](config.toml):
 
 ```
 [markup]
@@ -45,7 +45,14 @@ Since raw HTML is considerd unsage, Hugo should be configured to read and embed 
 
 ### Pagination and Read more ...
 
-See [layouts/_default/list.html](layouts/_default/list.html) for definition. The template at `layouts/_default/list.html` is used by default for pagination. Configuration can be seen at [config.toml](config.toml) - see `paginate = ...`. There's no need to setup pagination at `posts` for example, since it will automatically calls `list.html` template if more than `paginate = ...` files exist.
+Configuration:
+
+```
+[pagination]
+  pagerSize = 5
+```
+
+See [layouts/_default/list.html](layouts/_default/list.html) for definition. The template at `layouts/_default/list.html` is used by default for pagination. Configuration can be seen at [config.toml](config.toml) - see `pagerSize = ...` above. There's no need to setup pagination at `posts` for example, since it will automatically calls `list.html` template if more than `pagerSsize = ...` files exist.
 
 ### Summary -> Number of Words Truncated
 
