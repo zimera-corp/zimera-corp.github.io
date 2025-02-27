@@ -1,15 +1,105 @@
 # Website for Zimera Corporation
 
-Tools:
+See it in action at [Zimera Corporation official website](https://zimeracorp.com).
+
+Documentation/Help:
+1.  [GitHub Pages](https://pages.github.com/)
+2.  [Custom URL for GitHub Pages](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site)
+3.  [Using Apex domain](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/about-custom-domains-and-github-pages#using-an-apex-domain-for-your-github-pages-site)
+
+## Tools:
 
 1.  [Hugo](https://gohugo.io).
 2.  [Hugo Serif theme](https://github.com/zerostaticthemes/hugo-serif-theme).
 
-## Modify Contents
+## Content Management
 
-1.  Modify contents using `hugo new`, for example: `hugo new posts/10.md`. 
-2.  Test: `hugo serve`.
-3.  Deploy: `hugo`, then push to Github. See **Checking** below.
+### Add Content - Page
+
+1.  Add content using `hugo new` from root dir of this project, for example: `hugo new about.md`. The result will reside in `$ROOT_PROJECT_DIR/content/about.md`.
+2.  Edit `about.md` as you wish, save.
+3.  Create menu entry in [config.toml](config.toml), save:
+
+```
+[menu]
+...
+...
+...
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 3
+... 
+...
+...
+```
+
+### Add Content - Post
+
+This one is specific for `/posts/`.
+
+1.  Add post using `hugo new` from root dir of this project, for example: `hugo new posts/00006.md`. The result will reside in `$ROOT_PROJECT_DIR/content/posts/00006.md`.
+2.  Edit `00006.md` as you wish, save.
+
+### Edit Content - Page/Post
+
+Just edit markdown file at `content` directory, save.
+
+## Test the Result
+
+Use `hugo serve`. Go to http://localhost:1313/ using your browser.
+
+```
+$ hugo serve
+Watching for changes in /home/bpdp/kerjaan/repos/zimera/zimera-corp/zimera-corp.github.io/{archetypes,content,data,layouts,static,themes}
+Watching for config changes in /home/bpdp/kerjaan/repos/zimera/zimera-corp/zimera-corp.github.io/config.toml
+Start building sites … 
+hugo v0.144.2-098c68fd18f48031a7145bedab30cbaede48858f+extended linux/amd64 BuildDate=2025-02-19T12:17:04Z VendorInfo=gohugoio
+
+
+                   | EN   
+-------------------+------
+  Pages            | 248  
+  Paginator pages  |   4  
+  Non-page files   |   1  
+  Static files     |  64  
+  Processed images |   0  
+  Aliases          |   3  
+  Cleaned          |   0  
+
+Built in 811 ms
+Environment: "development"
+Serving pages from disk
+Running in Fast Render Mode. For full rebuilds on change: hugo server --disableFastRender
+Web Server is available at //localhost:1313/ (bind address 127.0.0.1) 
+Press Ctrl+C to stop
+
+```
+
+## Deployment
+
+Use `hugo` then push to GitHub
+
+```
+$ hugo 
+Start building sites … 
+hugo v0.144.2-098c68fd18f48031a7145bedab30cbaede48858f+extended linux/amd64 BuildDate=2025-02-19T12:17:04Z VendorInfo=gohugoio
+
+
+                   | EN   
+-------------------+------
+  Pages            | 248  
+  Paginator pages  |   4  
+  Non-page files   |   1  
+  Static files     |  64  
+  Processed images |   0  
+  Aliases          |   3  
+  Cleaned          |   0  
+
+Total in 774 ms
+
+$
+```
 
 ## Some Notes
 

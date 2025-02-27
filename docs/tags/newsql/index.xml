@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NewSQL on Zimera Corporation</title>
-    <link>/tags/newsql/</link>
+    <link>//localhost:1313/tags/newsql/</link>
     <description>Recent content in NewSQL on Zimera Corporation</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Wed, 18 Jan 2023 10:16:30 +0700</lastBuildDate>
-    <atom:link href="/tags/newsql/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="//localhost:1313/tags/newsql/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using YugabyteDB in Python App Development</title>
-      <link>/posts/05/</link>
+      <link>//localhost:1313/posts/05/</link>
       <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
-      <guid>/posts/05/</guid>
+      <guid>//localhost:1313/posts/05/</guid>
       <description>&lt;p&gt;As a long time &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt; user, it&amp;rsquo;s normal that &lt;a href=&#34;https://www.yugabyte.com/&#34;&gt;YugabyteDB&lt;/a&gt; got my attention. It&amp;rsquo;s a distributed SQL database which features-compatible with PostgreSQL so that I don&amp;rsquo;t need to lose my investation. YugabyteDB reuses PostgreSQL&amp;rsquo;s query layer, so I can use my development tools as usual. It gives me more since there is also Cassandra query layer. Using YugabyteDB I can reuse my SQL skill and development tools, enhanced with NOSQL data model (especially &lt;strong&gt;wide-column store&lt;/strong&gt;), while I have NewSQL&amp;rsquo;s resiliency, scalability, and high performance.&lt;/p&gt;</description>
     </item>
   </channel>

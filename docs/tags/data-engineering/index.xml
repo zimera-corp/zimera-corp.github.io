@@ -10,9 +10,9 @@
     <atom:link href="/tags/data-engineering/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Proses aggregate RDD pada Apache Spark</title>
-      <link>/posts/15/</link>
+      <link>/posts/00015/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      <guid>/posts/15/</guid>
+      <guid>/posts/00015/</guid>
       <description>&lt;p&gt;RDD merupakan struktur data fundamental di &lt;a href=&#34;https://spark.apache.org&#34;&gt;Apache Spark&lt;/a&gt;. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses &lt;em&gt;transformasi&lt;/em&gt; serta &lt;em&gt;action&lt;/em&gt; yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah &lt;strong&gt;zero value&lt;/strong&gt; yang ada pada &lt;em&gt;action&lt;/em&gt; &lt;strong&gt;aggregate&lt;/strong&gt;. Perhatikan &lt;em&gt;source code&lt;/em&gt; berikut ini:&lt;/p&gt;</description>
     </item>
   </channel>

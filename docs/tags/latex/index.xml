@@ -10,9 +10,9 @@
     <atom:link href="/tags/latex/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Tex Live - Instalasi dan Konfigurasi Manual</title>
-      <link>/posts/21/</link>
+      <link>/posts/00021/</link>
       <pubDate>Tue, 19 Mar 2024 11:23:03 +0700</pubDate>
-      <guid>/posts/21/</guid>
+      <guid>/posts/00021/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.tug.org/texlive/&#34;&gt;Tex Live&lt;/a&gt; adalah distribusi &lt;a href=&#34;https://www.tug.org/&#34;&gt;TeX document production system&lt;/a&gt;. TeX adalah sofware besar dan paket-paket pendukungnya dikumpulkan dan disimpan di &lt;a href=&#34;https://ctan.org/&#34;&gt;The Comprehensive TeX Archive Network&lt;/a&gt; dengan mirror di seluruh dunia.TeX Live biasanya sudah disiapkan di berbagai macam distro Linux dan bisa diinstal dengan menggunakan &lt;em&gt;package manager&lt;/em&gt; distro yang bersangkutan. Sebenarnya cukup menyenangkan, hanya saja, biasanya bukan versi update terbaru dan kita tidak bisa mengelola paket maupun mengkustomisasi TeX seperti yang kita inginkan. Contoh sederhana, menggunakan TeX Live dari distro Linux tertentu dan sekaligus menggunakan &lt;code&gt;tlmgr&lt;/code&gt; untuk mengelola paket dari CTAN biasanya akan cukup mengacaukan. Hal ini yang membuat saya kemudian melakukan instalasi lengkap tanpa menggunakan &lt;em&gt;package manager&lt;/em&gt; distro Linux yang bersangkutan.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Proses aggregate RDD pada Apache Spark - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Proses aggregate RDD pada Apache Spark"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00015/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Proses aggregate RDD pada Apache Spark</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/data">Data</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/apache-spark">Apache Spark</a>&nbsp;&nbsp;
+        
+        <a href="/tags/rdd">RDD</a>&nbsp;&nbsp;
+        
+        <a href="/tags/data-engineering">Data Engineering</a>&nbsp;&nbsp;
+        
+        <a href="/tags/action">action</a>&nbsp;&nbsp;
+        
+        <a href="/tags/aggregate">aggregate</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>October 14, 2023</time> | 
+        2  minutes reading time
+       </p>
+
+      <div class="content"><p>RDD merupakan struktur data fundamental di <a href="https://spark.apache.org">Apache Spark</a>. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses <em>transformasi</em> serta <em>action</em> yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah <strong>zero value</strong> yang ada pada <em>action</em> <strong>aggregate</strong>. Perhatikan <em>source code</em> berikut ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">from</span> pyspark <span style="color:#f92672">import</span> SparkContext
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sc <span style="color:#f92672">=</span> SparkContext()
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>listRDD <span style="color:#f92672">=</span> sc<span style="color:#f92672">.</span>parallelize([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">3</span>,<span style="color:#ae81ff">2</span>])
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(listRDD)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">for</span> element <span style="color:#f92672">in</span> listRDD<span style="color:#f92672">.</span>collect():
+</span></span><span style="display:flex;"><span>    print(element)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(<span style="color:#e6db74">&#34;Jumlah partisi: &#34;</span>, listRDD<span style="color:#f92672">.</span>getNumPartitions())
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># apa yang dilakukan thdp urutan2 data</span>
+</span></span><span style="display:flex;"><span>seqOp <span style="color:#f92672">=</span> (<span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">+</span> y)
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># apa yang dilakukan setelah kombinasi</span>
+</span></span><span style="display:flex;"><span>combOp <span style="color:#f92672">=</span> (<span style="color:#66d9ef">lambda</span> x, y: x <span style="color:#f92672">+</span> y)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># try this: change zero value to 1 or 2, what&#39;s the conclusion</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># if we use masterr[4]?</span>
+</span></span><span style="display:flex;"><span>agg0<span style="color:#f92672">=</span>listRDD<span style="color:#f92672">.</span>aggregate(<span style="color:#ae81ff">0</span>, seqOp, combOp)
+</span></span><span style="display:flex;"><span>agg1<span style="color:#f92672">=</span>listRDD<span style="color:#f92672">.</span>aggregate(<span style="color:#ae81ff">1</span>, seqOp, combOp)
+</span></span><span style="display:flex;"><span>agg2<span style="color:#f92672">=</span>listRDD<span style="color:#f92672">.</span>aggregate(<span style="color:#ae81ff">2</span>, seqOp, combOp)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>print(agg0) <span style="color:#75715e"># output 20</span>
+</span></span><span style="display:flex;"><span>print(agg1) <span style="color:#75715e"># output 25</span>
+</span></span><span style="display:flex;"><span>print(agg2) <span style="color:#75715e"># output 30</span>
+</span></span></code></pre></div><p>Manual untuk <strong>aggregate</strong> adalah sebagai berikut:</p>
+<pre tabindex="0"><code>RDD.aggregate(zeroValue: U, seqOp: Callable[[U, T], U], combOp: Callable[[U, U], U]) → U
+Aggregate the elements of each partition, and then the results for all the partitions, using a given combine functions and a neutral “zero value.”
+
+The functions op(t1, t2) is allowed to modify t1 and return it as its result value to avoid object allocation; however, it should not modify t2.
+
+The first function (seqOp) can return a different result type, U, than the type of this RDD. Thus, we need one operation for merging a T into an U and one operation for merging two U
+</code></pre><p><strong>Pertanyaannya adalah</strong>: mengapa hasil <em>source code</em> di atas adalah seperti berikut ini? darimana asal 20,25,30? apa keterkaitan dengan <em>zeroValue</em>?</p>
+<pre tabindex="0"><code>$ spark-submit --master local[4] 03_actions.py
+ParallelCollectionRDD[0] at readRDDFromFile at PythonRDD.scala:289
+ParallelCollectionRDD[1] at readRDDFromFile at PythonRDD.scala:289
+1
+2
+3
+4
+5
+3
+2
+Jumlah partisi:  4
+20
+25
+30
+$
+</code></pre><p>Jawabannya sederhana saja sebetulnya, mari kita lihat jika menggunakan angka 1 sebagai <em>zeroValue</em>:</p>
+<ol>
+<li>Bagi menjadi beberapa partisi, tempatkan data ke beberapa partisi. Partisi sesuai dengan parameter <code>--master local[4]</code> yang dituliskan di shell.</li>
+<li>Untuk setiap partisi, tambahkan 1 (zeroValue). Ini merupakan hasil definisi parameter <code>seqOp</code> pada <code>agg0=listRDD.aggregate(0, seqOp, combOp)</code>. Jadi, proses ini kurang lebih sebagai berikut:</li>
+</ol>
+<pre tabindex="0"><code>partisi1
+1
+2
+    +1
+partisi2
+3
+4
+    +1
+partisi3
+5
+3
+    +1
+partisi4
+2
+0 (karena tidak ada)
+    +1
+
+Hasil total = 24
+</code></pre><p>Setelah selesai dengan <code>seqOp</code>, data dikombinasikan kemudian ditambah dengan apa yang didefinisikan di <code>combOp</code>:</p>
+<pre tabindex="0"><code>Hasil total = 24
+    +1
+
+Hasil akhir = 25
+</code></pre><p>Sila dicoba untuk <em>zeroValue</em> 2.</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

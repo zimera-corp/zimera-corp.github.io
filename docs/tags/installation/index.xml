@@ -10,16 +10,16 @@
     <atom:link href="/tags/installation/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>PostGIS - PostgreSQL GIS Extension Installation</title>
-      <link>/posts/14/</link>
+      <link>/posts/00014/</link>
       <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
-      <guid>/posts/14/</guid>
+      <guid>/posts/00014/</guid>
       <description>&lt;p&gt;PostgreSQL - in its default installation - &lt;a href=&#34;https://www.postgresql.org/docs/current/datatype-geometric.html&#34;&gt;geometric data types&lt;/a&gt; for spatial object. More geospatial features exist in PostgreSQL extension - &lt;a href=&#34;https://postgis.net&#34;&gt;PostGIS&lt;/a&gt;. Here&amp;rsquo;s hos to insatll PostGIS extension.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;p&gt;PostGIS needs GEOS and SFCGAL. In Debian-based system, these packages are needed:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;gdal-data&lt;/code&gt; and &lt;code&gt;libgdal-dev&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;libgeosVERRSION&lt;/code&gt; and &lt;code&gt;libgeos-dev&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;libsfcgal1&lt;/code&gt; and &lt;code&gt;libsfcgal-dev&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;protobuf-*&lt;/code&gt; and &lt;code&gt;libprotobuf-c-dev&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;dblatex&lt;/code&gt; if you want to build PostGIS documentation&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;&#xA;&lt;p&gt;Get the &lt;a href=&#34;https://postgis.net/development/source_code/&#34;&gt;source code&lt;/a&gt;, extract:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ tar -xvf postgis-3.4.0.tar.gz&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cd postgis-3.4.0&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./configure --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/home/bpdp/software/dbms/postgis-3.4.0/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result, more or less will be something like this in the end:&lt;/p&gt;</description>
     </item>
     <item>
       <title>SDKMan for Linux - Bash, Zsh, and Fish Shell</title>
-      <link>/posts/12/</link>
+      <link>/posts/00012/</link>
       <pubDate>Tue, 27 Jun 2023 12:02:01 +0700</pubDate>
-      <guid>/posts/12/</guid>
+      <guid>/posts/00012/</guid>
       <description>&lt;p&gt;If you are a developer, working mainly with Java, you will notice that so many things need to be done in order to install and stay updated with Java ecosystem and development tools. There&amp;rsquo;s a tool called &lt;a href=&#34;https://sdkman.io&#34;&gt;SDKMAN!&lt;/a&gt; which can be used to handle installation, configuration, remove, and update all those Java-base software easier. It can be used on major platform (Linux, Windows, Mac) and makes our live as (Java platform) developer easier. However, it doesn&amp;rsquo;t include support for &lt;a href=&#34;https://fishshell.com&#34;&gt;Fish Shell&lt;/a&gt; (yet). So, if you are Linux user and a happy Fish user, stay tuned for a guide to install and configure SDKMAN! for Fish.&lt;/p&gt;</description>
     </item>
   </channel>

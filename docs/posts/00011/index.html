@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>How to Handle Unstable Debian-based APT Broken Package(s) - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="How to Handle Unstable Debian-based APT Broken Package(s)"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00011/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">How to Handle Unstable Debian-based APT Broken Package(s)</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/operating-system">Operating System</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/devuan">Devuan</a>&nbsp;&nbsp;
+        
+        <a href="/tags/debian-based">Debian-based</a>&nbsp;&nbsp;
+        
+        <a href="/tags/broken">Broken</a>&nbsp;&nbsp;
+        
+        <a href="/tags/apt">APT</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>June 22, 2023</time> | 
+        2  minutes reading time
+       </p>
+
+      <div class="content"><p>If you are a user of <a href="https://debian.org">Debian</a>-based Linux distro, especially the unstable release (so called <strong>Sid</strong> in Debian), broken packages are not special. They may arise in your day-to-day activities with the distro (that&rsquo;s the reason of why the word <strong>unstable</strong> is used!). While the reason to use the unsable release is obvious: to live in the bleeding edge of software release (including the packages), one still feel surprise of the broken packages event. That is also happen to me, I use <a href="https://devuan.org">Devuan</a> Linux for my daily activities. Devuan is Debian withoud systemd. I have my own reason to not using systemd - I might reveal that later. As a person who loves to stay in the bleeding edge of software release, I use <strong>ceres</strong> - a sid release of Devuan.</p>
+<p>My problem started yesterday, when I recklessly did <strong>sudo apt full-upgrade</strong> after <strong>sudo apt update</strong> and said Yes. The result is broken XOrg X Window System since <strong>xserver-xorg</strong> package and all dependencies were removed. I tried to cure the situation by <strong>sudo apt install xserver-xorg</strong> but it will install <strong>keyboard-configuration</strong> and keyboard-configuration package needs xkb-data version <strong>&lt;= 2.35.1</strong> while I have <strong>2.38-2</strong> (version for ceres).</p>
+<p>To handle this situation, one usually needs to wait for the new package information and hope that everything will be alright for the next update. Unfortunately, there will be no certain time when will the update be available, so, I need to downgrade the package from <strong>2.32-2</strong> to <strong>2.35.1</strong>. I use <strong>sudo apt install xkb-data=2.35.1</strong> but it didn&rsquo;t work. So, what I did is just grab the package from <a href="https://pkginfo.devuan.org/cgi-bin/policy-query.html">Devuan pakace information</a> and then installed it using dpkg:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dpkg -i xkb-data_2.35.1-1_all.deb
+</span></span></code></pre></div><p>After that, I installed xserver-xorg using <strong>sudo apt install xserver-xorg</strong>, and everything back to normal.</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

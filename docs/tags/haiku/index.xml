@@ -10,9 +10,9 @@
     <atom:link href="/tags/haiku/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>QEMU Parameter for Audio Devices</title>
-      <link>/posts/10/</link>
+      <link>/posts/00010/</link>
       <pubDate>Sun, 18 Jun 2023 22:15:53 +0700</pubDate>
-      <guid>/posts/10/</guid>
+      <guid>/posts/00010/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/posts/10/haiku-yt.png&#34; alt=&#34;Haiku - Web / Epiphany&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Have you ever use &lt;a href=&#34;https://haiku-os.org&#34;&gt;Haiku OS&lt;/a&gt;? I follow this project closely since Beta1. While I love to listen to music, I did not pay attention to sound in Haiku OS until now when I want to check whether I can use the browser (Web - Epiphany) to listen to Youtube. To this end, I&amp;rsquo;ve used some parameters in &lt;a href=&#34;https://www.qemu.org/&#34;&gt;QEMU&lt;/a&gt;. This is how I run QEMU so that my Haiku OS (Beta4) recognized my sound device:&lt;/p&gt;</description>
     </item>
   </channel>

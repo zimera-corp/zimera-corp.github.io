@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Optimasi AlmaLinux: Lightdm dan XFCE4 - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Optimasi AlmaLinux: Lightdm dan XFCE4"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00022/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Optimasi AlmaLinux: Lightdm dan XFCE4</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/operating-system">Operating System</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/almalinux">AlmaLinux</a>&nbsp;&nbsp;
+        
+        <a href="/tags/alma">Alma</a>&nbsp;&nbsp;
+        
+        <a href="/tags/rhel">RHEL</a>&nbsp;&nbsp;
+        
+        <a href="/tags/display-manager">Display Manager</a>&nbsp;&nbsp;
+        
+        <a href="/tags/lightdm">lightdm</a>&nbsp;&nbsp;
+        
+        <a href="/tags/optimasi">Optimasi</a>&nbsp;&nbsp;
+        
+        <a href="/tags/linux">Linux</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>March 23, 2024</time> | 
+        4  minutes reading time
+       </p>
+
+      <div class="content"><p>AlmaLinux menggunakan GNOME Display Manager dan akan menggunakan GNOME-Wayland secara default sebagai <em>desktop environment</em>. Untuk mesin dengan <em>resources</em> yang cukup, hal ini tentu saja tidak masalah. Meskipun demikian, mempunyai <em>resources</em> yang cukup, juga bukan berarti bebas saja. Banyak pemakai yang memang sudah memahami kebutuhannya, tidak terlalu mementingkan <em>bells and whistles</em> serta <em>eye-candy</em>. Saya mungkin termasuk dalam kategori seperti itu. AlmaLinux saya install secara default sehingga GDM dan GNOME akan digunakan. Saya memutuskan untuk menggunakan <a href="https://xfce.org/">XFCE</a> sebagai <em>desktop environment</em> dan <a href="https://github.com/canonical/lightdm">lightdm</a> sebagai pengganti dari GDM. Berikut ini langkah-langkah yang saya lakukan.</p>
+<h2 id="aktifkan-repo-untuk-epel">Aktifkan repo untuk EPEL</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dnf install epel-release
+</span></span></code></pre></div><p>Hasilnya adalah sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ rpm -qi epel-release
+</span></span><span style="display:flex;"><span>Name        : epel-release
+</span></span><span style="display:flex;"><span>Version     : <span style="color:#ae81ff">9</span>
+</span></span><span style="display:flex;"><span>Release     : 7.el9
+</span></span><span style="display:flex;"><span>Architecture: noarch
+</span></span><span style="display:flex;"><span>Install Date: Mon <span style="color:#ae81ff">11</span> Mar <span style="color:#ae81ff">2024</span> 07:48:19 AM WIB
+</span></span><span style="display:flex;"><span>Group       : Unspecified
+</span></span><span style="display:flex;"><span>Size        : <span style="color:#ae81ff">26865</span>
+</span></span><span style="display:flex;"><span>License     : GPLv2
+</span></span><span style="display:flex;"><span>Signature   : RSA/SHA256, Thu <span style="color:#ae81ff">17</span> Aug <span style="color:#ae81ff">2023</span> 04:57:12 PM WIB, Key ID 8a3872bf3228467c
+</span></span><span style="display:flex;"><span>Source RPM  : epel-release-9-7.el9.src.rpm
+</span></span><span style="display:flex;"><span>Build Date  : Thu <span style="color:#ae81ff">17</span> Aug <span style="color:#ae81ff">2023</span> 04:52:29 PM WIB
+</span></span><span style="display:flex;"><span>Build Host  : buildvm-x86-32.iad2.fedoraproject.org
+</span></span><span style="display:flex;"><span>Packager    : Fedora Project
+</span></span><span style="display:flex;"><span>Vendor      : Fedora Project
+</span></span><span style="display:flex;"><span>URL         : http://download.fedoraproject.org/pub/epel
+</span></span><span style="display:flex;"><span>Bug URL     : https://bugz.fedoraproject.org/epel-release
+</span></span><span style="display:flex;"><span>Summary     : Extra Packages <span style="color:#66d9ef">for</span> Enterprise Linux repository configuration
+</span></span><span style="display:flex;"><span>Description :
+</span></span><span style="display:flex;"><span>This package contains the Extra Packages <span style="color:#66d9ef">for</span> Enterprise Linux <span style="color:#f92672">(</span>EPEL<span style="color:#f92672">)</span> repository
+</span></span><span style="display:flex;"><span>GPG key as well as configuration <span style="color:#66d9ef">for</span> yum.
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Setelah itu, search paket XFCE:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dnf group list | grep -i xfce
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   Xfce
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="install-paket">Install Paket</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dnf groupinstall <span style="color:#e6db74">&#34;Xfce&#34;</span> <span style="color:#e6db74">&#34;base-x&#34;</span>
+</span></span><span style="display:flex;"><span>Last metadata expiration check: 0:02:32 ago on Sat <span style="color:#ae81ff">23</span> Mar <span style="color:#ae81ff">2024</span> 05:34:02 AM WIB.
+</span></span><span style="display:flex;"><span>Dependencies resolved.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">========================================================================================================================================================================</span>
+</span></span><span style="display:flex;"><span> Package                                              Architecture                   Version                                    Repository                         Size
+</span></span><span style="display:flex;"><span><span style="color:#f92672">========================================================================================================================================================================</span>
+</span></span><span style="display:flex;"><span>Installing group/module packages:
+</span></span><span style="display:flex;"><span> Thunar                                               x86_64                         4.18.6-2.el9                               epel                              1.8 M
+</span></span><span style="display:flex;"><span> network-manager-applet                               x86_64                         1.26.0-2.el9                               appstream                         <span style="color:#ae81ff">197</span> k
+</span></span><span style="display:flex;"><span> openssh-askpass                                      x86_64                         8.7p1-34.el9_3.3                           appstream                          <span style="color:#ae81ff">20</span> k
+</span></span><span style="display:flex;"><span> thunar-archive-plugin                                x86_64                         0.5.0-2.el9                                epel                               <span style="color:#ae81ff">93</span> k
+</span></span><span style="display:flex;"><span> thunar-volman                                        x86_64                         4.18.0-2.el9                               epel                              <span style="color:#ae81ff">210</span> k
+</span></span><span style="display:flex;"><span> tumbler                                              x86_64                         4.18.1-1.el9                               epel                              <span style="color:#ae81ff">237</span> k
+</span></span><span style="display:flex;"><span> xfce-polkit                                          x86_64                         0.3-8.el9                                  epel                               <span style="color:#ae81ff">24</span> k
+</span></span><span style="display:flex;"><span> xfce4-appfinder                                      x86_64                         4.18.0-2.el9                               epel                              <span style="color:#ae81ff">285</span> k
+</span></span><span style="display:flex;"><span> xfce4-panel                                          x86_64                         4.18.4-1.el9                               epel                              1.2 M
+</span></span><span style="display:flex;"><span> xfce4-power-manager                                  x86_64                         4.18.2-1.el9                               epel                              <span style="color:#ae81ff">733</span> k
+</span></span><span style="display:flex;"><span> xfce4-pulseaudio-plugin                              x86_64                         0.4.7-1.el9                                epel                              <span style="color:#ae81ff">131</span> k
+</span></span><span style="display:flex;"><span> xfce4-screensaver                                    x86_64                         4.18.2-1.el9                               epel                              <span style="color:#ae81ff">305</span> k
+</span></span><span style="display:flex;"><span> xfce4-session                                        x86_64                         4.18.3-1.el9                               epel                              <span style="color:#ae81ff">541</span> k
+</span></span><span style="display:flex;"><span> xfce4-settings                                       x86_64                         4.18.2-2.el9                               epel                              1.2 M
+</span></span><span style="display:flex;"><span> xfce4-terminal                                       x86_64                         1.0.4-1.el9                                epel                              <span style="color:#ae81ff">695</span> k
+</span></span><span style="display:flex;"><span> xfconf                                               x86_64                         4.18.1-1.el9                               epel                              <span style="color:#ae81ff">189</span> k
+</span></span><span style="display:flex;"><span> xfdesktop                                            x86_64                         4.18.1-3.el9                               epel                              1.7 M
+</span></span><span style="display:flex;"><span> xfwm4                                                x86_64                         4.18.0-2.el9                               epel                              <span style="color:#ae81ff">605</span> k
+</span></span><span style="display:flex;"><span>Installing dependencies:
+</span></span><span style="display:flex;"><span> almalinux-backgrounds-extras                         noarch                         90.0-1.el9                                 extras                             <span style="color:#ae81ff">19</span> k
+</span></span><span style="display:flex;"><span> exo                                                  x86_64                         4.18.0-2.el9                               epel                              <span style="color:#ae81ff">462</span> k
+</span></span><span style="display:flex;"><span> garcon                                               x86_64                         4.18.2-2.el9                               epel                              <span style="color:#ae81ff">247</span> k
+</span></span><span style="display:flex;"><span> iceauth                                              x86_64                         1.0.8-4.el9                                epel                               <span style="color:#ae81ff">26</span> k
+</span></span><span style="display:flex;"><span> keybinder3                                           x86_64                         0.3.2-13.el9                               appstream                          <span style="color:#ae81ff">20</span> k
+</span></span><span style="display:flex;"><span> libXScrnSaver                                        x86_64                         1.2.3-10.el9                               appstream                          <span style="color:#ae81ff">24</span> k
+</span></span><span style="display:flex;"><span> libxfce4ui                                           x86_64                         4.18.4-2.el9                               epel                              <span style="color:#ae81ff">316</span> k
+</span></span><span style="display:flex;"><span> libxfce4util                                         x86_64                         4.18.1-2.el9                               epel                              <span style="color:#ae81ff">190</span> k
+</span></span><span style="display:flex;"><span> pavucontrol                                          x86_64                         4.0-8.el9                                  appstream                         <span style="color:#ae81ff">165</span> k
+</span></span><span style="display:flex;"><span>Installing Groups:
+</span></span><span style="display:flex;"><span> Xfce                                                                                                                                                                  
+</span></span><span style="display:flex;"><span> base-x                                                                                                                                                                
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Transaction Summary
+</span></span><span style="display:flex;"><span><span style="color:#f92672">========================================================================================================================================================================</span>
+</span></span><span style="display:flex;"><span>Install  <span style="color:#ae81ff">27</span> Packages
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Total download size: <span style="color:#ae81ff">11</span> M
+</span></span><span style="display:flex;"><span>Installed size: <span style="color:#ae81ff">51</span> M
+</span></span><span style="display:flex;"><span>Is this ok <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: y
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><p>Install <em>lightdm</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo dnf install lightdm lightdm-settings 
+</span></span><span style="display:flex;"><span>modular-installer                                                                                                                       <span style="color:#ae81ff">216</span>  B/s | <span style="color:#ae81ff">659</span>  B     00:03    
+</span></span><span style="display:flex;"><span>modular-installer-noarch                                                                                                                <span style="color:#ae81ff">288</span>  B/s | <span style="color:#ae81ff">659</span>  B     00:02    
+</span></span><span style="display:flex;"><span>modular-installer-source                                                                                                                <span style="color:#ae81ff">327</span>  B/s | <span style="color:#ae81ff">659</span>  B     00:02    
+</span></span><span style="display:flex;"><span>Dependencies resolved.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">========================================================================================================================================================================</span>
+</span></span><span style="display:flex;"><span> Package                                           Architecture                     Version                                   Repository                           Size
+</span></span><span style="display:flex;"><span><span style="color:#f92672">========================================================================================================================================================================</span>
+</span></span><span style="display:flex;"><span>Installing:
+</span></span><span style="display:flex;"><span> lightdm                                           x86_64                           1.30.0-19.el9                             epel                                <span style="color:#ae81ff">218</span> k
+</span></span><span style="display:flex;"><span> lightdm-settings                                  noarch                           1.5.10-2.el9                              epel                                <span style="color:#ae81ff">136</span> k
+</span></span><span style="display:flex;"><span>Installing dependencies:
+</span></span><span style="display:flex;"><span> fpaste                                            noarch                           0.4.3.0-1.el9                             epel                                 <span style="color:#ae81ff">32</span> k
+</span></span><span style="display:flex;"><span> google-noto-sans-fonts                            noarch                           20201206-4.el9                            appstream                           7.6 M
+</span></span><span style="display:flex;"><span> libdbusmenu                                       x86_64                           16.04.0-19.el9                            epel                                <span style="color:#ae81ff">134</span> k
+</span></span><span style="display:flex;"><span> libdbusmenu-gtk3                                  x86_64                           16.04.0-19.el9                            epel                                 <span style="color:#ae81ff">40</span> k
+</span></span><span style="display:flex;"><span> lightdm-gobject                                   x86_64                           1.30.0-19.el9                             epel                                 <span style="color:#ae81ff">62</span> k
+</span></span><span style="display:flex;"><span> python3-setproctitle                              x86_64                           1.2.3-1.el9                               epel                                 <span style="color:#ae81ff">22</span> k
+</span></span><span style="display:flex;"><span> python3-xapp                                      noarch                           2.4.0-2.el9                               epel                                 <span style="color:#ae81ff">42</span> k
+</span></span><span style="display:flex;"><span> python3-xapps-overrides                           x86_64                           2.4.3-1.el9                               epel                                 <span style="color:#ae81ff">10</span> k
+</span></span><span style="display:flex;"><span> slick-greeter                                     x86_64                           1.5.6-2.el9                               epel                                <span style="color:#ae81ff">358</span> k
+</span></span><span style="display:flex;"><span> xapps                                             x86_64                           2.4.3-1.el9                               epel                                5.2 M
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Transaction Summary
+</span></span><span style="display:flex;"><span><span style="color:#f92672">========================================================================================================================================================================</span>
+</span></span><span style="display:flex;"><span>Install  <span style="color:#ae81ff">12</span> Packages
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Total download size: <span style="color:#ae81ff">14</span> M
+</span></span><span style="display:flex;"><span>Installed size: <span style="color:#ae81ff">34</span> M
+</span></span><span style="display:flex;"><span>Is this ok <span style="color:#f92672">[</span>y/N<span style="color:#f92672">]</span>: y
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span></code></pre></div><h2 id="aktifkan-lightdm-sebagai-display-manager">Aktifkan lightdm Sebagai Display Manager</h2>
+<p>Disable GDM dan aktifkan lightdm:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ sudo systemctl disable gdm.service
+</span></span><span style="display:flex;"><span>$ sudo systemctl enable lightdm.service
+</span></span><span style="display:flex;"><span>Created symlink /etc/systemd/system/display-manager.service → /usr/lib/systemd/system/lightdm.service.
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Kita bisa menggunakan berbagai <em>desktop environment</em> dengan memilih melalui lightdm selector:</p>
+<p><img src="/images/posts/22/lightdm-selector.jpg" alt="Lightdm selector"></p>
+<p>Menu yang muncul pada saat kita memilih <em>lightdm selector</em> bisa kita atur dengan konfigurasi berikut ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat /etc/lightdm/lightdm.conf | grep xsession
+</span></span><span style="display:flex;"><span>sessions-directory<span style="color:#f92672">=</span>/usr/share/lightdm/sessions:/usr/share/xsessions:/usr/share/wayland-sessions
+</span></span></code></pre></div><p>Jika merasa terlalu banyak, bisa dibatasi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sessions-directory<span style="color:#f92672">=</span>/usr/share/lightdm/sessions:/usr/share/xsessions
+</span></span></code></pre></div><p>Setelah itu reboot. Saat muncul <em>lightdm</em>, silakan login dan memilih XFCE di <em>selector</em>.</p>
+<h2 id="gambaran-waktu-booting">Gambaran Waktu Booting.</h2>
+<p>Berikut adalah waktu booting yang diperlukan:</p>
+<table>
+  <thead>
+      <tr>
+          <th style="text-align: center"><strong>Distro</strong></th>
+          <th style="text-align: center"><strong>DE</strong></th>
+          <th style="text-align: center"><strong>DM</strong></th>
+          <th style="text-align: center"><strong>Init System</strong></th>
+          <th style="text-align: center"><strong>Waktu</strong></th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td style="text-align: center">AlmaLinux</td>
+          <td style="text-align: center">GNOME - Wayland</td>
+          <td style="text-align: center">lightdm</td>
+          <td style="text-align: center">Systemd</td>
+          <td style="text-align: center">2 menit, 23 detik</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">AlmaLinux</td>
+          <td style="text-align: center">XFCE4 - X11</td>
+          <td style="text-align: center">lightdm</td>
+          <td style="text-align: center">Systemd</td>
+          <td style="text-align: center">86 detik</td>
+      </tr>
+      <tr>
+          <td style="text-align: center">Void Linux</td>
+          <td style="text-align: center">XFCE4 - X11</td>
+          <td style="text-align: center">lightdm</td>
+          <td style="text-align: center">runit</td>
+          <td style="text-align: center">34 detik</td>
+      </tr>
+  </tbody>
+</table>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

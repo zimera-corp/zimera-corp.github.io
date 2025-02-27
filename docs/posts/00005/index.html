@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Polyglot Programming dan GraalVM - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Polyglot Programming dan GraalVM"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00005/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Polyglot Programming dan GraalVM</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/software-engineering">Software Engineering</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/terminology">Terminology</a>&nbsp;&nbsp;
+        
+        <a href="/tags/polyglot">Polyglot</a>&nbsp;&nbsp;
+        
+        <a href="/tags/python">Python</a>&nbsp;&nbsp;
+        
+        <a href="/tags/graalvm">GraalVM</a>&nbsp;&nbsp;
+        
+        <a href="/tags/r">R</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author:  | <time>January 23, 2023</time> | 
+        6  minutes reading time
+       </p>
+
+      <div class="content"><p>Pernahkah mendengar istilah polyglot programming? Istilah ini sudah menjadi istilah yang umum dan barangkali banyak didengar oleh para developer yang sehari-hari memang berkutat dengan bahasa pemrograman dan peranti pengembangan. Polyglot programming merupakan penggunaan lebih dari satu bahasa pemrograman untuk menyelesaikan suatu masalah pemrograman. Kategori polyglot programming antara lain adalah:</p>
+<ol>
+<li>Penggunaan binding yang dibuat menggunakan suatu bahasa pemrograman tertentu (biasanya bahasa pemrograman aras sistem — atau aras rendah seperti C/C++, Assembly, Rust) ke suatu bahasa yang berada pada aras tinggi seperti Ruby, Python, dan lain-lain. Cara ini biasanya ditempuh untuk optimasi atau memang memerlukan function / procedure / library yang tidak ada di bahasa yang bersangkutan. Contoh: wxPython merupakan binding wxwidgets untuk Python untuk keperluan pembuatan aplikasi GUI.</li>
+<li>Fasilitas untuk mengeksekusi script / source code pada suatu bahasa tertentu. Contoh dari hal ini adalah Julia yang memungkinkan mengeksekusi source code Python sehingga memungkinkan akses terhadap banyak pustaka Python. Eksekusi ini biasanya dilakukan pada execution context yang berbeda.</li>
+<li>Penggunaan virtual machine bytecode yang bisa di-share oleh berbagai bahasa yang mendukung virtual machine tersebut. Contoh dari hal ini adalah JVM (Java Virtual Machine) yang secara default memerlukan bahasa pemrograman Java untuk menghasilkan bytecode .class. File-file bytecode tersebut bisa dibaca dan digunakan oleh bahasa lainnya yang dibuat pada JVM (misalnya Kotlin, Scala, Eta, Frege, dan lain-lain). Contoh lainnya ada pada CLR di dunia .NET yang bisa digunakan oleh berbagai bahasa seperti C#, F#, dan lain-lain. Jadi, dengan cara ini, bytecode merupakan tujuan akhir dan antar bahasa pemrograman bisa terjadi interoperabilitas karena memang berjalan pada VM yang sama dan bisa mengenali bytecode tersebut: source code harus dikompilasi terlebih dahulu untuk menghasilkan bytecode yang bisa memungkinkan interoperabilitas (sebagai contoh, Kotlin bisa mengakses berbagai file .jar di repo Maven yang dihasilkan oleh Java).</li>
+</ol>
+<p>GraalVM merupakan hasil riset dari Oracle (berbasis JDK) yang bertujuan untuk memungkinkan menggunakan berbagai bahasa dalam satu execution context di atas VM tanpa melalui proses kompilasi ke bytecode. Jadi, bisa saja menggunakan Python (salah satu bahasa yang didukung oleh GraalVM) dan source code Python kita mengakses pustaka standar di NodeJS. Lebih lanjut, hasil dari source code bisa dikompilasi menjadi native images yang mempunyai waktu eksekusi lebih cepat daripada bytecode VM. Menarik? mari kita coba.</p>
+<p>Saat ini GraalVM semakin <em>mature</em> dan saat tulisan ini dibuat, GraalVM memasuki versi <strong>22.3.1</strong>. Instalasi GraalVM sangat mudah, hanya perlu mengambil binary di <a href="https://github.com/graalvm/graalvm-ce-builds/releases">https://github.com/graalvm/graalvm-ce-builds/releases</a> dan kemudian mengekstrak serta menambahkan path bin ke dalam env variable PATH (contoh berikut menggunakan fish):</p>
+<pre tabindex="0"><code>set -x PATH /opt/software/graalvm/graalvm/bin $PATH
+</code></pre><p>Anda bisa mengambil sesuai versi JDK yang anda pilih (saat ini: 11, 17, dan 19). Setelah itu, beberapa executable file untuk beberapa bahasa pemrograman / tools sudah tersedia. Default bahasa pemrograman yang tersedia adalah Java dan JavaScript. Selain itu, bisa digunakan gu (GraalVM Component Updater) untuk menginstall bahasa pemrograman lain (misalnya Python).</p>
+<pre tabindex="0"><code>$ gu list
+ComponentId              Version             Component name                Stability                     Origin 
+---------------------------------------------------------------------------------------------------------------------------------
+graalvm                  22.3.1              GraalVM Core                  Supported                     
+$ gu available
+Downloading: Component catalog from www.graalvm.org
+ComponentId              Version             Component name                Stability                     Origin 
+---------------------------------------------------------------------------------------------------------------------------------
+espresso                 22.3.1              Java on Truffle               Supported                     github.com
+espresso-llvm            22.3.1              Java on Truffle LLVM Java librSupported                     github.com
+js                       22.3.1              Graal.js                      Supported                     github.com
+llvm                     22.3.1              LLVM Runtime Core             Supported                     github.com
+llvm-toolchain           22.3.1              LLVM.org toolchain            Supported                     github.com
+native-image             22.3.1              Native Image                  Early adopter                 github.com
+native-image-llvm-backend22.3.1              Native Image LLVM Backend     Early adopter (experimental)  github.com
+nodejs                   22.3.1              Graal.nodejs                  Supported                     github.com
+python                   22.3.1              GraalVM Python                Experimental                  github.com
+R                        22.3.1              FastR                         Experimental                  github.com
+ruby                     22.3.1              TruffleRuby                   Experimental                  github.com
+visualvm                 22.3.1              VisualVM                      Experimental                  github.com
+wasm                     22.3.1              GraalWasm                     Experimental                  github.com
+</code></pre><p>Berikut adalah versi GraalVM dengan menggunakan JDK 11:</p>
+<pre tabindex="0"><code>$ java -version
+openjdk version &#34;11.0.18&#34; 2023-01-17
+OpenJDK Runtime Environment GraalVM CE 22.3.1 (build 11.0.18+10-jvmci-22.3-b13)
+OpenJDK 64-Bit Server VM GraalVM CE 22.3.1 (build 11.0.18+10-jvmci-22.3-b13, mixed mode, sharing)
+$ javac -version
+javac 11.0.18
+$
+</code></pre><p>Mari install <code>js</code>, <code>python</code>, dan <code>nodejs</code>:</p>
+<pre tabindex="0"><code>$ gu install js nodejs python
+Downloading: Component catalog from www.graalvm.org
+Processing Component: Graal.js
+Processing Component: Graal.nodejs
+Processing Component: GraalVM Python
+Processing Component: Graal.js
+Processing Component: LLVM.org toolchain
+Processing Component: LLVM Runtime Core
+Additional Components are required:
+    Graal.js (org.graalvm.js, version 22.3.1), required by: Graal.nodejs (org.graalvm.nodejs)
+    LLVM.org toolchain (org.graalvm.llvm-toolchain, version 22.3.1), required by: GraalVM Python (org.graalvm.python)
+    LLVM Runtime Core (org.graalvm.llvm, version 22.3.1), required by: GraalVM Python (org.graalvm.python)
+Downloading: Component js: Graal.js from github.com
+Downloading: Component nodejs: Graal.nodejs from github.com
+Downloading: Component python: GraalVM Python from github.com
+Downloading: Component org.graalvm.llvm-toolchain: LLVM.org toolchain from github.com
+Downloading: Component org.graalvm.llvm: LLVM Runtime Core from github.com
+Installing new component: LLVM Runtime Core (org.graalvm.llvm, version 22.3.1)
+Installing new component: LLVM.org toolchain (org.graalvm.llvm-toolchain, version 22.3.1)
+Installing new component: Graal.js (org.graalvm.js, version 22.3.1)
+Installing new component: Graal.nodejs (org.graalvm.nodejs, version 22.3.1)
+Installing new component: GraalVM Python (org.graalvm.python, version 22.3.1)
+$ gu list
+ComponentId              Version             Component name                Stability                     Origin 
+---------------------------------------------------------------------------------------------------------------------------------
+graalvm                  22.3.1              GraalVM Core                  Supported                     
+js                       22.3.1              Graal.js                      Supported                     github.com
+llvm                     22.3.1              LLVM Runtime Core             Supported                     github.com
+llvm-toolchain           22.3.1              LLVM.org toolchain            Supported                     github.com
+nodejs                   22.3.1              Graal.nodejs                  Supported                     github.com
+python                   22.3.1              GraalVM Python                Experimental                  github.com
+$
+</code></pre><p>Hasil instalasi adalah sebagai berikut:</p>
+<pre tabindex="0"><code>$ js --version
+GraalVM JavaScript (GraalVM CE Native 22.3.1)
+$ node -v
+v16.18.1
+$ python --version
+GraalVM Python 3.8.5 (GraalVM CE Native 22.3.1)
+$
+</code></pre><blockquote>
+<p>Catatan: <code>python</code> juga bisa dieksekusi menggunakan <code>graalpy</code></p></blockquote>
+<p>Mari kita coba Python.</p>
+<pre tabindex="0"><code>$ graalpy 
+Python 3.8.5 (Thu Jan 19 19:16:44 UTC 2023)
+[Graal, GraalVM CE, Java 11.0.18] on linux
+Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
+&gt;&gt;&gt; import sys
+&gt;&gt;&gt; sys.platform
+&#39;linux&#39;
+&gt;&gt;&gt; import os
+&gt;&gt;&gt; os.name
+&#39;posix&#39;
+&gt;&gt;&gt; sys.platform
+&#39;linux&#39;
+&gt;&gt;&gt; sys.copyright
+&#39;Copyright (c) Oracle and/or its affiliates. Licensed under the Universal Permissive License v 1.0 as shown at http://oss.oracle.com/licenses/upl.&#39;
+&gt;&gt;&gt; import platform
+&gt;&gt;&gt; platform.python_version()
+&#39;3.8.5&#39;
+&gt;&gt;&gt; 
+</code></pre><p>Sekarang mari mencoba Python dan R pada satu source code. Install R dengan perintah gu berikut:</p>
+<pre tabindex="0"><code>$ gu install R
+Downloading: Component catalog from www.graalvm.org
+Processing Component: FastR
+Downloading: Component R: FastR from github.com
+Installing new component: FastR (org.graalvm.R, version 22.3.1)
+NOTES:
+---------------
+FastR should work out of the box on most Linux distributions and recent MacOS versions. Run the following script to check FastR requirements and create a personal R packages library directory: 
+    /home/bpdp/software/java-dev-tools/graalvm-ce-java11-22.3.1/languages/R/bin/configure_fastr
+
+The R component comes without native image by default. If you wish to build the native image, which provides faster startup, but slightly slower peak performance, then run the following:
+    gu rebuild-images R
+
+The native image is then used by default. Pass &#39;--jvm&#39; flag to the R or Rscript launcher to use JVM instead of the native image. Note that the native image is not stable yet and is intended for evaluation and experiments for curious users. Some features may not work in the native image mode. Most notably, the --polyglot switch works only in JVM mode (when --jvm is used).
+
+See http://www.graalvm.org/docs/reference-manual/languages/r for more.
+
+$
+</code></pre><p>Kita akan mencoba menggabungkan source code Python dengan R. Buat file testgraal.py yang memanfaatkan R sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> polyglot
+</span></span><span style="display:flex;"><span>array <span style="color:#f92672">=</span> polyglot<span style="color:#f92672">.</span>eval(language<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;R&#34;</span>, string<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;c(1,2,42,4)&#34;</span>)
+</span></span><span style="display:flex;"><span>print(array[<span style="color:#ae81ff">2</span>])
+</span></span></code></pre></div><p>Setelah itu jalankan:</p>
+<pre tabindex="0"><code>$ graalpy --polyglot --jvm testgraal.py 
+42.0
+$
+</code></pre><p>Tentu jika sudah melibatkan banyak libraries, ada kemungkinan proses dan source code akan lebih kompleks. Hal ini tentu tidak mudah, tapi pada fase ini, kita sudah mengetahui bahwa kita bisa menggunakan lebih dari satu bahasa pemrograman pada satu masalah pemrograman.</p>
+<p>The next adventure should be exciting. Happy hacking!</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

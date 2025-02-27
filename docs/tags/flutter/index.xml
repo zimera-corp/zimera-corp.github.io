@@ -10,9 +10,9 @@
     <atom:link href="/tags/flutter/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Flutter: Persiapan Lingkungan Pengembangan</title>
-      <link>/posts/08/</link>
+      <link>/posts/00008/</link>
       <pubDate>Thu, 09 Feb 2023 20:59:19 +0700</pubDate>
-      <guid>/posts/08/</guid>
+      <guid>/posts/00008/</guid>
       <description>&lt;p&gt;Flutter adalah software framework yang digunakan untuk membangun native mobile app. Jika biasanya pemrogram membangun peranti khusus dari OS mobile yang berbeda-beda (Java/Kotlin/Scala untuk Android, Objective C/Swift untuk iOS), kali ini Flutter dimaksudkan untuk membangun aplikasi untuk 3 platform yang berbeda: Android, iOS, dan Fuchsia (belum rilis) dengan satu codebase yang sama. Tentu saja yang dikerjakan oleh Flutter ini bukan hal yang pertama kali, sebelumnya sudah ada &lt;a href=&#34;https://reactnative.dev/&#34;&gt;React Native&lt;/a&gt;, &lt;a href=&#34;https://nativescript.org/&#34;&gt;NativeScript&lt;/a&gt;, maupun &lt;a href=&#34;https://www.lambdanative.org/&#34;&gt;LambdaNative&lt;/a&gt;. Flutter sudah mencapai versi stabil pada bulan Desember 2018. Saat ini (2023), Flutter sudah berada pada versi 3.7.1.&lt;/p&gt;</description>
     </item>
   </channel>

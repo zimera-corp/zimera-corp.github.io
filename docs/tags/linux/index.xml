@@ -10,16 +10,16 @@
     <atom:link href="/tags/linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Konfigurasi VPN pada (Void) Linux</title>
-      <link>/posts/25/</link>
+      <link>/posts/00025/</link>
       <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
-      <guid>/posts/25/</guid>
+      <guid>/posts/00025/</guid>
       <description>&lt;p&gt;Artikel berikut akan membahas tentang cara mengkonfigurasi dan mengaktifkan VPN jika anda menggunakan Linux. Pembahasan pada artikel ini difokuskan pada &lt;a href=&#34;https://voidlinux.org/&#34;&gt;Void Linux&lt;/a&gt; meskipun sebenarnya cukup generik - tinggal diganti pada pembahasan instalasi paket sesuai dengan package manager yang digunakan serta penggunaan &lt;a href=&#34;https://smarden.org/runit/&#34;&gt;runit&lt;/a&gt; disesuaikan dengan distro yang anda gunakan (kebanyakan masih menggunakan &lt;a href=&#34;https://systemd.io/&#34;&gt;systemd&lt;/a&gt;).&lt;/p&gt;&#xA;&lt;p&gt;NetworkManager mempunyai beberapa plugin untuk VPN (OpenVPN, L2TP/IPsec, OpenConnect, PPTP). Untuk keperluan ini kita akan menggunakan L2TP/IPsec.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Install terlebih dahulu plugin untuk L2TP:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Cari paket plugin NetworkManager untuk l2tp dengan perintah &lt;code&gt;xbps-query -Rs NetworkManager&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Optimasi AlmaLinux: Lightdm dan XFCE4</title>
-      <link>/posts/22/</link>
+      <link>/posts/00022/</link>
       <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
-      <guid>/posts/22/</guid>
+      <guid>/posts/00022/</guid>
       <description>&lt;p&gt;AlmaLinux menggunakan GNOME Display Manager dan akan menggunakan GNOME-Wayland secara default sebagai &lt;em&gt;desktop environment&lt;/em&gt;. Untuk mesin dengan &lt;em&gt;resources&lt;/em&gt; yang cukup, hal ini tentu saja tidak masalah. Meskipun demikian, mempunyai &lt;em&gt;resources&lt;/em&gt; yang cukup, juga bukan berarti bebas saja. Banyak pemakai yang memang sudah memahami kebutuhannya, tidak terlalu mementingkan &lt;em&gt;bells and whistles&lt;/em&gt; serta &lt;em&gt;eye-candy&lt;/em&gt;. Saya mungkin termasuk dalam kategori seperti itu. AlmaLinux saya install secara default sehingga GDM dan GNOME akan digunakan. Saya memutuskan untuk menggunakan &lt;a href=&#34;https://xfce.org/&#34;&gt;XFCE&lt;/a&gt; sebagai &lt;em&gt;desktop environment&lt;/em&gt; dan &lt;a href=&#34;https://github.com/canonical/lightdm&#34;&gt;lightdm&lt;/a&gt; sebagai pengganti dari GDM. Berikut ini langkah-langkah yang saya lakukan.&lt;/p&gt;</description>
     </item>
   </channel>

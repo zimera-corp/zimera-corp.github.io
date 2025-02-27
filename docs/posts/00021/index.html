@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Tex Live - Instalasi dan Konfigurasi Manual - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Tex Live - Instalasi dan Konfigurasi Manual"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00021/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Tex Live - Instalasi dan Konfigurasi Manual</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/software">Software</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/latex">LaTex</a>&nbsp;&nbsp;
+        
+        <a href="/tags/tex-live">TeX Live</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>March 19, 2024</time> | 
+        5  minutes reading time
+       </p>
+
+      <div class="content"><p><a href="https://www.tug.org/texlive/">Tex Live</a> adalah distribusi <a href="https://www.tug.org/">TeX document production system</a>. TeX adalah sofware besar dan paket-paket pendukungnya dikumpulkan dan disimpan di <a href="https://ctan.org/">The Comprehensive TeX Archive Network</a> dengan mirror di seluruh dunia.TeX Live biasanya sudah disiapkan di berbagai macam distro Linux dan bisa diinstal dengan menggunakan <em>package manager</em> distro yang bersangkutan. Sebenarnya cukup menyenangkan, hanya saja, biasanya bukan versi update terbaru dan kita tidak bisa mengelola paket maupun mengkustomisasi TeX seperti yang kita inginkan. Contoh sederhana, menggunakan TeX Live dari distro Linux tertentu dan sekaligus menggunakan <code>tlmgr</code> untuk mengelola paket dari CTAN biasanya akan cukup mengacaukan. Hal ini yang membuat saya kemudian melakukan instalasi lengkap tanpa menggunakan <em>package manager</em> distro Linux yang bersangkutan.</p>
+<p><strong>Langkah 1</strong>: unduh TeX Live.</p>
+<p>Tex Live bisa diperoleh di <a href="https://www.tug.org/texlive/acquire.html">TUG</a>. Untuk keperluan ini, pilih metode <a href="https://www.tug.org/texlive/acquire-netinstall.html">download</a>. Gunakan script <a href="https://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz">install-tl</a>. Setelah itu ekstrak file yang telah diunduh:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tar -xvf install-tl-unx.tar.gz
+</span></span><span style="display:flex;"><span>$ tree install-tl-20240317 -L <span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>install-tl-20240317
+</span></span><span style="display:flex;"><span>├── LICENSE.CTAN
+</span></span><span style="display:flex;"><span>├── LICENSE.TL
+</span></span><span style="display:flex;"><span>├── install-tl
+</span></span><span style="display:flex;"><span>├── release-texlive.txt
+</span></span><span style="display:flex;"><span>├── texmf-disth
+</span></span><span style="display:flex;"><span>└── tlpkg
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">3</span> directories, <span style="color:#ae81ff">4</span> files
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p><strong>Langkah 2</strong>: konfigurasi <em>env variable</em>.</p>
+<p>Saya menggunakan Fish, jika menggunakan shell lain, sila menyesuaikan. <em>Env variable</em> yang harus dikonfigurasi adalah <em>TEXLIVE_INSTALL_PREFIX</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ set -x TEXLIVE_INSTALL_PREFIX /home/bpdp/software/texlive
+</span></span></code></pre></div><p><strong>Langkah 3</strong>: jalankan <em>installer</em>.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd install-tl-20240317
+</span></span><span style="display:flex;"><span>$ ./install-tl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Loading https://mirror.unpad.ac.id/ctan/systems/texlive/tlnet/tlpkg/texlive.tlpdb
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">======================</span>&gt; TeX Live installation procedure &lt;<span style="color:#f92672">=====================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">======</span>&gt;   Letters/digits in &lt;angle brackets&gt; indicate   &lt;<span style="color:#f92672">=======</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">======</span>&gt;   menu items <span style="color:#66d9ef">for</span> actions or customizations      &lt;<span style="color:#f92672">=======</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=</span> help&gt;   https://tug.org/texlive/doc/install-tl.html   &lt;<span style="color:#f92672">=======</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> Detected platform: GNU/Linux on x86_64
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> &lt;B&gt; set binary platforms: <span style="color:#ae81ff">1</span> out of <span style="color:#ae81ff">15</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;S&gt; set installation scheme: scheme-full
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;C&gt; set installation collections:
+</span></span><span style="display:flex;"><span>     <span style="color:#ae81ff">40</span> collections out of 41, disk space required: <span style="color:#ae81ff">8324</span> MB <span style="color:#f92672">(</span>free: <span style="color:#ae81ff">729568</span> MB<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;D&gt; set directories:
+</span></span><span style="display:flex;"><span>   TEXDIR <span style="color:#f92672">(</span>the main TeX directory<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     /home/bpdp/software/texlive/2024
+</span></span><span style="display:flex;"><span>   TEXMFLOCAL <span style="color:#f92672">(</span>directory <span style="color:#66d9ef">for</span> site-wide local files<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     /home/bpdp/software/texlive/texmf-local
+</span></span><span style="display:flex;"><span>   TEXMFSYSVAR <span style="color:#f92672">(</span>directory <span style="color:#66d9ef">for</span> variable and automatically generated data<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     /home/bpdp/software/texlive/2024/texmf-var
+</span></span><span style="display:flex;"><span>   TEXMFSYSCONFIG <span style="color:#f92672">(</span>directory <span style="color:#66d9ef">for</span> local config<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     /home/bpdp/software/texlive/2024/texmf-config
+</span></span><span style="display:flex;"><span>   TEXMFVAR <span style="color:#f92672">(</span>personal directory <span style="color:#66d9ef">for</span> variable and automatically generated data<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     ~/.texlive2024/texmf-var
+</span></span><span style="display:flex;"><span>   TEXMFCONFIG <span style="color:#f92672">(</span>personal directory <span style="color:#66d9ef">for</span> local config<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     ~/.texlive2024/texmf-config
+</span></span><span style="display:flex;"><span>   TEXMFHOME <span style="color:#f92672">(</span>directory <span style="color:#66d9ef">for</span> user-specific files<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     ~/texmf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;O&gt; options:
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> use letter size instead of A4 by default
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">[</span>X<span style="color:#f92672">]</span> allow execution of restricted list of programs via <span style="color:#ae81ff">\w</span>rite18
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">[</span>X<span style="color:#f92672">]</span> create all format files
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">[</span>X<span style="color:#f92672">]</span> install macro/font doc tree
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">[</span>X<span style="color:#f92672">]</span> install macro/font source tree
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> create symlinks to standard directories
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;V&gt; set up <span style="color:#66d9ef">for</span> portable installation
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Actions:
+</span></span><span style="display:flex;"><span> &lt;I&gt; start installation to hard disk
+</span></span><span style="display:flex;"><span> &lt;P&gt; save installation profile to <span style="color:#e6db74">&#39;texlive.profile&#39;</span> and exit
+</span></span><span style="display:flex;"><span> &lt;Q&gt; quit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter command: 
+</span></span></code></pre></div><p>Kita bisa mengubaha konfigurasi dengan memilih huruf yang ada pada <code>&lt;&gt;</code>. Misal, kita bisa mengubah skema paket yang diinstall dengan memilih <code>S</code> diikuti Enter:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#f92672">===============================================================================</span>
+</span></span><span style="display:flex;"><span>Select scheme:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> a <span style="color:#f92672">[</span>X<span style="color:#f92672">]</span> full scheme <span style="color:#f92672">(</span>everything<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> b <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> medium scheme <span style="color:#f92672">(</span>small + more packages and languages<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> c <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> small scheme <span style="color:#f92672">(</span>basic + xetex, metapost, a few languages<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> d <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> basic scheme <span style="color:#f92672">(</span>plain and latex<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> e <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> minimal scheme <span style="color:#f92672">(</span>plain only<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> f <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> infrastructure-only scheme <span style="color:#f92672">(</span>no TeX at all<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> g <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> book publishing scheme <span style="color:#f92672">(</span>core LaTeX and add-ons<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> h <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> ConTeXt scheme
+</span></span><span style="display:flex;"><span> i <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> GUST TeX Live scheme
+</span></span><span style="display:flex;"><span> j <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> teTeX scheme <span style="color:#f92672">(</span>more than medium, but nowhere near full<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> k <span style="color:#f92672">[</span> <span style="color:#f92672">]</span> custom selection of collections
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Actions: <span style="color:#f92672">(</span>disk space required: <span style="color:#ae81ff">8324</span> MB<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> &lt;R&gt; <span style="color:#66d9ef">return</span> to main menu
+</span></span><span style="display:flex;"><span> &lt;Q&gt; quit
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Enter letter to <span style="color:#66d9ef">select</span> scheme: 
+</span></span></code></pre></div><p>Pilihan lainnya bisa dikonfigurasi. Saya pribadi lebih suka menggunakan <em>portable installation</em> dengan memilih <code>V</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>   !! Portable option changed;
+</span></span><span style="display:flex;"><span>   !! Directories have been reinitialized!
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> &lt;D&gt; set directories:
+</span></span><span style="display:flex;"><span>   TEXDIR <span style="color:#f92672">(</span>the main TeX directory<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     /home/bpdp/software/texlive/2024
+</span></span><span style="display:flex;"><span>   TEXMFLOCAL <span style="color:#f92672">(</span>directory <span style="color:#66d9ef">for</span> site-wide local files<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     /home/bpdp/software/texlive/texmf-local
+</span></span><span style="display:flex;"><span>   TEXMFSYSVAR <span style="color:#f92672">(</span>directory <span style="color:#66d9ef">for</span> variable and automatically generated data<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     /home/bpdp/software/texlive/2024/texmf-var
+</span></span><span style="display:flex;"><span>   TEXMFSYSCONFIG <span style="color:#f92672">(</span>directory <span style="color:#66d9ef">for</span> local config<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     /home/bpdp/software/texlive/2024/texmf-config
+</span></span><span style="display:flex;"><span>   TEXMFVAR <span style="color:#f92672">(</span>personal directory <span style="color:#66d9ef">for</span> variable and automatically generated data<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     $TEXMFSYSVAR
+</span></span><span style="display:flex;"><span>   TEXMFCONFIG <span style="color:#f92672">(</span>personal directory <span style="color:#66d9ef">for</span> local config<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     $TEXMFSYSCONFIG
+</span></span><span style="display:flex;"><span>   TEXMFHOME <span style="color:#f92672">(</span>directory <span style="color:#66d9ef">for</span> user-specific files<span style="color:#f92672">)</span>:
+</span></span><span style="display:flex;"><span>     $TEXMFLOCAL
+</span></span></code></pre></div><p>Setelah itu, install:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>Enter command: I
+</span></span><span style="display:flex;"><span>Installing to: /home/bpdp/software/texlive/2024
+</span></span><span style="display:flex;"><span>Installing <span style="color:#f92672">[</span>1/4, time/total: ??:??/??:??<span style="color:#f92672">]</span>: hyphen-base <span style="color:#f92672">[</span>23k<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Installing <span style="color:#f92672">[</span>2/4, time/total: 00:00/00:00<span style="color:#f92672">]</span>: kpathsea <span style="color:#f92672">[</span>1065k<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Installing <span style="color:#f92672">[</span>3/4, time/total: 00:02/00:04<span style="color:#f92672">]</span>: texlive-scripts <span style="color:#f92672">[</span>536k<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Installing <span style="color:#f92672">[</span>4/4, time/total: 00:03/00:04<span style="color:#f92672">]</span>: texlive.infra <span style="color:#f92672">[</span>557k<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>Installing <span style="color:#f92672">[</span>4669/4671, time/total: 01:32:25/01:32:25<span style="color:#f92672">]</span>: zxjafont <span style="color:#f92672">[</span>173k<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Installing <span style="color:#f92672">[</span>4670/4671, time/total: 01:32:26/01:32:26<span style="color:#f92672">]</span>: zxjatype <span style="color:#f92672">[</span>144k<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Installing <span style="color:#f92672">[</span>4671/4671, time/total: 01:32:27/01:32:27<span style="color:#f92672">]</span>: zztex <span style="color:#f92672">[</span>147k<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Time used <span style="color:#66d9ef">for</span> installing the packages: 1:32:28
+</span></span><span style="display:flex;"><span>running mktexlsr /home/bpdp/software/texlive/2024/texmf-dist ...
+</span></span><span style="display:flex;"><span>mktexlsr: Updating /home/bpdp/software/texlive/2024/texmf-dist/ls-R... 
+</span></span><span style="display:flex;"><span>mktexlsr: Done.
+</span></span><span style="display:flex;"><span>writing fmtutil.cnf to /home/bpdp/software/texlive/2024/texmf-dist/web2c/fmtutil.cnf
+</span></span><span style="display:flex;"><span>writing updmap.cfg to /home/bpdp/software/texlive/2024/texmf-dist/web2c/updmap.cfg
+</span></span><span style="display:flex;"><span>writing language.dat to /home/bpdp/software/texlive/2024/texmf-var/tex/generic/config/language.dat
+</span></span><span style="display:flex;"><span>writing language.def to /home/bpdp/software/texlive/2024/texmf-var/tex/generic/config/language.def
+</span></span><span style="display:flex;"><span>writing language.dat.lua to /home/bpdp/software/texlive/2024/texmf-var/tex/generic/config/language.dat.lua
+</span></span><span style="display:flex;"><span>running mktexlsr /home/bpdp/software/texlive/2024/texmf-var /home/bpdp/software/texlive/2024/texmf-config /home/bpdp/software/texlive/2024/texmf-dist ...
+</span></span><span style="display:flex;"><span>mktexlsr: Updating /home/bpdp/software/texlive/2024/texmf-config/ls-R... 
+</span></span><span style="display:flex;"><span>mktexlsr: Updating /home/bpdp/software/texlive/2024/texmf-dist/ls-R... 
+</span></span><span style="display:flex;"><span>mktexlsr: Updating /home/bpdp/software/texlive/2024/texmf-var/ls-R... 
+</span></span><span style="display:flex;"><span>mktexlsr: Done.
+</span></span><span style="display:flex;"><span>running updmap-sys --nohash ...done
+</span></span><span style="display:flex;"><span>re-running mktexlsr /home/bpdp/software/texlive/2024/texmf-var /home/bpdp/software/texlive/2024/texmf-config ...
+</span></span><span style="display:flex;"><span>mktexlsr: Updating /home/bpdp/software/texlive/2024/texmf-config/ls-R... 
+</span></span><span style="display:flex;"><span>mktexlsr: Updating /home/bpdp/software/texlive/2024/texmf-var/ls-R... 
+</span></span><span style="display:flex;"><span>mktexlsr: Done.
+</span></span><span style="display:flex;"><span>setting up ConTeXt cache: running mtxrun --generate ...done
+</span></span><span style="display:flex;"><span>running context --luatex --generate ...done
+</span></span><span style="display:flex;"><span>running context --luajittex --generate ...done
+</span></span><span style="display:flex;"><span>pre-generating all format files, be patient...
+</span></span><span style="display:flex;"><span>running fmtutil-sys --no-error-if-no-engine<span style="color:#f92672">=</span>luametatex,luajithbtex,luajittex,mfluajit --no-strict --all ...done
+</span></span><span style="display:flex;"><span>running package-specific postactions
+</span></span><span style="display:flex;"><span>finished with package-specific postactions
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> ----------------------------------------------------------------------
+</span></span><span style="display:flex;"><span> The following environment variables contain the string <span style="color:#e6db74">&#34;tex&#34;</span>
+</span></span><span style="display:flex;"><span> <span style="color:#f92672">(</span><span style="color:#66d9ef">case</span>-independent<span style="color:#f92672">)</span>.  If you<span style="color:#960050;background-color:#1e0010">&#39;</span>re doing anything but adding personal
+</span></span><span style="display:flex;"><span> directories to the system paths, they may well cause trouble somewhere
+</span></span><span style="display:flex;"><span> <span style="color:#66d9ef">while</span> running TeX.  If you encounter problems, try unsetting them.
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> Please ignore spurious matches unrelated to TeX. <span style="color:#f92672">(</span>To omit this check,
+</span></span><span style="display:flex;"><span> set the environment variable TEXLIVE_INSTALL_ENV_NOCHECK.<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    TEXDIR<span style="color:#f92672">=</span>/home/bpdp/software/texlive/
+</span></span><span style="display:flex;"><span>    TEXLIVE_INSTALL_NO_DISKCHECK<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+</span></span><span style="display:flex;"><span>    TEXLIVE_INSTALL_PREFIX<span style="color:#f92672">=</span>/home/bpdp/software/texlive
+</span></span><span style="display:flex;"><span> ----------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>Welcome to TeX Live!
+</span></span><span style="display:flex;"><span>See /home/bpdp/software/texlive/2024/index.html <span style="color:#66d9ef">for</span> links to documentation.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The TeX Live web site <span style="color:#f92672">(</span>https://tug.org/texlive/<span style="color:#f92672">)</span> provides all updates
+</span></span><span style="display:flex;"><span>and corrections. TeX Live is a joint project of the TeX user groups
+</span></span><span style="display:flex;"><span>around the world; please consider supporting it by joining the group
+</span></span><span style="display:flex;"><span>best <span style="color:#66d9ef">for</span> you. The list of groups is available on the web
+</span></span><span style="display:flex;"><span>at https://tug.org/usergroups.html.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Add /home/bpdp/software/texlive/2024/texmf-dist/doc/man to MANPATH.
+</span></span><span style="display:flex;"><span>Add /home/bpdp/software/texlive/2024/texmf-dist/doc/info to INFOPATH.
+</span></span><span style="display:flex;"><span>Most importantly, add /home/bpdp/software/texlive/2024/bin/x86_64-linux
+</span></span><span style="display:flex;"><span>to your PATH <span style="color:#66d9ef">for</span> current and future sessions.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Logfile: /home/bpdp/software/texlive/2024/install-tl.log
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Setelah itu, buat file untuk mengaktifkan <em>environment variable</em> yang bisa di-<em>source</em> saat kita akan menggunakan TeX Live:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat ~/env/fish/texlive
+</span></span><span style="display:flex;"><span>set -x MANPATH /home/bpdp/software/texlive/2024/texmf-dist/doc/man $MANPATH
+</span></span><span style="display:flex;"><span>set -x INFOPATH /home/bpdp/software/texlive/2024/texmf-dist/doc/info $INFOPATH
+</span></span><span style="display:flex;"><span>set -x PATH /home/bpdp/software/texlive/2024/bin/x86_64-linux $PATH
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Hasilnya adalah sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ source env/fish/texlive
+</span></span><span style="display:flex;"><span>$ pdflatex
+</span></span><span style="display:flex;"><span>This is pdfTeX, Version 3.141592653-2.6-1.40.26 <span style="color:#f92672">(</span>TeX Live 2024<span style="color:#f92672">)</span> <span style="color:#f92672">(</span>preloaded format<span style="color:#f92672">=</span>pdflatex<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span> restricted <span style="color:#ae81ff">\w</span>rite18 enabled.
+</span></span><span style="display:flex;"><span>**
+</span></span></code></pre></div><p>Selesai, kita bisa menggunakan TeX Live dan <code>tlmgr</code>.</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

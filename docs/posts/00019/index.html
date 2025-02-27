@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Mamba as Conda Replacement - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Mamba as Conda Replacement"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00019/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Mamba as Conda Replacement</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/software-engineering">Software Engineering</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/python">Python</a>&nbsp;&nbsp;
+        
+        <a href="/tags/miniforge">Miniforge</a>&nbsp;&nbsp;
+        
+        <a href="/tags/conda">Conda</a>&nbsp;&nbsp;
+        
+        <a href="/tags/mamba">Mamba</a>&nbsp;&nbsp;
+        
+        <a href="/tags/minimamba">Minimamba</a>&nbsp;&nbsp;
+        
+        <a href="/tags/package-management">Package Management</a>&nbsp;&nbsp;
+        
+        <a href="/tags/environment-management">Environment Management</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>March 12, 2024</time> | 
+        13  minutes reading time
+       </p>
+
+      <div class="content"><h2 id="python-and-its-package---environment-management">Python and Its Package - Environment Management</h2>
+<p><a href="https://python.org">Python</a> has always been the first choice for many programming tasks. This - of course - debatable since some problems exist in Python world, but let me tell you, in <a href="https://spectrum.ieee.org/the-top-programming-languages-2023">IEEE Spectrum top programming languages</a>, Python is the winner from <em>IEEE Spectrum</em> and <em>Trending</em> category while SQL beats it in <em>Job</em> category.</p>
+<p>As a long time developer who use Python since release 2.x (I insist on using Python for the whole curriculum in <a href="https://www.utdi.ac.id">Universitas Teknologi Digital Indonesia</a> back in 2004), currently I use <a href="https://docs.anaconda.com/free/miniconda/index.html">Miniconda</a> a lot (with <code>conda</code> as its package and environment manager). Conda is a beautiful piece of software of course. I use it to manage my package and create mine. Using it, I can create an environment with specific Python version and also its own packages. However, when I use it for my software with many packages, It runs quite slow. So, I start to look for a drop in replacement. There goes <a href="https://mamba.readthedocs.io/en/latest/">Mamba</a>!. It comes with faster and better at resolving package dependencies. Here&rsquo;s the reason why Mamba is faster and better from <a href="https://github.com/mamba-org/mamba">Mamba Github</a>:</p>
+<ol>
+<li>Parallel downloading of repository data and package files using multi-threading</li>
+<li><em>libsolv</em> for much faster dependency solving, a state of the art library used in the RPM package manager of Red Hat, Fedora and OpenSUSE</li>
+<li>core parts of mamba are implemented in C++ for maximum efficiency</li>
+</ol>
+<h2 id="installation">Installation</h2>
+<p>To use Mamba, I suggest you to use it from <a href="https://github.com/conda-forge/miniforge">Miniforge</a>. Download and install from that GitHub:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ wget https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+</span></span><span style="display:flex;"><span>--2024-03-11 11:30:33--  https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-Linux-x86_64.sh
+</span></span><span style="display:flex;"><span>Resolving github.com <span style="color:#f92672">(</span>github.com<span style="color:#f92672">)</span>... 20.205.243.166
+</span></span><span style="display:flex;"><span>Connecting to github.com <span style="color:#f92672">(</span>github.com<span style="color:#f92672">)</span>|20.205.243.166|:443... connected.
+</span></span><span style="display:flex;"><span>HTTP request sent, awaiting response... <span style="color:#ae81ff">302</span> Found
+</span></span><span style="display:flex;"><span>Location: https://github.com/conda-forge/miniforge/releases/download/23.11.0-0/Miniforge3-Linux-x86_64.sh <span style="color:#f92672">[</span>following<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>--2024-03-11 11:30:34--  https://github.com/conda-forge/miniforge/releases/download/23.11.0-0/Miniforge3-Linux-x86_64.sh
+</span></span><span style="display:flex;"><span>Reusing existing connection to github.com:443.
+</span></span><span style="display:flex;"><span>HTTP request sent, awaiting response... <span style="color:#ae81ff">302</span> Found
+</span></span><span style="display:flex;"><span>Location: https://objects.githubusercontent.com/github-production-release-asset-2e65be/221584272/ef57f62d-fd80-4921-a80d-fd319260a363?X-Amz-Algorithm<span style="color:#f92672">=</span>AWS4-HMAC-SHA256&amp;X-Amz-Credential<span style="color:#f92672">=</span>AKIAVCODYLSA53PQK4ZA%2F20240311%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date<span style="color:#f92672">=</span>20240311T043035Z&amp;X-Amz-Expires<span style="color:#f92672">=</span>300&amp;X-Amz-Signature<span style="color:#f92672">=</span>c6040d063867dffe8a700bfacc47679002b5d424dee058e532c1016e491e95b8&amp;X-Amz-SignedHeaders<span style="color:#f92672">=</span>host&amp;actor_id<span style="color:#f92672">=</span>0&amp;key_id<span style="color:#f92672">=</span>0&amp;repo_id<span style="color:#f92672">=</span>221584272&amp;response-content-disposition<span style="color:#f92672">=</span>attachment%3B%20filename%3DMiniforge3-Linux-x86_64.sh&amp;response-content-type<span style="color:#f92672">=</span>application%2Foctet-stream <span style="color:#f92672">[</span>following<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>--2024-03-11 11:30:35--  https://objects.githubusercontent.com/github-production-release-asset-2e65be/221584272/ef57f62d-fd80-4921-a80d-fd319260a363?X-Amz-Algorithm<span style="color:#f92672">=</span>AWS4-HMAC-SHA256&amp;X-Amz-Credential<span style="color:#f92672">=</span>AKIAVCODYLSA53PQK4ZA%2F20240311%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date<span style="color:#f92672">=</span>20240311T043035Z&amp;X-Amz-Expires<span style="color:#f92672">=</span>300&amp;X-Amz-Signature<span style="color:#f92672">=</span>c6040d063867dffe8a700bfacc47679002b5d424dee058e532c1016e491e95b8&amp;X-Amz-SignedHeaders<span style="color:#f92672">=</span>host&amp;actor_id<span style="color:#f92672">=</span>0&amp;key_id<span style="color:#f92672">=</span>0&amp;repo_id<span style="color:#f92672">=</span>221584272&amp;response-content-disposition<span style="color:#f92672">=</span>attachment%3B%20filename%3DMiniforge3-Linux-x86_64.sh&amp;response-content-type<span style="color:#f92672">=</span>application%2Foctet-stream
+</span></span><span style="display:flex;"><span>Resolving objects.githubusercontent.com <span style="color:#f92672">(</span>objects.githubusercontent.com<span style="color:#f92672">)</span>... 185.199.108.133, 185.199.109.133, 185.199.110.133, ...
+</span></span><span style="display:flex;"><span>Connecting to objects.githubusercontent.com <span style="color:#f92672">(</span>objects.githubusercontent.com<span style="color:#f92672">)</span>|185.199.108.133|:443... connected.
+</span></span><span style="display:flex;"><span>HTTP request sent, awaiting response... <span style="color:#ae81ff">200</span> OK
+</span></span><span style="display:flex;"><span>Length: <span style="color:#ae81ff">84233048</span> <span style="color:#f92672">(</span>80M<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>application/octet-stream<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>Saving to: ‘Miniforge3-Linux-x86_64.sh’
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Miniforge3-Linux-x86_64.sh                100%<span style="color:#f92672">[=====================================================================================</span>&gt;<span style="color:#f92672">]</span>  80.33M  4.26MB/s    in 19s     
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2024-03-11 11:30:55 <span style="color:#f92672">(</span>4.23 MB/s<span style="color:#f92672">)</span> - ‘Miniforge3-Linux-x86_64.sh’ saved <span style="color:#f92672">[</span>84233048/84233048<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Change the file into executable mode:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ chmod +x Miniforge3-Linux-x86_64.sh
+</span></span><span style="display:flex;"><span>$ ls -la
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">82260</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">2</span> bpdp bpdp       <span style="color:#ae81ff">40</span> Mar <span style="color:#ae81ff">11</span> 11:30 .
+</span></span><span style="display:flex;"><span>drwxr-xr-x. <span style="color:#ae81ff">5</span> bpdp bpdp       <span style="color:#ae81ff">70</span> Mar <span style="color:#ae81ff">11</span> 11:29 ..
+</span></span><span style="display:flex;"><span>-rwxr-xr-x. <span style="color:#ae81ff">1</span> bpdp bpdp <span style="color:#ae81ff">84233048</span> Dec <span style="color:#ae81ff">21</span> 22:41 Miniforge3-Linux-x86_64.sh
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Execute, pay attention to the answer for some questions in this screenshoot:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>./Miniforge3-Linux-x86_64.sh
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Welcome to Miniforge3 23.11.0-0
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>In order to <span style="color:#66d9ef">continue</span> the installation process, please review the license
+</span></span><span style="display:flex;"><span>agreement.
+</span></span><span style="display:flex;"><span>Please, press ENTER to <span style="color:#66d9ef">continue</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Miniforge installer code uses BSD-3-Clause license as stated below.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Binary packages that come with it have their own licensing terms
+</span></span><span style="display:flex;"><span>and by installing miniforge you agree to the licensing terms of individual
+</span></span><span style="display:flex;"><span>packages as well. They include different OSI-approved licenses including
+</span></span><span style="display:flex;"><span>the GNU General Public License and can be found in pkgs/&lt;pkg-name&gt;/info/licenses
+</span></span><span style="display:flex;"><span>folders.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Miniforge installer comes with a boostrapping executable that is used
+</span></span><span style="display:flex;"><span>when installing miniforge and is deleted after miniforge is installed.
+</span></span><span style="display:flex;"><span>The bootstrapping executable uses micromamba, cli11, cpp-filesystem,
+</span></span><span style="display:flex;"><span>curl, c-ares, krb5, libarchive, libev, lz4, nghttp2, openssl, libsolv,
+</span></span><span style="display:flex;"><span>nlohmann-json, reproc and zstd which are licensed under BSD-3-Clause,
+</span></span><span style="display:flex;"><span>MIT and OpenSSL licenses. Licenses and copyright notices of these
+</span></span><span style="display:flex;"><span>projects can be found at the following URL.
+</span></span><span style="display:flex;"><span>https://github.com/conda-forge/micromamba-feedstock/tree/master/recipe.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">=============================================================================</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Copyright <span style="color:#f92672">(</span>c<span style="color:#f92672">)</span> 2019-2022, conda-forge
+</span></span><span style="display:flex;"><span>All rights reserved.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Redistribution and use in source and binary forms, with or without
+</span></span><span style="display:flex;"><span>modification, are permitted provided that the following conditions are met:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>1. Redistributions of source code must retain the above copyright notice, this
+</span></span><span style="display:flex;"><span>list of conditions and the following disclaimer.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>2. Redistributions in binary form must reproduce the above copyright notice,
+</span></span><span style="display:flex;"><span>this list of conditions and the following disclaimer in the documentation
+</span></span><span style="display:flex;"><span>and/or other materials provided with the distribution.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>3. Neither the name of the copyright holder nor the names of its contributors
+</span></span><span style="display:flex;"><span>may be used to endorse or promote products derived from this software without
+</span></span><span style="display:flex;"><span>specific prior written permission.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS <span style="color:#e6db74">&#34;AS IS&#34;</span> AND
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED
+</span></span><span style="display:flex;"><span>WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE
+</span></span><span style="display:flex;"><span>DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE
+</span></span><span style="display:flex;"><span>FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL
+</span></span><span style="display:flex;"><span>DAMAGES <span style="color:#f92672">(</span>INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR
+</span></span><span style="display:flex;"><span>SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION<span style="color:#f92672">)</span> HOWEVER
+</span></span><span style="display:flex;"><span>CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
+</span></span><span style="display:flex;"><span>OR TORT <span style="color:#f92672">(</span>INCLUDING NEGLIGENCE OR OTHERWISE<span style="color:#f92672">)</span> ARISING IN ANY WAY OUT OF THE USE
+</span></span><span style="display:flex;"><span>OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Do you accept the license terms? <span style="color:#f92672">[</span>yes|no<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span><span style="display:flex;"><span>Please answer <span style="color:#e6db74">&#39;yes&#39;</span> or <span style="color:#e6db74">&#39;no&#39;</span>:<span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">&gt;&gt;&gt; yes
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Miniforge3 will now be installed into this location:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">/home/bpdp/miniforge3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  - Press ENTER to confirm the location
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  - Press CTRL-C to abort the installation
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  - Or specify a different location below
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[/home/bpdp/miniforge3] &gt;&gt;&gt; /home/bpdp/software/python-dev-tools/miniforge3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">PREFIX=/home/bpdp/software/python-dev-tools/miniforge3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Unpacking payload ...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting _libgcc_mutex-0.1-conda_forge.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting ca-certificates-2023.11.17-hbcca054_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting ld_impl_linux-64-2.40-h41732ed_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libstdcxx-ng-13.2.0-h7e041cc_3.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting pybind11-abi-4-hd8ed1ab_3.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting python_abi-3.10-4_cp310.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting tzdata-2023c-h71feb2d_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libgomp-13.2.0-h807b86a_3.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting _openmp_mutex-4.5-2_gnu.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libgcc-ng-13.2.0-h807b86a_3.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting bzip2-1.0.8-hd590300_5.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting c-ares-1.24.0-hd590300_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting fmt-10.1.1-h00ab1b0_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting icu-73.2-h59595ed_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting keyutils-1.6.1-h166bdaf_0.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libev-4.33-hd590300_2.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libffi-3.4.2-h7f98852_5.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libiconv-1.17-hd590300_2.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libnsl-2.0.1-hd590300_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libuuid-2.38.1-h0b41bf4_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libzlib-1.2.13-hd590300_5.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting lz4-c-1.9.4-hcb278e6_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting lzo-2.10-h516909a_1000.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting ncurses-6.4-h59595ed_2.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting openssl-3.2.0-hd590300_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting reproc-14.2.4.post0-hd590300_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting xz-5.2.6-h166bdaf_0.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting yaml-cpp-0.8.0-h59595ed_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libedit-3.1.20191231-he28a2e2_2.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libnghttp2-1.58.0-h47da74e_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libsolv-0.7.27-hfc55251_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libsqlite-3.44.2-h2797004_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libssh2-1.11.0-h0841786_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libxml2-2.12.3-h232c23b_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting readline-8.2-h8228510_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting reproc-cpp-14.2.4.post0-h59595ed_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting tk-8.6.13-noxft_h4845f30_101.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting zstd-1.5.5-hfc55251_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting krb5-1.21.2-h659d440_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libarchive-3.7.2-h2aa1ff5_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting python-3.10.13-hd12c33a_0_cpython.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libcurl-8.5.0-hca28451_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting menuinst-2.0.1-py310hff52083_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting archspec-0.2.2-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting boltons-23.1.1-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting brotli-python-1.1.0-py310hc6cd4ac_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting certifi-2023.11.17-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting charset-normalizer-3.3.2-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting colorama-0.4.6-pyhd8ed1ab_0.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting distro-1.8.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting idna-3.6-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting jsonpointer-2.4-py310hff52083_3.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libmamba-1.5.5-had39da4_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting packaging-23.2-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting platformdirs-4.1.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting pluggy-1.3.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting pycosat-0.6.6-py310h2372a71_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting pycparser-2.21-pyhd8ed1ab_0.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting pysocks-1.7.1-pyha2e5f31_6.tar.bz2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting ruamel.yaml.clib-0.2.7-py310h2372a71_2.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting setuptools-68.2.2-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting truststore-0.8.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting wheel-0.42.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting cffi-1.16.0-py310h2fee648_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting jsonpatch-1.33-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting libmambapy-1.5.5-py310h39ff949_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting pip-23.3.2-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting ruamel.yaml-0.18.5-py310h2372a71_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting tqdm-4.66.1-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting urllib3-2.1.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting requests-2.31.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting zstandard-0.22.0-py310h1275a96_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting conda-package-streaming-0.9.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting conda-package-handling-2.2.0-pyh38be061_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting conda-23.11.0-py310hff52083_1.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting conda-libmamba-solver-23.12.0-pyhd8ed1ab_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Extracting mamba-1.5.5-py310h51d5547_0.conda
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Installing base environment...
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">                                           __
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">          __  ______ ___  ____ _____ ___  / /_  ____ _
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">         / / / / __ `__ \/ __ `/ __ `__ \/ __ \/ __ `/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">        / /_/ / / / / / / /_/ / / / / / / /_/ / /_/ /
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">       / .___/_/ /_/ /_/\__,_/_/ /_/ /_/_.___/\__,_/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">      /_/
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Transaction
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Prefix: /home/bpdp/software/python-dev-tools/miniforge3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Updating specs:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::_libgcc_mutex==0.1=conda_forge[md5=d7c89558ba9fa0495403155b64376d81]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::ca-certificates==2023.11.17=hbcca054_0[md5=01ffc8d36f9eba0ce0b3c1955fa780ee]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::ld_impl_linux-64==2.40=h41732ed_0[md5=7aca3059a1729aa76c597603f10b0dd3]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libstdcxx-ng==13.2.0=h7e041cc_3[md5=937eaed008f6bf2191c5fe76f87755e9]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::pybind11-abi==4=hd8ed1ab_3[md5=878f923dd6acc8aeb47a75da6c4098be]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::python_abi==3.10=4_cp310[md5=26322ec5d7712c3ded99dd656142b8ce]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::tzdata==2023c=h71feb2d_0[md5=939e3e74d8be4dac89ce83b20de2492a]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libgomp==13.2.0=h807b86a_3[md5=7124cbb46b13d395bdde68f2d215c989]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::_openmp_mutex==4.5=2_gnu[md5=73aaf86a425cc6e73fcf236a5a46396d]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libgcc-ng==13.2.0=h807b86a_3[md5=23fdf1fef05baeb7eadc2aed5fb0011f]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::bzip2==1.0.8=hd590300_5[md5=69b8b6202a07720f448be700e300ccf4]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::c-ares==1.24.0=hd590300_0[md5=f5842b88e9cbfa177abfaeacd457a45d]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::fmt==10.1.1=h00ab1b0_1[md5=50a08d74ca45785f3334b175da23fd82]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::icu==73.2=h59595ed_0[md5=cc47e1facc155f91abd89b11e48e72ff]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::keyutils==1.6.1=h166bdaf_0[md5=30186d27e2c9fa62b45fb1476b7200e3]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libev==4.33=hd590300_2[md5=172bf1cd1ff8629f2b1179945ed45055]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libffi==3.4.2=h7f98852_5[md5=d645c6d2ac96843a2bfaccd2d62b3ac3]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libiconv==1.17=hd590300_2[md5=d66573916ffcf376178462f1b61c941e]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libnsl==2.0.1=hd590300_0[md5=30fd6e37fe21f86f4bd26d6ee73eeec7]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libuuid==2.38.1=h0b41bf4_0[md5=40b61aab5c7ba9ff276c41cfffe6b80b]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libzlib==1.2.13=hd590300_5[md5=f36c115f1ee199da648e0597ec2047ad]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::lz4-c==1.9.4=hcb278e6_0[md5=318b08df404f9c9be5712aaa5a6f0bb0]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::lzo==2.10=h516909a_1000[md5=bb14fcb13341b81d5eb386423b9d2bac]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::ncurses==6.4=h59595ed_2[md5=7dbaa197d7ba6032caf7ae7f32c1efa0]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::openssl==3.2.0=hd590300_1[md5=603827b39ea2b835268adb8c821b8570]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::reproc==14.2.4.post0=hd590300_1[md5=82ca53502dfd5a64a80dee76dae14685]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::xz==5.2.6=h166bdaf_0[md5=2161070d867d1b1204ea749c8eec4ef0]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::yaml-cpp==0.8.0=h59595ed_0[md5=965eaacd7c18eb8361fd12bb9e7a57d7]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libedit==3.1.20191231=he28a2e2_2[md5=4d331e44109e3f0e19b4cb8f9b82f3e1]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libnghttp2==1.58.0=h47da74e_1[md5=700ac6ea6d53d5510591c4344d5c989a]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libsolv==0.7.27=hfc55251_0[md5=7dc82edcd617c399ca7fdb51d993a0c2]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libsqlite==3.44.2=h2797004_0[md5=3b6a9f225c3dbe0d24f4fedd4625c5bf]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libssh2==1.11.0=h0841786_0[md5=1f5a58e686b13bcfde88b93f547d23fe]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libxml2==2.12.3=h232c23b_0[md5=bc6ac4c0cea148d924f621985bc3892b]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::readline==8.2=h8228510_1[md5=47d31b792659ce70f470b5c82fdfb7a4]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::reproc-cpp==14.2.4.post0=h59595ed_1[md5=715e1d720ec1a03715bebd237972fca5]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::tk==8.6.13=noxft_h4845f30_101[md5=d453b98d9c83e71da0741bb0ff4d76bc]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::zstd==1.5.5=hfc55251_0[md5=04b88013080254850d6c01ed54810589]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::krb5==1.21.2=h659d440_0[md5=cd95826dbd331ed1be26bdf401432844]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libarchive==3.7.2=h2aa1ff5_1[md5=3bf887827d1968275978361a6e405e4f]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::python==3.10.13=hd12c33a_0_cpython[md5=f3a8c32aa764c3e7188b4b810fc9d6ce]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libcurl==8.5.0=hca28451_0[md5=7144d5a828e2cae218e0e3c98d8a0aeb]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::menuinst==2.0.1=py310hff52083_0[md5=471a72a1214ff4910ab6095936aecdfd]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::archspec==0.2.2=pyhd8ed1ab_0[md5=0dc2fce00a160271714647c019e3a8a8]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::boltons==23.1.1=pyhd8ed1ab_0[md5=56febe65315cc388a5d20adf2b39a74d]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::brotli-python==1.1.0=py310hc6cd4ac_1[md5=1f95722c94f00b69af69a066c7433714]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::certifi==2023.11.17=pyhd8ed1ab_0[md5=2011bcf45376341dd1d690263fdbc789]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::charset-normalizer==3.3.2=pyhd8ed1ab_0[md5=7f4a9e3fcff3f6356ae99244a014da6a]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::colorama==0.4.6=pyhd8ed1ab_0[md5=3faab06a954c2a04039983f2c4a50d99]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::distro==1.8.0=pyhd8ed1ab_0[md5=67999c5465064480fa8016d00ac768f6]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::idna==3.6=pyhd8ed1ab_0[md5=1a76f09108576397c41c0b0c5bd84134]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::jsonpointer==2.4=py310hff52083_3[md5=08ec1463dbc5c806a32fc431874032ca]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libmamba==1.5.5=had39da4_0[md5=3a99159f63c866711e67955885087700]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::packaging==23.2=pyhd8ed1ab_0[md5=79002079284aa895f883c6b7f3f88fd6]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::platformdirs==4.1.0=pyhd8ed1ab_0[md5=45a5065664da0d1dfa8f8cd2eaf05ab9]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::pluggy==1.3.0=pyhd8ed1ab_0[md5=2390bd10bed1f3fdc7a537fb5a447d8d]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::pycosat==0.6.6=py310h2372a71_0[md5=0adaac9a86d59adae2bc86b3cdef2df1]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::pycparser==2.21=pyhd8ed1ab_0[md5=076becd9e05608f8dc72757d5f3a91ff]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::pysocks==1.7.1=pyha2e5f31_6[md5=2a7de29fb590ca14b5243c4c812c8025]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::ruamel.yaml.clib==0.2.7=py310h2372a71_2[md5=7c9da9721ee545d57ad759f020172853]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::setuptools==68.2.2=pyhd8ed1ab_0[md5=fc2166155db840c634a1291a5c35a709]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::truststore==0.8.0=pyhd8ed1ab_0[md5=08316d001eca8854392cf2837828ea11]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::wheel==0.42.0=pyhd8ed1ab_0[md5=1cdea58981c5cbc17b51973bcaddcea7]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::cffi==1.16.0=py310h2fee648_0[md5=45846a970e71ac98fd327da5d40a0a2c]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::jsonpatch==1.33=pyhd8ed1ab_0[md5=bfdb7c5c6ad1077c82a69a8642c87aff]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::libmambapy==1.5.5=py310h39ff949_0[md5=718fe2d638023e9eaaa2f8e05e1a8185]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::pip==23.3.2=pyhd8ed1ab_0[md5=8591c748f98dcc02253003533bc2e4b1]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::ruamel.yaml==0.18.5=py310h2372a71_0[md5=14fd49048b91c96a8fbf1113a8cc4f49]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::tqdm==4.66.1=pyhd8ed1ab_0[md5=03c97908b976498dcae97eb4e4f3149c]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::urllib3==2.1.0=pyhd8ed1ab_0[md5=f8ced8ee63830dec7ecc1be048d1470a]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::requests==2.31.0=pyhd8ed1ab_0[md5=a30144e4156cdbb236f99ebb49828f8b]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::zstandard==0.22.0=py310h1275a96_0[md5=54698ba13cd3494547b289cd86a2176a]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::conda-package-streaming==0.9.0=pyhd8ed1ab_0[md5=38253361efb303deead3eab39ae9269b]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::conda-package-handling==2.2.0=pyh38be061_0[md5=8a3ae7f6318376aa08ea753367bb7dd6]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::conda==23.11.0=py310hff52083_1[md5=d5278ac990c67d5ed51584998aa16c5a]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/noarch::conda-libmamba-solver==23.12.0=pyhd8ed1ab_0[md5=e877d5150e73a0844ea2939be110c3b1]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   - conda-forge/linux-64::mamba==1.5.5=py310h51d5547_0[md5=7e9379ab9a9540195193e3c00b48465b]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Package                         Version  Build               Channel           Size
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">───────────────────────────────────────────────────────────────────────────────────────
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Install:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">───────────────────────────────────────────────────────────────────────────────────────
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + _libgcc_mutex                     0.1  conda_forge         conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + _openmp_mutex                     4.5  2_gnu               conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + archspec                        0.2.2  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + boltons                        23.1.1  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + brotli-python                   1.1.0  py310hc6cd4ac_1     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + bzip2                           1.0.8  hd590300_5          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + c-ares                         1.24.0  hd590300_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + ca-certificates            2023.11.17  hbcca054_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + certifi                    2023.11.17  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + cffi                           1.16.0  py310h2fee648_0     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + charset-normalizer              3.3.2  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + colorama                        0.4.6  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + conda                         23.11.0  py310hff52083_1     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + conda-libmamba-solver         23.12.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + conda-package-handling          2.2.0  pyh38be061_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + conda-package-streaming         0.9.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + distro                          1.8.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + fmt                            10.1.1  h00ab1b0_1          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + icu                              73.2  h59595ed_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + idna                              3.6  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + jsonpatch                        1.33  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + jsonpointer                       2.4  py310hff52083_3     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + keyutils                        1.6.1  h166bdaf_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + krb5                           1.21.2  h659d440_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + ld_impl_linux-64                 2.40  h41732ed_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libarchive                      3.7.2  h2aa1ff5_1          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libcurl                         8.5.0  hca28451_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libedit                  3.1.20191231  he28a2e2_2          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libev                            4.33  hd590300_2          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libffi                          3.4.2  h7f98852_5          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libgcc-ng                      13.2.0  h807b86a_3          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libgomp                        13.2.0  h807b86a_3          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libiconv                         1.17  hd590300_2          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libmamba                        1.5.5  had39da4_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libmambapy                      1.5.5  py310h39ff949_0     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libnghttp2                     1.58.0  h47da74e_1          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libnsl                          2.0.1  hd590300_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libsolv                        0.7.27  hfc55251_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libsqlite                      3.44.2  h2797004_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libssh2                        1.11.0  h0841786_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libstdcxx-ng                   13.2.0  h7e041cc_3          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libuuid                        2.38.1  h0b41bf4_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libxml2                        2.12.3  h232c23b_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + libzlib                        1.2.13  hd590300_5          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + lz4-c                           1.9.4  hcb278e6_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + lzo                              2.10  h516909a_1000       conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + mamba                           1.5.5  py310h51d5547_0     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + menuinst                        2.0.1  py310hff52083_0     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + ncurses                           6.4  h59595ed_2          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + openssl                         3.2.0  hd590300_1          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + packaging                        23.2  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + pip                            23.3.2  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + platformdirs                    4.1.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + pluggy                          1.3.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + pybind11-abi                        4  hd8ed1ab_3          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + pycosat                         0.6.6  py310h2372a71_0     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + pycparser                        2.21  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + pysocks                         1.7.1  pyha2e5f31_6        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + python                        3.10.13  hd12c33a_0_cpython  conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + python_abi                       3.10  4_cp310             conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + readline                          8.2  h8228510_1          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + reproc                   14.2.4.post0  hd590300_1          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + reproc-cpp               14.2.4.post0  h59595ed_1          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + requests                       2.31.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + ruamel.yaml                    0.18.5  py310h2372a71_0     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + ruamel.yaml.clib                0.2.7  py310h2372a71_2     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + setuptools                     68.2.2  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + tk                             8.6.13  noxft_h4845f30_101  conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + tqdm                           4.66.1  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + truststore                      0.8.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + tzdata                          2023c  h71feb2d_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + urllib3                         2.1.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + wheel                          0.42.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + xz                              5.2.6  h166bdaf_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + yaml-cpp                        0.8.0  h59595ed_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + zstandard                      0.22.0  py310h1275a96_0     conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  + zstd                            1.5.5  hfc55251_0          conda-forge     Cached
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Summary:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Install: 77 packages
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  Total download: 0 B
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">───────────────────────────────────────────────────────────────────────────────────────
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Transaction starting
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking _libgcc_mutex-0.1-conda_forge
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking ca-certificates-2023.11.17-hbcca054_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking ld_impl_linux-64-2.40-h41732ed_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libstdcxx-ng-13.2.0-h7e041cc_3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking pybind11-abi-4-hd8ed1ab_3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking python_abi-3.10-4_cp310
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking tzdata-2023c-h71feb2d_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libgomp-13.2.0-h807b86a_3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking _openmp_mutex-4.5-2_gnu
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libgcc-ng-13.2.0-h807b86a_3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking bzip2-1.0.8-hd590300_5
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking c-ares-1.24.0-hd590300_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking fmt-10.1.1-h00ab1b0_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking icu-73.2-h59595ed_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking keyutils-1.6.1-h166bdaf_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libev-4.33-hd590300_2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libffi-3.4.2-h7f98852_5
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libiconv-1.17-hd590300_2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libnsl-2.0.1-hd590300_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libuuid-2.38.1-h0b41bf4_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libzlib-1.2.13-hd590300_5
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking lz4-c-1.9.4-hcb278e6_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking lzo-2.10-h516909a_1000
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking ncurses-6.4-h59595ed_2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking openssl-3.2.0-hd590300_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking reproc-14.2.4.post0-hd590300_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking xz-5.2.6-h166bdaf_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking yaml-cpp-0.8.0-h59595ed_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libedit-3.1.20191231-he28a2e2_2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libnghttp2-1.58.0-h47da74e_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libsolv-0.7.27-hfc55251_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libsqlite-3.44.2-h2797004_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libssh2-1.11.0-h0841786_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libxml2-2.12.3-h232c23b_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking readline-8.2-h8228510_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking reproc-cpp-14.2.4.post0-h59595ed_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking tk-8.6.13-noxft_h4845f30_101
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking zstd-1.5.5-hfc55251_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking krb5-1.21.2-h659d440_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libarchive-3.7.2-h2aa1ff5_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking python-3.10.13-hd12c33a_0_cpython
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libcurl-8.5.0-hca28451_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking menuinst-2.0.1-py310hff52083_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking archspec-0.2.2-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking boltons-23.1.1-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking brotli-python-1.1.0-py310hc6cd4ac_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking certifi-2023.11.17-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking charset-normalizer-3.3.2-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking colorama-0.4.6-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking distro-1.8.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking idna-3.6-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking jsonpointer-2.4-py310hff52083_3
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libmamba-1.5.5-had39da4_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking packaging-23.2-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking platformdirs-4.1.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking pluggy-1.3.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking pycosat-0.6.6-py310h2372a71_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking pycparser-2.21-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking pysocks-1.7.1-pyha2e5f31_6
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking ruamel.yaml.clib-0.2.7-py310h2372a71_2
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking setuptools-68.2.2-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking truststore-0.8.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking wheel-0.42.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking cffi-1.16.0-py310h2fee648_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking jsonpatch-1.33-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking libmambapy-1.5.5-py310h39ff949_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking pip-23.3.2-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking ruamel.yaml-0.18.5-py310h2372a71_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking tqdm-4.66.1-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking urllib3-2.1.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking requests-2.31.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking zstandard-0.22.0-py310h1275a96_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking conda-package-streaming-0.9.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking conda-package-handling-2.2.0-pyh38be061_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking conda-23.11.0-py310hff52083_1
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking conda-libmamba-solver-23.12.0-pyhd8ed1ab_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Linking mamba-1.5.5-py310h51d5547_0
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Transaction finished
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">installation finished.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Do you wish to update your shell profile to automatically initialize conda?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">This will activate conda on startup and change the command prompt when activated.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">If you&#39;</span>d prefer that conda<span style="color:#e6db74">&#39;s base environment not be activated on startup,
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">   run the following command when conda is activated:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">conda config --set auto_activate_base false
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">You can undo this by running `conda init --reverse $SHELL`? [yes|no]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">[no] &gt;&gt;&gt; no
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">You have chosen to not have conda modify your shell scripts at all.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">To activate conda&#39;</span>s base environment in your current shell session:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>/home/bpdp/software/python-dev-tools/miniforge3/bin/conda shell.YOUR_SHELL_NAME hook<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span> 
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>To install conda<span style="color:#960050;background-color:#1e0010">&#39;</span>s shell functions <span style="color:#66d9ef">for</span> easier access, first activate, <span style="color:#66d9ef">then</span>:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>conda init
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Thank you <span style="color:#66d9ef">for</span> installing Miniforge3!
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Note that I use <a href="https://fishshel.com">Fish shell</a>. if you use bash, just <strong>conda init</strong> and <strong>mamba init</strong>, no need to use <strong>conda init fish</strong> and <strong>mamba init fish</strong>. Initialize <code>conda</code> and <code>mamba</code> (in this order since <code>mamba</code> uses environment variable from <code>conda</code>):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ source /home/bpdp/software/python-dev-tools/miniforge3/etc/fish/conf.d/conda.fish
+</span></span><span style="display:flex;"><span>$ conda init fish
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/condabin/conda
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/bin/conda
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/bin/conda-env
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/bin/activate
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/bin/deactivate
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/etc/profile.d/conda.sh
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/etc/fish/conf.d/conda.fish
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/shell/condabin/Conda.psm1
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/shell/condabin/conda-hook.ps1
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/lib/python3.10/site-packages/xontrib/conda.xsh
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/etc/profile.d/conda.csh
+</span></span><span style="display:flex;"><span>modified      /home/bpdp/.config/fish/config.fish
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; For changes to take effect, close and re-open your current shell. &lt;<span style="color:#f92672">==</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$ mamba init fish
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/condabin/conda
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/bin/conda
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/bin/conda-env
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/bin/activate
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/bin/deactivate
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/etc/profile.d/conda.sh
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/etc/fish/conf.d/conda.fish
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/shell/condabin/Conda.psm1
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/shell/condabin/conda-hook.ps1
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/lib/python3.10/site-packages/xontrib/conda.xsh
+</span></span><span style="display:flex;"><span>no change     /home/bpdp/software/python-dev-tools/miniforge3/etc/profile.d/conda.csh
+</span></span><span style="display:flex;"><span>modified      /home/bpdp/.config/fish/config.fish
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">==</span>&gt; For changes to take effect, close and re-open your current shell. &lt;<span style="color:#f92672">==</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>I usually don&rsquo;t activate software by default, instead I will define some environment variables so that I can <code>source</code> them whenever I need to. Here, I created a file for environment variables definition:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat ~/env/fish/python-mamba 
+</span></span><span style="display:flex;"><span>source /home/bpdp/software/python-dev-tools/miniforge3/etc/fish/conf.d/conda.fish
+</span></span><span style="display:flex;"><span>source /home/bpdp/software/python-dev-tools/miniforge3/etc/fish/conf.d/mamba.fish
+</span></span><span style="display:flex;"><span>set -x PATH <span style="color:#e6db74">&#34;/home/bpdp/software/python-dev-tools/miniforge3/bin&#34;</span> $PATH
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="usage">Usage</h2>
+<p>Everytime I want to use Python and Mamba, I just <code>source</code> the file which I created:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ source ~/env/fish/python-mamba
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>and then I can start using Mamba and Conda. Of course I will use Mamba for this post. Mamba is a drop in replacement for Conda, therefore, it understands and run all Conda parameters.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mamba
+</span></span><span style="display:flex;"><span>usage: mamba <span style="color:#f92672">[</span>-h<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-v<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>--no-plugins<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>-V<span style="color:#f92672">]</span> COMMAND ...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>conda is a tool <span style="color:#66d9ef">for</span> managing and deploying applications, environments and packages.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>options:
+</span></span><span style="display:flex;"><span>  -h, --help          Show this help message and exit.
+</span></span><span style="display:flex;"><span>  -v, --verbose       Can be used multiple times. Once <span style="color:#66d9ef">for</span> detailed output, twice <span style="color:#66d9ef">for</span> INFO logging, thrice <span style="color:#66d9ef">for</span> DEBUG logging, four times <span style="color:#66d9ef">for</span> TRACE logging.
+</span></span><span style="display:flex;"><span>  --no-plugins        Disable all plugins that are not built into conda.
+</span></span><span style="display:flex;"><span>  -V, --version       Show the conda version number and exit.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>commands:
+</span></span><span style="display:flex;"><span>  The following built-in and plugins subcommands are available.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  COMMAND
+</span></span><span style="display:flex;"><span>    activate          Activate a conda environment.
+</span></span><span style="display:flex;"><span>    clean             Remove unused packages and caches.
+</span></span><span style="display:flex;"><span>    compare           Compare packages between conda environments.
+</span></span><span style="display:flex;"><span>    config            Modify configuration values in .condarc.
+</span></span><span style="display:flex;"><span>    create            Create a new conda environment from a list of specified packages.
+</span></span><span style="display:flex;"><span>    deactivate        Deactivate the current active conda environment.
+</span></span><span style="display:flex;"><span>    doctor            Display a health report <span style="color:#66d9ef">for</span> your environment.
+</span></span><span style="display:flex;"><span>    env               See <span style="color:#e6db74">`</span>conda env --help<span style="color:#e6db74">`</span>.
+</span></span><span style="display:flex;"><span>    info              Display information about current conda install.
+</span></span><span style="display:flex;"><span>    init              Initialize conda <span style="color:#66d9ef">for</span> shell interaction.
+</span></span><span style="display:flex;"><span>    install           Install a list of packages into a specified conda environment.
+</span></span><span style="display:flex;"><span>    list              List installed packages in a conda environment.
+</span></span><span style="display:flex;"><span>    notices           Retrieve latest channel notifications.
+</span></span><span style="display:flex;"><span>    package           Create low-level conda packages. <span style="color:#f92672">(</span>EXPERIMENTAL<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>    remove <span style="color:#f92672">(</span>uninstall<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>                      Remove a list of packages from a specified conda environment.
+</span></span><span style="display:flex;"><span>    rename            Rename an existing environment.
+</span></span><span style="display:flex;"><span>    repoquery         Advanced search <span style="color:#66d9ef">for</span> repodata.
+</span></span><span style="display:flex;"><span>    repoquery         Query repositories using mamba.
+</span></span><span style="display:flex;"><span>    run               Run an executable in a conda environment.
+</span></span><span style="display:flex;"><span>    search            Search <span style="color:#66d9ef">for</span> packages and display associated information using the MatchSpec format.
+</span></span><span style="display:flex;"><span>    update <span style="color:#f92672">(</span>upgrade<span style="color:#f92672">)</span>  Update conda packages to the latest compatible version.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Let&rsquo;s create an environment with latest Python version (3.12)</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mamba create -n py312-de python<span style="color:#f92672">=</span>3.12
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Looking <span style="color:#66d9ef">for</span>: <span style="color:#f92672">[</span><span style="color:#e6db74">&#39;python=3.12&#39;</span><span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>conda-forge/noarch                                  13.8MB @   1.7MB/s  8.1s
+</span></span><span style="display:flex;"><span>conda-forge/linux-64                                33.0MB @   3.0MB/s 11.0s
+</span></span><span style="display:flex;"><span>Transaction
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Prefix: /home/bpdp/software/python-dev-tools/miniforge3/envs/py312-de
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Updating specs:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>   - python<span style="color:#f92672">=</span>3.12
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Package              Version  Build               Channel           Size
+</span></span><span style="display:flex;"><span>────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>  Install:
+</span></span><span style="display:flex;"><span>────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  + _libgcc_mutex          0.1  conda_forge         conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + ld_impl_linux-64      2.40  h41732ed_0          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + ca-certificates   2024.2.2  hbcca054_0          conda-forge      155kB
+</span></span><span style="display:flex;"><span>  + libgomp             13.2.0  h807b86a_5          conda-forge      420kB
+</span></span><span style="display:flex;"><span>  + _openmp_mutex          4.5  2_gnu               conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + libgcc-ng           13.2.0  h807b86a_5          conda-forge      771kB
+</span></span><span style="display:flex;"><span>  + libxcrypt           4.4.36  hd590300_1          conda-forge      100kB
+</span></span><span style="display:flex;"><span>  + libexpat             2.6.1  h59595ed_0          conda-forge       74kB
+</span></span><span style="display:flex;"><span>  + libzlib             1.2.13  hd590300_5          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + libffi               3.4.2  h7f98852_5          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + bzip2                1.0.8  hd590300_5          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + ncurses                6.4  h59595ed_2          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + openssl              3.2.1  hd590300_0          conda-forge        3MB
+</span></span><span style="display:flex;"><span>  + libuuid             2.38.1  h0b41bf4_0          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + libnsl               2.0.1  hd590300_0          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + xz                   5.2.6  h166bdaf_0          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + tk                  8.6.13  noxft_h4845f30_101  conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + libsqlite           3.45.1  h2797004_0          conda-forge      859kB
+</span></span><span style="display:flex;"><span>  + readline               8.2  h8228510_1          conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + tzdata               2024a  h0c530f3_0          conda-forge      120kB
+</span></span><span style="display:flex;"><span>  + python              3.12.2  hab00c5b_0_cpython  conda-forge       32MB
+</span></span><span style="display:flex;"><span>  + wheel               0.42.0  pyhd8ed1ab_0        conda-forge     Cached
+</span></span><span style="display:flex;"><span>  + setuptools          69.1.1  pyhd8ed1ab_0        conda-forge      470kB
+</span></span><span style="display:flex;"><span>  + pip                   24.0  pyhd8ed1ab_0        conda-forge        1MB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Summary:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Install: <span style="color:#ae81ff">24</span> packages
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  Total download: 40MB
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>────────────────────────────────────────────────────────────────────────────
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Confirm changes: <span style="color:#f92672">[</span>Y/n<span style="color:#f92672">]</span> y
+</span></span><span style="display:flex;"><span>libexpat                                            73.6kB @  63.0kB/s  1.2s
+</span></span><span style="display:flex;"><span>libxcrypt                                          100.4kB @  84.6kB/s  1.2s
+</span></span><span style="display:flex;"><span>ca-certificates                                    155.4kB @ 115.9kB/s  1.3s
+</span></span><span style="display:flex;"><span>libgcc-ng                                          770.5kB @ 451.9kB/s  1.7s
+</span></span><span style="display:flex;"><span>setuptools                                         469.6kB @ 210.4kB/s  0.5s
+</span></span><span style="display:flex;"><span>libgomp                                            419.8kB @ 168.4kB/s  2.5s
+</span></span><span style="display:flex;"><span>tzdata                                             119.8kB @  46.4kB/s  1.4s
+</span></span><span style="display:flex;"><span>openssl                                              2.9MB @ 930.5kB/s  1.7s
+</span></span><span style="display:flex;"><span>pip                                                  1.4MB @ 436.9kB/s  2.0s
+</span></span><span style="display:flex;"><span>libsqlite                                          859.3kB @ 240.7kB/s  1.3s
+</span></span><span style="display:flex;"><span>python                                              32.3MB @   3.0MB/s  8.3s
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Downloading and Extracting Packages:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Preparing transaction: <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Verifying transaction: <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>Executing transaction: <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>To activate this environment, use
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>     $ mamba activate py312-de
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>To deactivate an active environment, use
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>     $ mamba deactivate
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>After environment creation, we may activate it using:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mamba activate py312-de
+</span></span><span style="display:flex;"><span>$ python
+</span></span><span style="display:flex;"><span>Python 3.12.2 | packaged by conda-forge | <span style="color:#f92672">(</span>main, Feb <span style="color:#ae81ff">16</span> 2024, 20:50:58<span style="color:#f92672">)</span> <span style="color:#f92672">[</span>GCC 12.3.0<span style="color:#f92672">]</span> on linux
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span>, <span style="color:#e6db74">&#34;copyright&#34;</span>, <span style="color:#e6db74">&#34;credits&#34;</span> or <span style="color:#e6db74">&#34;license&#34;</span> <span style="color:#66d9ef">for</span> more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span></code></pre></div><p>That&rsquo;s the end of the beginning of Python adventure using Mamba. Have fun and happy coding!</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

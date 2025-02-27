@@ -10,9 +10,9 @@
     <atom:link href="/tags/optimasi/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Optimasi AlmaLinux: Lightdm dan XFCE4</title>
-      <link>/posts/22/</link>
+      <link>/posts/00022/</link>
       <pubDate>Sat, 23 Mar 2024 05:59:05 +0700</pubDate>
-      <guid>/posts/22/</guid>
+      <guid>/posts/00022/</guid>
       <description>&lt;p&gt;AlmaLinux menggunakan GNOME Display Manager dan akan menggunakan GNOME-Wayland secara default sebagai &lt;em&gt;desktop environment&lt;/em&gt;. Untuk mesin dengan &lt;em&gt;resources&lt;/em&gt; yang cukup, hal ini tentu saja tidak masalah. Meskipun demikian, mempunyai &lt;em&gt;resources&lt;/em&gt; yang cukup, juga bukan berarti bebas saja. Banyak pemakai yang memang sudah memahami kebutuhannya, tidak terlalu mementingkan &lt;em&gt;bells and whistles&lt;/em&gt; serta &lt;em&gt;eye-candy&lt;/em&gt;. Saya mungkin termasuk dalam kategori seperti itu. AlmaLinux saya install secara default sehingga GDM dan GNOME akan digunakan. Saya memutuskan untuk menggunakan &lt;a href=&#34;https://xfce.org/&#34;&gt;XFCE&lt;/a&gt; sebagai &lt;em&gt;desktop environment&lt;/em&gt; dan &lt;a href=&#34;https://github.com/canonical/lightdm&#34;&gt;lightdm&lt;/a&gt; sebagai pengganti dari GDM. Berikut ini langkah-langkah yang saya lakukan.&lt;/p&gt;</description>
     </item>
   </channel>

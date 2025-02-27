@@ -10,9 +10,9 @@
     <atom:link href="/tags/methodology/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Agile Development: Welcome Changing Requirements?</title>
-      <link>/posts/02/</link>
+      <link>/posts/00002/</link>
       <pubDate>Sat, 14 Jan 2023 10:13:33 +0700</pubDate>
-      <guid>/posts/02/</guid>
+      <guid>/posts/00002/</guid>
       <description>&lt;p&gt;If you ever being in a team which practices agile software development, you might already heard about how a software development team &amp;ldquo;welcome chnging requirements&amp;rdquo;. While it sounds great, I personally think, if this statement is not properly explained, the impact will be negative on the development team side. Now, let&amp;rsquo;s see the complete statement:&lt;/p&gt;&#xA;&lt;blockquote&gt;&#xA;&lt;p&gt;Welcome changing requirements, even late in development. Agile processes harness change for the customer’s competitive advantage.&lt;/p&gt;</description>
     </item>
   </channel>

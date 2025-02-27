@@ -10,9 +10,9 @@
     <atom:link href="/tags/sdkman/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SDKMan for Linux - Bash, Zsh, and Fish Shell</title>
-      <link>/posts/12/</link>
+      <link>/posts/00012/</link>
       <pubDate>Tue, 27 Jun 2023 12:02:01 +0700</pubDate>
-      <guid>/posts/12/</guid>
+      <guid>/posts/00012/</guid>
       <description>&lt;p&gt;If you are a developer, working mainly with Java, you will notice that so many things need to be done in order to install and stay updated with Java ecosystem and development tools. There&amp;rsquo;s a tool called &lt;a href=&#34;https://sdkman.io&#34;&gt;SDKMAN!&lt;/a&gt; which can be used to handle installation, configuration, remove, and update all those Java-base software easier. It can be used on major platform (Linux, Windows, Mac) and makes our live as (Java platform) developer easier. However, it doesn&amp;rsquo;t include support for &lt;a href=&#34;https://fishshell.com&#34;&gt;Fish Shell&lt;/a&gt; (yet). So, if you are Linux user and a happy Fish user, stay tuned for a guide to install and configure SDKMAN! for Fish.&lt;/p&gt;</description>
     </item>
   </channel>

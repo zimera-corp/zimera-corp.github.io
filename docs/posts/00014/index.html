@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>PostGIS - PostgreSQL GIS Extension Installation - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="PostGIS - PostgreSQL GIS Extension Installation"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00014/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">PostGIS - PostgreSQL GIS Extension Installation</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/data">Data</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/postgresql">PostgreSQL</a>&nbsp;&nbsp;
+        
+        <a href="/tags/postgis">PostGIS</a>&nbsp;&nbsp;
+        
+        <a href="/tags/geospation">Geospation</a>&nbsp;&nbsp;
+        
+        <a href="/tags/installation">Installation</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>August 29, 2023</time> | 
+        3  minutes reading time
+       </p>
+
+      <div class="content"><p>PostgreSQL - in its default installation - <a href="https://www.postgresql.org/docs/current/datatype-geometric.html">geometric data types</a> for spatial object. More geospatial features exist in PostgreSQL extension - <a href="https://postgis.net">PostGIS</a>. Here&rsquo;s hos to insatll PostGIS extension.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>PostGIS needs GEOS and SFCGAL. In Debian-based system, these packages are needed:</p>
+<ol>
+<li><code>gdal-data</code> and <code>libgdal-dev</code>.</li>
+<li><code>libgeosVERRSION</code> and <code>libgeos-dev</code>.</li>
+<li><code>libsfcgal1</code> and <code>libsfcgal-dev</code>.</li>
+<li><code>protobuf-*</code> and <code>libprotobuf-c-dev</code></li>
+<li><code>dblatex</code> if you want to build PostGIS documentation</li>
+</ol>
+<h2 id="build">Build</h2>
+<p>Get the <a href="https://postgis.net/development/source_code/">source code</a>, extract:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tar -xvf postgis-3.4.0.tar.gz
+</span></span><span style="display:flex;"><span>$ cd postgis-3.4.0
+</span></span><span style="display:flex;"><span>$ ./configure --prefix<span style="color:#f92672">=</span>/home/bpdp/software/dbms/postgis-3.4.0/
+</span></span></code></pre></div><p>The result, more or less will be something like this in the end:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  PostGIS is now configured <span style="color:#66d9ef">for</span> x86_64-pc-linux-gnu
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> -------------- Compiler Info ------------- 
+</span></span><span style="display:flex;"><span>  C compiler:           gcc -std<span style="color:#f92672">=</span>gnu99 -g -O2 -fno-math-errno -fno-signed-zeros -Wall
+</span></span><span style="display:flex;"><span>  C++ compiler <span style="color:#f92672">(</span>Wagyu<span style="color:#f92672">)</span>: gcc -std<span style="color:#f92672">=</span>c++11 -x c++ 
+</span></span><span style="display:flex;"><span>  C++ compiler <span style="color:#f92672">(</span>FlatGeobuf<span style="color:#f92672">)</span>: gcc -std<span style="color:#f92672">=</span>c++11 -x c++ 
+</span></span><span style="display:flex;"><span>  CPPFLAGS:              -I/usr/include -I/usr/include/x86_64-linux-gnu   -I/usr/include/libxml2 -I/usr/include -I/usr/include/json-c   -DNDEBUG 
+</span></span><span style="display:flex;"><span>  LDFLAGS:               -lm
+</span></span><span style="display:flex;"><span>  SQL preprocessor:     /usr/bin/cpp -traditional-cpp -w -P -Upixel -Ubool
+</span></span><span style="display:flex;"><span>  Archiver:             gcc-ar rs
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> -------------- Additional Info ------------- 
+</span></span><span style="display:flex;"><span>  Interrupt Tests:   ENABLED
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> -------------- Dependencies -------------- 
+</span></span><span style="display:flex;"><span>  GEOS config:          /usr/bin/geos-config
+</span></span><span style="display:flex;"><span>  GEOS version:         3.12.0
+</span></span><span style="display:flex;"><span>  GDAL config:          /usr/bin/gdal-config
+</span></span><span style="display:flex;"><span>  GDAL version:         3.7.1
+</span></span><span style="display:flex;"><span>  SFCGAL config:        /usr/bin/sfcgal-config
+</span></span><span style="display:flex;"><span>  SFCGAL version:       1.4.1
+</span></span><span style="display:flex;"><span>  PostgreSQL config:    /home/bpdp/software/dbms/postgresql-15/bin/pg_config
+</span></span><span style="display:flex;"><span>  PostgreSQL version:   PostgreSQL 15.4
+</span></span><span style="display:flex;"><span>  PROJ4 version:        <span style="color:#ae81ff">92</span>
+</span></span><span style="display:flex;"><span>  Libxml2 config:       /usr/bin/xml2-config
+</span></span><span style="display:flex;"><span>  Libxml2 version:      2.9.14
+</span></span><span style="display:flex;"><span>  JSON-C support:       yes
+</span></span><span style="display:flex;"><span>  protobuf support:     yes
+</span></span><span style="display:flex;"><span>  protobuf-c version:   <span style="color:#ae81ff">1004001</span>
+</span></span><span style="display:flex;"><span>  PCRE support:         Version <span style="color:#ae81ff">2</span>
+</span></span><span style="display:flex;"><span>  Perl:                 /usr/bin/perl
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> --------------- Extensions --------------- 
+</span></span><span style="display:flex;"><span>  PostgreSQL EXTENSION support:       enabled
+</span></span><span style="display:flex;"><span>  PostGIS Raster:                     enabled
+</span></span><span style="display:flex;"><span>  PostGIS Topology:                   enabled
+</span></span><span style="display:flex;"><span>  SFCGAL support:                     enabled
+</span></span><span style="display:flex;"><span>  Address Standardizer support:       enabled
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span> -------- Documentation Generation -------- 
+</span></span><span style="display:flex;"><span>  xsltproc:             /usr/bin/xsltproc
+</span></span><span style="display:flex;"><span>  xsl style sheets:     /usr/share/xml/docbook/stylesheet/docbook-xsl
+</span></span><span style="display:flex;"><span>  dblatex:              /usr/bin/dblatex
+</span></span><span style="display:flex;"><span>  convert:              /usr/bin/convert
+</span></span><span style="display:flex;"><span>  mathml2.dtd:          http://www.w3.org/Math/DTD/mathml2/mathml2.dtd
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>So now we are ready to build and install:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ make
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>$ make install
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-15.4/share/extension/address_standardizer--3.3.1--ANY.sql&#39;</span> -&gt; <span style="color:#e6db74">&#39;address_standardizer--TEMPLATED--TO--ANY.sql&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-15.4/share/extension/address_standardizer--3.3.2--ANY.sql&#39;</span> -&gt; <span style="color:#e6db74">&#39;address_standardizer--TEMPLATED--TO--ANY.sql&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-15.4/share/extension/address_standardizer--3.3.3--ANY.sql&#39;</span> -&gt; <span style="color:#e6db74">&#39;address_standardizer--TEMPLATED--TO--ANY.sql&#39;</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-15.4/share/extension/address_standardizer--3.3.4--ANY.sql&#39;</span> -&gt; <span style="color:#e6db74">&#39;address_standardizer--TEMPLATED--TO--ANY.sql&#39;</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/postgresql/15/postgis-3.4.0/extensions/address_standardizer&#39;</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/postgresql/15/postgis-3.4.0/extensions&#39;</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/postgresql/15/postgis-3.4.0&#39;</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>The results will be installed in PostgreSQL location and also at the &ndash;prefix location above. The &ndash;prefix location is used for some tools developed by PostGIS project:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pwd
+</span></span><span style="display:flex;"><span>/home/bpdp/software/dbms/postgis-3.4.0
+</span></span><span style="display:flex;"><span>$ tree .
+</span></span><span style="display:flex;"><span>.
+</span></span><span style="display:flex;"><span>+-- bin
+</span></span><span style="display:flex;"><span>|�� +-- pgsql2shp
+</span></span><span style="display:flex;"><span>|�� +-- pgtopo_export
+</span></span><span style="display:flex;"><span>|�� +-- pgtopo_import
+</span></span><span style="display:flex;"><span>|�� +-- postgis
+</span></span><span style="display:flex;"><span>|�� +-- postgis_restore
+</span></span><span style="display:flex;"><span>|�� +-- raster2pgsql
+</span></span><span style="display:flex;"><span>|�� +-- shp2pgsql
+</span></span><span style="display:flex;"><span>+-- share
+</span></span><span style="display:flex;"><span>    +-- man
+</span></span><span style="display:flex;"><span>        +-- man1
+</span></span><span style="display:flex;"><span>            +-- pgsql2shp.1
+</span></span><span style="display:flex;"><span>            +-- pgtopo_export.1
+</span></span><span style="display:flex;"><span>            +-- pgtopo_import.1
+</span></span><span style="display:flex;"><span>            +-- postgis.1
+</span></span><span style="display:flex;"><span>            +-- postgis_restore.1
+</span></span><span style="display:flex;"><span>            +-- shp2pgsql.1
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">5</span> directories, <span style="color:#ae81ff">13</span> files
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="use-postgis">Use PostGIS</h2>
+<p>Put the <code>bin</code> location above into <code>PATH</code> and <code>share/man</code> into <code>MANPATH</code>. Now we can try to use PostGIS:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ psql -U bpdp -d template1
+</span></span><span style="display:flex;"><span>psql <span style="color:#f92672">(</span>15.4<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span> <span style="color:#66d9ef">for</span> help.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=</span><span style="color:#75715e"># CREATE^C</span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=</span><span style="color:#75715e"># CREATE EXTENSION postgis;</span>
+</span></span><span style="display:flex;"><span>CREATE EXTENSION
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=</span><span style="color:#75715e"># SELECT PostGIS_Full_Version();</span>
+</span></span><span style="display:flex;"><span>                                                                                                                                                postg
+</span></span><span style="display:flex;"><span>is_full_version                                                                                                                                      
+</span></span><span style="display:flex;"><span>           
+</span></span><span style="display:flex;"><span>-----------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>-----------------------------------------------------------------------------------------------------------------------------------------------------
+</span></span><span style="display:flex;"><span>-----------
+</span></span><span style="display:flex;"><span> POSTGIS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3.4.0 0874ea3&#34;</span> <span style="color:#f92672">[</span>EXTENSION<span style="color:#f92672">]</span> PGSQL<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;150&#34;</span> GEOS<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;3.12.0-CAPI-1.18.0&#34;</span> PROJ<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;9.2.1 NETWORK_ENABLED=OFF URL_ENDPOINT=https://cdn.proj.org USER_WRI
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">TABLE_DIRECTORY=/home/bpdp/.local/share/proj DATABASE_PATH=/usr/share/proj/proj.db&#34;</span> LIBXML<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;2.9.14&#34;</span> LIBJSON<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.17&#34;</span> LIBPROTOBUF<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;1.4.1&#34;</span> WAGYU<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;0.5.0 (
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Internal)&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> row<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=</span><span style="color:#75715e"># SELECT * FROM pg_available_extensions WHERE name = &#39;postgis&#39;;</span>
+</span></span><span style="display:flex;"><span>  name   | default_version | installed_version |                          comment                           
+</span></span><span style="display:flex;"><span>---------+-----------------+-------------------+------------------------------------------------------------
+</span></span><span style="display:flex;"><span> postgis | 3.4.0           | 3.4.0             | PostGIS geometry and geography spatial types and functions
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> row<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>template1<span style="color:#f92672">=</span><span style="color:#75715e"># </span>
+</span></span></code></pre></div></div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

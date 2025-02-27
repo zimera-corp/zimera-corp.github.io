@@ -10,9 +10,9 @@
     <atom:link href="/tags/management/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Managing a Software Development Team: Some Experiences</title>
-      <link>/posts/03/</link>
+      <link>/posts/00003/</link>
       <pubDate>Sun, 15 Jan 2023 10:14:33 +0700</pubDate>
-      <guid>/posts/03/</guid>
+      <guid>/posts/00003/</guid>
       <description>&lt;p&gt;Managing a software development team is never an easy task. It consists of 2 sides:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;technical things&lt;/li&gt;&#xA;&lt;li&gt;non-technical things.&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;This task is often assigned to the project manager, VP Engineering, Software Development Manager, etc. To be succeed, one has to consider those 2 sides. In this article, I will ouline some of my experiences in managing a software development team. This list is not meant to be complete nor perfect. You may need more but at least you will be in the safety line level one if you do care with these issues.&lt;/p&gt;</description>
     </item>
   </channel>

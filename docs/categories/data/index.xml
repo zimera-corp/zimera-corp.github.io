@@ -10,59 +10,52 @@
     <atom:link href="/categories/data/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Blockchain: Tidak Hanya untuk Cryptocurrency</title>
-      <link>/posts/24/</link>
+      <link>/posts/00024/</link>
       <pubDate>Sun, 02 Jun 2024 12:19:08 +0700</pubDate>
-      <guid>/posts/24/</guid>
+      <guid>/posts/00024/</guid>
       <description>&lt;img src=&#34;/images/posts/24/bpdp-blockchain-not-just-cryptocurrency.jpg&#34; alt=&#34;Artikel KR&#34; width=&#34;1000&#34;&gt;&#xA;&#xA;&#xA;&lt;p&gt;Jika anda menyukai bidang investasi, istilah &lt;em&gt;cryptocurrency&lt;/em&gt; atau mata uang kripto bukan merupakan istilah yang asing. Banyak &lt;em&gt;cryptocurrency&lt;/em&gt; yang beredar dan bisa dijadikan sebagai investasi maupun alat pembayaran dengan segala kelebihan dan kekurangannya. Kekurangan paling mendasar adalah tidak adanya nilai intrinsik. Kondisi ini menyebabkan nilai dari &lt;em&gt;cryptocurrency&lt;/em&gt; sangat fluktuatif sehingga menyebabkan pandangan orang terhadap &lt;em&gt;cryptocurrency&lt;/em&gt; cenderung negatif. Keberadaan &lt;em&gt;cryptocurrency&lt;/em&gt; ini dimungkinkan oleh adanya teknologi yang disebut dengan &lt;strong&gt;blockchain&lt;/strong&gt;.&lt;/p&gt;&#xA;&lt;p&gt;Kasus kejahatan yang melibatkan &lt;em&gt;cryptocurrency&lt;/em&gt; ini (dikenal dengan istilah &lt;em&gt;cyptocurrency scams&lt;/em&gt;) juga cukup signifikan. Jenis kejahatan tersebut antara lain adalah skema ponzi, &lt;em&gt;phishing scam&lt;/em&gt;, &lt;em&gt;fraudulent ICO&lt;/em&gt;, &lt;em&gt;blackmail&lt;/em&gt;, &lt;em&gt;rug pull scam&lt;/em&gt;, &lt;em&gt;giveaway scam&lt;/em&gt;, dan lain-lain. Kondisi seperti ini setidaknya menyebabkan istilah blockchain mempunyai sisi orientasi negatif meskipun secara teknologi masyarakat perlu mengetahui bahwa blockchain adalah teknologi.&lt;/p&gt;</description>
     </item>
     <item>
       <title>UUID di Instalasi PostgreSQL</title>
-      <link>/posts/20/</link>
+      <link>/posts/00020/</link>
       <pubDate>Tue, 12 Mar 2024 17:09:50 +0700</pubDate>
-      <guid>/posts/20/</guid>
+      <guid>/posts/00020/</guid>
       <description>&lt;p&gt;&lt;a href=&#34;https://www.postgresql.org&#34;&gt;PostgreSQL&lt;/a&gt; adalah salah satu RDBMS yang dikembangkan sudah sejak lama (1996) dan menjadi basis pengembangan software-software lainnya (YugabyteDB, CockroachDB, EDB). Hampir semua distro Linux menyertakan PostgreSQL dalam distribusinya. Sistem operasi lain juga didukung. Artikel ini membahas sedikit tentang UUID dan kaitannya dengan instalasi PostgreSQL.&lt;/p&gt;&#xA;&lt;p&gt;Pada PostgreSQL versi lama, UUID dihasilkan oleh pustaka yang dibuat oleh &lt;a href=&#34;http://www.ossp.org/pkg/lib/uuid/&#34;&gt;OSSP&lt;/a&gt;. Sayangnya, software yang dibuat oleh legenda open source Ralf Engelschall ini tidak dikembangkan lagi. Oleh karena itu, proses untuk menghasilkan UUID sebaiknya menggunakan pustaka lainnya. Secara umum, ada 3 pilihan yang bisa digunakan dalam parameter &lt;code&gt;--with-uuid=LIB&lt;/code&gt; (ganti LIB dengan salah satu dari:&lt;/p&gt;</description>
     </item>
     <item>
       <title>FalkorDB - RedisGraph Fork for OpenCypher-based Property Graph DBMS</title>
-      <link>/posts/18/</link>
+      <link>/posts/00018/</link>
       <pubDate>Sat, 24 Feb 2024 12:30:22 +0700</pubDate>
-      <guid>/posts/18/</guid>
+      <guid>/posts/00018/</guid>
       <description>&lt;p&gt;If you are a software developer, mainly working with data intensive application, chances are, you&amp;rsquo;ve already work with in-memory data as it will make our app runs fast. &lt;a href=&#34;https://redis.io&#34;&gt;Redis&lt;/a&gt; usually becomes de-facto DBMS for caching. Redis mainly uses &lt;em&gt;key-value&lt;/em&gt; data model but its modular architecture makes it possible to develop other tools or data models using Redis key-value as its underlying data model. That&amp;rsquo;s also happens with &lt;em&gt;RedisGraph&lt;/em&gt;, a Redis module for property graph model. It uses &lt;a href=&#34;https://opencypher.org&#34;&gt;OpenCypher&lt;/a&gt; as its query language. However, bad news came: Redis &lt;a href=&#34;https://redis.com/blog/redisgraph-eol/&#34;&gt;stopped its development&lt;/a&gt;. However, lucky for us, some developers decide to fork RedisGraph and continue its development as &lt;a href=&#34;https://falkordb.com&#34;&gt;FalkorDB&lt;/a&gt;. This article explains how we can get started quickly with FalkorDB.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Apache AGE - Property Graph - OpenCypher for PostgreSQL</title>
-      <link>/posts/17/</link>
+      <link>/posts/00017/</link>
       <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
-      <guid>/posts/17/</guid>
+      <guid>/posts/00017/</guid>
       <description>&lt;h2 id=&#34;tentang-apache-age&#34;&gt;Tentang Apache AGE&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://age.apache.org/&#34;&gt;Apache AGE&lt;/a&gt; adalah adalah ekstensi dari &lt;a href=&#34;https://postgresql.org&#34;&gt;PostgreSQL&lt;/a&gt; untuk model data graph. Apache AGE mendukung model data graph berupa &lt;em&gt;property graph&lt;/em&gt; (jenis lainnya adalah RDF/TripleStore). Apache AGE merupakan software bebas dan mendukung berbagai versi PostgreSQL. Secara resmi, pada halaman web Apache AGE, dinyatakan bahwa versi PostgreSQL yang didukung adalah versi 11-15. Meski demikian, pada versi &lt;em&gt;release&lt;/em&gt; dari Apache AGE di &lt;a href=&#34;https://github.com/apache/age/releases&#34;&gt;GitHub&lt;/a&gt;, terdapat versi untuk PostgreSQL 16.x. Artikel ini menggunakan versi 16.1.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Proses aggregate RDD pada Apache Spark</title>
-      <link>/posts/15/</link>
+      <link>/posts/00015/</link>
       <pubDate>Sat, 14 Oct 2023 09:19:22 +0700</pubDate>
-      <guid>/posts/15/</guid>
+      <guid>/posts/00015/</guid>
       <description>&lt;p&gt;RDD merupakan struktur data fundamental di &lt;a href=&#34;https://spark.apache.org&#34;&gt;Apache Spark&lt;/a&gt;. RDD cenderung lebih sesuai jika ingin menggunakan akses aras rendah terhadap data. Akses lebih mudah bisa dilakukan dengan menggunakan DataFrame. Meskipun demikian, seringkali kita tetap memerlukan RDD sehingga harus memahami berbagai proses &lt;em&gt;transformasi&lt;/em&gt; serta &lt;em&gt;action&lt;/em&gt; yang bisa dilakukan. Manual dokumentasi Apache Spark menyediakan penjelasan tetapi seringkali dirasakan masih kurang, salah satu di antara kekurangjelasan tersebut adalah &lt;strong&gt;zero value&lt;/strong&gt; yang ada pada &lt;em&gt;action&lt;/em&gt; &lt;strong&gt;aggregate&lt;/strong&gt;. Perhatikan &lt;em&gt;source code&lt;/em&gt; berikut ini:&lt;/p&gt;</description>
     </item>
     <item>
       <title>PostGIS - PostgreSQL GIS Extension Installation</title>
-      <link>/posts/14/</link>
+      <link>/posts/00014/</link>
       <pubDate>Tue, 29 Aug 2023 22:25:56 +0700</pubDate>
-      <guid>/posts/14/</guid>
+      <guid>/posts/00014/</guid>
       <description>&lt;p&gt;PostgreSQL - in its default installation - &lt;a href=&#34;https://www.postgresql.org/docs/current/datatype-geometric.html&#34;&gt;geometric data types&lt;/a&gt; for spatial object. More geospatial features exist in PostgreSQL extension - &lt;a href=&#34;https://postgis.net&#34;&gt;PostGIS&lt;/a&gt;. Here&amp;rsquo;s hos to insatll PostGIS extension.&lt;/p&gt;&#xA;&lt;h2 id=&#34;prerequisites&#34;&gt;Prerequisites&lt;/h2&gt;&#xA;&lt;p&gt;PostGIS needs GEOS and SFCGAL. In Debian-based system, these packages are needed:&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;&lt;code&gt;gdal-data&lt;/code&gt; and &lt;code&gt;libgdal-dev&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;libgeosVERRSION&lt;/code&gt; and &lt;code&gt;libgeos-dev&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;libsfcgal1&lt;/code&gt; and &lt;code&gt;libsfcgal-dev&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;protobuf-*&lt;/code&gt; and &lt;code&gt;libprotobuf-c-dev&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;&lt;code&gt;dblatex&lt;/code&gt; if you want to build PostGIS documentation&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;h2 id=&#34;build&#34;&gt;Build&lt;/h2&gt;&#xA;&lt;p&gt;Get the &lt;a href=&#34;https://postgis.net/development/source_code/&#34;&gt;source code&lt;/a&gt;, extract:&lt;/p&gt;&#xA;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ tar -xvf postgis-3.4.0.tar.gz&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ cd postgis-3.4.0&#xA;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;$ ./configure --prefix&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/home/bpdp/software/dbms/postgis-3.4.0/&#xA;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The result, more or less will be something like this in the end:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Tantangan Pengelolaan Data di Era Digital</title>
-      <link>/posts/07/</link>
+      <link>/posts/00007/</link>
       <pubDate>Mon, 06 Feb 2023 06:48:57 +0700</pubDate>
-      <guid>/posts/07/</guid>
+      <guid>/posts/00007/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/posts/07/artikel-pengelolaan-data.jpg&#34; alt=&#34;Artikel KR&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Organisasi menghadapi tantangan yang semakin kompleks di era digital ini. Era digital merupakan era yang ditandai dengan masifnya penggunaan teknologi berbasis peranti digital elektronik yang memproses angka 0 dan 1 sebagai penanda hidup - mati atau &lt;em&gt;on - off&lt;/em&gt;. Peranti digital elektronik sejak dahulu dikenal dengan istilah komputer dan saat ini sudah menunjuk ke berbagai perangkat serta sistem berbasis komputer dalam berbagai skala, mulai dari skala kecil (sub–0.1-mm3) yang bisa diinjeksikan ke dalam tubuh manusia (Shi, 2021) sampai dengan peranti berkapasitas besar yang digunakan dalam suatu data center. Pada era ini, software dan data sedemikian masif digunakan untuk membantu manusia dalam melakukan berbagai aktivitas.&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>Using YugabyteDB in Python App Development</title>
-      <link>/posts/05/</link>
-      <pubDate>Wed, 18 Jan 2023 10:16:30 +0700</pubDate>
-      <guid>/posts/05/</guid>
-      <description>&lt;p&gt;As a long time &lt;a href=&#34;https://www.postgresql.org/&#34;&gt;PostgreSQL&lt;/a&gt; user, it&amp;rsquo;s normal that &lt;a href=&#34;https://www.yugabyte.com/&#34;&gt;YugabyteDB&lt;/a&gt; got my attention. It&amp;rsquo;s a distributed SQL database which features-compatible with PostgreSQL so that I don&amp;rsquo;t need to lose my investation. YugabyteDB reuses PostgreSQL&amp;rsquo;s query layer, so I can use my development tools as usual. It gives me more since there is also Cassandra query layer. Using YugabyteDB I can reuse my SQL skill and development tools, enhanced with NOSQL data model (especially &lt;strong&gt;wide-column store&lt;/strong&gt;), while I have NewSQL&amp;rsquo;s resiliency, scalability, and high performance.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

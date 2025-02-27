@@ -10,9 +10,9 @@
     <atom:link href="/tags/vim/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Konfigurasi LSP dan Treesitter di Neovim &#43; LazyVim</title>
-      <link>/posts/23/</link>
+      <link>/posts/00023/</link>
       <pubDate>Sun, 21 Apr 2024 12:10:35 +0700</pubDate>
-      <guid>/posts/23/</guid>
+      <guid>/posts/00023/</guid>
       <description>&lt;p&gt;Bagi anda yang telat terbiasa berada di lingkungan berbasis UNIX, &lt;a href=&#34;https://www.vim.org/&#34;&gt;Vim&lt;/a&gt; bukan software yang asing. Editor ini biasanya sering dikaitkan dengan &lt;a href=&#34;https://www.gnu.org/software/emacs/&#34;&gt;Emacs&lt;/a&gt; dalam suatu &lt;a href=&#34;https://en.wikipedia.org/wiki/Editor_war&#34;&gt;perang suci&lt;/a&gt;. Tentu saja seiring makin berkembangnya dunia software, perang suci ini sudah tidak terlalu relevan lagi. Vim pun sekarang sudah terpecah menjadi 2: Vim dan &lt;a href=&#34;http://neovim.io/&#34;&gt;Neovim&lt;/a&gt;. Saya tidak akan membahas perang suci ini maupun perpecahan pasukan yang ikut dalam peperangan tersebut tentu saja. Sebagai pengguna Vim dan kemudian berpindah ke Neovim, saya rasa banyak hal yang harus dipelajari dan disesuaikan meskipun tidak secara eksplisit dan to the point. Satu di antara hal-hal tersebut adalah konfigurasi &lt;a href=&#34;https://microsoft.github.io/language-server-protocol/&#34;&gt;LSP (Language Server Protocol)&lt;/a&gt; dan syntax highlighting.&lt;/p&gt;</description>
     </item>
   </channel>

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Konfigurasi LSP dan Treesitter di Neovim &#43; LazyVim - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Konfigurasi LSP dan Treesitter di Neovim &#43; LazyVim"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00023/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Konfigurasi LSP dan Treesitter di Neovim &#43; LazyVim</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/software">Software</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/coding">Coding</a>&nbsp;&nbsp;
+        
+        <a href="/tags/ide">IDE</a>&nbsp;&nbsp;
+        
+        <a href="/tags/neovim">Neovim</a>&nbsp;&nbsp;
+        
+        <a href="/tags/vim">vim</a>&nbsp;&nbsp;
+        
+        <a href="/tags/lsp">LSP</a>&nbsp;&nbsp;
+        
+        <a href="/tags/tree-sitter">Tree-sitter</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author: 
+          Bambang Purnomosidi D. P.
+	       | <time>April 21, 2024</time> | 
+        2  minutes reading time
+       </p>
+
+      <div class="content"><p>Bagi anda yang telat terbiasa berada di lingkungan berbasis UNIX, <a href="https://www.vim.org/">Vim</a> bukan software yang asing. Editor ini biasanya sering dikaitkan dengan <a href="https://www.gnu.org/software/emacs/">Emacs</a> dalam suatu <a href="https://en.wikipedia.org/wiki/Editor_war">perang suci</a>. Tentu saja seiring makin berkembangnya dunia software, perang suci ini sudah tidak terlalu relevan lagi. Vim pun sekarang sudah terpecah menjadi 2: Vim dan <a href="http://neovim.io/">Neovim</a>. Saya tidak akan membahas perang suci ini maupun perpecahan pasukan yang ikut dalam peperangan tersebut tentu saja. Sebagai pengguna Vim dan kemudian berpindah ke Neovim, saya rasa banyak hal yang harus dipelajari dan disesuaikan meskipun tidak secara eksplisit dan to the point. Satu di antara hal-hal tersebut adalah konfigurasi <a href="https://microsoft.github.io/language-server-protocol/">LSP (Language Server Protocol)</a> dan syntax highlighting.</p>
+<p>Sebenarnya kita bisa memulai LSP dan syntax highlighting dari plain Neovim, tetapi saya pribadi lebih memilih menggunakan distribusi Neovim untuk menghemat waktu. Ada banyak distribusi dari Vim/Neovim dan saya menyukai <a href="http://www.lazyvim.org/">LazyVim</a>. Silakan akses halaman web dari LazyVim dan lakukan instalasi sesuai petunjuk.</p>
+<p>Meski sudah menggunakan banyak plugins, LazyVim tidak memberikan petunjuk yang cukup jelas untuk konfigurasi LSP server serta syntax highlighting. LazyVim telah menyertakan <a href="https://github.com/neovim/nvim-lspconfig">nvim-lspconfig</a> untuk konfigurasi LSP server serta <a href="https://tree-sitter.github.io/tree-sitter/">Tree-sitter</a> dan <a href="https://github.com/nvim-treesitter/nvim-treesitter">nvim-treesitter</a> untuk layer abstraksi dan konfigurasi bagi Neovim. Berikut adalah konfigurasi dari Neovim - LazyVim untuk LSP server dan syntax highlighting. Contoh berikut menggunakan bahasa pemrograman dan kompilator <a href="https://gleam.run/">Gleam</a>.</p>
+<ol>
+<li>Konfigurasi LSP.</li>
+</ol>
+<p>Konfigurasi LSP sangat mudah, cukup menuliskan di <code>$HOME/.config/nvim/init.lua</code>:</p>
+<p><img src="/images/posts/23/01--lsp-config.png" alt="Konfigurasi LSP"></p>
+<p>Lihat informasi lengkapnya di <a href="https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md">server configuration</a> jika anda akan mengkonfigurasikan LSP untuk bahasa pemrograman lainnya.</p>
+<ol start="2">
+<li>Install parser untuk Gleam.</li>
+</ol>
+<p>Saat belum diinstall, syntax highlighting untuk Gleam tidak muncul:</p>
+<p><img src="/images/posts/23/02--find-file.png" alt="Neovim untuk Gleam tanpa syntax highlighting"></p>
+<p>Install parser Tree-sitter menggunakan <strong>:TSInstall gleam</strong></p>
+<p><img src="/images/posts/23/03--tsinstall-gleam.png" alt="Install parser untuk Gleam"></p>
+<p>Setelah terinstall:</p>
+<p><img src="/images/posts/23/04--ts-gleam-installed.png" alt="Parser Gleam telah terinstall"></p>
+<ol start="3">
+<li>Berikut adalah berbagai hasil dari LSP:</li>
+</ol>
+<p><img src="/images/posts/23/05--completion.png" alt="Completion"></p>
+<p><img src="/images/posts/23/06--warning-from-lsp.png" alt="Peringatan"></p>
+<p><img src="/images/posts/23/07--lsp-info.png" alt="LspInfo"></p>
+<p><img src="/images/posts/23/08--lsp-info-result.png" alt="Hasil LspInfo"></p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

@@ -10,9 +10,9 @@
     <atom:link href="/tags/void-linux/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Konfigurasi VPN pada (Void) Linux</title>
-      <link>/posts/25/</link>
+      <link>/posts/00025/</link>
       <pubDate>Wed, 26 Feb 2025 15:54:08 +0700</pubDate>
-      <guid>/posts/25/</guid>
+      <guid>/posts/00025/</guid>
       <description>&lt;p&gt;Artikel berikut akan membahas tentang cara mengkonfigurasi dan mengaktifkan VPN jika anda menggunakan Linux. Pembahasan pada artikel ini difokuskan pada &lt;a href=&#34;https://voidlinux.org/&#34;&gt;Void Linux&lt;/a&gt; meskipun sebenarnya cukup generik - tinggal diganti pada pembahasan instalasi paket sesuai dengan package manager yang digunakan serta penggunaan &lt;a href=&#34;https://smarden.org/runit/&#34;&gt;runit&lt;/a&gt; disesuaikan dengan distro yang anda gunakan (kebanyakan masih menggunakan &lt;a href=&#34;https://systemd.io/&#34;&gt;systemd&lt;/a&gt;).&lt;/p&gt;&#xA;&lt;p&gt;NetworkManager mempunyai beberapa plugin untuk VPN (OpenVPN, L2TP/IPsec, OpenConnect, PPTP). Untuk keperluan ini kita akan menggunakan L2TP/IPsec.&lt;/p&gt;&#xA;&lt;ol&gt;&#xA;&lt;li&gt;Install terlebih dahulu plugin untuk L2TP:&lt;/li&gt;&#xA;&lt;/ol&gt;&#xA;&lt;p&gt;Cari paket plugin NetworkManager untuk l2tp dengan perintah &lt;code&gt;xbps-query -Rs NetworkManager&lt;/code&gt;.&lt;/p&gt;</description>
     </item>
   </channel>

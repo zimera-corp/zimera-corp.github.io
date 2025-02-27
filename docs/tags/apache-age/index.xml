@@ -10,9 +10,9 @@
     <atom:link href="/tags/apache-age/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Apache AGE - Property Graph - OpenCypher for PostgreSQL</title>
-      <link>/posts/17/</link>
+      <link>/posts/00017/</link>
       <pubDate>Sat, 27 Jan 2024 17:41:41 +0700</pubDate>
-      <guid>/posts/17/</guid>
+      <guid>/posts/00017/</guid>
       <description>&lt;h2 id=&#34;tentang-apache-age&#34;&gt;Tentang Apache AGE&lt;/h2&gt;&#xA;&lt;p&gt;&lt;a href=&#34;https://age.apache.org/&#34;&gt;Apache AGE&lt;/a&gt; adalah adalah ekstensi dari &lt;a href=&#34;https://postgresql.org&#34;&gt;PostgreSQL&lt;/a&gt; untuk model data graph. Apache AGE mendukung model data graph berupa &lt;em&gt;property graph&lt;/em&gt; (jenis lainnya adalah RDF/TripleStore). Apache AGE merupakan software bebas dan mendukung berbagai versi PostgreSQL. Secara resmi, pada halaman web Apache AGE, dinyatakan bahwa versi PostgreSQL yang didukung adalah versi 11-15. Meski demikian, pada versi &lt;em&gt;release&lt;/em&gt; dari Apache AGE di &lt;a href=&#34;https://github.com/apache/age/releases&#34;&gt;GitHub&lt;/a&gt;, terdapat versi untuk PostgreSQL 16.x. Artikel ini menggunakan versi 16.1.&lt;/p&gt;</description>
     </item>
   </channel>
