@@ -1,7 +1,7 @@
 {
 	"version": 3,
 	"file": "style.css",
-	"sourceRoot": "/home/bpdp/kerjaan/repos/zimera/zimera-corp/zimera-corp.github.io",
+	"sourceRoot": "/home/bpdp/kerjaan/repos/zimera/zimera-corp.github.io",
 	"sources": [
 		"themes/hugo-serif-theme/assets/scss/style.scss",
 		"themes/hugo-serif-theme/assets/scss/_variables.scss",

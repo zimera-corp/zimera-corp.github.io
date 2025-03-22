@@ -199,7 +199,7 @@
     Author: 
           Bambang Purnomosidi D. P.
 	       | <time>March 12, 2024</time> | 
-        2  minutes reading time
+        5  minutes reading time
        </p>
 
       <div class="content"><p><a href="https://www.postgresql.org">PostgreSQL</a> adalah salah satu RDBMS yang dikembangkan sudah sejak lama (1996) dan menjadi basis pengembangan software-software lainnya (YugabyteDB, CockroachDB, EDB). Hampir semua distro Linux menyertakan PostgreSQL dalam distribusinya. Sistem operasi lain juga didukung. Artikel ini membahas sedikit tentang UUID dan kaitannya dengan instalasi PostgreSQL.</p>
@@ -209,19 +209,222 @@
 <li><strong>e2fs</strong>: menggunakan <code>libuuid</code> dari <strong>e2fsprogs</strong>.</li>
 <li><strong>bsd</strong>: menggunakan fungsi dari BSD.</li>
 </ol>
-<p>Saya sendiri menggunakan <code>libuuid</code> sehingga proses konfigurasi menjadi:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ./configure --prefix<span style="color:#f92672">=</span>/home/bpdp/software/dbms/postgresql/16.2 --with-uuid<span style="color:#f92672">=</span>e2fs
-</span></span></code></pre></div><p>Setelah itu, untuk mengkompilasi dan menginstall:</p>
+<p>Artikel ini akan membahas instalasi PostgreSQL menggunakan <code>libuuid</code>. Untuk mengikuti langkah-langkah di sini, sila unduh <em>source code</em> dari PostgreSQL terlebih dahulu di <a href="https://www.postgresql.org/ftp/source/">https://www.postgresql.org/ftp/source/</a> (artikel ini menggunakan versi 7.4). Selain itu, siapkan direktori kosong yang akan digunakan sebagai tempat instalasi PostgreSQL.</p>
+<ol>
+<li>Unduh PostgreSQL</li>
+<li>Ekstrak hasil unduhan tersebut.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ tar -xvf postgresql-17.4.tar.bz2
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>postgresql-17.4/src/tutorial/complex.source
+</span></span><span style="display:flex;"><span>postgresql-17.4/src/tutorial/funcs.c
+</span></span><span style="display:flex;"><span>postgresql-17.4/src/tutorial/funcs.source
+</span></span><span style="display:flex;"><span>postgresql-17.4/src/tutorial/syscat.source
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><ol start="3">
+<li>Masuk ke direktori hasil ekstrak:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd postgresql-17.4
+</span></span></code></pre></div><ol start="4">
+<li>Konfigurasi kompilasi</li>
+</ol>
+<p>Saya menggunakan <code>libuuid</code> sehingga proses konfigurasi menjadi:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ./configure --prefix<span style="color:#f92672">=</span>/home/bpdp/software/dbms/postgresql-17.4 --with-uuid<span style="color:#f92672">=</span>e2fs
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>configure: using LDFLAGS<span style="color:#f92672">=</span>  -Wl,--as-needed
+</span></span><span style="display:flex;"><span>configure: creating ./config.status
+</span></span><span style="display:flex;"><span>config.status: creating GNUmakefile
+</span></span><span style="display:flex;"><span>config.status: creating src/Makefile.global
+</span></span><span style="display:flex;"><span>config.status: creating src/include/pg_config.h
+</span></span><span style="display:flex;"><span>config.status: creating src/include/pg_config_ext.h
+</span></span><span style="display:flex;"><span>config.status: creating src/interfaces/ecpg/include/ecpg_config.h
+</span></span><span style="display:flex;"><span>config.status: linking src/backend/port/tas/dummy.s to src/backend/port/tas.s
+</span></span><span style="display:flex;"><span>config.status: linking src/backend/port/posix_sema.c to src/backend/port/pg_sema.c
+</span></span><span style="display:flex;"><span>config.status: linking src/backend/port/sysv_shmem.c to src/backend/port/pg_shmem.c
+</span></span><span style="display:flex;"><span>config.status: linking src/include/port/linux.h to src/include/pg_config_os.h
+</span></span><span style="display:flex;"><span>config.status: linking src/makefiles/Makefile.linux to src/Makefile.port
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Pada proses ini, mungkin terdapat beberapa paket yang diperlukan. Install paket yang diperlukan (misal: bison, flex, icu, dan lain-lain). Biasanya juga diperlukan instalasi package-devel atau package-dev (misal icu-devel, libicu-dev - tergantung distro yang digunakan. Khusus jika terdapat error semacam <em>icu library not found</em> padahal icu dan icu-devel sudah diinstall, berarti distro yang digunakan masih memerlukan paket pkg-config.</p>
+<ol start="5">
+<li>Setelah itu lakukan proses kompilasi:</li>
+</ol>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ make
-</span></span><span style="display:flex;"><span>$ make install
-</span></span></code></pre></div><p>Berikutnya, tetapkan lokasi direktori untuk data dan gunakan sebagai parameter dari <code>pg_ctl</code> untuk <em>start</em> maupun <em>stop</em>. Saya membuat alias berikut ini (Fish shell):</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>set -x PATH /home/bpdp/software/dbms/postgresql/16.2/bin $PATH
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>3<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/src/test/regress&#39;</span>
+</span></span><span style="display:flex;"><span>rm -f pg_regress.o <span style="color:#f92672">&amp;&amp;</span> ln -s ../../../src/test/regress/pg_regress.o .
+</span></span><span style="display:flex;"><span>gcc -Wall -Wmissing-prototypes -Wpointer-arith -Wdeclaration-after-statement -Werror<span style="color:#f92672">=</span>vla -Wendif-labels -Wmissing-format-attribute -Wimplicit-fallthrough<span style="color:#f92672">=</span><span style="color:#ae81ff">3</span> -Wcast-function-type -Wshadow<span style="color:#f92672">=</span>compatible-local -Wformat-security -fno-strict-aliasing -fwrapv -fexcess-precision<span style="color:#f92672">=</span>standard -Wno-format-truncation -Wno-stringop-truncation -O2 isolation_main.o pg_regress.o -L../../../src/interfaces/libpq -lpq -L../../../src/port -L../../../src/common   -Wl,--as-needed -Wl,-rpath,<span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib&#39;</span>,--enable-new-dtags  -lpgcommon -lpgport -lz -ledit -lm  -o pg_isolation_regress
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/src/test/isolation&#39;</span>
+</span></span><span style="display:flex;"><span>make -C test/perl all
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/src/test/perl&#39;</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: Nothing to be <span style="color:#66d9ef">done</span> <span style="color:#66d9ef">for</span> <span style="color:#e6db74">&#39;all&#39;</span>.
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/src/test/perl&#39;</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/src&#39;</span>
+</span></span><span style="display:flex;"><span>make -C config all
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/config&#39;</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Nothing to be <span style="color:#66d9ef">done</span> <span style="color:#66d9ef">for</span> <span style="color:#e6db74">&#39;all&#39;</span>.
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/config&#39;</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><ol start="6">
+<li>Lakukan proses instalasi</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ make install
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>2<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/src/test/perl&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/mkdir -p <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib/pgxs/src&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">644</span> Makefile.global <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib/pgxs/src/Makefile.global&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">644</span> Makefile.port <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib/pgxs/src/Makefile.port&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">644</span> ./Makefile.shlib <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib/pgxs/src/Makefile.shlib&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">644</span> ./nls-global.mk <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib/pgxs/src/nls-global.mk&#39;</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/src&#39;</span>
+</span></span><span style="display:flex;"><span>mtoake -C config install
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Entering directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/config&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/mkdir -p <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib/pgxs/config&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">755</span> ./install-sh <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib/pgxs/config/install-sh&#39;</span>
+</span></span><span style="display:flex;"><span>/usr/bin/install -c -m <span style="color:#ae81ff">755</span> ./missing <span style="color:#e6db74">&#39;/home/bpdp/software/dbms/postgresql-17.0/lib/pgxs/config/missing&#39;</span>
+</span></span><span style="display:flex;"><span>make<span style="color:#f92672">[</span>1<span style="color:#f92672">]</span>: Leaving directory <span style="color:#e6db74">&#39;/home/bpdp/master/dbms/postgresql/postgresql-17.4/config&#39;</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><ol start="7">
+<li>Membuat file untuk menyimpan <em>env variables</em></li>
+</ol>
+<p>Berikutnya, tetapkan lokasi direktori untuk data dan gunakan sebagai parameter dari <code>pg_ctl</code> untuk <em>start</em> maupun <em>stop</em>. Saya membuat alias berikut ini (Fish shell). Username, password, host, serta database boleh juga dimasukkan ke <em>env variables</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat ~/env/fish/dbms/postgresql/postgresql-17 
+</span></span><span style="display:flex;"><span>set PSQL_HOME $HOME/software/dbms/postgresql-17
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>alias startpsql<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pg_ctl -D /home/bpdp/software/dbms/postgresql/16-data -l logfile start&#34;</span>
-</span></span><span style="display:flex;"><span>alias stoppsql<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pg_ctl -D /home/bpdp/software/dbms/postgresql/16-data stop&#34;</span>
-</span></span></code></pre></div><p>Untuk bisa menggunakan alias tersebut, perlu dilakukan inisialisasi lsebih dahulu:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ initdb -D /home/bpdp/software/dbms/postgresql/16-data
+</span></span><span style="display:flex;"><span>set -x PATH $PSQL_HOME/bin $PATH
+</span></span><span style="display:flex;"><span>set -x LD_LIBRARY_PATH $PSQL_HOME/lib 
+</span></span><span style="display:flex;"><span>set -x PGDATA $HOME/software/dbms/17-data
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>set -x PGUSER bpdp
+</span></span><span style="display:flex;"><span>set -x PGPASSWORD merdeka
+</span></span><span style="display:flex;"><span>set -x PGHOST localhost
+</span></span><span style="display:flex;"><span>set -x PGPORT <span style="color:#ae81ff">5432</span>
+</span></span><span style="display:flex;"><span>set -x PGDATABASE htap
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>alias startpsql<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pg_ctl -l /tmp/logfile start&#34;</span>
+</span></span><span style="display:flex;"><span>alias stoppsql<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;pg_ctl stop&#34;</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Buat <em>symlink</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd ~/software/dbms/
+</span></span><span style="display:flex;"><span>$ ln -s postgresql-17.4 postgresql-17
+</span></span></code></pre></div><p>Direktori data juga harus dibuat supaya <em>env variables</em> tersebut bisa digunakan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd ~/software/dbms/
+</span></span><span style="display:flex;"><span>$ mkdir 17-data
+</span></span></code></pre></div><ol start="8">
+<li>Inisialisasi direktori data</li>
+</ol>
+<p>Untuk bisa menggunakan alias tersebut, perlu dilakukan inisialisasi lsebih dahulu:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ initdb ~/software/dbms/17-data/
+</span></span><span style="display:flex;"><span>The files belonging to this database system will be owned by user <span style="color:#e6db74">&#34;bpdp&#34;</span>.
+</span></span><span style="display:flex;"><span>This user must also own the server process.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>The database cluster will be initialized with this locale configuration:
+</span></span><span style="display:flex;"><span>  locale provider:   libc
+</span></span><span style="display:flex;"><span>  LC_COLLATE:  C
+</span></span><span style="display:flex;"><span>  LC_CTYPE:    en_US.UTF-8
+</span></span><span style="display:flex;"><span>  LC_MESSAGES: en_US.UTF-8
+</span></span><span style="display:flex;"><span>  LC_MONETARY: en_US.UTF-8
+</span></span><span style="display:flex;"><span>  LC_NUMERIC:  en_US.UTF-8
+</span></span><span style="display:flex;"><span>  LC_TIME:     en_US.UTF-8
+</span></span><span style="display:flex;"><span>The default database encoding has accordingly been set to <span style="color:#e6db74">&#34;UTF8&#34;</span>.
+</span></span><span style="display:flex;"><span>The default text search configuration will be set to <span style="color:#e6db74">&#34;english&#34;</span>.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Data page checksums are disabled.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>fixing permissions on existing directory /home/bpdp/software/dbms/17-data ... ok
+</span></span><span style="display:flex;"><span>creating subdirectories ... ok
+</span></span><span style="display:flex;"><span>selecting dynamic shared memory implementation ... posix
+</span></span><span style="display:flex;"><span>selecting default <span style="color:#e6db74">&#34;max_connections&#34;</span> ... <span style="color:#ae81ff">100</span>
+</span></span><span style="display:flex;"><span>selecting default <span style="color:#e6db74">&#34;shared_buffers&#34;</span> ... 128MB
+</span></span><span style="display:flex;"><span>selecting default time zone ... Asia/Jakarta
+</span></span><span style="display:flex;"><span>creating configuration files ... ok
+</span></span><span style="display:flex;"><span>running bootstrap script ... ok
+</span></span><span style="display:flex;"><span>performing post-bootstrap initialization ... ok
+</span></span><span style="display:flex;"><span>syncing data to disk ... ok
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>initdb: warning: enabling <span style="color:#e6db74">&#34;trust&#34;</span> authentication <span style="color:#66d9ef">for</span> local connections
+</span></span><span style="display:flex;"><span>initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Success. You can now start the database server using:
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    pg_ctl -D /home/bpdp/software/dbms/17-data/ -l logfile start
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>$
 </span></span></code></pre></div><p>Inisialisasi ini cukup dilakukan sekali saja, di awal saat akan menggunakan suatu direktori sebagai lokasi data. Kompilasi ini akan menghasilkan user dengan nama sesuai dengan user sistem operasi yang melakukan kompilasi.</p>
+<ol start="9">
+<li>Mengaktifkan <em>env variables</em></li>
+</ol>
+<p>Setiap akan menggunakan PostgreSQL, pastikan sudah mengaktifkan <em>env variables</em>. Berikut adalah caranya, sekaligus mengaktifkan PostgreSQL server.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ source ~/env/fish/dbms/postgresql/postgresql-17 
+</span></span><span style="display:flex;"><span>$ startpsql
+</span></span><span style="display:flex;"><span>waiting <span style="color:#66d9ef">for</span> server to start.... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>server started
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><ol start="10">
+<li>Membuat <em>database</em></li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ creatdb htap
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><ol start="11">
+<li>Akses <em>database</em> kemudian atur password</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ psql
+</span></span><span style="display:flex;"><span>psql <span style="color:#f92672">(</span>17.4<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span> <span style="color:#66d9ef">for</span> help.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>htap<span style="color:#f92672">=</span><span style="color:#75715e"># alter user bpdp with encrypted password &#39;merdeka&#39;;</span>
+</span></span><span style="display:flex;"><span>ALTER ROLE
+</span></span><span style="display:flex;"><span>htap<span style="color:#f92672">=</span><span style="color:#75715e">#</span>
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">\q</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><ol start="12">
+<li>Jika diperlukan, buat user khusus untuk <em>database</em> tersebut:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ createuser htap_oltp_01
+</span></span><span style="display:flex;"><span>$ psql
+</span></span><span style="display:flex;"><span>psql <span style="color:#f92672">(</span>17.4<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span> <span style="color:#66d9ef">for</span> help.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>htap<span style="color:#f92672">=</span><span style="color:#75715e"># alter user htap_oltp_01 with encrypted password &#39;passoltp01&#39;;</span>
+</span></span><span style="display:flex;"><span>ALTER ROLE
+</span></span><span style="display:flex;"><span>htap<span style="color:#f92672">=</span><span style="color:#75715e">#</span>
+</span></span></code></pre></div><p>Pada posisi ini, silakan dipertimbangkan akan mengatur <em>env variables</em> PGUSER dan PGPASSWORD atau tidak.</p>
+<ol start="13">
+<li>Atur akses supaya semua menggunakan password. Lihat lokasi dari file konfigurasi.</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>htap<span style="color:#f92672">=</span><span style="color:#75715e"># show config_file;</span>
+</span></span><span style="display:flex;"><span>                   config_file                    
+</span></span><span style="display:flex;"><span>--------------------------------------------------
+</span></span><span style="display:flex;"><span> /home/bpdp/software/dbms/17-data/postgresql.conf
+</span></span><span style="display:flex;"><span><span style="color:#f92672">(</span><span style="color:#ae81ff">1</span> row<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>htap<span style="color:#f92672">=</span><span style="color:#75715e">#</span>
+</span></span></code></pre></div><p>Edit file <em>/home/bpdp/software/dbms/17-data/pg_hba.conf</em></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>...
+</span></span><span style="display:flex;"><span>host    all             all             samehost                 password
+</span></span><span style="display:flex;"><span>local   all             all                                      password
+</span></span><span style="display:flex;"><span>host    all             all             127.0.0.1/32             password 
+</span></span></code></pre></div><p>Restart PostgreSQL server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>stoppsql
+</span></span><span style="display:flex;"><span>waiting <span style="color:#66d9ef">for</span> server to shut down..... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>server stopped
+</span></span><span style="display:flex;"><span>$ startpsql
+</span></span><span style="display:flex;"><span>waiting <span style="color:#66d9ef">for</span> server to start.... <span style="color:#66d9ef">done</span>
+</span></span><span style="display:flex;"><span>server started
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Coba akses menggunakan user baru:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ psql -U htap_oltp_01 htap -h localhost
+</span></span><span style="display:flex;"><span>Password <span style="color:#66d9ef">for</span> user htap_oltp_01: 
+</span></span><span style="display:flex;"><span>psql <span style="color:#f92672">(</span>17.4<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>Type <span style="color:#e6db74">&#34;help&#34;</span> <span style="color:#66d9ef">for</span> help.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>htap<span style="color:#f92672">=</span>&gt;
+</span></span></code></pre></div><p>Akan terlihat promp yang muncul berbeda dengan superuser (<em>bpdp</em>). Jika user <em>bpdp</em> maka prompt <em>=#</em>, sementara kalau user biasa <em>=&gt;</em>.</p>
+<p>Pada posisi ini, instalasi dasar dari PostgreSQL telah selesai. Masih ada banyak yang perlu diperhatikan (misalnya hak akses), tetapi dari posisi ini, kira-kira bisa mulai dikerjakan berbagai optimasi. Selamat mencoba!</p>
 </div>
     </div>
   </div>
