@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Mengelola Environment dan Pustaka Python Menggunakan uv - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.2d6c7f09b6f23d89683ad8f04291ceab78102cf249eb695725b60153b80197ae.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Mengelola Environment dan Pustaka Python Menggunakan uv"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00026/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Mengelola Environment dan Pustaka Python Menggunakan uv</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/software">Software</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/programming">Programming</a>&nbsp;&nbsp;
+        
+        <a href="/tags/python">Python</a>&nbsp;&nbsp;
+        
+        <a href="/tags/environment-manager">Environment Manager</a>&nbsp;&nbsp;
+        
+        <a href="/tags/package-manager">Package Manager</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author:  | <time>May 8, 2025</time> | 
+        5  minutes reading time
+       </p>
+
+      <div class="content"><p>Jika anda adalah developer Python yang serius, <em>environment manager</em> adalah keharusan. <em>Environment manager</em> memungkinkan developer untuk menginstall lebih dari satu versi Python karena &ldquo;mengganggu&rdquo; instalasi Python di default sistem operasi bisa mengacaukan. Beberapa <em>environment manager</em> di Python sudah banyak dibuat dan sampai saat ini saya setia dengan <a href="https://mamba.readthedocs.io/en/latest/user_guide/micromamba.html">Micromamba</a>. Hari ini saya ingin mencoba <a href="https://github.com/astral-sh/uv">uv</a> yang mulai banyak digunakan. <code>uv</code> dibuat menggunakan Rust dan berfungsi sebagai <em>environment manager</em> serta <em>package manager</em>.</p>
+<h2 id="instalasi-uv">Instalasi <code>uv</code></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ curl -LsSf https://astral.sh/uv/install.sh | sh
+</span></span><span style="display:flex;"><span>downloading uv 0.7.3 x86_64-unknown-linux-gnu
+</span></span><span style="display:flex;"><span>no checksums to verify
+</span></span><span style="display:flex;"><span>installing to /home/bpdp/.local/bin
+</span></span><span style="display:flex;"><span>  uv
+</span></span><span style="display:flex;"><span>  uvx
+</span></span><span style="display:flex;"><span>everything&#39;s installed!
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="menjalankan-uv">Menjalankan <code>uv</code></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ uv
+</span></span><span style="display:flex;"><span>An extremely fast Python package manager.
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Usage: uv [OPTIONS] &lt;COMMAND&gt;
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Commands:
+</span></span><span style="display:flex;"><span>  run      Run a command or script
+</span></span><span style="display:flex;"><span>  init     Create a new project
+</span></span><span style="display:flex;"><span>  add      Add dependencies to the project
+</span></span><span style="display:flex;"><span>  remove   Remove dependencies from the project
+</span></span><span style="display:flex;"><span>  sync     Update the project&#39;s environment
+</span></span><span style="display:flex;"><span>  lock     Update the project&#39;s lockfile
+</span></span><span style="display:flex;"><span>  export   Export the project&#39;s lockfile to an alternate format
+</span></span><span style="display:flex;"><span>  tree     Display the project&#39;s dependency tree
+</span></span><span style="display:flex;"><span>  tool     Run and install commands provided by Python packages
+</span></span><span style="display:flex;"><span>  python   Manage Python versions and installations
+</span></span><span style="display:flex;"><span>  pip      Manage Python packages with a pip-compatible interface
+</span></span><span style="display:flex;"><span>  venv     Create a virtual environment
+</span></span><span style="display:flex;"><span>  build    Build Python packages into source distributions and wheels
+</span></span><span style="display:flex;"><span>  publish  Upload distributions to an index
+</span></span><span style="display:flex;"><span>  cache    Manage uv&#39;s cache
+</span></span><span style="display:flex;"><span>  self     Manage the uv executable
+</span></span><span style="display:flex;"><span>  version  Read or update the project&#39;s version
+</span></span><span style="display:flex;"><span>  help     Display documentation for a command
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Cache options:
+</span></span><span style="display:flex;"><span>  -n, --no-cache               Avoid reading from or writing to the cache, instead using a temporary directory for the duration of the
+</span></span><span style="display:flex;"><span>                               operation [env: UV_NO_CACHE=]
+</span></span><span style="display:flex;"><span>      --cache-dir &lt;CACHE_DIR&gt;  Path to the cache directory [env: UV_CACHE_DIR=]
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Python options:
+</span></span><span style="display:flex;"><span>  --managed-python       Require use of uv-managed Python versions [env: UV_MANAGED_PYTHON=]
+</span></span><span style="display:flex;"><span>  --no-managed-python    Disable use of uv-managed Python versions [env: UV_NO_MANAGED_PYTHON=]
+</span></span><span style="display:flex;"><span>  --no-python-downloads  Disable automatic downloads of Python. [env: &#34;UV_PYTHON_DOWNLOADS=never&#34;]
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Global options:
+</span></span><span style="display:flex;"><span>  -q, --quiet...                                   Use quiet output
+</span></span><span style="display:flex;"><span>  -v, --verbose...                                 Use verbose output
+</span></span><span style="display:flex;"><span>      --color &lt;COLOR_CHOICE&gt;                       Control the use of color in output [possible values: auto, always, never]
+</span></span><span style="display:flex;"><span>      --native-tls                                 Whether to load TLS certificates from the platform&#39;s native certificate store [env:
+</span></span><span style="display:flex;"><span>                                                   UV_NATIVE_TLS=]
+</span></span><span style="display:flex;"><span>      --offline                                    Disable network access [env: UV_OFFLINE=]
+</span></span><span style="display:flex;"><span>      --allow-insecure-host &lt;ALLOW_INSECURE_HOST&gt;  Allow insecure connections to a host [env: UV_INSECURE_HOST=]
+</span></span><span style="display:flex;"><span>      --no-progress                                Hide all progress outputs [env: UV_NO_PROGRESS=]
+</span></span><span style="display:flex;"><span>      --directory &lt;DIRECTORY&gt;                      Change to the given directory prior to running the command
+</span></span><span style="display:flex;"><span>      --project &lt;PROJECT&gt;                          Run the command within the given project directory [env: UV_PROJECT=]
+</span></span><span style="display:flex;"><span>      --config-file &lt;CONFIG_FILE&gt;                  The path to a `uv.toml` file to use for configuration [env: UV_CONFIG_FILE=]
+</span></span><span style="display:flex;"><span>      --no-config                                  Avoid discovering configuration files (`pyproject.toml`, `uv.toml`) [env:
+</span></span><span style="display:flex;"><span>                                                   UV_NO_CONFIG=]
+</span></span><span style="display:flex;"><span>  -h, --help                                       Display the concise help for this command
+</span></span><span style="display:flex;"><span>  -V, --version                                    Display the uv version
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>Use `uv help` for more details.
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="menginstall-python-dan-mengaktifkan-python-versi-tertentu">Menginstall Python dan mengaktifkan Python versi tertentu</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ uv python install 3.12
+</span></span><span style="display:flex;"><span>Installed Python 3.12.10 in 10.01s
+</span></span><span style="display:flex;"><span> + cpython-3.12.10-linux-x86_64-gnu
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="menampilkan-daftar-instalasi-python">Menampilkan Daftar Instalasi Python</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ uv python list
+</span></span><span style="display:flex;"><span>cpython-3.14.0a6-linux-x86_64-gnu                 &lt;download available&gt;
+</span></span><span style="display:flex;"><span>cpython-3.14.0a6+freethreaded-linux-x86_64-gnu    &lt;download available&gt;
+</span></span><span style="display:flex;"><span>cpython-3.13.3-linux-x86_64-gnu                   /usr/bin/python3.13
+</span></span><span style="display:flex;"><span>cpython-3.13.3-linux-x86_64-gnu                   /usr/bin/python3 -&gt; python3.13
+</span></span><span style="display:flex;"><span>cpython-3.13.3-linux-x86_64-gnu                   /usr/bin/python -&gt; python3.13
+</span></span><span style="display:flex;"><span>cpython-3.13.3-linux-x86_64-gnu                   &lt;download available&gt;
+</span></span><span style="display:flex;"><span>cpython-3.13.3+freethreaded-linux-x86_64-gnu      &lt;download available&gt;
+</span></span><span style="display:flex;"><span>cpython-3.12.10-linux-x86_64-gnu                  .local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/bin/python3.12
+</span></span><span style="display:flex;"><span>cpython-3.11.12-linux-x86_64-gnu                  &lt;download available&gt;
+</span></span><span style="display:flex;"><span>cpython-3.10.17-linux-x86_64-gnu                  &lt;download available&gt;
+</span></span><span style="display:flex;"><span>cpython-3.9.22-linux-x86_64-gnu                   &lt;download available&gt;
+</span></span><span style="display:flex;"><span>cpython-3.8.20-linux-x86_64-gnu                   &lt;download available&gt;
+</span></span><span style="display:flex;"><span>pypy-3.11.11-linux-x86_64-gnu                     &lt;download available&gt;
+</span></span><span style="display:flex;"><span>pypy-3.10.16-linux-x86_64-gnu                     &lt;download available&gt;
+</span></span><span style="display:flex;"><span>pypy-3.9.19-linux-x86_64-gnu                      &lt;download available&gt;
+</span></span><span style="display:flex;"><span>pypy-3.8.16-linux-x86_64-gnu                      &lt;download available&gt;
+</span></span><span style="display:flex;"><span>graalpy-3.11.0-linux-x86_64-gnu                   &lt;download available&gt;
+</span></span><span style="display:flex;"><span>graalpy-3.10.0-linux-x86_64-gnu                   &lt;download available&gt;
+</span></span><span style="display:flex;"><span>graalpy-3.8.5-linux-x86_64-gnu                    &lt;download available&gt;
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><h2 id="menggunakan-environment">Menggunakan <em>Environment</em></h2>
+<p>Saat belum diaktifkan, menggunakan instalasi default sistem:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ python
+</span></span><span style="display:flex;"><span>Python 3.13.3 (main, Apr 11 2025, 13:41:26) [GCC 13.2.0] on linux
+</span></span><span style="display:flex;"><span>Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span></code></pre></div><p>Mengubah menggunakan versi yang diinstall menggunakan <code>uv</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ uv venv py312-agentic --python 3.12
+</span></span><span style="display:flex;"><span>Using CPython 3.12.10
+</span></span><span style="display:flex;"><span>Creating virtual environment at: py312-agentic
+</span></span><span style="display:flex;"><span>Activate with: source py312-agentic/bin/activate.fish
+</span></span><span style="display:flex;"><span>$ source py312-agentic/bin/activate.fish 
+</span></span><span style="display:flex;"><span>(py312-agentic) $ python
+</span></span><span style="display:flex;"><span>Python 3.12.10 (main, Apr  9 2025, 04:03:51) [Clang 20.1.0 ] on linux
+</span></span><span style="display:flex;"><span>Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Isi dari direktori <em>py312-agentic</em> adalah sebagai berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ tree py312-agentic -L2
+</span></span><span style="display:flex;"><span>py312-agentic
+</span></span><span style="display:flex;"><span>├── CACHEDIR.TAG
+</span></span><span style="display:flex;"><span>├── bin
+</span></span><span style="display:flex;"><span>│   ├── activate
+</span></span><span style="display:flex;"><span>│   ├── activate.bat
+</span></span><span style="display:flex;"><span>│   ├── activate.csh
+</span></span><span style="display:flex;"><span>│   ├── activate.fish
+</span></span><span style="display:flex;"><span>│   ├── activate.nu
+</span></span><span style="display:flex;"><span>│   ├── activate.ps1
+</span></span><span style="display:flex;"><span>│   ├── activate_this.py
+</span></span><span style="display:flex;"><span>│   ├── cowsay
+</span></span><span style="display:flex;"><span>│   ├── deactivate.bat
+</span></span><span style="display:flex;"><span>│   ├── pydoc.bat
+</span></span><span style="display:flex;"><span>│   ├── python -&gt; /home/bpdp/.local/share/uv/python/cpython-3.12.10-linux-x86_64-gnu/bin/python3.12
+</span></span><span style="display:flex;"><span>│   ├── python3 -&gt; python
+</span></span><span style="display:flex;"><span>│   └── python3.12 -&gt; python
+</span></span><span style="display:flex;"><span>├── lib
+</span></span><span style="display:flex;"><span>│   └── python3.12
+</span></span><span style="display:flex;"><span>├── lib64 -&gt; lib
+</span></span><span style="display:flex;"><span>└── pyvenv.cfg
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">
+</span></span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010"></span>5 directories, 15 files
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Untuk keluar dari <em>environment</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ deactivate
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><pre tabindex="0"><code></code></pre><h2 id="install-paket-pustaka">Install Paket Pustaka</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ uv pip list
+</span></span><span style="display:flex;"><span>Using Python 3.12.10 environment at: py312-agentic
+</span></span><span style="display:flex;"><span>(py312-agentic) $ uv pip install cowsay
+</span></span><span style="display:flex;"><span>Using Python 3.12.10 environment at: py312-agentic
+</span></span><span style="display:flex;"><span>Resolved 1 package in 2ms
+</span></span><span style="display:flex;"><span>Installed 1 package in 3ms
+</span></span><span style="display:flex;"><span> + cowsay==6.1
+</span></span><span style="display:flex;"><span>(py312-agentic) $ uv pip list
+</span></span><span style="display:flex;"><span>Using Python 3.12.10 environment at: py312-agentic
+</span></span><span style="display:flex;"><span>Package Version
+</span></span><span style="display:flex;"><span>------- -------
+</span></span><span style="display:flex;"><span>cowsay  6.1
+</span></span><span style="display:flex;"><span>(py312-agentic) $ ls -la py312-agentic/lib/python3.12/site-packages/
+</span></span><span style="display:flex;"><span>total 32
+</span></span><span style="display:flex;"><span>drwxr-xr-x 5 bpdp bpdp 4096 May  8 22:26 ./
+</span></span><span style="display:flex;"><span>drwxr-xr-x 3 bpdp bpdp 4096 May  8 22:02 ../
+</span></span><span style="display:flex;"><span>drwxr-xr-x 2 bpdp bpdp 4096 May  8 22:24 __pycache__/
+</span></span><span style="display:flex;"><span>-rw-r--r-- 1 bpdp bpdp   18 May  8 22:02 _virtualenv.pth
+</span></span><span style="display:flex;"><span>-rw-r--r-- 1 bpdp bpdp 4342 May  8 22:02 _virtualenv.py
+</span></span><span style="display:flex;"><span>drwxr-xr-x 4 bpdp bpdp 4096 May  8 22:27 cowsay/
+</span></span><span style="display:flex;"><span>drwxr-xr-x 2 bpdp bpdp 4096 May  8 22:26 cowsay-6.1.dist-info/
+</span></span><span style="display:flex;"><span>(py312-agentic) $ python
+</span></span><span style="display:flex;"><span>Python 3.12.10 (main, Apr  9 2025, 04:03:51) [Clang 20.1.0 ] on linux
+</span></span><span style="display:flex;"><span>Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; import cowsay
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; cowsay.cow<span style="color:#f92672">(</span><span style="color:#e6db74">&#39;Hi!&#39;</span><span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  ___
+</span></span><span style="display:flex;"><span>| Hi! |
+</span></span><span style="display:flex;"><span>  ===
+</span></span><span style="display:flex;"><span>   \
+</span></span><span style="display:flex;"><span>    \
+</span></span><span style="display:flex;"><span>      ^__^
+</span></span><span style="display:flex;"><span>      (oo)\_______
+</span></span><span style="display:flex;"><span>      (__)\       )\/\
+</span></span><span style="display:flex;"><span>          ||----w |
+</span></span><span style="display:flex;"><span>          ||     ||
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span></code></pre></div><p>Setelah keluar dari <em>environment</em> tersebut, paket yang sudah diinstall pada <em>environment</em> tersebut sudah tidak bisa diakses lagi.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-console" data-lang="console"><span style="display:flex;"><span>$ deactivate
+</span></span><span style="display:flex;"><span>$ python
+</span></span><span style="display:flex;"><span>Python 3.13.3 (main, Apr 11 2025, 13:41:26) [GCC 13.2.0] on linux
+</span></span><span style="display:flex;"><span>Type &#34;help&#34;, &#34;copyright&#34;, &#34;credits&#34; or &#34;license&#34; for more information.
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; import cowsay
+</span></span><span style="display:flex;"><span>Traceback (most recent call last):
+</span></span><span style="display:flex;"><span>  File &#34;&lt;python-input-0&gt;&#34;, line 1, in &lt;module&gt;
+</span></span><span style="display:flex;"><span>    import cowsay
+</span></span><span style="display:flex;"><span>ModuleNotFoundError: No module named &#39;cowsay&#39;
+</span></span><span style="display:flex;"><span>&gt;&gt;&gt; 
+</span></span></code></pre></div><h2 id="penutup">Penutup</h2>
+<p>Selain sangat cepat, saya cenderung melihat <code>uv</code> sebagai solusi yang lebih sederhana untuk kebutuhan pengelolaan <em>environment</em> dan <em>packages</em>. Instalasi paket juga lebih memudahkan kalau sudah terbiasa menggunakan <code>pip</code>. Berbeda dengan <code>conda</code> serta <code>micromamba</code> yang cenderung menggunakan instalasi Python lengkap untuk setiap <em>environment</em>, <code>uv</code> melakukan instalasi Python (sesuai versi yang dikehendaki) dan kemudian menyimpan berbagai paket di direktori <code>nama-environment/lib/python-3.12/site-packages</code>.</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

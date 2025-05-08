@@ -6,8 +6,36 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 26 Feb 2025 15:54:08 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 08 May 2025 21:21:32 +0700</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Environment Manager</title>
+      <link>/tags/environment-manager/</link>
+      <pubDate>Thu, 08 May 2025 21:21:32 +0700</pubDate>
+      <guid>/tags/environment-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Package Manager</title>
+      <link>/tags/package-manager/</link>
+      <pubDate>Thu, 08 May 2025 21:21:32 +0700</pubDate>
+      <guid>/tags/package-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Programming</title>
+      <link>/tags/programming/</link>
+      <pubDate>Thu, 08 May 2025 21:21:32 +0700</pubDate>
+      <guid>/tags/programming/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Python</title>
+      <link>/tags/python/</link>
+      <pubDate>Thu, 08 May 2025 21:21:32 +0700</pubDate>
+      <guid>/tags/python/</guid>
+      <description></description>
+    </item>
     <item>
       <title>L2tp</title>
       <link>/tags/l2tp/</link>
@@ -251,13 +279,6 @@
       <link>/tags/package-management/</link>
       <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
       <guid>/tags/package-management/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Python</title>
-      <link>/tags/python/</link>
-      <pubDate>Tue, 12 Mar 2024 06:45:51 +0700</pubDate>
-      <guid>/tags/python/</guid>
       <description></description>
     </item>
     <item>
