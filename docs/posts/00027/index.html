@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Pixi: Package Manager untuk Software Developer - Mojo - Zimera Corporation</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/png" href="/">
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair&#43;Display:wght@600&amp;family=Source&#43;Sans&#43;Pro:wght@400;700&amp;display=swap" rel="stylesheet">
+
+
+
+  
+  
+  
+  
+    
+  
+  <link rel="stylesheet" href="/css/style.min.5150d296364b950351da609e4b65ef356fb2c78e8618022c5d5279eb42b3a65a.css">
+
+  
+
+  
+    
+    <meta property="og:title" content="Pixi: Package Manager untuk Software Developer - Mojo"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="/posts/00027/"/>
+    
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:site" content="@ZimeraCorp"/>
+    <meta name="twitter:creator" content="@ZimeraCorp"/>
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="/"><img height=200px alt="Zimera Corporation" src="/images/logo/logo-zimera-corp--mobile.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-services ">
+      <a href="/services/">
+        
+        <span>Services</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-team ">
+      <a href="/team/">
+        
+        <span>Team</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-about ">
+      <a href="/about/">
+        
+        <span>About</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-news ">
+      <a href="/news/">
+        
+        <span>News</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-posts ">
+      <a href="/posts/">
+        
+        <span>Posts</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button" aria-label="Mobile Menu">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+    
+<div class="container pb-6 pt-6 pt-md-10 pb-md-10">
+  <div class="row justify-content-start">
+    <div class="col-12 col-md-8">
+      <h1 class="title">Pixi: Package Manager untuk Software Developer - Mojo</h1>
+
+    <p>Posted in: 
+    
+        
+        <a href="/categories/software">Software</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Tags: 
+    
+        
+        <a href="/tags/development">Development</a>&nbsp;&nbsp;
+        
+        <a href="/tags/mojo">Mojo</a>&nbsp;&nbsp;
+        
+        <a href="/tags/package-manager">Package Manager&#39;</a>&nbsp;&nbsp;
+        
+        <a href="/tags/reproducible">Reproducible</a>&nbsp;&nbsp;
+        
+        <a href="/tags/language-agnostic">Language Agnostic</a>&nbsp;&nbsp;
+        
+    
+    <br />
+    Author:  | <time>July 22, 2025</time> | 
+        5  minutes reading time
+       </p>
+
+      <div class="content"><p>Saat akan menggunakan Mojo, saya melihat sekarang Mojo menggunakan <a href="https://pixi.sh">Pixi</a> untuk <em>development setups</em> bagi para software developer yang akan menggunakan Mojo. Secara natural saja saya kemudian penasaran dan ingin mencoba menggunakan Pixi serta membandingkan dengan berbagai <em>tools</em> yang pernah saya gunakan. Perbandingannya mungkin belakangan saja, saya tulis di sini langkah-langkah dokumentasi penggunaannya untuk memudahkan mencari referensi jika berikutnya saya memerlukan Pixi.</p>
+<p>Instalasi Pixi mudah, hanya perlu menjalankan script yang diambil dari URL kemudian mengatur PATH. Hasil instalasi akan diberikan di direktori <code>$HOME/.pixi</code> dengan *binary executable diletakkan di direktori <code>bin</code>. Konfigurasi PATH tentu saja disesuaikan dengan shell yang digunakan. Untuk <strong>fish</strong> shell saya, kurang lebih akan seperti ini:</p>
+<p><img src="/images/posts/27/01-pixi-install.png" alt="Instalasi Pixi"></p>
+<p>Setelah mengatur PATH, Pixi bisa dijalankan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pixi
+</span></span><span style="display:flex;"><span>Pixi <span style="color:#f92672">[</span>version 0.49.0<span style="color:#f92672">]</span> - Developer Workflow and Environment Management <span style="color:#66d9ef">for</span> Multi-Platform, Language-Agnostic Workspaces.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Pixi is a versatile developer workflow tool designed to streamline the management of your workspace<span style="color:#e6db74">&#39;s dependencies, tasks, and environments.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Built on top of the Conda ecosystem, Pixi offers seamless integration with the PyPI ecosystem.
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Basic Usage:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Initialize pixi for a workspace:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    $ pixi init
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    $ pixi add python numpy pytest
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Run a task:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    $ pixi task add test &#39;</span>pytest -s<span style="color:#e6db74">&#39;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    $ pixi run test
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Found a Bug or Have a Feature Request?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Open an issue at: https://github.com/prefix-dev/pixi/issues
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Need Help?
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Ask a question on the Prefix Discord server: https://discord.gg/kKV8ZxyzY4
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">For more information, see the documentation at: https://pixi.sh
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Usage: pixi [OPTIONS] &lt;COMMAND&gt;
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">Commands:
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  add          Adds dependencies to the workspace [aliases: a]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  auth         Login to prefix.dev or anaconda.org servers to access private channels
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  build        Workspace configuration
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  clean        Cleanup the environments
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  completion   Generates a completion script for a shell
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  config       Configuration management
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  exec         Run a command and install it in a temporary environment [aliases: x]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  global       Subcommand for global package management actions [aliases: g]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  info         Information about the system, workspace and environments for the current machine
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  init         Creates a new workspace
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  install      Install an environment, both updating the lockfile and installing the environment [aliases: i]
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">  list         List workspace&#39;</span>s packages <span style="color:#f92672">[</span>aliases: ls<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  lock         Solve environment and update the lock file without installing the environments
+</span></span><span style="display:flex;"><span>  reinstall    Re-install an environment, both updating the lockfile and re-installing the environment
+</span></span><span style="display:flex;"><span>  remove       Removes dependencies from the workspace <span style="color:#f92672">[</span>aliases: rm<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  run          Runs task in the pixi environment <span style="color:#f92672">[</span>aliases: r<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  search       Search a conda package
+</span></span><span style="display:flex;"><span>  self-update  Update pixi to the latest version or a specific version
+</span></span><span style="display:flex;"><span>  shell        Start a shell in a pixi environment, run <span style="color:#e6db74">`</span>exit<span style="color:#e6db74">`</span> to leave the shell <span style="color:#f92672">[</span>aliases: s<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  shell-hook   Print the pixi environment activation script
+</span></span><span style="display:flex;"><span>  task         Interact with tasks in the workspace
+</span></span><span style="display:flex;"><span>  tree         Show a tree of workspace dependencies <span style="color:#f92672">[</span>aliases: t<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>  update       The <span style="color:#e6db74">`</span>update<span style="color:#e6db74">`</span> command checks <span style="color:#66d9ef">if</span> there are newer versions of the dependencies and updates the <span style="color:#e6db74">`</span>pixi.lock<span style="color:#e6db74">`</span> file and environments accordingly
+</span></span><span style="display:flex;"><span>  upgrade      Checks <span style="color:#66d9ef">if</span> there are newer versions of the dependencies and upgrades them in the lockfile and manifest file
+</span></span><span style="display:flex;"><span>  upload       Upload a conda package
+</span></span><span style="display:flex;"><span>  workspace    Modify the workspace configuration file through the command line
+</span></span><span style="display:flex;"><span>  help         Print this message or the help of the given subcommand<span style="color:#f92672">(</span>s<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Options:
+</span></span><span style="display:flex;"><span>  -V, --version  Print version
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Global Options:
+</span></span><span style="display:flex;"><span>  -h, --help           Display help information
+</span></span><span style="display:flex;"><span>  -v, --verbose...     Increase logging verbosity <span style="color:#f92672">(</span>-v <span style="color:#66d9ef">for</span> warnings, -vv <span style="color:#66d9ef">for</span> info, -vvv <span style="color:#66d9ef">for</span> debug, -vvvv <span style="color:#66d9ef">for</span> trace<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>  -q, --quiet...       Decrease logging verbosity <span style="color:#f92672">(</span>quiet mode<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>      --color &lt;COLOR&gt;  Whether the log needs to be colored <span style="color:#f92672">[</span>env: PIXI_COLOR<span style="color:#f92672">=]</span> <span style="color:#f92672">[</span>default: auto<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>possible values: always, never, auto<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>      --no-progress    Hide all progress bars, always turned on <span style="color:#66d9ef">if</span> stderr is not a terminal <span style="color:#f92672">[</span>env: PIXI_NO_PROGRESS<span style="color:#f92672">=]</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Kita akan mencoba Pixi untuk Mojo. Bagian ini saya ambilkan dari <a href="https://docs.modular.com/mojo/manual/get-started/">Mojo - Getting Started</a>. Mulai dengan membuat direktori untuk kode sumber:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pixi init life -c https://conda.modular.com/max-nightly/ -c conda-forge
+</span></span><span style="display:flex;"><span>✔ Created /home/bpdp/kerjaan/src/mojo/life/pixi.toml
+</span></span><span style="display:flex;"><span>$ cd life/
+</span></span></code></pre></div><p>Setelah itu tambahkan paket <code>modular</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pixi add modular
+</span></span><span style="display:flex;"><span>✔ Added modular &gt;<span style="color:#f92672">=</span>25.5.0.dev2025072105,&lt;<span style="color:#ae81ff">26</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Hasilnya kurang lebih seperti ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ ls -la
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">152</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x <span style="color:#ae81ff">3</span> bpdp bpdp     <span style="color:#ae81ff">93</span> Jul <span style="color:#ae81ff">22</span> 14:12 ./
+</span></span><span style="display:flex;"><span>drwxr-xr-x <span style="color:#ae81ff">3</span> bpdp bpdp     <span style="color:#ae81ff">18</span> Jul <span style="color:#ae81ff">22</span> 14:12 ../
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp    <span style="color:#ae81ff">122</span> Jul <span style="color:#ae81ff">22</span> 14:12 .gitattributes
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp     <span style="color:#ae81ff">26</span> Jul <span style="color:#ae81ff">22</span> 14:12 .gitignore
+</span></span><span style="display:flex;"><span>drwxr-xr-x <span style="color:#ae81ff">3</span> bpdp bpdp     <span style="color:#ae81ff">63</span> Jul <span style="color:#ae81ff">22</span> 14:12 .pixi/
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp <span style="color:#ae81ff">143123</span> Jul <span style="color:#ae81ff">22</span> 14:12 pixi.lock
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp    <span style="color:#ae81ff">266</span> Jul <span style="color:#ae81ff">22</span> 14:12 pixi.toml
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>File <code>pixi.toml</code> digunakan untuk mengelola paket serta metadata dari proyek. Isinya kurang lebih seperti ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">workspace</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">authors</span> = [<span style="color:#e6db74">&#34;Bambang Purnomosidi D. P. &lt;phylossophie@gmail.com&gt;&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">channels</span> = [<span style="color:#e6db74">&#34;https://conda.modular.com/max-nightly&#34;</span>, <span style="color:#e6db74">&#34;conda-forge&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;life&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">platforms</span> = [<span style="color:#e6db74">&#34;linux-64&#34;</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">version</span> = <span style="color:#e6db74">&#34;0.1.0&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">tasks</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>[<span style="color:#a6e22e">dependencies</span>]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">modular</span> = <span style="color:#e6db74">&#34;&gt;=25.5.0.dev2025072105,&lt;26&#34;</span>
+</span></span></code></pre></div><p>Pada posisi ini, Mojo sudah terinstall dan bisa digunakan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pixi run mojo --version
+</span></span><span style="display:flex;"><span>Mojo 25.5.0.dev2025072105 <span style="color:#f92672">(</span>068b9cc8<span style="color:#f92672">)</span>
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Untuk mencoba, buat file <code>life.mojo</code> berikut ini:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># My first Mojo program!</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">main</span>():
+</span></span><span style="display:flex;"><span>    print(<span style="color:#e6db74">&#34;Hello, World!&#34;</span>)
+</span></span></code></pre></div><p>Untuk menggunakan Mojo secara langsung dari shell, gunakan perintah berikut:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ pixi shell
+</span></span></code></pre></div><p>Shell akan menampilkan tulisan <em>environment</em> yang aktif saat ini di sebelah kanan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$                                                                         <span style="color:#f92672">(</span>life<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p>Untuk menjalankan:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mojo life.mojo                                                          <span style="color:#f92672">(</span>life<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>Hello, World!
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Untuk mengkompilasi menjadi <em>binary executable</em>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ mojo build life.mojo                                                   <span style="color:#f92672">(</span>life<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>$ ls -la                                                                 <span style="color:#f92672">(</span>life<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>total <span style="color:#ae81ff">176</span>
+</span></span><span style="display:flex;"><span>drwxr-xr-x <span style="color:#ae81ff">3</span> bpdp bpdp    <span style="color:#ae81ff">122</span> Jul <span style="color:#ae81ff">22</span> 14:15 ./
+</span></span><span style="display:flex;"><span>drwxr-xr-x <span style="color:#ae81ff">3</span> bpdp bpdp     <span style="color:#ae81ff">18</span> Jul <span style="color:#ae81ff">22</span> 14:12 ../
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp    <span style="color:#ae81ff">122</span> Jul <span style="color:#ae81ff">22</span> 14:12 .gitattributes
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp     <span style="color:#ae81ff">26</span> Jul <span style="color:#ae81ff">22</span> 14:12 .gitignore
+</span></span><span style="display:flex;"><span>-rwxr-xr-x <span style="color:#ae81ff">1</span> bpdp bpdp  <span style="color:#ae81ff">17688</span> Jul <span style="color:#ae81ff">22</span> 14:15 life*
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp     <span style="color:#ae81ff">64</span> Jul <span style="color:#ae81ff">22</span> 14:15 life.mojo
+</span></span><span style="display:flex;"><span>drwxr-xr-x <span style="color:#ae81ff">3</span> bpdp bpdp     <span style="color:#ae81ff">63</span> Jul <span style="color:#ae81ff">22</span> 14:12 .pixi/
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp <span style="color:#ae81ff">143123</span> Jul <span style="color:#ae81ff">22</span> 14:12 pixi.lock
+</span></span><span style="display:flex;"><span>-rw-r--r-- <span style="color:#ae81ff">1</span> bpdp bpdp    <span style="color:#ae81ff">266</span> Jul <span style="color:#ae81ff">22</span> 14:12 pixi.toml
+</span></span><span style="display:flex;"><span>$ ./life                                                                 <span style="color:#f92672">(</span>life<span style="color:#f92672">)</span> 
+</span></span><span style="display:flex;"><span>Hello, World!
+</span></span><span style="display:flex;"><span>$
+</span></span></code></pre></div><p>Jika ingin menggunakan REPL dari Mojo, gunakan perintah berikut:</p>
+<p><img src="/images/posts/27/02-pixi-mojo-repl.png" alt="Mojo REPL"></p>
+<p><strong>Catatan</strong>: abaikan <code>sh: symbol lookup error: sh: undefined symbol: rl_print_keybinding</code> karena spesifik untuk paket di distro Linux tertentu.</p>
+</div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
+  <div class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="footer-inner">
+          <h3 class="footer-title">Zimera Corporation</h3>
+          <div id="footer-menu" class="footer-menu">
+  <ul>
+    
+    
+    
+    
+    <li class="menu-item-home ">
+      <a href="/">
+        
+        <span>Home</span>
+      </a>
+    </li>
+    
+    
+    
+    <li class="menu-item-contact ">
+      <a href="/contact/">
+        
+        <span>Contact</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <div class="sub-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="sub-footer-inner">
+          
+            
+<div class="social">
+    
+        <a href="https://github.com/zimera-corp" target="blank"><img src="/images/social/github.svg" title="Github" alt="Github" /></a>
+    
+        <a href="https://twitter.com/ZimeraCorp" target="blank"><img src="/images/social/twitter.svg" title="Twitter" alt="Twitter" /></a>
+    
+</div>
+
+          
+          
+            <div class="copyright">Powered by <a class="zerostatic" href="https://gohugo.io">Hugo</a>, theme by <a class="zerostatic" href="https://www.zerostatic.io">www.zerostatic.io</a>, image: <a class="zerostatic" href="https://www.freepik.com/free-vector/people-analyzing-growth-charts_12643932.htm#query=data%20science&position=2&from_view=search&track=sph">Freepik</a></div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+  
+
+  
+  
+
+  
+    
+  
+  <script type="text/javascript" src="/js/scripts.min.8504133605a277da18f0d58cfd2e90d154962f4a961543a6e2f0a459a2d05462.js"></script>
+
+  
+
+
+  
+
+
+</body>
+
+</html>

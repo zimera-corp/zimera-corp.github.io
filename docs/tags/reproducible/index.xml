@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reproducible on Zimera Corporation</title>
+    <link>/tags/reproducible/</link>
+    <description>Recent content in Reproducible on Zimera Corporation</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 22 Jul 2025 13:47:53 +0700</lastBuildDate>
+    <atom:link href="/tags/reproducible/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Pixi: Package Manager untuk Software Developer - Mojo</title>
+      <link>/posts/00027/</link>
+      <pubDate>Tue, 22 Jul 2025 13:47:53 +0700</pubDate>
+      <guid>/posts/00027/</guid>
+      <description>&lt;p&gt;Saat akan menggunakan Mojo, saya melihat sekarang Mojo menggunakan &lt;a href=&#34;https://pixi.sh&#34;&gt;Pixi&lt;/a&gt; untuk &lt;em&gt;development setups&lt;/em&gt; bagi para software developer yang akan menggunakan Mojo. Secara natural saja saya kemudian penasaran dan ingin mencoba menggunakan Pixi serta membandingkan dengan berbagai &lt;em&gt;tools&lt;/em&gt; yang pernah saya gunakan. Perbandingannya mungkin belakangan saja, saya tulis di sini langkah-langkah dokumentasi penggunaannya untuk memudahkan mencari referensi jika berikutnya saya memerlukan Pixi.&lt;/p&gt;&#xA;&lt;p&gt;Instalasi Pixi mudah, hanya perlu menjalankan script yang diambil dari URL kemudian mengatur PATH. Hasil instalasi akan diberikan di direktori &lt;code&gt;$HOME/.pixi&lt;/code&gt; dengan *binary executable diletakkan di direktori &lt;code&gt;bin&lt;/code&gt;. Konfigurasi PATH tentu saja disesuaikan dengan shell yang digunakan. Untuk &lt;strong&gt;fish&lt;/strong&gt; shell saya, kurang lebih akan seperti ini:&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -6,8 +6,43 @@
     <description>Recent content in Tags on Zimera Corporation</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 May 2025 21:21:32 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jul 2025 13:47:53 +0700</lastBuildDate>
     <atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Development</title>
+      <link>/tags/development/</link>
+      <pubDate>Tue, 22 Jul 2025 13:47:53 +0700</pubDate>
+      <guid>/tags/development/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Language Agnostic</title>
+      <link>/tags/language-agnostic/</link>
+      <pubDate>Tue, 22 Jul 2025 13:47:53 +0700</pubDate>
+      <guid>/tags/language-agnostic/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Mojo</title>
+      <link>/tags/mojo/</link>
+      <pubDate>Tue, 22 Jul 2025 13:47:53 +0700</pubDate>
+      <guid>/tags/mojo/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Package Manager&#39;</title>
+      <link>/tags/package-manager/</link>
+      <pubDate>Tue, 22 Jul 2025 13:47:53 +0700</pubDate>
+      <guid>/tags/package-manager/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Reproducible</title>
+      <link>/tags/reproducible/</link>
+      <pubDate>Tue, 22 Jul 2025 13:47:53 +0700</pubDate>
+      <guid>/tags/reproducible/</guid>
+      <description></description>
+    </item>
     <item>
       <title>Environment Manager</title>
       <link>/tags/environment-manager/</link>
@@ -342,13 +377,6 @@
       <link>/tags/modular/</link>
       <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
       <guid>/tags/modular/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>Mojo</title>
-      <link>/tags/mojo/</link>
-      <pubDate>Fri, 17 Nov 2023 22:01:11 +0700</pubDate>
-      <guid>/tags/mojo/</guid>
       <description></description>
     </item>
     <item>

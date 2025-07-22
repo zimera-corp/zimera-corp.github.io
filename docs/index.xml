@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 08 May 2025 21:21:32 +0700</lastBuildDate>
+    <lastBuildDate>Tue, 22 Jul 2025 13:47:53 +0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
@@ -49,6 +49,13 @@
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
       <guid>/services/systems/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/services/systems.jpg&#34; alt=&#34;Zimera Systems&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version. This case happen in source code level version, so that one can be sure that we do not offer other version. We will, of course, make some documentation about differences with upstream.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Pixi: Package Manager untuk Software Developer - Mojo</title>
+      <link>/posts/00027/</link>
+      <pubDate>Tue, 22 Jul 2025 13:47:53 +0700</pubDate>
+      <guid>/posts/00027/</guid>
+      <description>&lt;p&gt;Saat akan menggunakan Mojo, saya melihat sekarang Mojo menggunakan &lt;a href=&#34;https://pixi.sh&#34;&gt;Pixi&lt;/a&gt; untuk &lt;em&gt;development setups&lt;/em&gt; bagi para software developer yang akan menggunakan Mojo. Secara natural saja saya kemudian penasaran dan ingin mencoba menggunakan Pixi serta membandingkan dengan berbagai &lt;em&gt;tools&lt;/em&gt; yang pernah saya gunakan. Perbandingannya mungkin belakangan saja, saya tulis di sini langkah-langkah dokumentasi penggunaannya untuk memudahkan mencari referensi jika berikutnya saya memerlukan Pixi.&lt;/p&gt;&#xA;&lt;p&gt;Instalasi Pixi mudah, hanya perlu menjalankan script yang diambil dari URL kemudian mengatur PATH. Hasil instalasi akan diberikan di direktori &lt;code&gt;$HOME/.pixi&lt;/code&gt; dengan *binary executable diletakkan di direktori &lt;code&gt;bin&lt;/code&gt;. Konfigurasi PATH tentu saja disesuaikan dengan shell yang digunakan. Untuk &lt;strong&gt;fish&lt;/strong&gt; shell saya, kurang lebih akan seperti ini:&lt;/p&gt;</description>
     </item>
     <item>
       <title>Mengelola Environment dan Pustaka Python Menggunakan uv</title>
