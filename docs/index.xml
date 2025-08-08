@@ -6,7 +6,7 @@
     <description>Recent content in Homepage on Zimera Corporation</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 22 Jul 2025 13:47:53 +0700</lastBuildDate>
+    <lastBuildDate>Fri, 08 Aug 2025 16:13:57 +0700</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dr. Bambang Purnomosidi D. P.</title>
@@ -49,6 +49,13 @@
       <pubDate>Tue, 31 Jan 2023 12:59:06 +0700</pubDate>
       <guid>/services/systems/</guid>
       <description>&lt;p&gt;&lt;img src=&#34;/images/services/systems.jpg&#34; alt=&#34;Zimera Systems&#34;&gt;&lt;/p&gt;&#xA;&lt;p&gt;Systems services provide data-related software products. We do not provide services for project-based software systems, instead we engineer some products (in some cases, we also fork some open source software products) and provide services for customization of the software. In case of providing software customization for some open source projects, we will put all of our modification to upstream and so that the software is the same with upstream version. This case happen in source code level version, so that one can be sure that we do not offer other version. We will, of course, make some documentation about differences with upstream.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cyber Threat Intelligence: Menuju Strategi Keamanan Proaktif</title>
+      <link>/posts/00028/</link>
+      <pubDate>Fri, 08 Aug 2025 16:13:57 +0700</pubDate>
+      <guid>/posts/00028/</guid>
+      <description>&lt;img src=&#34;/images/posts/28/bpdp-cti.jpg&#34; alt=&#34;Artikel KR - Cyber Threat Intelligence&#34; width=&#34;1000&#34;&gt;&#xA;&#xA;&#xA;&lt;p&gt;Di era Kecerdasan Artifisial (KA/AI) yang didasari oleh sistem yang terdistribusi dan terdesentralisasi saat ini, isu keamanan informasi menjadi sangat penting. Masih segar dalam ingatan kita berbagai kasus keamanan seperti pencurian data (paspor, BPJS Kesehatan, KPU), &lt;em&gt;ransomware&lt;/em&gt; (BSI, PDN, berbagai Rumah Sakit), dan &lt;em&gt;DDoS&lt;/em&gt; (tiket.com, Citilink). Beberapa kasus yang melibatkan Kecerdasan Artifisial (KA) sebagai &lt;em&gt;attack vectors&lt;/em&gt; adalah pembuatan malware serta teknik untuk menghindari deteksi &lt;em&gt;malware&lt;/em&gt;, pembuatan &lt;em&gt;phishing&lt;/em&gt;, eksploitasi vulnerabilitas sistem, penggunaan &lt;em&gt;LLM&lt;/em&gt; sebagai &lt;em&gt;attack agents&lt;/em&gt; (Lupinacci et. al., 2025), dan lain-lain. Penggunaan KA oleh threat actors menjadi hal yang ancaman yang serius karena sering kali sistem keamanan dibangun dengan tujuan menahan serangan dari manusia, bukan serangan yang diperkuat oleh KA dan bersifat reaktif - bereaksi saat sudah terjadi kasus. Sudah waktunya organisasi memanfaatkan KA untuk memperkuat sisi keamanan organisasinya dengan strategi keamanan proaktif.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Pixi: Package Manager untuk Software Developer - Mojo</title>

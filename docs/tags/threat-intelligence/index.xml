@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Threat Intelligence on Zimera Corporation</title>
+    <link>/tags/threat-intelligence/</link>
+    <description>Recent content in Threat Intelligence on Zimera Corporation</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 08 Aug 2025 16:13:57 +0700</lastBuildDate>
+    <atom:link href="/tags/threat-intelligence/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cyber Threat Intelligence: Menuju Strategi Keamanan Proaktif</title>
+      <link>/posts/00028/</link>
+      <pubDate>Fri, 08 Aug 2025 16:13:57 +0700</pubDate>
+      <guid>/posts/00028/</guid>
+      <description>&lt;img src=&#34;/images/posts/28/bpdp-cti.jpg&#34; alt=&#34;Artikel KR - Cyber Threat Intelligence&#34; width=&#34;1000&#34;&gt;&#xA;&#xA;&#xA;&lt;p&gt;Di era Kecerdasan Artifisial (KA/AI) yang didasari oleh sistem yang terdistribusi dan terdesentralisasi saat ini, isu keamanan informasi menjadi sangat penting. Masih segar dalam ingatan kita berbagai kasus keamanan seperti pencurian data (paspor, BPJS Kesehatan, KPU), &lt;em&gt;ransomware&lt;/em&gt; (BSI, PDN, berbagai Rumah Sakit), dan &lt;em&gt;DDoS&lt;/em&gt; (tiket.com, Citilink). Beberapa kasus yang melibatkan Kecerdasan Artifisial (KA) sebagai &lt;em&gt;attack vectors&lt;/em&gt; adalah pembuatan malware serta teknik untuk menghindari deteksi &lt;em&gt;malware&lt;/em&gt;, pembuatan &lt;em&gt;phishing&lt;/em&gt;, eksploitasi vulnerabilitas sistem, penggunaan &lt;em&gt;LLM&lt;/em&gt; sebagai &lt;em&gt;attack agents&lt;/em&gt; (Lupinacci et. al., 2025), dan lain-lain. Penggunaan KA oleh threat actors menjadi hal yang ancaman yang serius karena sering kali sistem keamanan dibangun dengan tujuan menahan serangan dari manusia, bukan serangan yang diperkuat oleh KA dan bersifat reaktif - bereaksi saat sudah terjadi kasus. Sudah waktunya organisasi memanfaatkan KA untuk memperkuat sisi keamanan organisasinya dengan strategi keamanan proaktif.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
